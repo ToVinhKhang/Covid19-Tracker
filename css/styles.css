@@ -1,0 +1,9 @@
+body{background-color: #f1f2f5}
+body div {margin-top: 30px;}
+.logo{width: 80px; height: 80px; margin-right: 20px;}
+table td:nth-child(3) { font-weight: bold; color: #BB2020;}
+table td:nth-child(4) { font-weight: bold; color: #006233;}
+table td:nth-child(5) { font-weight: bold; color: grey;}
+.text-center{text-align: center;}
+.text-bold{font-weight: bold;}
+.footer{font-weight: bold; margin-bottom: 30px;text-align: center;}
