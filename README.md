@@ -1,2 +1,8 @@
 # Covid19-Tracker
-The situation of the Coronavirus epidemic data around the World (Update Real-time)
+This is demo about using Fetch & Ajax to get API data about the situation of the Coronavirus epidemic data around the World.
+<br>
+
+Link API:
+`
+https://corona.lmao.ninja/v2/countries
+`
