@@ -16,18 +16,21 @@ function displayData(jsonData){
 		let td2 = document.createElement('td');
 		let td3 = document.createElement('td');
 		let td4 = document.createElement('td');
+		let td5 = document.createElement('td');
 
 		td0.innerHTML = `<img style="width:50px; height: 25px;" src="`+u.countryInfo.flag+`">`;
 		td1.innerHTML = u.country;
-		td2.innerHTML = u.cases;
-		td3.innerHTML = u.recovered;
-		td4.innerHTML = u.deaths;
+		td2.innerHTML = u.cases.toLocaleString('en-US'); //number.toLocaleString('en-US') is number with commas as thousands
+		td3.innerHTML = u.recovered.toLocaleString('en-US');
+		td4.innerHTML = u.deaths.toLocaleString('en-US');
+		td5.innerHTML = u.tests.toLocaleString('en-US');
 
 		tr.appendChild(td0);
 		tr.appendChild(td1);
 		tr.appendChild(td2);
 		tr.appendChild(td3);
 		tr.appendChild(td4);
+		tr.appendChild(td5);
 		table.appendChild(tr);
 	});
 }
