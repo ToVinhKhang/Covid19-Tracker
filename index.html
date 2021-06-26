@@ -9,6 +9,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/themes/dark_turquoise.min.js"></script>
 	<link rel="stylesheet" href="css/styles.css">
 	<script src="js/scripts.js"></script>
 </head>
@@ -23,7 +25,12 @@
 		<div class="text-center">
 			<div class="text-bold" id="time"></div>(Time in Vietnam UTC +7)
 		</div>
-		<br>
+		
+		<!-- Vietnam -->
+		<div id="vietnam" style="width: 100%; height: 500px;"></div>
+	
+		<!-- The World -->
+		<br><br>
 		<table class="table table-striped">
 		    <thead>
 				<tr>

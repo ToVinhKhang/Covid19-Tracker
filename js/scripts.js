@@ -24,7 +24,7 @@ function displayData(jsonData){
 		td3.innerHTML = u.recovered.toLocaleString('en-US');
 		td4.innerHTML = u.deaths.toLocaleString('en-US');
 		td5.innerHTML = u.tests.toLocaleString('en-US');
-
+		
 		tr.appendChild(td0);
 		tr.appendChild(td1);
 		tr.appendChild(td2);
@@ -32,6 +32,25 @@ function displayData(jsonData){
 		tr.appendChild(td4);
 		tr.appendChild(td5);
 		table.appendChild(tr);
+		
+		// Chart for Vietnam
+		if(u.country == "Vietnam"){
+			anychart.onDocumentReady(function() {
+			  var data = {header: ["Name", "Number"],
+			  rows:[
+				["Cases", u.cases],
+				["Treating", u.active],
+				["Recovered", u.recovered],
+				["Deaths", u.deaths],
+			  ]};
+			  var chart = anychart.bar();
+			  anychart.theme(anychart.themes.darkTurquoise);chart.data(data);
+			  chart.title("THE SITUATION OF THE CORONAVIRUS IN VIETNAM");
+			  chart.yScale().ticks().interval(500);chart.yScale().minorTicks().interval(100);
+			  chart.yGrid().enabled(true);chart.yMinorGrid().enabled(true);chart.animation(true);
+			  chart.container("vietnam");chart.draw();
+			});
+		}
 	});
 }
 
@@ -64,6 +83,7 @@ setInterval(()=>{
         [Zero(now.getHours()),Zero(now.getMinutes())].join(":"), 
         now.getHours() >= 12 ? "PM" : "AM"].join(" ");
     document.getElementById("time").innerHTML = strDateTime;
-    loadByAjax();
 },1000);
+
+
 
