@@ -18,7 +18,7 @@ function displayData(jsonData){
 		let td4 = document.createElement('td');
 		let td5 = document.createElement('td');
 
-		td0.innerHTML = `<img style="width:50px; height: 25px;" src="`+u.countryInfo.flag+`">`;
+		td0.innerHTML = `<img class="flagCountry" style="width:50px; height: 25px;" src="`+u.countryInfo.flag+`">`;
 		td1.innerHTML = u.country;
 		td2.innerHTML = u.cases.toLocaleString('en-US'); //number.toLocaleString('en-US') is number with commas as thousands
 		td3.innerHTML = u.recovered.toLocaleString('en-US');

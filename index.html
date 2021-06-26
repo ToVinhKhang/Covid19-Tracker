@@ -14,6 +14,7 @@
 </head>
 
 <body>
+	<!-- Covid19 Info -->
 	<div class="container">
 		<h1 class="text-center">
 			<img class="logo" src="https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=720">Covid-19 Tracker
@@ -37,6 +38,29 @@
 		    <tbody id="table"></tbody>
 	  	</table>
 	</div>
+	
+	<!-- Popup Flag -->
+	<script>
+		$("body").on("click", ".flagCountry", (e) => {
+			let Img = e.target.getAttribute("src"); e.preventDefault();
+			$("#viewImage").attr("src", Img);
+			$("#viewModal").modal("toggle");
+		});
+	</script>
+	<div class="modal fade" id="viewModal" role="dialog">
+		<div class="modal-dialog modal-xl" role="content">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title"></h4><button class="close" type="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<img class="w-100" id="viewImage" />
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Footer -->
 	<div class="footer">Producted by ToVinhKhang</div>
 </body>
 </html>
