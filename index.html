@@ -18,32 +18,37 @@
 <body>
 	<!-- Covid19 Info -->
 	<div class="container">
-		<h1 class="text-center">
-			<img class="logo" src="https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=720">Covid-19 Tracker
-		</h1>
-		<p class="text-center">The situation of the Coronavirus epidemic data around the World (Update Real-time)</p>
 		<div class="text-center">
-			<div class="text-bold" id="time"></div>(Time in Vietnam UTC +7)
+			<img class="logo" src="https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=720">
+			<p class="title text-center">Covid-19 Tracker</p>
 		</div>
 		
-		<!-- Global -->
-		<div id="global" style="width: 100%; height: 500px;"></div>
-		<br><br>
+		<p class="text-center description">The situation of the Coronavirus epidemic data around the World (Update Real-time)</p>
+		<div class="text-center time">
+			<div class="text-bold" id="time"></div>(Time in Vietnam UTC +7)
+		</div>
+		<div class="container loader" id="loader"></div>
 		
-		<!-- The World -->
-		<table class="table table-striped">
-		    <thead>
-				<tr>
-					<th></th>
-					<th>Countries</th>
-					<th>Cases</th>
-					<th>Recovered</th>
-					<th>Deaths</th>
-					<th>Tests</th>
-				</tr>
-		    </thead>
-		    <tbody id="table"></tbody>
-	  	</table>
+		<!-- Global -->
+		<div id="global"></div>
+		
+		
+		<!-- Countries -->
+		<div id="countries">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Countries</th>
+						<th>Cases</th>
+						<th>Recovered</th>
+						<th>Deaths</th>
+						<th>Tests</th>
+					</tr>
+				</thead>
+				<tbody id="table"></tbody>
+			</table>
+		</div>
 	</div>
 	
 	<!-- Popup Flag -->
@@ -68,6 +73,6 @@
 	</div>
 	
 	<!-- Footer -->
-	<div class="footer">Producted by ToVinhKhang</div>
+	<div class="footer">Producted by <a href="https://tovinhkhang.netlify.app/" target="_blank">ToVinhKhang</a></div>
 </body>
 </html>

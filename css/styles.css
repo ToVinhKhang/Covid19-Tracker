@@ -1,13 +1,37 @@
+/* Init */
 body{background-color: #f1f2f5}
 body div {margin-top: 30px;}
-.logo{width: 80px; height: 80px; margin-right: 20px;}
+.logo{width: 80px; height: 80px; margin-right: 20px;margin-bottom: 20px;}
+.footer{font-weight: bold; margin-bottom: 30px;text-align: center;}
+.text-center{text-align: center;}
+.text-bold{font-weight: bold;}
+.title{display: inline;font-size: 300%;font-weight:bold;color:#309FB5;}
+.description{font-size:165%;color:#309FB5;}
+.time{color:#7652B5; font-size:120%;}
+
+/* Data */
+#global{width: 100%; height: 400px;margin-bottom:50px;}
 table td:nth-child(2){font-weight: bold;}
 table td:nth-child(3){font-weight: bold; color: #186FB5;}
 table td:nth-child(4){font-weight: bold; color: #006233;}
 table td:nth-child(5){font-weight: bold; color: #E41E20;}
 table td:nth-child(6){font-weight: bold; color: grey;}
-.text-center{text-align: center;}
-.text-bold{font-weight: bold;}
-.footer{font-weight: bold; margin-bottom: 30px;text-align: center;}
 span{font-size: 12px;}
 .flagCountry{width: 70px; height: 50px;}
+
+/* Loader */
+.loader {margin-top: 15%;border: 10px solid #f3f3f3;border-top: 10px solid #65506D;border-radius: 50%;width: 120px; height: 120px;-webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
+@-webkit-keyframes spin{0%{-webkit-transform: rotate(0deg);}100% {-webkit-transform: rotate(360deg);}}
+@keyframes spin{0%{transform: rotate(0deg);}100%{transform:rotate(360deg);}}
+
+/* Responsive */
+@media screen and (max-width: 720px) {
+	#global{width: 100%; height: 150px;margin-bottom: 0px;}
+	#countries{font-size:65%;}
+	.flagCountry{width: 40px; height: 30px;}
+	.description{display: none;}
+	.logo{margin-right: 0px;}
+	.title{display: block;}
+	.loader {margin-top: 25%;}
+}
+

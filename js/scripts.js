@@ -66,8 +66,11 @@ function Global_FetchAndDrawChart(){
 			  chart.title("THE SITUATION OF THE CORONAVIRUS IN GLOBAL");
 			  chart.yScale().ticks().interval(500000);chart.yScale().minorTicks().interval(100000);
 			  chart.yGrid().enabled(true);chart.yMinorGrid().enabled(true);
+			  chart.background().cornerType("round");chart.background().corners(10);
 			  chart.animation(true);chart.container("global");chart.draw();
 			});
+			// Hide Loading after display success
+			document.getElementById("loader").style.display = "none";
 		})
 		.catch(e => console.log(e));
 }
