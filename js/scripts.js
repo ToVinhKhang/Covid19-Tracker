@@ -6,11 +6,14 @@
 // -----------------------------------------------
 
 // Init
+const API_Global    = "https://api.covid19api.com/summary";
+const API_Countries = "https://corona.lmao.ninja/v2/countries";
 let table;
-const API = "https://corona.lmao.ninja/v2/countries";
+
 window.addEventListener('load',() => {
 	table = document.getElementById("table");
-	loadByFetch();
+	Global_FetchAndDrawChart();
+	Countries_Fetch();
 });
 
 // Display
@@ -25,11 +28,11 @@ function displayData(jsonData){
 		let td4 = document.createElement('td');
 		let td5 = document.createElement('td');
 
-		td0.innerHTML = `<img class="flagCountry" style="width:50px; height: 25px;" src="`+u.countryInfo.flag+`">`;
+		td0.innerHTML = `<img class="flagCountry" src="`+u.countryInfo.flag+`">`;
 		td1.innerHTML = u.country;
-		td2.innerHTML = u.cases.toLocaleString('en-US'); //number.toLocaleString('en-US') is number with commas as thousands
-		td3.innerHTML = u.recovered.toLocaleString('en-US');
-		td4.innerHTML = u.deaths.toLocaleString('en-US');
+		td2.innerHTML = u.cases.toLocaleString('en-US')+`<br><span>+`+u.todayCases.toLocaleString('en-US')+`</span>`; //Commas thousands
+		td3.innerHTML = u.recovered.toLocaleString('en-US')+`<br><span>+`+u.todayRecovered.toLocaleString('en-US')+`</span>`;
+		td4.innerHTML = u.deaths.toLocaleString('en-US')+`<br><span>+`+u.todayDeaths.toLocaleString('en-US')+`</span>`;
 		td5.innerHTML = u.tests.toLocaleString('en-US');
 		
 		tr.appendChild(td0);
@@ -39,71 +42,52 @@ function displayData(jsonData){
 		tr.appendChild(td4);
 		tr.appendChild(td5);
 		table.appendChild(tr);
-		
-		// Chart for Vietnam
-		if(u.country == "Vietnam"){
+	});
+}
+
+// ---------
+// Load Data
+// ---------
+
+// Fetch and Draw Chart
+function Global_FetchAndDrawChart(){
+	fetch(API_Global)
+		.then(data => data.json())
+		.then(jsonData => {
 			anychart.onDocumentReady(function() {
 			  var data = {header: ["Name", "Number"],
 			  rows:[
-				["Cases", u.cases],
-				["Treating", u.active],
-				["Recovered", u.recovered],
-				["Deaths", u.deaths],
+				["Cases", jsonData.Global.TotalConfirmed],
+				["Recovered", jsonData.Global.TotalRecovered],
+				["Deaths", jsonData.Global.TotalDeaths],
 			  ]};
 			  var chart = anychart.bar();
 			  anychart.theme(anychart.themes.darkTurquoise);chart.data(data);
-			  chart.title("THE SITUATION OF THE CORONAVIRUS IN VIETNAM");
-			  chart.yScale().ticks().interval(500);chart.yScale().minorTicks().interval(100);
-			  chart.yGrid().enabled(true);chart.yMinorGrid().enabled(true);chart.animation(true);
-			  chart.container("vietnam");chart.draw();
+			  chart.title("THE SITUATION OF THE CORONAVIRUS IN GLOBAL");
+			  chart.yScale().ticks().interval(500000);chart.yScale().minorTicks().interval(100000);
+			  chart.yGrid().enabled(true);chart.yMinorGrid().enabled(true);
+			  chart.animation(true);chart.container("global");chart.draw();
 			});
-		}
-	});
+		})
+		.catch(e => console.log(e));
 }
-function displayDataUpdateRealtime(jsonData){
-	table.innerHTML = '';
-	jsonData.forEach(u => {
-		let tr = document.createElement('tr');
-		let td0 = document.createElement('td');
-		let td1 = document.createElement('td');
-		let td2 = document.createElement('td');
-		let td3 = document.createElement('td');
-		let td4 = document.createElement('td');
-		let td5 = document.createElement('td');
-
-		td0.innerHTML = `<img class="flagCountry" style="width:50px; height: 25px;" src="`+u.countryInfo.flag+`">`;
-		td1.innerHTML = u.country;
-		td2.innerHTML = u.cases.toLocaleString('en-US'); //number.toLocaleString('en-US') is number with commas as thousands
-		td3.innerHTML = u.recovered.toLocaleString('en-US');
-		td4.innerHTML = u.deaths.toLocaleString('en-US');
-		td5.innerHTML = u.tests.toLocaleString('en-US');
-		
-		tr.appendChild(td0);
-		tr.appendChild(td1);
-		tr.appendChild(td2);
-		tr.appendChild(td3);
-		tr.appendChild(td4);
-		tr.appendChild(td5);
-		table.appendChild(tr);
-	});
-}
-
-// Load Data
-function loadByFetch(){
-	fetch(API) /* [Promise] Method */
+// Fetch
+function Countries_Fetch(){
+	fetch(API_Countries) /* [Promise] Method */
 		.then(data => data.json())
 		.then(jsonData => {displayData(jsonData);})
 		.catch(e => console.log(e));
 }
-function loadByAjax(){
+// AJAX
+function Countries_Ajax(){
 	let xmlHttpRequest = new XMLHttpRequest();
 	xmlHttpRequest.addEventListener('load',e => {
 		if(xmlHttpRequest.readyState === 4 && xmlHttpRequest.status === 200){
 			let jsonData = xmlHttpRequest.response;
-			displayDataUpdateRealtime(jsonData);
+			displayData(jsonData);
 		}else{console.log(e);}
 	});
-	xmlHttpRequest.open('GET',API,true);
+	xmlHttpRequest.open('GET',API_Countries,true);
 	xmlHttpRequest.responseType = 'json';
 	xmlHttpRequest.send();
 }
@@ -117,11 +101,12 @@ setInterval(()=>{
         [Zero(now.getHours()),Zero(now.getMinutes())].join(":"), 
         now.getHours() >= 12 ? "PM" : "AM"].join(" ");
     document.getElementById("time").innerHTML = strDateTime;
-	loadByAjax();
+	Countries_Ajax();
 },1000);
 
 //------
 // END
 //------
+
 
 
