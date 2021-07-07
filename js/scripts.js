@@ -63,7 +63,7 @@ function Global_FetchAndDrawChart(){
 			  ]};
 			  var chart = anychart.bar();
 			  anychart.theme(anychart.themes.darkTurquoise);chart.data(data);
-			  chart.title("THE SITUATION OF THE CORONAVIRUS IN GLOBAL");
+			  chart.title("THE SITUATION OF COVID-19 IN GLOBAL");
 			  chart.yScale().ticks().interval(500000);chart.yScale().minorTicks().interval(100000);
 			  chart.yGrid().enabled(true);chart.yMinorGrid().enabled(true);
 			  chart.background().cornerType("round");chart.background().corners(10);
