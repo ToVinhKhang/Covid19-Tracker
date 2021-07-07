@@ -27,9 +27,9 @@ span{font-size: 12px;}
 /* Responsive */
 @media screen and (max-width: 720px) {
 	#global{width: 100%; height: 200px;margin-bottom: 0px;}
-	#countries{font-size:65%;width: 100%;}
+	#countries{font-size:55%;width: 100%;}
 	span{font-size: 8px;}
-	.flagCountry{width: 40px; height: 30px;}
+	.flagCountry{width: 30px; height: 25px;}
 	.description{display: none;}
 	.logo{margin-right: 0px;}
 	.title{display: block;}
