@@ -18,6 +18,7 @@ table td:nth-child(5){font-weight: bold; color: #E41E20;}
 table td:nth-child(6){font-weight: bold; color: grey;}
 span{font-size: 12px;}
 .flagCountry{width: 70px; height: 50px;}
+#nameCountry{font-weight: bold;}
 
 /* Loader */
 .loader {margin-top: 15%;border: 10px solid #f3f3f3;border-top: 10px solid #65506D;border-radius: 50%;width: 120px; height: 120px;-webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
@@ -25,7 +26,7 @@ span{font-size: 12px;}
 @keyframes spin{0%{transform: rotate(0deg);}100%{transform:rotate(360deg);}}
 
 /* Responsive */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
 	#global{width: 100%; height: 200px;margin-bottom: 0px;}
 	#countries{font-size:55%;width: 100%;}
 	span{font-size: 8px;}

@@ -55,6 +55,8 @@
 	<script>
 		$("body").on("click", ".flagCountry", (e) => {
 			let Img = e.target.getAttribute("src"); e.preventDefault();
+			let nameCountry = e.target.parentNode.parentNode.cells[1].innerHTML;
+			document.getElementById("nameCountry").textContent = nameCountry;
 			$("#viewImage").attr("src", Img);
 			$("#viewModal").modal("toggle");
 		});
@@ -63,7 +65,7 @@
 		<div class="modal-dialog modal-xl" role="content">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title"></h4><button class="close" type="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" id="nameCountry"></h4><button class="close" type="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
 					<img class="w-100" id="viewImage" />
