@@ -42,5 +42,6 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 	table td:nth-child(2), table th:nth-child(1){display: none;}
 	#imgCfmCovid{display: none;}
 	.btnAboutTheData{font-size: 10px;}
+	table{margin-top: 20px;}
 }
 
