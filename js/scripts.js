@@ -1,6 +1,6 @@
 // -----------------------------------------------
 // COVID19 TRACKER
-// Demo Load data by Fetch & AJAX Update realtime
+// Demo Load data by Fetch & AJAX
 // Author: ToVinhKhang
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
@@ -95,7 +95,7 @@ function Countries_Ajax(){
 	xmlHttpRequest.send();
 }
 
-// Realtime
+// DateTime
 function Zero(num) {return (num >= 0 && num < 10) ? "0" + num : num + "";}
 setInterval(()=>{
     var now = new Date();
@@ -104,8 +104,10 @@ setInterval(()=>{
         [Zero(now.getHours()),Zero(now.getMinutes())].join(":"), 
         now.getHours() >= 12 ? "PM" : "AM"].join(" ");
     document.getElementById("time").innerHTML = strDateTime;
-	Countries_Ajax();
 },1000);
+
+// Update data every 15 mins
+setInterval(()=>{Countries_Ajax();},(1000*60*15));
 
 //------
 // END

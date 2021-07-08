@@ -17,21 +17,22 @@
 
 <body>
 	<!-- Covid19 Info -->
+	<button class="btn btn-info" onclick=AboutTheData();>About The Data?</button>
+	
 	<div class="container">
 		<div class="text-center">
 			<img class="logo" src="https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=720">
 			<p class="title text-center">Covid-19 Tracker</p>
 		</div>
 		
-		<p class="text-center description">The situation of the Coronavirus epidemic data around the World (Update Real-time)</p>
+		<p class="text-center description">The situation of the Coronavirus epidemic data around the World</p>
 		<div class="text-center time">
-			<div class="text-bold" id="time"></div>(Time in Vietnam UTC +7)
+			<div class="text-bold" id="time"></div>(UTC +7)
 		</div>
 		<div class="container loader" id="loader"></div>
 		
 		<!-- Global -->
 		<div id="global"></div>
-		
 		
 		<!-- Countries -->
 		<div id="countries">
@@ -51,23 +52,43 @@
 		</div>
 	</div>
 	
-	<!-- Popup Flag -->
+	<!-- Popup Event -->
 	<script>
+		<!-- Flag -->
 		$("body").on("click", ".flagCountry", (e) => {
 			let Img = e.target.getAttribute("src"); e.preventDefault();
 			let nameCountry = e.target.parentNode.parentNode.cells[1].innerHTML;
 			document.getElementById("nameCountry").textContent = nameCountry;
+			document.getElementById("aboutTheData").textContent = "";
 			$("#viewImage").attr("src", Img);
 			$("#viewModal").modal("toggle");
 		});
+		<!-- AboutTheData -->
+		function AboutTheData(){
+			document.getElementById("nameCountry").textContent = "About The Data";
+			document.getElementById("aboutTheData").innerHTML = 
+				`It changes rapidly`+
+				`<h6>This data updates every 15 minutes and might not reflect some cases still being reported.</h6>`+
+				`It only includes people tested`+
+				`<h6>Numbers are based on official estimates, which may not account for unverified cases in countries lacking the proper infrastructure to diagnose patients.</h6>`+
+				`It may be discrepancies from other sources`+
+				`<h6>A change in a source may result in inaccurate/no data being reported for the associated region.</h6>`;
+			$("#viewImage").attr("src", "");
+			$("#viewModal").modal("toggle");
+		}
 	</script>
+	<!-- Modal-->
 	<div class="modal fade" id="viewModal" role="dialog">
 		<div class="modal-dialog modal-xl" role="content">
 			<div class="modal-content">
+				<!-- Header Modal-->
 				<div class="modal-header">
 					<h4 class="modal-title" id="nameCountry"></h4><button class="close" type="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
+					<!-- AboutTheData -->
+					<h5 id="aboutTheData"></h5>
+					<!-- Flag -->
 					<img class="w-100" id="viewImage" />
 				</div>
 			</div>
