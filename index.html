@@ -61,10 +61,12 @@
 			document.getElementById("nameCountry").textContent = nameCountry;
 			document.getElementById("aboutTheData").textContent = "";
 			$("#viewImage").attr("src", Img);
+			$("#imgCfmCovid").attr("src", "");
 			$("#viewModal").modal("toggle");
 		});
 		<!-- AboutTheData -->
 		function AboutTheData(){
+			$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
 			document.getElementById("nameCountry").textContent = "About The Data";
 			document.getElementById("aboutTheData").innerHTML = 
 				`It changes rapidly`+
@@ -85,9 +87,15 @@
 				<div class="modal-header">
 					<h4 class="modal-title" id="nameCountry"></h4><button class="close" type="close" data-dismiss="modal">&times;</button>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body row">
 					<!-- AboutTheData -->
-					<h5 id="aboutTheData"></h5>
+					<div class="col-md-9 col-12">
+						<h5 id="aboutTheData"></h5>
+					</div>
+					<div class="col-md-3 col-12">
+						<img id="imgCfmCovid" style="">
+					</div>
+
 					<!-- Flag -->
 					<img class="w-100" id="viewImage" />
 				</div>
