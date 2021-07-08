@@ -21,6 +21,8 @@ span{font-size: 12px;}
 h5{font-weight:bold;margin: 15px 0px;}
 h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;line-height: 200%;}
 #imgCfmCovid{width: 100%; bottom: 0; position: absolute;}
+.btnAboutTheData{border-radius: 0px 0px 22px 0px;}
+.btnAboutTheData:hover{font-weight: bold;}
 
 /* Loader */
 .loader {margin-top: 15%;border: 10px solid #f3f3f3;border-top: 10px solid #65506D;border-radius: 50%;width: 120px; height: 120px;-webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
@@ -39,5 +41,6 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 	.loader {margin-top: 25%;}
 	table td:nth-child(2), table th:nth-child(1){display: none;}
 	#imgCfmCovid{display: none;}
+	.btnAboutTheData{font-size: 10px;}
 }
 
