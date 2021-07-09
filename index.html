@@ -5,6 +5,7 @@
 	<title>Covid-19 Tracker</title>
 	<link rel="icon" href="https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=720" type="image" sizes="16x16">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -41,6 +42,11 @@
 		
 		<!-- Countries -->
 		<div id="countries">
+			<div class="search">
+				<input type="text" id="searchInput" onkeyup="SearchCountries()" class="search-input" placeholder="Searching names of countries . . .">
+				<i class="search-icon fa fa-search"></i>
+			</div>
+			
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -54,6 +60,24 @@
 				</thead>
 				<tbody id="table"></tbody>
 			</table>
+			
+			<!-- Search Countries -->
+			<script>
+				function SearchCountries(){
+				  var input = document.getElementById("searchInput");
+				  var filter = input.value.toUpperCase();
+				  var table = document.getElementById("table");
+				  var tr = table.getElementsByTagName("tr");
+				  
+				  for (var i=0; i<tr.length; i++){
+					td = tr[i].getElementsByTagName("td")[1];
+					if(td){var txtValue = td.textContent || td.innerText;
+					  if(txtValue.toUpperCase().indexOf(filter) > -1){tr[i].style.display = "";}
+					  else{tr[i].style.display = "none";}
+					}
+				  }
+				}
+			</script>
 		</div>
 	</div>
 	
