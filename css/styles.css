@@ -51,7 +51,6 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 	.search{width: 100%;max-width: 100%;margin: 20px 0px; height: 18px;}
 	.search-input{letter-spacing: 1px;text-align: center;border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
 	#minutes{font-size: 10px; max-width: 70px;}
-	#viewModal{padding-left: 16px;}
 	h5{font-size:110%;}h6{font-size:90%;}
 }
 
