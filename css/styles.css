@@ -19,12 +19,13 @@ table td:nth-child(6){font-weight: bold; color: grey;}
 span{font-size: 12px;}
 .flagCountry{width: 70px; height: 50px;}
 #nameCountry{font-weight: bold;}
-h5{font-weight:bold;margin: 15px 0px;}
-h6{font-style:italic;margin: 20px 20px 20px 29px;text-align: justify;letter-spacing: 1px;line-height: 200%; }
+h5{font-weight:bold;margin: 15px 0px;letter-spacing: 1px;line-height: 200%; }
+h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;line-height: 200%; }
 .plusSign{margin-top: 0px;}
 #imgCfmCovid{width: 100%; bottom: 0; position: absolute;}
 .btnAboutTheData{border-radius: 0px 0px 22px 0px;}
 .btnAboutTheData:hover{font-weight: bold;}
+.modal-content{padding: 10px;}
 
 /* Loader */
 .loader {margin-top: 15%;border: 10px solid #f3f3f3;border-top: 10px solid #65506D;border-radius: 50%;width: 120px; height: 120px;-webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
@@ -46,5 +47,7 @@ h6{font-style:italic;margin: 20px 20px 20px 29px;text-align: justify;letter-spac
 	.btnAboutTheData{font-size: 10px;}
 	table{margin-top: 20px;}
 	#minutes{font-size: 10px; max-width: 70px;}
+	#viewModal{padding-left: 16px;}
+	h5{font-size:110%;}h6{font-size:90%;}
 }
 
