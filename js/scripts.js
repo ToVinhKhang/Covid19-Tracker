@@ -14,7 +14,6 @@ window.addEventListener('load',() => {
 	table = document.getElementById("table");
 	Global_FetchAndDrawChart();
 	Countries_Fetch();
-	timeDataUpdated();
 });
 
 // Display
