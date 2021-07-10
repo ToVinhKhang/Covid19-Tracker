@@ -108,14 +108,7 @@ setInterval(()=>{
 },1000);
 
 // Update data every 15 mins
-function timeDataUpdated(){var secs = 0;
-    setInterval(()=>{secs++; mins = parseInt(secs/60,10);
-		if(secs <= 60){document.getElementById("minutes").innerHTML = "Data Updated: 1 minute ago";}
-		if(secs > 60){document.getElementById("minutes").innerHTML = "Data Updated: " + mins + " minutes ago";}
-		if(mins == 15){secs = 0;}
-    },1000);
-}
-setInterval(()=>{Countries_Ajax();timeDataUpdated();},(1000*60*15));
+setInterval(()=>{Countries_Ajax();},(1000*60*15));
 
 //------
 // END

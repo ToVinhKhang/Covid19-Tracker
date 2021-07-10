@@ -21,8 +21,7 @@
 	<!-- About The Data -->
 	<button class="btn btn-info btnAboutTheData" onclick=AboutTheData();>About The Data?</button>
 	
-	<!-- Time Data Updated -->
-	<p id="minutes"></p>
+	<i class="fa tool-icon fa-moon-o" onclick="darkMode()" id="darkMode"></i>
 	
 	<!-- Data -->
 	<div class="container">
@@ -76,6 +75,15 @@
 					  else{tr[i].style.display = "none";}
 					}
 				  }
+				}
+				
+				<!-- Dark Mode -->
+				function darkMode(){ document.body.classList.toggle("dark-mode");
+					var darkMode = document.getElementById("darkMode").classList;
+					if(darkMode.contains("fa-moon-o") == true){
+						darkMode.toggle("fa-sun-o");darkMode.remove("fa-moon-o");}
+					else if(darkMode.contains("fa-moon-o") == false){
+						darkMode.toggle("fa-moon-o");darkMode.remove("fa-sun-o");}
 				}
 			</script>
 		</div>
