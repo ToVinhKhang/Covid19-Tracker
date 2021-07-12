@@ -25,15 +25,13 @@
 	<div class="btn btn-info btnVNFlag">
 		<i class="fa tool-icon fa-moon-o" onclick="darkMode()" id="darkMode"></i>
 		<div class="btnVNTracker">
-			<a href="https://covid19-kent-vn.netlify.app/">
-				<img class="vnLogo" src="https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png">
-			</a>
+			<img id="switchTracker" onclick="SwitchTracker()"; class="vnLogo" src="https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png">
 		</div>
-		<span class="txtVNTracker">Covid-19 Vietnam Tracker</span>
+		<span class="txtVNTracker" id="txtVNTracker">Covid-19 Vietnam Tracker</span>
 	</div>
 	
 	<!-- Data -->
-	<div class="container">
+	<div class="container" id="contentWorld">
 		<div class="text-center">
 			<img class="logo" src="https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=720">
 			<p class="title text-center">Covid-19 Tracker</p>
@@ -94,6 +92,28 @@
 					else if(darkMode.contains("fa-moon-o") == false){
 						darkMode.toggle("fa-moon-o");darkMode.remove("fa-sun-o");}
 				}
+				<!-- SwitchTracker -->
+				function SwitchTracker(){ 
+					var checkClass = document.getElementById("switchTracker").classList;
+					<!-- Display Vietnam Tracker -->
+					if(checkClass.contains("WorldLogo") == true){
+						checkClass.toggle("vnLogo");
+						document.getElementById("content").style.display = "none";
+						document.getElementById("contentWorld").style.display = "block";
+						document.getElementById("txtVNTracker").innerHTML = "Covid-19 Vietnam Tracker";
+						$(".WorldLogo").attr("src", "https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png");
+						checkClass.remove("WorldLogo");
+					}
+					<!-- Display World Tracker -->
+					else if(checkClass.contains("WorldLogo") == false){
+						checkClass.toggle("WorldLogo");
+						document.getElementById("contentWorld").style.display = "none";
+						document.getElementById("content").style.display = "block";
+						document.getElementById("txtVNTracker").innerHTML = "Covid-19 World Tracker";
+						$(".vnLogo").attr("src", "https://image.flaticon.com/icons/png/512/1652/1652844.png");
+						checkClass.remove("vnLogo");
+					}
+				}
 			</script>
 		</div>
 	</div>
@@ -149,6 +169,40 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- VIETNAM -->
+	<div class="container" id="content">
+	  <div class="row">
+		<!-- Table -->
+		<div class="col-lg-5 col-md-4 col-12">
+			<img class="vnDetailsFlag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/640px-Flag_of_Vietnam.svg.png">
+			<span><h2>VIETNAM</h2></span>
+		</div>
+		<div class="col-lg-7 col-md-8  col-12">
+			<table id="tableVN">
+				<thead>
+					<tr>
+					  <th>Names of Cities</th>
+					  <th>Cases</th>
+					  <th>Recovered</th>
+					  <th>Deaths</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		
+		<!-- Chart -->
+		<div class="col-md-12 col-12">
+			<div class="row">
+			  <div class="col-md-4"><canvas id="casesChart" class="chart"></canvas></div>
+			  <div class="col-md-4"><canvas id="recoveredChart" class="chart"></canvas></div>
+			  <div class="col-md-4"><canvas id="deathsChart" class="chart"></canvas></div>
+			</div>
+		</div>
+	  </div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./js/scripts_vn.js"></script>
 	
 	<!-- Footer -->
 	<div class="footer">Producted by <a href="https://tovinhkhang.netlify.app/" target="_blank">ToVinhKhang</a></div>
