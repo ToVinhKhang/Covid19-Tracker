@@ -20,14 +20,14 @@
 <body>
 	<!-- Features(1,2) -->
 	<!-- 1.About The Data -->
-	<button class="btn btn-info btnAboutTheData" onclick=AboutTheData();>About The Data?</button>
+	<button class="btn btn-info btnAboutTheData" onclick=AboutTheData();>About Data?</button>
 	<!-- 2.DarkLight Mode & VN Tracker -->
 	<div class="btn btn-info btnVNFlag">
 		<i class="fa tool-icon fa-moon-o" onclick="darkMode()" id="darkMode"></i>
 		<div class="btnVNTracker">
 			<img id="switchTracker" onclick="SwitchTracker()"; class="vnLogo" src="https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png">
 		</div>
-		<span class="txtVNTracker" id="txtVNTracker">Covid-19 Vietnam Tracker</span>
+		<span class="txtVNTracker" id="txtVNTracker">Vietnam</span>
 	</div>
 	
 	<!-- Data -->
@@ -100,7 +100,7 @@
 						checkClass.toggle("vnLogo");
 						document.getElementById("content").style.display = "none";
 						document.getElementById("contentWorld").style.display = "block";
-						document.getElementById("txtVNTracker").innerHTML = "Covid-19 Vietnam Tracker";
+						document.getElementById("txtVNTracker").innerHTML = "Vietnam";
 						$(".WorldLogo").attr("src", "https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png");
 						checkClass.remove("WorldLogo");
 					}
@@ -109,7 +109,7 @@
 						checkClass.toggle("WorldLogo");
 						document.getElementById("contentWorld").style.display = "none";
 						document.getElementById("content").style.display = "block";
-						document.getElementById("txtVNTracker").innerHTML = "Covid-19 World Tracker";
+						document.getElementById("txtVNTracker").innerHTML = "World";
 						$(".vnLogo").attr("src", "https://image.flaticon.com/icons/png/512/1652/1652844.png");
 						checkClass.remove("vnLogo");
 					}
@@ -140,7 +140,9 @@
 				`Only includes people tested`+
 					`<h6>Numbers are based on official estimates, which may not account for unverified cases in countries lacking the proper infrastructure to diagnose patients.</h6><h6 class="plusSign">The "+" sign means that the newly collected data is recorded during the day.</h6>`+
 				`May discrepancies from other sources`+
-					`<h6>A change may result in inaccurate/no data being reported for the associated region.</h6>`;
+					`<h6>A change may result in inaccurate/no data being reported for the associated region.</h6>`+
+				`New updates`+
+					`<h6>Detailed information on the Covid-19 epidemic situation by city and weekly chart statistics in Vietnam has been supported at the button on the top-right screen.</h6>`;
 				
 			$("#viewImage").attr("src", "");
 			$("#viewModal").modal("toggle");

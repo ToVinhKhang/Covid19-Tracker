@@ -19,9 +19,10 @@ body{background-color: #f1f2f5}
   background-color: #309FB5;color: white;
   border-radius: 6px;
   font-size: 12px;
-  padding: 8px;
+  padding: 5px;
   right: 10px;
   top: 50px;
+  width: 100%;
 }
 #content{display: none; margin-top: 20px;}
 #content > .row > div{margin-bottom: 50px;}
@@ -35,7 +36,7 @@ h2{text-align: center;margin: 20px; font-weight: bold;}
 #tableVN td:nth-child(4){font-weight: bold; color: #E41E20;}
 #tableVN tr:nth-child(even){background-color: #f2f2f2;}
 #tableVN tr:hover {background-color: #ddd;}
-#tableVN{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;border-radius: 10px;}
+#tableVN{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
 #tableVN::-webkit-scrollbar {display: none;}
 
 /* Dark Mode */
@@ -99,9 +100,8 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 /* Responsive */
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{padding: 50px 10px 10px 10px;}
-	.btnCovid19WorldTracker:hover + .txtCovid19WorldTracker {
-	  left: 80px;
-	  top: 60px;
+	.btnVNTracker:hover + .txtVNTracker {
+	  display: none;
 	}
 }
 
