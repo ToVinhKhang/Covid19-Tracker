@@ -87,7 +87,7 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 	.logo{margin-right: 0px;}
 	.title{display: block;}
 	.loader {margin-top: 25%;}
-	table td:nth-child(2), table th:nth-child(1){display: none;}
+	.table td:nth-child(2), .table th:nth-child(1){display: none;}
 	#imgCfmCovid{display: none;}
 	.btnAboutTheData{font-size: 14px;}
 	.search{width: 100%;max-width: 100%;margin: 20px 0px; height: 18px;}
@@ -96,6 +96,7 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 	#darkMode{position: absolute; right: 47px; top: 6px;font-size:1.3em;}
 	.btnVNFlag{height:37px;}
 	.vnLogo{height: 33px;}
+	#tableVN{font-size: 12px;}
 }
 /* Responsive */
 @media screen and (max-width: 720px) {
