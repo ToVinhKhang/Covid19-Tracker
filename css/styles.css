@@ -10,17 +10,31 @@ body{background-color: #f1f2f5}
 .search{padding: 15px 30px;border: 1.5px solid #309FB5;background-color: #E8E8E8;border-radius: 100px;display: flex;align-items: center;width: 100%;max-width: 350px;margin-bottom: 20px; text-align: center; height: 40px; float: right;}
 .search-icon{flex: 1;font-size: 16px;}
 .search-input{border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
+.btnVNFlag{position:absolute; right: 0px; padding: 0px; margin: 0px; width: 85px; border-radius: 0px 0px 0px 20px; height: 38px;}
+.vnLogo{position:absolute; right: 2px; top: 0px; height: 36px; border-radius: 10px;}
+.txtVNTracker {display: none;}
+.btnVNTracker:hover + .txtVNTracker {
+  display: block;
+  position: absolute;
+  background-color: #309FB5;color: white;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 8px;
+  right: 10px;
+  top: 50px;
+}
 
 /* Dark Mode */
-#darkMode{position: absolute; right: 7px; top: 6px;font-size:1.8em;}
-#darkMode:hover{color:#6AA8B5;}
-.fa-sun-o{color: #a4adc8;}
+#darkMode{position: absolute; right: 50px; top: 6px;font-size:1.5em;}
+#darkMode:hover{color: black;}
+.fa-sun-o{color: white;}
 .dark-mode {background-color: black!important;}
 .dark-mode > div > #countries > table{background-color: #1c1e21!important;color: white;}
 .dark-mode > #viewModal > div > div{background-color: #1c1e21!important;color: white;}
 .dark-mode > #viewModal > div > div {color: #6AA8B5!important;}
 .dark-mode > #viewModal > div > div > .modal-header > .close{color: white;}
 .dark-mode > .footer{color: #a4adc8!important;}
+
 
 /* Data */
 #global{width: 100%; height: 400px;margin-bottom:50px;}
@@ -57,10 +71,12 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 	.loader {margin-top: 25%;}
 	table td:nth-child(2), table th:nth-child(1){display: none;}
 	#imgCfmCovid{display: none;}
-	.btnAboutTheData{font-size: 10px;}
+	.btnAboutTheData{font-size: 14px;}
 	.search{width: 100%;max-width: 100%;margin: 20px 0px; height: 18px;}
 	.search-input{letter-spacing: 1px;text-align: center;border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
 	h5{font-size:110%;}h6{font-size:90%;}
-	#darkMode{position: absolute; right: 7px; top: 6px;font-size:1.4em;}
+	#darkMode{position: absolute; right: 47px; top: 6px;font-size:1.3em;}
+	.btnVNFlag{height:37px;}
+	.vnLogo{height: 33px;}
 }
 

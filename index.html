@@ -18,10 +18,19 @@
 
 <!-- Covid19 Tracker -->
 <body>
-	<!-- About The Data -->
+	<!-- Features(1,2) -->
+	<!-- 1.About The Data -->
 	<button class="btn btn-info btnAboutTheData" onclick=AboutTheData();>About The Data?</button>
-	
-	<i class="fa tool-icon fa-moon-o" onclick="darkMode()" id="darkMode"></i>
+	<!-- 2.DarkLight Mode & VN Tracker -->
+	<div class="btn btn-info btnVNFlag">
+		<i class="fa tool-icon fa-moon-o" onclick="darkMode()" id="darkMode"></i>
+		<div class="btnVNTracker">
+			<a href="https://covid19vn.netlify.app/">
+				<img class="vnLogo" src="https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png">
+			</a>
+		</div>
+		<span class="txtVNTracker">Covid-19 Vietnam Tracker</span>
+	</div>
 	
 	<!-- Data -->
 	<div class="container">
