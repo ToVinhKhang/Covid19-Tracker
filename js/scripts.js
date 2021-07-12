@@ -1,6 +1,5 @@
 // -----------------------------------------------
 // COVID19 TRACKER
-// Demo Load data by Fetch & AJAX
 // Author: ToVinhKhang
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------

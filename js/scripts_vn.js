@@ -23,7 +23,7 @@ async function getDataCity(){
 		var name = key.find(k => k["hec-key"] == detail[i]["hc-key"]);
 		
         if(name){
-			var City = document.createElement("td");City.textContent = ConvertString(name.name);
+			var City = document.createElement("td");City.textContent = ConvertVnCityString(name.name);
             var Cases = document.createElement("td");Cases.textContent = detail[i].value;
             var Recovered = document.createElement("td");Recovered.textContent = detail[i].socakhoi;
             var Deaths = document.createElement("td");Deaths.textContent = detail[i].socatuvong;
@@ -40,8 +40,7 @@ async function getDataCity(){
 function getDataChart(){
 	fetch(API_Chart, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
 	.then(data => data.json())
-	.then(jsonData => {
-		var dataChart = jsonData.data;
+	.then(jsonData => {var dataChart = jsonData.data;
 		var dateArray = [];
 		var casesArray = [];
 		var deathsArray = [];
@@ -69,8 +68,7 @@ function getDataChart(){
 
 // Some Support Functions
 function createChart(dateArray, dataArray, name, color, idChart){
-    var data = {labels: dateArray, 
-		datasets:[{
+    var data = {labels: dateArray,datasets:[{
 			label: name,
 			backgroundColor: color,
 			borderColor: color,
@@ -80,11 +78,8 @@ function createChart(dateArray, dataArray, name, color, idChart){
     var config = {type:'line',data,options:{tension: 0.3}};
     var myChart = new Chart(document.getElementById(idChart),config);
 }
-function ConvertString(s){var string = "";
-	s.split("-").forEach(t => {
-		string += CapitalizeString(t);
-		string += " ";
-	});
+function ConvertVnCityString(s){var string = "";
+	s.split("-").forEach(t => {string += CapitalizeString(t);string += " ";});
 	return string.trim();
 }
 function CapitalizeString(s){return s.charAt(0).toUpperCase()+s.slice(1);}
@@ -92,9 +87,6 @@ function CapitalizeString(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 // Display
 getDataCity();
 getDataChart();
-	
-
-
 
 // -----
 // END

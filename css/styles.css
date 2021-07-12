@@ -1,3 +1,9 @@
+/* -----------------------------------------------
+	COVID19 TRACKER
+	Author: ToVinhKhang
+	Portfolio: https://tovinhkhang.netlify.app/
+------------------------------------------------*/
+
 /* Init */
 body{background-color: #f1f2f5}
 .logo{width: 80px; height: 80px; margin-right: 20px;margin-bottom: 20px;}
@@ -12,49 +18,13 @@ body{background-color: #f1f2f5}
 .search-input{border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
 .btnVNFlag{position:absolute; right: 0px; padding: 0px; margin: 0px; width: 85px; border-radius: 0px 0px 0px 20px; height: 38px;}
 .vnLogo,.WorldLogo{position:absolute; right: 2px; top: 0px; height: 36px; border-radius: 10px;}
-.txtVNTracker {display: none;}
-.btnVNTracker:hover + .txtVNTracker {
-  display: block;
-  position: absolute;
-  background-color: #309FB5;color: white;
-  border-radius: 6px;
-  font-size: 12px;
-  padding: 5px;
-  right: 10px;
-  top: 50px;
-  width: 100%;
-}
-#content{display: none; margin-top: 20px;}
-#content > .row > div{margin-bottom: 50px;}
 .vnDetailsFlag{width: 100%;border-radius: 10px;height: 300px;}
 h2{text-align: center;margin: 20px; font-weight: bold;}
-#tableVN td, #tableVN th{border: 2.5px solid #ddd;padding: 8px;width: 100%;}
-#tableVN th{position: sticky;top:0;}
-#tableVN th{padding-top: 12px;padding-bottom: 12px;background-color: #309FB5;color: white;}
-#tableVN td:nth-child(2){font-weight: bold; color: #186FB5;}
-#tableVN td:nth-child(3){font-weight: bold; color: #006233;}
-#tableVN td:nth-child(4){font-weight: bold; color: #E41E20;}
-#tableVN tr:nth-child(even){background-color: #f2f2f2;}
-#tableVN tr:hover {background-color: #ddd;}
-#tableVN{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
-#tableVN::-webkit-scrollbar {display: none;}
+.txtVNTracker {display: none;}
+.btnVNTracker:hover + .txtVNTracker {display: block;position: absolute;background-color: #309FB5;color: white;border-radius: 6px;font-size: 12px;padding: 5px;right: 10px;top: 50px;width: 100%;}
 
-/* Dark Mode */
-#darkMode{position: absolute; right: 50px; top: 6px;font-size:1.5em;}
-#darkMode:hover{color: black;}
-.fa-sun-o{color: white;}
-.dark-mode {background-color: black!important;}
-.dark-mode > div > #countries > table{background-color: #1c1e21!important;color: white;}
-.dark-mode > #viewModal > div > div{background-color: #1c1e21!important;color: white;}
-.dark-mode > #viewModal > div > div {color: #6AA8B5!important;}
-.dark-mode > #viewModal > div > div > .modal-header > .close{color: white;}
-.dark-mode > .footer{color: #a4adc8!important;}
-.dark-mode h2{color: white!important;}
-.dark-mode #tableVN > tr{background-color: #1c1e21!important;color: white;}
-.dark-mode #tableVN td{border: 2px solid #309FB5!important;}
-.dark-mode #tableVN th{border: 2px solid #309FB5!important;}
 
-/* Data */
+/* Data World */
 #global{width: 100%; height: 400px;margin-bottom:50px;}
 table td:nth-child(2){font-weight: bold;}
 table td:nth-child(3){font-weight: bold; color: #186FB5;}
@@ -72,10 +42,43 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 .btnAboutTheData:hover{font-weight: bold;}
 .modal-content{padding: 10px;}
 
+
+/* Data Vietnam */
+#content{display: none; margin-top: 20px;}
+#content > .row > div{margin-bottom: 50px;}
+#tableVN td, #tableVN th{border: 2.5px solid #ddd;padding: 8px;width: 100%;}
+#tableVN th{position: sticky;top:0;}
+#tableVN th{padding-top: 12px;padding-bottom: 12px;background-color: #309FB5;color: white;}
+#tableVN td:nth-child(2){font-weight: bold; color: #186FB5;}
+#tableVN td:nth-child(3){font-weight: bold; color: #006233;}
+#tableVN td:nth-child(4){font-weight: bold; color: #E41E20;}
+#tableVN tr:nth-child(even){background-color: #f2f2f2;}
+#tableVN tr:hover {background-color: #ddd;}
+#tableVN{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
+#tableVN::-webkit-scrollbar {display: none;}
+
+
+/* Dark Mode */
+#darkMode{position: absolute; right: 50px; top: 6px;font-size:1.5em;}
+#darkMode:hover{color: black;}
+.fa-sun-o{color: white;}
+.dark-mode {background-color: black!important;}
+.dark-mode > div > #countries > table{background-color: #1c1e21!important;color: white;}
+.dark-mode > #viewModal > div > div{background-color: #1c1e21!important;color: white;}
+.dark-mode > #viewModal > div > div {color: #6AA8B5!important;}
+.dark-mode > #viewModal > div > div > .modal-header > .close{color: white;}
+.dark-mode > .footer{color: #a4adc8!important;}
+.dark-mode h2{color: white!important;}
+.dark-mode #tableVN > tr{background-color: #1c1e21!important;color: white;}
+.dark-mode #tableVN td{border: 2px solid #309FB5!important;}
+.dark-mode #tableVN th{border: 2px solid #309FB5!important;}
+
+
 /* Loader */
-.loader {margin-top: 15%;border: 10px solid #f3f3f3;border-top: 10px solid #65506D;border-radius: 50%;width: 120px; height: 120px;-webkit-animation: spin 2s linear infinite;animation: spin 2s linear infinite;}
+.loader {margin-top: 15%;border: 10px solid #f3f3f3;border-top: 10px solid #65506D;border-radius: 50%;width: 120px; height: 120px;-webkit-animation: spin 1.75s linear infinite;animation: spin 1.75s linear infinite;}
 @-webkit-keyframes spin{0%{-webkit-transform: rotate(0deg);}100% {-webkit-transform: rotate(360deg);}}
 @keyframes spin{0%{transform: rotate(0deg);}100%{transform:rotate(360deg);}}
+
 
 /* Responsive */
 @media screen and (max-width: 1024px) {
@@ -98,11 +101,8 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 	.vnLogo{height: 33px;}
 	#tableVN{font-size: 12px;}
 }
-/* Responsive */
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{padding: 50px 10px 10px 10px;}
-	.btnVNTracker:hover + .txtVNTracker {
-	  display: none;
-	}
+	.btnVNTracker:hover + .txtVNTracker {display: none;}
 }
 
