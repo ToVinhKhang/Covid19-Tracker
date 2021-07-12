@@ -11,17 +11,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/8.7.1/themes/dark_turquoise.min.js"></script>
+	<script src="https://cdn.anychart.com/releases/8.7.1/themes/dark_turquoise.min.js"></script>
 	<link rel="stylesheet" href="css/styles.css">
 	<script src="js/scripts.js"></script>
 </head>
 
 <!-- Covid19 Tracker -->
 <body>
-	<!-- Features(1,2) -->
-	<!-- 1.About The Data -->
+	<!-- About The Data -->
 	<button class="btn btn-info btnAboutTheData" onclick=AboutTheData();>About Data?</button>
-	<!-- 2.DarkLight Mode & VN Tracker -->
+	<!-- DarkLight Mode & Switch Tracker -->
 	<div class="btn btn-info btnVNFlag">
 		<i class="fa tool-icon fa-moon-o" onclick="darkMode()" id="darkMode"></i>
 		<div class="btnVNTracker">
@@ -30,17 +29,18 @@
 		<span class="txtVNTracker" id="txtVNTracker">Vietnam</span>
 	</div>
 	
-	<!-- Data -->
+	<!-- DATA WORLD -->
 	<div class="container" id="contentWorld">
 		<div class="text-center">
 			<img class="logo" src="https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=720">
 			<p class="title text-center">Covid-19 Tracker</p>
 		</div>
-		
 		<p class="text-center description">The situation of the Coronavirus epidemic data around the World</p>
 		<div class="text-center time">
 			<div class="text-bold" id="time"></div>(UTC +7)
 		</div>
+		
+		<!-- Loader -->
 		<div class="container loader" id="loader"></div>
 		
 		<!-- Global -->
@@ -67,8 +67,9 @@
 				<tbody id="table"></tbody>
 			</table>
 			
-			<!-- Search Countries -->
+			<!-- Functions -->
 			<script>
+				<!-- Search Countries -->
 				function SearchCountries(){
 				  var input = document.getElementById("searchInput");
 				  var filter = input.value.toUpperCase();
@@ -92,7 +93,8 @@
 					else if(darkMode.contains("fa-moon-o") == false){
 						darkMode.toggle("fa-moon-o");darkMode.remove("fa-sun-o");}
 				}
-				<!-- SwitchTracker -->
+				
+				<!-- Switch Tracker -->
 				function SwitchTracker(){ 
 					var checkClass = document.getElementById("switchTracker").classList;
 					<!-- Display Vietnam Tracker -->
@@ -130,6 +132,7 @@
 			$("#imgCfmCovid").attr("src", "");
 			$("#viewModal").modal("toggle");
 		});
+		
 		<!-- AboutTheData -->
 		function AboutTheData(){
 			$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
@@ -172,7 +175,7 @@
 		</div>
 	</div>
 	
-	<!-- VIETNAM -->
+	<!-- DATA VIETNAM -->
 	<div class="container" id="content">
 	  <div class="row">
 		<!-- Table -->
@@ -193,7 +196,7 @@
 			</table>
 		</div>
 		
-		<!-- Chart -->
+		<!-- Chart JS -->
 		<div class="col-md-12 col-12">
 			<div class="row">
 			  <div class="col-md-4"><canvas id="casesChart" class="chart"></canvas></div>
