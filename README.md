@@ -1,11 +1,15 @@
 # Covid-19 Tracker
-Demo about using 3 methods (Fetch/AJAX/Axios) to get data from API.
+#### Demo about using 2 methods (Fetch & AJAX) to get data from API.
+#### Total and today data about the situation of the Coronavirus epidemic data around the World. 
 <br>
-Total and today data about the situation of the Coronavirus epidemic data around the World. 
+
++ Detail info from each city and weekly chart statistics in Vietnam.
 <br>
-Detail from each city and weekly chart statistics in Vietnam.
+
++ Dark-Light mode and Responsive.
 <br>
-Dark-Light mode and Responsive
+
++ Searching name of Countries.
 <br>
 
 Link API_Global:

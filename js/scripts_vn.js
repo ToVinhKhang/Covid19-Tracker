@@ -39,31 +39,31 @@ async function getDataCity(){
 // Get Data Chart
 function getDataChart(){
 	fetch(API_Chart, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
-	.then(data => data.json())
-	.then(jsonData => {var dataChart = jsonData.data;
-		var dateArray = [];
-		var casesArray = [];
-		var deathsArray = [];
-		var recoveredArray = [];
-		
-		const MapJsonData = Object.entries(dataChart).map(([date, detail]) => ({date,detail,}));
-        const {date,detail: {total_cases,recovered,deaths},} = MapJsonData[0];
-        const MapJsonData_Week = Object.entries(dataChart).map(([date, detail]) => ({date,detail,}));
-		
-		for(i=7; i>=0; i--){
-			var dataChart_Date = MapJsonData_Week[i].date;
-			var dataChart_Detail = MapJsonData_Week[i].detail;
+		.then(data => data.json())
+		.then(jsonData => {var dataChart = jsonData.data;
+			var dateArray = [];
+			var casesArray = [];
+			var deathsArray = [];
+			var recoveredArray = [];
 			
-			dateArray.push(dataChart_Date);
-			casesArray.push(dataChart_Detail.total_cases);
-			recoveredArray.push(dataChart_Detail.recovered);
-			deathsArray.push(dataChart_Detail.deaths);
-		}
-		createChart(dateArray,casesArray,"Cases","#186FB5","casesChart");
-		createChart(dateArray,recoveredArray,"Recovered","#006233","recoveredChart");
-		createChart(dateArray,deathsArray,"Deaths","#E41E20","deathsChart");
-	})
-	.catch(err => {console.error(err);});
+			const MapJsonData = Object.entries(dataChart).map(([date, detail]) => ({date,detail,}));
+			const {date,detail: {total_cases,recovered,deaths},} = MapJsonData[0];
+			const MapJsonData_Week = Object.entries(dataChart).map(([date, detail]) => ({date,detail,}));
+			
+			for(i=7; i>=0; i--){
+				var dataChart_Date = MapJsonData_Week[i].date;
+				var dataChart_Detail = MapJsonData_Week[i].detail;
+				
+				dateArray.push(dataChart_Date);
+				casesArray.push(dataChart_Detail.total_cases);
+				recoveredArray.push(dataChart_Detail.recovered);
+				deathsArray.push(dataChart_Detail.deaths);
+			}
+			createChart(dateArray,casesArray,"Cases","#186FB5","casesChart");
+			createChart(dateArray,recoveredArray,"Recovered","#006233","recoveredChart");
+			createChart(dateArray,deathsArray,"Deaths","#E41E20","deathsChart");
+		})
+		.catch(err => {console.error(err);});
 }
 
 // Some Support Functions
