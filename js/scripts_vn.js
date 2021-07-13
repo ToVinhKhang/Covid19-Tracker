@@ -88,6 +88,9 @@ function CapitalizeString(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 getDataCity();
 getDataChart();
 
+// Update data every 15 mins
+setInterval(()=>{getDataCity();getDataChart();},(1000*60*15));
+
 // -----
 // END
 // -----
