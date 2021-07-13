@@ -25,11 +25,6 @@ h2{text-align: center;margin: 20px; font-weight: bold;}
 
 /* Data World */
 #global{width: 100%; height: 400px;margin-bottom:50px;}
-table td:nth-child(2){font-weight: bold;}
-table td:nth-child(3){font-weight: bold; color: #186FB5;}
-table td:nth-child(4){font-weight: bold; color: #006233;}
-table td:nth-child(5){font-weight: bold; color: #E41E20;}
-table td:nth-child(6){font-weight: bold; color: grey;}
 span{font-size: 12px;}
 .flagCountry{width: 70px; height: 50px;}
 #nameCountry{font-weight: bold;}
@@ -40,12 +35,22 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 .btnAboutTheData{border-radius: 0px 0px 22px 0px;}
 .btnAboutTheData:hover{font-weight: bold;}
 .modal-content{padding: 10px;}
+thead{display:table;width:100%;table-layout:fixed;}
+.theadCities th{border: 2.5px solid #ddd;}
+#table td:nth-child(2){font-weight: bold;}
+#table td:nth-child(3){font-weight: bold; color: #186FB5;}
+#table td:nth-child(4){font-weight: bold; color: #006233;}
+#table td:nth-child(5){font-weight: bold; color: #E41E20;}
+#table td:nth-child(6){font-weight: bold; color: grey;}
+#table{display:block;height:500px;overflow:scroll; width: 100%;}
+#table tr {display:table;width:100%;table-layout:fixed;}
+#table::-webkit-scrollbar {display: none;}
+
 
 /* Data Vietnam */
 #content{display: none; margin-top: 20px;}
 #content > .row > div{margin-bottom: 50px;}
 #tableVN td, #tableVN th{border: 2.5px solid #ddd;padding: 8px;width: 100%;}
-#tableVN th{position: sticky;top:0;}
 #tableVN th{padding-top: 12px;padding-bottom: 12px;background-color: #309FB5;color: white;}
 #tableVN td:nth-child(2){font-weight: bold; color: #186FB5;}
 #tableVN td:nth-child(3){font-weight: bold; color: #006233;}
@@ -53,6 +58,7 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 #tableVN tr:nth-child(even){background-color: #f2f2f2;}
 #tableVN tr:hover {background-color: #ddd;}
 #tableVN{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
+#tableVN tr {display:table;width:100%;table-layout:fixed;}
 #tableVN::-webkit-scrollbar {display: none;}
 
 
@@ -70,6 +76,7 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 .dark-mode #tableVN > tr{background-color: #1c1e21!important;color: white;}
 .dark-mode #tableVN td{border: 2px solid #309FB5!important;}
 .dark-mode #tableVN th{border: 2px solid #309FB5!important;}
+.dark-mode .theadCities{color:white!important;border: 2px solid #309FB5!important;background:#309FB5!important; }
 
 
 /* Loader */
@@ -88,7 +95,7 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 	.logo{margin-right: 0px;}
 	.title{display: block;}
 	.loader {margin-top: 25%;}
-	.table td:nth-child(2), .table th:nth-child(1){display: none;}
+	#table td:nth-child(2), .th-contries-flags{display: none;}
 	#imgCfmCovid{display: none;}
 	.btnAboutTheData{font-size: 14px;}
 	.search{width: 100%;max-width: 100%;margin: 20px 0px; height: 18px;}
@@ -97,7 +104,12 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 	#darkMode{position: absolute; right: 47px; top: 6px;font-size:1.3em;}
 	.btnVNFlag{height:37px;}
 	.vnLogo{height: 33px;}
-	#tableVN{font-size: 12px;}
+	.theadCities{font-size: 12px;}
+	#table{height:440px;}
+	#tableVN{font-size: 12px;height:400px;}
+	#countries{margin-bottom: 30px;}
+	.footer{font-size: 10px;}
+	
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{padding: 50px 10px 10px 10px;}
