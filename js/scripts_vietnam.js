@@ -23,10 +23,10 @@ async function getDataCity(){
 		var name = key.find(k => k["hec-key"] == detail[i]["hc-key"]);
 		
         if(name){
-			var City = document.createElement("td");City.textContent = ConvertVnCityString(name.name);
-            var Cases = document.createElement("td");Cases.textContent = detail[i].value;
-            var Recovered = document.createElement("td");Recovered.textContent = detail[i].socakhoi;
-            var Deaths = document.createElement("td");Deaths.textContent = detail[i].socatuvong;
+			var City = document.createElement("td");City.textContent = ConvertVnCityString(name.name).toLocaleString('en-US');
+            var Cases = document.createElement("td");Cases.textContent = detail[i].value.toLocaleString('en-US');
+            var Recovered = document.createElement("td");Recovered.textContent = detail[i].socakhoi.toLocaleString('en-US');
+            var Deaths = document.createElement("td");Deaths.textContent = detail[i].socatuvong.toLocaleString('en-US');
 			
             tr.appendChild(City);
             tr.appendChild(Cases);
