@@ -42,6 +42,14 @@ function displayData(jsonData){
 		tr.appendChild(td4);
 		tr.appendChild(td5);
 		table.appendChild(tr);
+		
+		// Custom Rate in Vietnam
+		if(u.country == "Vietnam"){
+			var incidenceRate = parseFloat((u.cases/u.population)*100).toFixed(3)+`%`;
+			var recoveryRate  = parseFloat((u.recovered/u.cases)*100).toFixed(3)+`%`;
+			var deathRate     = parseFloat((u.deaths/u.cases)*100).toFixed(3)+`%`;
+			displayRate(incidenceRate,recoveryRate,deathRate)
+		}
 	});
 }
 
@@ -55,21 +63,21 @@ function Global_FetchAndDrawChart(){
 		.then(data => data.json())
 		.then(jsonData => {
 			anychart.onDocumentReady(function() {
-			  var data = {header: ["Name", "Number"],
-			  rows:[
-				["Cases", jsonData.Global.TotalConfirmed],
-				["Recovered", jsonData.Global.TotalRecovered],
-				["Deaths", jsonData.Global.TotalDeaths],
-			  ]};
-			  var chart = anychart.bar();
-			  anychart.theme(anychart.themes.darkTurquoise);chart.data(data);
-			  chart.title("THE SITUATION OF COVID-19 IN GLOBAL");
-			  chart.yScale().ticks().interval(50000);chart.yScale().minorTicks().interval(10000);
-			  chart.padding().right("60px");
-			  chart.yAxis().labels().format("{%value}{groupsSeparator:.}");
-			  chart.yGrid().enabled(true);chart.yMinorGrid().enabled(true);
-			  chart.background().cornerType("round");chart.background().corners(10);
-			  chart.animation(true);chart.container("global");chart.draw();
+				var data = {header: ["Name", "Number"],
+				rows:[
+					["Cases", jsonData.Global.TotalConfirmed],
+					["Recovered", jsonData.Global.TotalRecovered],
+					["Deaths", jsonData.Global.TotalDeaths],
+				]};
+				var chart = anychart.bar();
+				anychart.theme(anychart.themes.darkTurquoise);chart.data(data);
+				chart.title("THE SITUATION OF COVID-19 IN GLOBAL");
+				chart.yScale().ticks().interval(50000);chart.yScale().minorTicks().interval(10000);
+				chart.padding().right("60px");
+				chart.yAxis().labels().format("{%value}{groupsSeparator:.}");
+				chart.yGrid().enabled(true);chart.yMinorGrid().enabled(true);
+				chart.background().cornerType("round");chart.background().corners(10);
+				chart.animation(true);chart.container("global");chart.draw();
 			});
 			// Hide Loading after display success
 			document.getElementById("loader").style.display = "none";
@@ -96,7 +104,11 @@ function Countries_Ajax(){
 	xmlHttpRequest.responseType = 'json';
 	xmlHttpRequest.send();
 }
-
+function displayRate(incidenceRate,recoveryRate,deathRate){
+	document.getElementById("IncidenceRate").innerHTML = incidenceRate;
+	document.getElementById("RecoveryRate").innerHTML  = recoveryRate;
+	document.getElementById("DeathRate").innerHTML     = deathRate;
+}
 // DateTime
 function Zero(num) {return (num >= 0 && num < 10) ? "0" + num : num + "";}
 setInterval(()=>{
