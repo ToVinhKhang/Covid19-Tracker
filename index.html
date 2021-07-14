@@ -13,7 +13,8 @@
 	<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js"></script>
 	<script src="https://cdn.anychart.com/releases/8.7.1/themes/dark_turquoise.min.js"></script>
 	<link rel="stylesheet" href="css/styles.css">
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts_main.js"></script>
+	<script src="js/scripts_sortable.js"></script>
 </head>
 
 <!-- Covid19 Tracker -->
@@ -53,15 +54,15 @@
 				<i class="search-icon fa fa-search"></i>
 			</div>
 
-			<table class="table table-striped">
+			<table class="table table-striped sortable-table">
 				<thead>
 					<tr>
 						<th class="th-contries-flags"></th>
 						<th class="th-contries">Countries</th>
-						<th>Cases</th>
-						<th>Recovered</th>
-						<th>Deaths</th>
-						<th>Tests</th>
+						<th class="numeric-sort">Cases</th>
+						<th class="numeric-sort">Recovered</th>
+						<th class="numeric-sort">Deaths</th>
+						<th class="numeric-sort">Tests</th>
 					</tr>
 				</thead>
 				<tbody id="table"></tbody>
@@ -209,7 +210,7 @@
 	  </div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="./js/scripts_vn.js"></script>
+	<script src="./js/scripts_vietnam.js"></script>
 	
 	<!-- Footer -->
 	<div class="footer">Designed by <a href="https://tovinhkhang.netlify.app/" target="_blank">ToVinhKhang</a></div>

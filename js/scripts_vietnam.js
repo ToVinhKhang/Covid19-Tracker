@@ -5,7 +5,7 @@
 // -----------------------------------------------
 
 // API for Chart
-const API_Chart = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
+var API_Chart = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
 const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
 const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 
@@ -37,7 +37,7 @@ async function getDataCity(){
     }
 }
 // Get Data Chart
-function getDataChart(){
+function getDataChart(API_Chart){
 	fetch(API_Chart, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
 		.then(data => data.json())
 		.then(jsonData => {var dataChart = jsonData.data;
@@ -86,10 +86,10 @@ function CapitalizeString(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 
 // Display
 getDataCity();
-getDataChart();
+getDataChart(API_Chart);
 
 // Update data every 15 mins
-setInterval(()=>{getDataCity();getDataChart();},(1000*60*15));
+setInterval(()=>{getDataCity();getDataChart(API_Chart);},(1000*60*15));
 
 // -----
 // END
