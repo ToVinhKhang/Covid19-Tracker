@@ -50,11 +50,15 @@ thead{display:table;width:100%;table-layout:fixed;}
 /* Data Vietnam */
 #content{display: none; margin-top: 20px;}
 #content > .row > div{margin-bottom: 50px;}
+.theadCities th:nth-child(2){text-align:center;}
+.theadCities th:nth-child(3){text-align:center;}
+.theadCities th:nth-child(4){text-align:center;}
 #tableVN td, #tableVN th{border: 2.5px solid #ddd;padding: 8px;width: 100%;}
 #tableVN th{padding-top: 12px;padding-bottom: 12px;background-color: #309FB5;color: white;}
-#tableVN td:nth-child(2){font-weight: bold; color: #186FB5;}
-#tableVN td:nth-child(3){font-weight: bold; color: #006233;}
-#tableVN td:nth-child(4){font-weight: bold; color: #E41E20;}
+#tableVN td:nth-child(1){padding-left:11px;padding-right: 11px;}
+#tableVN td:nth-child(2){font-weight: bold; color: #186FB5;text-align:center;}
+#tableVN td:nth-child(3){font-weight: bold; color: #006233;text-align:center;}
+#tableVN td:nth-child(4){font-weight: bold; color: #E41E20;text-align:center;}
 #tableVN tr:nth-child(even){background-color: #f2f2f2;}
 #tableVN tr:hover {background-color: #ddd;}
 #tableVN{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
@@ -87,7 +91,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 
 /* Responsive */
 @media screen and (max-width: 1024px) {
-	#global{width: 100%; height: 200px;margin-bottom: 0px;}
+	#global{width: 100%; height: 300px;margin-bottom: 0px;}
 	#countries{font-size:55%;width: 100%;}
 	span{font-size: 8px;}
 	.flagCountry{width: 30px; height: 25px;}
@@ -104,15 +108,23 @@ thead{display:table;width:100%;table-layout:fixed;}
 	#darkMode{position: absolute; right: 47px; top: 6px;font-size:1.3em;}
 	.btnVNFlag{height:37px;}
 	.vnLogo{height: 33px;}
-	.theadCities{font-size: 12px;}
+	.btnVNTracker:hover + .txtVNTracker {display: none;}
+	.theadCities{font-size: 10px;}
+	.theadCities th:nth-child(1){text-align: center;padding-left:0px;padding-right: 0px;width: 100px;}
+	#tableVN td:nth-child(1){width: 100px;padding-left:14px;padding-right: 14px;}
 	#table{height:440px;}
-	#tableVN{font-size: 12px;height:400px;}
+	#tableVN{font-size: 10px;height:400px;}
 	#countries{margin-bottom: 30px;}
 	.footer{font-size: 10px;}
-	
+}
+@media screen and (max-width: 768px) {
+	.vnDetailsFlag{height: 50%;}
 }
 @media screen and (max-width: 720px) {
-	.vnDetailsFlag{padding: 50px 10px 10px 10px;}
-	.btnVNTracker:hover + .txtVNTracker {display: none;}
+	.vnDetailsFlag{height: 250px;padding: 50px 10px 10px 10px;}
+}
+@media screen and (max-width: 420px) {
+	.theadCities{font-size: 9px;}
+	#tableVN{font-size: 9px;}
 }
 

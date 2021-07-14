@@ -4,6 +4,7 @@
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
 
+
 // Init
 const API_Global    = "https://api.covid19api.com/summary";
 const API_Countries = "https://corona.lmao.ninja/v2/countries";
@@ -63,7 +64,9 @@ function Global_FetchAndDrawChart(){
 			  var chart = anychart.bar();
 			  anychart.theme(anychart.themes.darkTurquoise);chart.data(data);
 			  chart.title("THE SITUATION OF COVID-19 IN GLOBAL");
-			  chart.yScale().ticks().interval(500000);chart.yScale().minorTicks().interval(100000);
+			  chart.yScale().ticks().interval(50000);chart.yScale().minorTicks().interval(10000);
+			  chart.padding().right("60px");
+			  chart.yAxis().labels().format("{%value}{groupsSeparator:.}");
 			  chart.yGrid().enabled(true);chart.yMinorGrid().enabled(true);
 			  chart.background().cornerType("round");chart.background().corners(10);
 			  chart.animation(true);chart.container("global");chart.draw();
