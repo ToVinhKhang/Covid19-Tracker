@@ -1,7 +1,7 @@
 # Covid-19 Tracker
 #### Demo about using 2 methods (Fetch & AJAX) to get data from API.
 #### Total and today data about the situation of the Coronavirus epidemic data around the World. 
-<br>
+#### Includes the following functions:
 
 + Detail info from each city and weekly chart statistics in Vietnam.
 <br>
@@ -9,7 +9,7 @@
 + Dark-Light mode and Responsive.
 <br>
 
-+ Searching name of Countries.
++ Searching name of Countries and Sort table.
 <br>
 
 Link API_Global:
