@@ -11,11 +11,11 @@ $("#txtAboutData").change(function(){
 	if(target=="Data"){
 		$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
 		$("#viewModal").modal("toggle");
-		$(this).val("none");
+		$(this).val('');
 	}
 	// About Vaccine
 	if(target=="Vaccine"){
 
-		$(this).val("none");
+		$(this).val('');
 	}
 });
