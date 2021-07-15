@@ -35,7 +35,7 @@ h5{font-weight:bold;margin: 15px 0px;letter-spacing: 1px;line-height: 200%; }
 h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;line-height: 200%; }
 .plusSign{margin-top: 0px;}
 #imgCfmCovid{width: 100%; bottom: 0; position: absolute;}
-.btnAboutTheData{border-radius: 0px 0px 22px 0px;font-weight:bold;}
+.btnAboutTheData{border-radius: 0px 0px 18px 0px;font-weight:bold;padding-right:0px;padding-left:8px;}
 .btnAboutTheData:hover{font-weight: bold;}
 .modal-content{padding: 10px;}
 thead{display:table;width:100%;table-layout:fixed;}

@@ -4,9 +4,18 @@
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
 
-// About Data
-$("#txtAboutData").click(function() {
-	$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
-	$("#viewImage").attr("src", "");
-	$("#viewModal").modal("toggle");
+
+$("#txtAboutData").change(function(){
+	target = $(this).val();
+	// About Data
+	if(target=="Data"){
+		$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
+		$("#viewModal").modal("toggle");
+		$(this).val("");
+	}
+	// About Vaccine
+	if(target=="Vaccine"){
+
+		$(this).val("");
+	}
 });
