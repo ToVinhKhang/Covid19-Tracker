@@ -63,7 +63,7 @@ dataVN = `{
 	},
 	"rateVietnam": {
 		"txt1": "Tỉ lệ mắc bệnh",
-		"txt2": "Tỉ lệ khỏi bệnh",
+		"txt2": "Tỉ lệ bình phục",
 		"txt3": "Tỉ lệ tử vong"
 	},
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
