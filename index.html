@@ -19,8 +19,14 @@
 
 <!-- Covid19 Tracker -->
 <body>
+	<!-- Switch Languages -->
+	<select class="btn" id="SwitchLanguages">
+		<option value="EN">EN</option>
+		<option value="VN">VN</option>
+	</select>
 	<!-- About The Data -->
-	<button class="btn btn-info btnAboutTheData" onclick=AboutTheData();>About Data?</button>
+	<button class="btn btn-info btnAboutTheData" onclick=AboutTheData(); id="txtAboutData">About Data?</button>
+	
 	<!-- DarkLight Mode & Switch Tracker -->
 	<div class="btn btn-info btnVNFlag">
 		<i class="fa tool-icon fa-moon-o" onclick="darkMode()" id="darkMode"></i>
@@ -34,9 +40,9 @@
 	<div class="container" id="contentWorld">
 		<div class="text-center">
 			<img class="logo" src="https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=720">
-			<p class="title text-center">Covid-19 Tracker</p>
+			<p class="title text-center" id="txtTitle">Covid-19 Tracker</p>
 		</div>
-		<p class="text-center description">The situation of the Coronavirus epidemic data around the World</p>
+		<p class="text-center description" id="txtDesc">The situation of the Coronavirus epidemic data around the World</p>
 		<div class="text-center time">
 			<div class="text-bold" id="time"></div>(UTC+7)
 		</div>
@@ -50,7 +56,7 @@
 		<!-- Countries -->
 		<div id="countries">
 			<div class="search">
-				<input type="text" id="searchInput" onkeyup="SearchCountries()" class="search-input" placeholder="Searching names of countries . . .">
+				<input type="text" id="searchInput" onkeyup="SearchCountries()" class="search-input" placeholder="Searching by names of countries . . .">
 				<i class="search-icon fa fa-search"></i>
 			</div>
 
@@ -58,11 +64,11 @@
 				<thead>
 					<tr>
 						<th class="th-contries-flags"></th>
-						<th class="th-contries">Countries</th>
-						<th class="numeric-sort">Cases</th>
-						<th class="numeric-sort">Recovered</th>
-						<th class="numeric-sort">Deaths</th>
-						<th class="numeric-sort">Tests</th>
+						<th class="th-contries"  id="th-contries">Countries</th>
+						<th class="numeric-sort" id="th-cases">Cases</th>
+						<th class="numeric-sort" id="th-recovered">Recovered</th>
+						<th class="numeric-sort" id="th-deaths">Deaths</th>
+						<th class="numeric-sort" id="th-tests">Tests</th>
 					</tr>
 				</thead>
 				<tbody id="table"></tbody>
@@ -117,6 +123,9 @@
 						checkClass.remove("vnLogo");
 					}
 				}
+				
+				
+				
 			</script>
 		</div>
 	</div>
@@ -181,25 +190,25 @@
 		<div class="row vnTotal">
 			<div class="col-md-3 col-6">
 				<div>
-					<h3 class="TotalCases">Cases</h3>
+					<h3 class="TotalCases" id="txtTotalCases">Cases</h3>
 					<h1 id="TotalCases"></h1>
 				</div>
 			</div>
 			<div class="col-md-3 col-6">
 				<div>
-					<h3 class="TotalRecovered">Recovered</h3>
+					<h3 class="TotalRecovered" id="txtTotalRecovered">Recovered</h3>
 					<h1 id="TotalRecovered"></h1>
 				</div>
 			</div>
 			<div class="col-md-3 col-6">
 				<div>
-					<h3 class="TotalDeaths">Deaths</h3>
+					<h3 class="TotalDeaths" id="txtTotalDeaths">Deaths</h3>
 					<h1 id="TotalDeaths"></h1>
 				</div>
 			</div>
 			<div class="col-md-3 col-6">
 				<div>
-					<h3 class="Population">Population</h3>
+					<h3 class="Population" id="txtPopulation">Population</h3>
 					<h1 id="Population"></h1>
 				</div>
 			</div>
@@ -210,23 +219,23 @@
 				<div class="row vnRate">
 					<div class="col-md-12 col-12">
 						<img class="vnDetailsFlag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/640px-Flag_of_Vietnam.svg.png">
-						<span><h2>VIETNAM</h2></span>
+						<span><h2 id="vnName">VIETNAM</h2></span>
 					</div>
 					<div class="col-md-4 col-4">
 						<div>
-							<h3 class="IncidenceRate">Incidence Rate</h3>
+							<h3 class="IncidenceRate" id="txtIncidenceRate">Incidence Rate</h3>
 							<h1 id="IncidenceRate"></h1>
 						</div>
 					</div>
 					<div class="col-md-4 col-4">
 						<div>
-							<h3 class="RecoveryRate">Recovery Rate</h3>
+							<h3 class="RecoveryRate" id="txtRecoveryRate">Recovery Rate</h3>
 							<h1 id="RecoveryRate"></h1>
 						</div>
 					</div>
 					<div class="col-md-4 col-4">
 						<div>
-							<h3 class="DeathRate">Death Rate</h3>
+							<h3 class="DeathRate" id="txtDeathRate">Death Rate</h3>
 							<h1 id="DeathRate"></h1>
 						</div>
 					</div>
@@ -236,10 +245,10 @@
 				<table class="table table-striped sortable-table">
 					<thead class="theadCities">
 						<tr>
-						  <th class="theadCitiesProvinces">Cities/Provinces</th>
-						  <th class="numeric-sort">Cases</th>
-						  <th class="numeric-sort">Recovered</th>
-						  <th class="numeric-sort">Deaths</th>
+						  <th class="theadCitiesProvinces" id="th-citiesprovinces">Cities/Provinces</th>
+						  <th class="numeric-sort" id="th-citiesCases">Cases</th>
+						  <th class="numeric-sort" id="th-citiesRecovered">Recovered</th>
+						  <th class="numeric-sort" id="th-citiesDeaths">Deaths</th>
 						</tr>
 					</thead>
 					<tbody id="tableVN">
@@ -259,8 +268,9 @@
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="./js/scripts_vietnam.js"></script>
+	<script src="./js/scripts_translation.js"></script>
 	
 	<!-- Footer -->
-	<div class="footer">Designed by <a href="https://tovinhkhang.netlify.app/" target="_blank">ToVinhKhang</a></div>
+	<div class="footer"><span id="designedBy">Designed by </span><a href="https://tovinhkhang.netlify.app/" target="_blank">ToVinhKhang</a></div>
 </body>
 </html>

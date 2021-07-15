@@ -8,6 +8,7 @@
 body{background-color: #f1f2f5}
 .logo{width: 80px; height: 80px; margin-right: 20px;margin-bottom: 20px;}
 .footer{font-weight: bold; margin-bottom: 30px;text-align: center;}
+#designedBy{font-size: 1rem;}
 .text-center{text-align: center;}
 .text-bold{font-weight: bold;}
 .title{display: inline;font-size: 300%;font-weight:bold;color:#309FB5;}
@@ -22,7 +23,7 @@ body{background-color: #f1f2f5}
 h2{text-align: center;margin: 20px; font-weight: bold;}
 .txtVNTracker {display: none;}
 .btnVNTracker:hover + .txtVNTracker {display: block;position: absolute;background-color: #309FB5;color: white;border-radius: 6px;font-size: 12px;padding: 5px;right: 10px;top: 50px;width: 100%;}
-
+#SwitchLanguages{position: absolute;top:5px; right:90px;padding:0px;color: #17a2b8; font-weight: bold;}
 
 /* Data World */
 #global{width: 100%; height: 400px;margin-bottom:50px;}
@@ -160,6 +161,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.IncidenceRate{font-size:10px;}
 	.RecoveryRate{font-size:10px;}
 	.DeathRate{font-size:10px;}
+	#SwitchLanguages{font-size: 14px;}
 }
 @media screen and (max-width: 360px) {
 	.IncidenceRate{font-size:7px;}
