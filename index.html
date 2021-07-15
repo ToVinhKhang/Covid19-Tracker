@@ -12,9 +12,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js"></script>
 	<script src="https://cdn.anychart.com/releases/8.7.1/themes/dark_turquoise.min.js"></script>
-	<link rel="stylesheet" href="css/styles.css">
-	<script src="js/scripts_main.js"></script>
-	<script src="js/scripts_sortTable.js"></script>
+	<link rel="stylesheet" href="./css/styles.css">
+	<script src="./js/scripts_main.js"></script>
 </head>
 
 <!-- Covid19 Tracker -->
@@ -24,16 +23,17 @@
 		<option value="EN">EN</option>
 		<option value="VN">VN</option>
 	</select>
+	
 	<!-- About The Data -->
-	<button class="btn btn-info btnAboutTheData" onclick=AboutTheData(); id="txtAboutData">About Data?</button>
+	<button class="btn btn-info btnAboutTheData" id="txtAboutData">About Data?</button>
 	
 	<!-- DarkLight Mode & Switch Tracker -->
 	<div class="btn btn-info btnVNFlag">
-		<i class="fa tool-icon fa-moon-o" onclick="darkMode()" id="darkMode"></i>
+		<i class="fa tool-icon fa-moon-o" id="darkMode"></i>
 		<div class="btnVNTracker">
-			<img id="switchTracker" onclick="SwitchTracker()"; class="vnLogo" src="https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png">
+			<img id="switchTracker" class="vnLogo" src="https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png">
 		</div>
-		<span class="txtVNTracker" id="txtVNTracker">Vietnam</span>
+		<span class="txtVNTracker" id="txtVNTracker">Vietnam Tracker</span>
 	</div>
 	
 	<!-- DATA WORLD -->
@@ -56,7 +56,7 @@
 		<!-- Countries -->
 		<div id="countries">
 			<div class="search">
-				<input type="text" id="searchInput" onkeyup="SearchCountries()" class="search-input" placeholder="Searching by names of countries . . .">
+				<input type="text" id="searchInput" class="search-input" placeholder="Searching by names of countries . . .">
 				<i class="search-icon fa fa-search"></i>
 			</div>
 
@@ -73,120 +73,12 @@
 				</thead>
 				<tbody id="table"></tbody>
 			</table>
-			
-			<!-- Functions -->
-			<script>
-				<!-- Search Countries -->
-				function SearchCountries(){
-				  var input = document.getElementById("searchInput");
-				  var filter = input.value.toUpperCase();
-				  var table = document.getElementById("table");
-				  var tr = table.getElementsByTagName("tr");
-				  
-				  for (var i=0; i<tr.length; i++){
-					td = tr[i].getElementsByTagName("td")[1];
-					if(td){var txtValue = td.textContent || td.innerText;
-					  if(txtValue.toUpperCase().indexOf(filter) > -1){tr[i].style.display = "";}
-					  else{tr[i].style.display = "none";}
-					}
-				  }
-				}
-				
-				<!-- Dark Mode -->
-				function darkMode(){ document.body.classList.toggle("dark-mode");
-					var darkMode = document.getElementById("darkMode").classList;
-					if(darkMode.contains("fa-moon-o") == true){
-						darkMode.toggle("fa-sun-o");darkMode.remove("fa-moon-o");}
-					else if(darkMode.contains("fa-moon-o") == false){
-						darkMode.toggle("fa-moon-o");darkMode.remove("fa-sun-o");}
-				}
-				
-				<!-- Switch Tracker -->
-				function SwitchTracker(){ 
-					var checkClass = document.getElementById("switchTracker").classList;
-					<!-- Display Vietnam Tracker -->
-					if(checkClass.contains("WorldLogo") == true){
-						checkClass.toggle("vnLogo");
-						document.getElementById("content").style.display = "none";
-						document.getElementById("contentWorld").style.display = "block";
-						document.getElementById("txtVNTracker").innerHTML = "Vietnam";
-						$(".WorldLogo").attr("src", "https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png");
-						checkClass.remove("WorldLogo");
-					}
-					<!-- Display World Tracker -->
-					else if(checkClass.contains("WorldLogo") == false){
-						checkClass.toggle("WorldLogo");
-						document.getElementById("contentWorld").style.display = "none";
-						document.getElementById("content").style.display = "block";
-						document.getElementById("txtVNTracker").innerHTML = "World";
-						$(".vnLogo").attr("src", "https://image.flaticon.com/icons/png/512/1652/1652844.png");
-						checkClass.remove("vnLogo");
-					}
-				}
-				
-				
-				
-			</script>
-		</div>
-	</div>
-	
-	<!-- Popup Event -->
-	<script>
-		<!-- Flag -->
-		$("body").on("click", ".flagCountry", (e) => {
-			let Img = e.target.getAttribute("src"); e.preventDefault();
-			let nameCountry = e.target.parentNode.parentNode.cells[1].innerHTML;
-			document.getElementById("nameCountry").textContent = nameCountry;
-			document.getElementById("aboutTheData").textContent = "";
-			$("#viewImage").attr("src", Img);
-			$("#imgCfmCovid").attr("src", "");
-			$("#viewModal").modal("toggle");
-		});
-		
-		<!-- AboutTheData -->
-		function AboutTheData(){
-			$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
-			document.getElementById("nameCountry").textContent = "About The Data";
-			document.getElementById("aboutTheData").innerHTML = 
-				`Changes rapidly`+
-					`<h6>This data updates every 15 minutes and might not reflect some cases still being reported.</h6>`+
-				`Only includes people tested`+
-					`<h6>Numbers are based on official estimates, which may not account for unverified cases in countries lacking the proper infrastructure to diagnose patients.</h6><h6 class="plusSign">The "+" sign means that the newly collected data is recorded during the day.</h6>`+
-				`May discrepancies from other sources`+
-					`<h6>A change may result in inaccurate/no data being reported for the associated region.</h6>`+
-				`New updates`+
-					`<h6>Detailed information on the Covid-19 epidemic situation by city and weekly chart statistics in Vietnam has been supported at the button on the top-right screen.</h6>`;
-				
-			$("#viewImage").attr("src", "");
-			$("#viewModal").modal("toggle");
-		}
-	</script>
-	<!-- Modal-->
-	<div class="modal fade" id="viewModal" role="dialog">
-		<div class="modal-dialog modal-xl" role="content">
-			<div class="modal-content">
-				<!-- Header Modal-->
-				<div class="modal-header">
-					<h4 class="modal-title" id="nameCountry"></h4><button class="close" type="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body row">
-					<!-- AboutTheData -->
-					<div class="col-md-9 col-12">
-						<h5 id="aboutTheData"></h5>
-					</div>
-					<div class="col-md-3 col-12">
-						<img id="imgCfmCovid" style="">
-					</div>
-
-					<!-- Flag -->
-					<img class="w-100" id="viewImage" />
-				</div>
-			</div>
 		</div>
 	</div>
 	
 	<!-- DATA VIETNAM -->
 	<div class="container" id="content">
+		<!-- Total Info -->
 		<div class="row vnTotal">
 			<div class="col-md-3 col-6">
 				<div>
@@ -213,8 +105,9 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="row">
-			<!-- Table -->
+			<!-- Rate Info -->
 			<div class="col-lg-5 col-md-4 col-12">
 				<div class="row vnRate">
 					<div class="col-md-12 col-12">
@@ -241,6 +134,8 @@
 					</div>
 				</div>
 			</div>
+			
+			<!-- Table -->
 			<div class="col-lg-7 col-md-8  col-12">
 				<table class="table table-striped sortable-table">
 					<thead class="theadCities">
@@ -266,9 +161,40 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Modal-->
+	<div class="modal fade" id="viewModal" role="dialog">
+		<div class="modal-dialog modal-xl" role="content">
+			<div class="modal-content">
+				<!-- Header Modal-->
+				<div class="modal-header">
+					<h4 class="modal-title" id="nameCountry"></h4><button class="close" type="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body row">
+					<!-- AboutTheData -->
+					<div class="col-md-9 col-12">
+						<h5 id="aboutTheData"></h5>
+					</div>
+					<div class="col-md-3 col-12">
+						<img id="imgCfmCovid" style="">
+					</div>
+
+					<!-- Flag -->
+					<img class="w-100" id="viewImage" />
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="./js/scripts_vietnam.js"></script>
 	<script src="./js/scripts_translation.js"></script>
+	<script src="./js/scripts_search.js"></script>
+	<script src="./js/scripts_darkmode.js"></script>
+	<script src="./js/scripts_sortTable.js"></script>
+	<script src="./js/scripts_switchTracker.js"></script>
+	<script src="./js/scripts_popup.js"></script>
 	
 	<!-- Footer -->
 	<div class="footer"><span id="designedBy">Designed by </span><a href="https://tovinhkhang.netlify.app/" target="_blank">ToVinhKhang</a></div>

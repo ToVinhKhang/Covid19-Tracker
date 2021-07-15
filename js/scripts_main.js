@@ -14,6 +14,7 @@ window.addEventListener('load',() => {
 	table = document.getElementById("table");
 	Global_FetchAndDrawChart();
 	Countries_Fetch();
+	AboutTheData();
 });
 
 
@@ -69,6 +70,18 @@ function displayRate(incidenceRate,recoveryRate,deathRate){
 	document.getElementById("IncidenceRate").innerHTML = incidenceRate;
 	document.getElementById("RecoveryRate").innerHTML  = recoveryRate;
 	document.getElementById("DeathRate").innerHTML     = deathRate;
+}
+function AboutTheData(){
+	document.getElementById("nameCountry").textContent = "About The Data";
+	document.getElementById("aboutTheData").innerHTML = 
+		`Changes rapidly`+
+			`<h6>This data updates every 15 minutes and might not reflect some cases still being reported.</h6>`+
+		`Only includes people tested`+
+			`<h6>Numbers are based on official estimates, which may not account for unverified cases in countries lacking the proper infrastructure to diagnose patients.</h6><h6 class="plusSign">The "+" sign means that the newly collected data is recorded during the day.</h6>`+
+		`May discrepancies from other sources`+
+			`<h6>A change may result in inaccurate/no data being reported for the associated region.</h6>`+
+		`New updates`+
+			`<h6>Detailed information on the Covid-19 epidemic situation by cities/provinces and weekly chart statistics in Vietnam has been supported at the button on the top-right screen.</h6>`;
 }
 
 
