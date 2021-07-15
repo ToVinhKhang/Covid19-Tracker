@@ -29,5 +29,5 @@
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
 	"footer": "Được thiết kế bởi ",
 	"vnName" : "VIỆT NAM",
-	"AboutData" : "<option value=''>Xem Thêm</option><option value='Data'>• Về Dữ liệu</option><option value='Vaccine'>• Về Vắc-xin</option>"
+	"AboutData" : "<option value='none'>Xem Thêm</option><option value='Data'>• Về Dữ liệu</option><option value='Vaccine'>• Về Vắc-xin</option>"
 }
