@@ -45,10 +45,16 @@ function displayData(jsonData){
 		
 		// Custom Rate in Vietnam
 		if(u.country == "Vietnam"){
-			var incidenceRate = parseFloat((u.cases/u.population)*100).toFixed(3)+`%`;
-			var recoveryRate  = parseFloat((u.recovered/u.cases)*100).toFixed(3)+`%`;
-			var deathRate     = parseFloat((u.deaths/u.cases)*100).toFixed(3)+`%`;
-			displayRate(incidenceRate,recoveryRate,deathRate)
+			var totalCases     = u.cases;
+			var totalRecovered = u.recovered;
+			var totalDeaths    = u.deaths;
+			var Population     = u.population;
+			
+			var incidenceRate = parseFloat((totalCases/Population)*100).toFixed(2)+`%`;
+			var recoveryRate  = parseFloat((totalRecovered/totalCases)*100).toFixed(2)+`%`;
+			var deathRate     = parseFloat((totalDeaths/totalCases)*100).toFixed(2)+`%`;
+			displayTotal(totalCases,totalRecovered,totalDeaths,getNumberUnit(Population));
+			displayRate(incidenceRate,recoveryRate,deathRate);
 		}
 	});
 }
@@ -104,10 +110,25 @@ function Countries_Ajax(){
 	xmlHttpRequest.responseType = 'json';
 	xmlHttpRequest.send();
 }
+function displayTotal(TotalCases,TotalRecovered,TotalDeaths,Population){
+	document.getElementById("TotalCases").innerHTML      = TotalCases.toLocaleString('en-US');
+	document.getElementById("TotalRecovered").innerHTML  = TotalRecovered.toLocaleString('en-US');
+	document.getElementById("TotalDeaths").innerHTML     = TotalDeaths.toLocaleString('en-US');
+	document.getElementById("Population").innerHTML      = Population;
+}
 function displayRate(incidenceRate,recoveryRate,deathRate){
 	document.getElementById("IncidenceRate").innerHTML = incidenceRate;
 	document.getElementById("RecoveryRate").innerHTML  = recoveryRate;
 	document.getElementById("DeathRate").innerHTML     = deathRate;
+}
+2
+
+function getNumberUnit(num) {
+    var units = ["M","B","T"]
+    var unit = Math.floor((num / 1.0e+1).toFixed(0).toString().length)
+    var r = unit%3
+    var x =  Math.abs(Number(num))/Number('1.0e+'+(unit-r)).toFixed(2)
+    return x.toFixed(0) + units[Math.floor(unit/3)-2]
 }
 // DateTime
 function Zero(num) {return (num >= 0 && num < 10) ? "0" + num : num + "";}

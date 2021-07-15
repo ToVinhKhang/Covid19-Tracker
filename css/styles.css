@@ -71,10 +71,17 @@ thead{display:table;width:100%;table-layout:fixed;}
 #tableVN::-webkit-scrollbar {display: none;}
 .sortable-table thead .theadCitiesProvinces[data-sort-direction="1"]:after{content:"\25B4";}
 .sortable-table thead .theadCitiesProvinces[data-sort-direction="-1"]:after{content:"\25BE"}
-.IncidenceRate,#IncidenceRate{color: #186FB5;text-align: center;}
-.RecoveryRate,#RecoveryRate{color: #006233;text-align: center;}
-.DeathRate,#DeathRate{color: #E41E20;text-align: center;}
-
+.IncidenceRate,#IncidenceRate,.TotalCases,#TotalCases{color: #186FB5;text-align: center;}
+.RecoveryRate,#RecoveryRate,.TotalRecovered,#TotalRecovered{color: #006233;text-align: center;}
+.DeathRate,#DeathRate,.TotalDeaths,#TotalDeaths{color: #E41E20;text-align: center;}
+.Population,#Population{color: grey;text-align: center;}
+.IncidenceRate{font-size:14px;margin:0px;}
+#IncidenceRate{font-size:22px;margin:0px;}
+.RecoveryRate{font-size:14px;margin:0px;}
+#RecoveryRate{font-size:22px;margin:0px;}
+.DeathRate{font-size:14px;margin:0px;}
+#DeathRate{font-size:22px;margin:0px;}
+	
 /* Dark Mode */
 #darkMode{position: absolute; right: 50px; top: 6px;font-size:1.5em;}
 #darkMode:hover{color: black;}
@@ -128,15 +135,18 @@ thead{display:table;width:100%;table-layout:fixed;}
 }
 @media screen and (max-width: 768px) {
 	.vnDetailsFlag{height: 50%;}
-	.IncidenceRate{font-size:14px;margin:0px;}
-	#IncidenceRate{font-size:22px;margin:0px;}
-	.RecoveryRate{font-size:14px;margin:0px;}
-	#RecoveryRate{font-size:22px;margin:0px;}
-	.DeathRate{font-size:14px;margin:0px;}
-	#DeathRate{font-size:22px;margin:0px;}
+	.TotalCases{font-size:16px;}
+	#TotalCases{font-size:30px;}
+	.TotalRecovered{font-size:16px;}
+	#TotalRecovered{font-size:30px;}
+	.TotalDeaths{font-size:16px;}
+	#TotalDeaths{font-size:30px;}
+	.Population{font-size:16px;}
+	#Population{font-size:30px;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
+	.vnTotal,.vnRate{border: 2px solid #ddd;margin: 10px;border-radius:25px;padding:25px 10px 10px 10px;}
 }
 
 @media screen and (max-width: 420px) {
@@ -144,11 +154,20 @@ thead{display:table;width:100%;table-layout:fixed;}
 	#tableVN{font-size: 9px;}
 	.vnDetailsFlag{display:none;}
 	#content > .row > div{margin-bottom:15px;}
-	.rateInfo{margin-top: 30px;}
+	.vnTotal{padding-bottom:0px;}
+	.vnRate{padding:10px;}
+	h2{display: none;}
+	.IncidenceRate{font-size:10px;}
+	.RecoveryRate{font-size:10px;}
+	.DeathRate{font-size:10px;}
 }
 @media screen and (max-width: 360px) {
-	.IncidenceRate{font-size:12px;}
-	.RecoveryRate{font-size:12px;}
-	.DeathRate{font-size:12px;}
+	.IncidenceRate{font-size:7px;}
+	#IncidenceRate{font-size:18px;}
+	.RecoveryRate{font-size:7px;}
+	#RecoveryRate{font-size:18px;}
+	.DeathRate{font-size:7px;}
+	#DeathRate{font-size:18px;}
+	h2{display: none;}
 }
 
