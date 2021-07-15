@@ -39,12 +39,15 @@ dataEN = `{
 	"AboutData" : "About Data?"
 }`;
 
-dataVN = fetch("./lang/vn.json");
-console.log(dataVN)
+fetch("./lang/vn.json")
+.then(data=>data.json())
+.then(dataJson => console.log(dataJson))
+.catch(e => console.log(e));
+
 
 // PARSE DATA
 dataEN = JSON.parse(dataEN);dataVN = JSON.parse(dataVN);
-console.log(dataVN)
+
 // SELECT LANGUAGES
 $("#SwitchLanguages").change(function(){lang = $(this).val();
 	var txtTitle = document.getElementById("txtTitle");
