@@ -13,7 +13,7 @@ $("#switchTracker").click(function() {
 		document.getElementById("content").style.display = "none";
 		document.getElementById("contentWorld").style.display = "block";
 		document.getElementById("txtVNTracker").innerHTML = "Vietnam Tracker";
-		$(".WorldLogo").attr("src", "https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png");
+		$(".WorldLogo").attr("src", "https://img.icons8.com/color/452/vietnam-circular.png");
 		checkClass.remove("WorldLogo");
 	}
 	
