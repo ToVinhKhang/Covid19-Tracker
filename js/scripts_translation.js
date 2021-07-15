@@ -38,43 +38,13 @@ dataEN = `{
 	"vnName" : "VIETNAM",
 	"AboutData" : "About Data?"
 }`;
-dataVN = `{
-	"title": "Bộ Theo Dõi Covid-19",
-	"desc": "Dữ liệu về Tình hình Dịch bệnh các nước trên toàn Thế giới",
-	"global": "DỮ LIỆU COVID-19 TRÊN TOÀN CẦU ",
-	"tableWorld": {
-		"th1": "Quốc gia",
-		"th2": "Ca nhiễm",
-		"th3": "Khỏi bệnh",
-		"th4": "Tử vong",
-		"th5": "Xét nghiệm"
-	},
-	"tableVietnam": {
-		"th1": "Thành Phố/Tỉnh",
-		"th2": "Ca nhiễm",
-		"th3": "Khỏi bệnh",
-		"th4": "Tử vong"
-	},
-	"totalVietnam": {
-		"txt1": "Ca nhiễm",
-		"txt2": "Khỏi bệnh",
-		"txt3": "Tử vong",
-		"txt4": "Dân số"
-	},
-	"rateVietnam": {
-		"txt1": "Tỉ lệ mắc bệnh",
-		"txt2": "Tỉ lệ bình phục",
-		"txt3": "Tỉ lệ tử vong"
-	},
-	"searching" : "Tìm kiếm theo tên quốc gia . . .",
-	"footer": "Được thiết kế bởi ",
-	"vnName" : "VIỆT NAM",
-	"AboutData" : "Về Dữ liệu?"
-}`;
+
+dataVN = fetch("./lang/vn.json");
+console.log(dataVN)
 
 // PARSE DATA
 dataEN = JSON.parse(dataEN);dataVN = JSON.parse(dataVN);
-
+console.log(dataVN)
 // SELECT LANGUAGES
 $("#SwitchLanguages").change(function(){lang = $(this).val();
 	var txtTitle = document.getElementById("txtTitle");
