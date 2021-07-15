@@ -1,5 +1,5 @@
 # Covid-19 Tracker
-#### Demo about using 2 methods (Fetch & AJAX) to get data from API.
+
 #### Includes the following functions:
 <br>
 
