@@ -35,8 +35,8 @@ dataEN = `{
 	},
 	"searching" : "Searching by names of countries . . .",
 	"footer": "Designed by ",
-	"AboutData" : "About Data?",
-	"vnName" : "VIETNAM"
+	"vnName" : "VIETNAM",
+	"AboutData" : "About Data?"
 }`;
 dataVN = `{
 	"title": "Bộ Theo Dõi Covid-19",
@@ -68,8 +68,8 @@ dataVN = `{
 	},
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
 	"footer": "Được thiết kế bởi ",
-	"AboutData" : "Về Dữ liệu?",
-	"vnName" : "VIỆT NAM"
+	"vnName" : "VIỆT NAM",
+	"AboutData" : "Về Dữ liệu?"
 }`;
 
 // PARSE DATA
@@ -173,7 +173,7 @@ $("#SwitchLanguages").change(function(){lang = $(this).val();
 		aboutTheData.innerHTML = 
 			`Thay đổi nhanh chóng`+
 				`<h6>Dữ liệu này cập nhật 15 phút một lần và có thể không phản ánh một số trường hợp vẫn đang được báo cáo.</h6>`+
-			`Chỉ bao gồm những người được lấy mẫu`+
+			`Chỉ bao gồm những người đã được xét nghiệm`+
 				`<h6>Các con số dựa trên ước tính chính thức, có thể không tính đến các trường hợp chưa được xác minh ở các quốc gia thiếu cơ sở hạ tầng thích hợp để chẩn đoán bệnh nhân.</h6><h6 class="plusSign">Dấu "+" có nghĩa là dữ liệu mới thu thập được ghi nhận trong ngày.</h6>`+
 			`Có thể có sự khác biệt so với các nguồn khác`+
 				`<h6>Thay đổi có thể dẫn đến dữ liệu không chính xác/không được báo cáo cho khu vực được liên kết.</h6>`+
