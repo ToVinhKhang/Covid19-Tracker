@@ -1,4 +1,10 @@
+// -----------------------------------------------
+// TRANSLATION
+// Author: ToVinhKhang
+// Portfolio: https://tovinhkhang.netlify.app/
+// -----------------------------------------------
 
+// DATA JSON
 dataEN = `{
 	"title": "Covid-19 Tracker",
 	"desc": "The situation of the Coronavirus epidemic data around the World",
@@ -65,8 +71,11 @@ dataVN = `{
 	"AboutData" : "Về Dữ liệu?",
 	"vnName" : "VIỆT NAM"
 }`;
+
+// PARSE DATA
 dataEN = JSON.parse(dataEN);dataVN = JSON.parse(dataVN);
 
+// SELECT LANGUAGES
 $("#SwitchLanguages").change(function(){lang = $(this).val();
 	var txtTitle = document.getElementById("txtTitle");
 	var txtDesc = document.getElementById("txtDesc");
@@ -92,7 +101,7 @@ $("#SwitchLanguages").change(function(){lang = $(this).val();
 	var txtAboutData = document.getElementById("txtAboutData");
 	var vnName = document.getElementById("vnName");
 	
-
+	// English
 	if(lang=="EN"){
 		txtTitle.innerHTML = dataEN.title;
 		txtDesc.innerHTML = dataEN.desc;
@@ -119,7 +128,7 @@ $("#SwitchLanguages").change(function(){lang = $(this).val();
 		txtAboutData.innerHTML = dataEN.AboutData;
 		vnName.innerHTML = dataEN.vnName;
 	}
-
+	// Vietnamses
 	if(lang=="VN"){
 		txtTitle.innerHTML = dataVN.title;
 		txtDesc.innerHTML = dataVN.desc;
@@ -147,3 +156,7 @@ $("#SwitchLanguages").change(function(){lang = $(this).val();
 		vnName.innerHTML = dataVN.vnName;
 	}
 });
+
+// ----
+// END
+// ----
