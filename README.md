@@ -3,16 +3,19 @@
 #### Includes the following functions:
 <br>
 
-+ World Data: Total and today data about the situation of the Coronavirus epidemic data around the World.
++ World Data: Total and Today data about The situation of the Coronavirus Epidemic data around the World.
 <br>
 
-+ Vietnam Data: Detail info from each City, Weekly chart statistics and Rate in Vietnam.
++ Vietnam Data: Detail info from each City, Weekly chart statistics and Rate Info in Vietnam.
 <br>
 
-+ Table: Searching name of Countries and Sort.
++ Table: Searching Countries and Sort.
 <br>
 
 + Switch languages: English/Vietnamese.
+<br>
+
++ Vaccine Information: Vaccine Details/Technology.
 <br>
 
 + Mode: Dark-Light and Responsive.
