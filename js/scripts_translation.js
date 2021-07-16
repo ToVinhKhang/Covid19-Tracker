@@ -94,7 +94,6 @@ function displayDataTranslated(dataLang){
 	aboutTheVaccineDetails.innerHTML = dataLang.AboutVaccineDetails.content;
 	nameGuide.textContent = dataLang.SoftwareInfo.title;
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
-	console.log(dataLang.SoftwareInfo.title)
 }
 
 // ----
