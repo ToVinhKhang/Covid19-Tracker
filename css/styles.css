@@ -134,7 +134,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	#darkMode{position: absolute; right: 46px; top: 5px;font-size:1.5em;}
 	.SwitchBar{height:38.2px;width: 115px;}
 	.vnLogo,.WorldLogo{top: 1px;right: 76px;}
-	#SwitchLanguages{font-size:14px;top:5px;right:8px;}
+	#SwitchLanguages{font-size:15px;top:5px;right:10px;}
 	.btnVNTracker:hover + .txtVNTracker {display: none;}
 	.theadCities{font-size: 10px;}
 	.theadCities th:nth-child(1){text-align: center;padding-left:0px;padding-right: 0px;width: 100px;}
