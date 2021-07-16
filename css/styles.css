@@ -92,10 +92,12 @@ thead{display:table;width:100%;table-layout:fixed;}
 .dark-mode {background-color: black!important;}
 .dark-mode > div > #countries > table{background-color: #1c1e21!important;color: white;}
 .dark-mode > #viewModalData > div > div{background-color: #1c1e21!important;}
-.dark-mode > #viewModalData > div > div > .modal-header{color: #6AA8B5!important;}
+.dark-mode > #viewModalData > div > div > .modal-header{color: #17a2b8!important;}
 .dark-mode > #viewModalData > div > div > .modal-body{color: white!important;}
 .dark-mode > #viewModalData > div > div > .modal-header > .close{color: white;}
-.dark-mode > #viewModalVaccine > div > div{background-color: #1c1e21!important;color: #6AA8B5!important;}
+.dark-mode > #viewModalVaccine > div > div{background-color: #1c1e21!important;}
+.dark-mode > #viewModalVaccine > div > div > .modal-header{color: #17a2b8!important;}
+.dark-mode > #viewModalVaccine > div > div > .modal-body{color: white!important;}
 .dark-mode > #viewModalVaccine > div > div > .modal-header > .close{color: white;}
 .dark-mode > .footer{color: #a4adc8!important;}
 .dark-mode h2{color: white!important;}
