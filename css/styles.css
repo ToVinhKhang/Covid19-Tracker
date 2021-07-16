@@ -106,6 +106,10 @@ thead{display:table;width:100%;table-layout:fixed;}
 .dark-mode > #viewModalVaccineDetails > div > div > .modal-header{color: #17a2b8!important;}
 .dark-mode > #viewModalVaccineDetails > div > div > .modal-body{color: white!important;}
 .dark-mode > #viewModalVaccineDetails > div > div > .modal-header > .close{color: white;}
+.dark-mode > #viewModalGuide > div > div{background-color: #1c1e21!important;}
+.dark-mode > #viewModalGuide > div > div > .modal-header{color: #17a2b8!important;}
+.dark-mode > #viewModalGuide > div > div > .modal-body{color: white!important;}
+.dark-mode > #viewModalGuide > div > div > .modal-header > .close{color: white;}
 .dark-mode > .footer{color: #a4adc8!important;}
 .dark-mode h2{color: white!important;}
 .dark-mode #tableVN > tr{background-color: #1c1e21!important;color: white;}
@@ -181,7 +185,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.RecoveryRate{font-size:10px;}
 	.DeathRate{font-size:10px;}
 	.SwitchBar{height:36.8px;}
-	#aboutGuide td:nth-child(1){width:45%;}
+	#aboutGuide td:nth-child(1){width:46%;}
 }
 @media screen and (max-width: 360px) {
 	.IncidenceRate{font-size:7px;}
@@ -191,5 +195,6 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.DeathRate{font-size:7px;}
 	#DeathRate{font-size:18px;}
 	h2{display: none;}
+	#aboutGuide td:nth-child(1){width:50%;}
 }
 
