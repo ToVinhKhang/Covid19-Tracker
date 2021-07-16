@@ -17,7 +17,7 @@ body{background-color: #f1f2f5}
 .search{padding: 15px 30px;border: 1.5px solid #309FB5;background-color: #E8E8E8;border-radius: 100px;display: flex;align-items: center;width: 100%;max-width: 350px;margin-bottom: 20px; text-align: center; height: 40px; float: right;}
 .search-icon{flex: 1;font-size: 16px;}
 .search-input{border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
-.btnVNFlag{position:absolute; right: 0px; padding: 0px; margin: 0px; width: 135px; border-radius: 0px 0px 0px 20px; height: 38px;}
+.SwitchBar{position:absolute; right: 0px; padding: 0px; margin: 0px; width: 135px; border-radius: 0px 0px 0px 20px; height: 38px;}
 .vnLogo,.WorldLogo{position:absolute; right: 90px; top: 2px; height: 32px;}
 .vnDetailsFlag{width: 100%;border-radius: 10px;height: 300px;}
 h2{text-align: center;margin: 20px; font-weight: bold;}
@@ -35,7 +35,7 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 .plusSign{margin-top: 0px;}
 #imgCfmCovid{width: 100%; bottom: 0; position: absolute;}
 #imgVaccine{width: 100%;border-radius: 25px;}
-.btnAboutTheData{border-radius: 0px 0px 18px 0px;font-weight:bold;padding-right:0px;padding-left:8px;width:123.6px;}
+.btnAboutTheData{border-radius: 0px 0px 18px 0px;font-weight:bold;padding: 5px 0px 5px 5px;width:123.6px;color: #fff;background-color: #17a2b8;border-color: #17a2b8;text-align: center;font-size: 1rem;}
 .btnAboutTheData:hover{font-weight: bold;}
 .modal-content{padding: 10px;}
 thead{display:table;width:100%;table-layout:fixed;}
@@ -130,7 +130,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.search-input{letter-spacing: 1px;border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
 	h5{font-size:110%;}h6{font-size:90%;}
 	#darkMode{position: absolute; right: 46px; top: 5px;font-size:1.5em;}
-	.btnVNFlag{height:38.2px;width: 115px;}
+	.SwitchBar{height:38.2px;width: 115px;}
 	.vnLogo,.WorldLogo{top: 1px;right: 76px;}
 	#SwitchLanguages{font-size:14px;top:5px;}
 	.btnVNTracker:hover + .txtVNTracker {display: none;}
@@ -170,7 +170,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.IncidenceRate{font-size:10px;}
 	.RecoveryRate{font-size:10px;}
 	.DeathRate{font-size:10px;}
-	.btnVNFlag{height:36.8px;}
+	.SwitchBar{height:36.8px;}
 }
 @media screen and (max-width: 360px) {
 	.IncidenceRate{font-size:7px;}
