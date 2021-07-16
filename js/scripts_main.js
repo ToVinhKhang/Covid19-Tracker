@@ -14,7 +14,7 @@ window.addEventListener('load',() => {
 	table = document.getElementById("table");
 	Global_FetchAndDrawChart();
 	Countries_Fetch();
-	AboutTheData();
+	AboutData();
 });
 
 
@@ -71,18 +71,8 @@ function displayRate(incidenceRate,recoveryRate,deathRate){
 	document.getElementById("RecoveryRate").innerHTML  = recoveryRate;
 	document.getElementById("DeathRate").innerHTML     = deathRate;
 }
-function AboutTheData(){
-	document.getElementById("nameCountry").textContent = "About The Data";
-	document.getElementById("aboutTheData").innerHTML = 
-		`Changes rapidly`+
-			`<h6>This data updates every 15 minutes and might not reflect some cases still being reported.</h6>`+
-		`Only includes people tested`+
-			`<h6>Numbers are based on official estimates, which may not account for unverified cases in countries lacking the proper infrastructure to diagnose patients.</h6><h6 class="plusSign">The "+" sign means that the newly collected data is recorded during the day.</h6>`+
-		`May discrepancies from other sources`+
-			`<h6>A change may result in inaccurate/no data being reported for the associated region.</h6>`+
-		`New updates`+
-			`<h6>Detailed information on the Covid-19 epidemic situation by cities/provinces and weekly chart statistics in Vietnam has been supported at the button on the top-right screen.</h6>`;
-}
+
+
 
 
 // ---------
@@ -136,6 +126,17 @@ function Countries_Ajax(){
 	xmlHttpRequest.responseType = 'json';
 	xmlHttpRequest.send();
 }
+// Load data in MoreAbout
+function AboutData(){
+	fetch("./lang/en.json")
+		.then(data => data.json())
+		.then(dataEN => {
+			document.getElementById("nameCountry").textContent = dataEN.AboutTheData.title;
+			document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
+		}).catch(e => console.log(e));
+}
+
+
 // Shorter Num
 function ShorterNum(num) {
     var units = ["M"]
@@ -155,6 +156,7 @@ setInterval(()=>{
         now.getHours() >= 12 ? "PM" : "AM"].join(" ");
     document.getElementById("time").innerHTML = strDateTime;
 },1000);
+
 
 // Update data every 15 mins
 setInterval(()=>{Countries_Ajax();},(1000*60*15));

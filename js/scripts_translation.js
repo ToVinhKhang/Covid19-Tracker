@@ -1,5 +1,5 @@
 // -----------------------------------------------
-// TRANSLATION
+// SWITCH LANGUAGES (TRANSLATE)
 // Author: ToVinhKhang
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
