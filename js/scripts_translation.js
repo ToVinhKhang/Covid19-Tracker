@@ -8,6 +8,7 @@
 $("#SwitchLanguages").change(function(){
 	// LANG TARGET
 	lang = $(this).val();
+	var Population = document.getElementById("Population").innerHTML;
 	
 	// English
 	if(lang=="EN"){
@@ -15,6 +16,7 @@ $("#SwitchLanguages").change(function(){
 		.then(data => data.json())
 		.then(dataEN => {
 			displayDataTranslated(dataEN);
+			Population = Population.replace("M","Tr");
 		}).catch(e => console.log(e));
 	}
 	
@@ -24,6 +26,7 @@ $("#SwitchLanguages").change(function(){
 		.then(data => data.json())
 		.then(dataVN => {
 			displayDataTranslated(dataVN);
+			Population = Population.replace("Tr","M");
 		}).catch(e => console.log(e));
 	}
 });
@@ -44,7 +47,6 @@ function displayDataTranslated(dataLang){
 	var txtTotalCases = document.getElementById("txtTotalCases");
 	var txtTotalRecovered = document.getElementById("txtTotalRecovered");
 	var txtTotalDeaths = document.getElementById("txtTotalDeaths");
-	var Population = document.getElementById("Population");
 	var txtIncidenceRate = document.getElementById("txtIncidenceRate");
 	var txtRecoveryRate = document.getElementById("txtRecoveryRate");
 	var txtDeathRate = document.getElementById("txtDeathRate");
@@ -75,7 +77,6 @@ function displayDataTranslated(dataLang){
 	txtTotalRecovered.innerHTML = dataLang.totalVietnam.txt2;
 	txtTotalDeaths.innerHTML = dataLang.totalVietnam.txt3;
 	txtPopulation.innerHTML = dataLang.totalVietnam.txt4;
-	Population.innerHTML = Population.innerHTML.replace("Tr","M");
 	txtIncidenceRate.innerHTML = dataLang.rateVietnam.txt1;
 	txtRecoveryRate.innerHTML = dataLang.rateVietnam.txt2;
 	txtDeathRate.innerHTML = dataLang.rateVietnam.txt3;
