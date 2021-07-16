@@ -31,12 +31,12 @@ h2{text-align: center;margin: 20px; font-weight: bold;}
 #global{width: 100%; height: 400px;margin-bottom:50px;}
 span{font-size: 12px;}
 .flagCountry{width: 70px; height: 50px;}
-#nameAbData,#nameVaccine{font-weight: bold;}
+#nameAbData,#nameVaccine,#nameVaccineDetails{font-weight: bold;}
 h5{font-weight:bold;margin: 15px 0px;letter-spacing: 1px;line-height: 200%; }
 h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;line-height: 200%; }
 .plusSign{margin-top: 0px;}
 #imgCfmCovid{width: 100%; bottom: 0; position: absolute;}
-#imgVaccine{width: 100%;border-radius: 25px;}
+#imgVaccine,#imgVaccineDetails{width: 100%;border-radius: 25px;}
 .btnAboutTheData{position:relative; left: 0px; padding: 0px; margin: 0px; width: 135px; border-radius: 0px 0px 20px 0px; height: 38px;}
 .modal-content{padding: 10px;}
 thead{display:table;width:100%;table-layout:fixed;}
@@ -100,6 +100,10 @@ thead{display:table;width:100%;table-layout:fixed;}
 .dark-mode > #viewModalVaccine > div > div > .modal-header{color: #17a2b8!important;}
 .dark-mode > #viewModalVaccine > div > div > .modal-body{color: white!important;}
 .dark-mode > #viewModalVaccine > div > div > .modal-header > .close{color: white;}
+.dark-mode > #viewModalVaccineDetails > div > div{background-color: #1c1e21!important;}
+.dark-mode > #viewModalVaccineDetails > div > div > .modal-header{color: #17a2b8!important;}
+.dark-mode > #viewModalVaccineDetails > div > div > .modal-body{color: white!important;}
+.dark-mode > #viewModalVaccineDetails > div > div > .modal-header > .close{color: white;}
 .dark-mode > .footer{color: #a4adc8!important;}
 .dark-mode h2{color: white!important;}
 .dark-mode #tableVN > tr{background-color: #1c1e21!important;color: white;}
