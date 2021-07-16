@@ -36,6 +36,8 @@ $("#SwitchLanguages").change(function(){
 	$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
 	var nameAbData = document.getElementById("nameAbData");
 	var aboutTheData = document.getElementById("aboutTheData");
+	var nameVaccine = document.getElementById("nameVaccine");
+	var aboutTheVaccine = document.getElementById("aboutTheVaccine");
 
 	
 	// -------
@@ -71,6 +73,8 @@ $("#SwitchLanguages").change(function(){
 			vnName.innerHTML = dataEN.vnName;
 			nameAbData.textContent = dataEN.AboutTheData.title;
 			aboutTheData.innerHTML = dataEN.AboutTheData.content;
+			nameVaccine.textContent = dataEN.AboutTheData.title;
+			aboutTheVaccine.innerHTML = dataEN.AboutTheData.content;
 		}).catch(e => console.log(e));
 	}
 	
@@ -108,6 +112,8 @@ $("#SwitchLanguages").change(function(){
 			vnName.innerHTML = dataVN.vnName;
 			nameAbData.textContent = dataVN.AboutTheData.title;
 			aboutTheData.innerHTML = dataVN.AboutTheData.content;
+			nameVaccine.textContent = dataVN.AboutTheData.title;
+			aboutTheVaccine.innerHTML = dataVN.AboutTheData.content;
 		}).catch(e => console.log(e));
 	}
 });
