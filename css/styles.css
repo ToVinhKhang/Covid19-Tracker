@@ -108,7 +108,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 .dark-mode > #viewModalVaccineDetails > div > div > .modal-header > .close{color: white;}
 .dark-mode > #viewModalGuide > div > div{background-color: #1c1e21!important;}
 .dark-mode > #viewModalGuide > div > div > .modal-header{color: #17a2b8!important;}
-.dark-mode > #viewModalGuide > div > div > .modal-body{color: white!important;}
+.dark-mode > #viewModalGuide > div > div > .modal-body > table > tbody > tr > td{color: white!important;}
 .dark-mode > #viewModalGuide > div > div > .modal-header > .close{color: white;}
 .dark-mode > .footer{color: #a4adc8!important;}
 .dark-mode h2{color: white!important;}
