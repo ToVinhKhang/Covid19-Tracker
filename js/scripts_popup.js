@@ -15,7 +15,7 @@ $("#txtAboutData").change(function(){
 	}
 	// About Vaccine
 	if(target=="Vaccine"){
-		$("#imgVaccine").attr("src", "https://content.govdelivery.com/attachments/fancy_images/USVHA/2021/01/4005196/covid-vaccine-01_original.png");
+		$("#imgVaccine").attr("src", "https://cms.wellcome.org/sites/default/files/styles/image_full_hi/public/2021-01/FINAL_ExplainerThumbnails_Ex9_What_Different_Types_Of_Covid_Vaccine_Are_There-1600x900.png?itok=uHtvnnMM");
 		$("#viewModalVaccine").modal("toggle");
 		$(this).val('');
 	}
