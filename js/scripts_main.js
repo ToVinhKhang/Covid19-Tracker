@@ -73,8 +73,6 @@ function displayRate(incidenceRate,recoveryRate,deathRate){
 }
 
 
-
-
 // ---------
 // Load Data
 // ---------
@@ -133,6 +131,8 @@ function AboutData(){
 		.then(dataEN => {
 			document.getElementById("nameCountry").textContent = dataEN.AboutTheData.title;
 			document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
+			document.getElementById("nameVaccine").textContent = dataEN.AboutTheVaccine.title;
+			document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutTheVaccine.content;
 		}).catch(e => console.log(e));
 }
 

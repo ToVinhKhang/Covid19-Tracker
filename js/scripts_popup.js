@@ -15,7 +15,8 @@ $("#txtAboutData").change(function(){
 	}
 	// About Vaccine
 	if(target=="Vaccine"){
-
+		$("#imgVaccine").attr("src", "https://content.govdelivery.com/attachments/fancy_images/USVHA/2021/01/4005196/covid-vaccine-01_original.png");
+		$("#viewModalVaccine").modal("toggle");
 		$(this).val('');
 	}
 });
