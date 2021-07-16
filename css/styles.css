@@ -27,7 +27,7 @@ h2{text-align: center;margin: 20px; font-weight: bold;}
 #txtAboutData{position: absolute;top:1px; left:0px;padding:0px;color: black; font-weight: bold;font-size:18px;width: 125px;}
 option{font-weight: bold;}
 .SoftwareInfo{table-layout: fixed;text-align:justify;}
-
+aboutGuide td{width:50%;}
 
 /* Data World */
 #global{width: 100%; height: 400px;margin-bottom:50px;}
@@ -160,12 +160,11 @@ thead{display:table;width:100%;table-layout:fixed;}
 	#TotalDeaths{font-size:30px;}
 	.Population{font-size:16px;}
 	#Population{font-size:30px;}
-	#aboutGuide{word-break: break-all;}
+	.SoftwareInfo{font-size:12px;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
 	.vnTotal,.vnRate{border: 2px solid #ddd;margin: 10px;border-radius:25px;padding:25px 10px 10px 10px;}
-	.SoftwareInfo{font-size:12px;}
 }
 
 @media screen and (max-width: 420px) {
