@@ -25,8 +25,7 @@ h2{text-align: center;margin: 20px; font-weight: bold;}
 .btnVNTracker:hover + .txtVNTracker {display: block;position: absolute;background-color: #309FB5;color: white;border-radius: 6px;font-size: 12px;padding: 5px;right: 10px;top: 50px;width: 100%;}
 #SwitchLanguages{position: absolute;top:2px; right:0px;padding:0px;color: black; font-weight: bold;font-size:20px;}
 #txtAboutData{position: absolute;top:1px; left:0px;padding:0px;color: black; font-weight: bold;font-size:18px;width: 125px;}
-option{font-weight: bold;color: black;padding:15px!important;}
-option:hover{background-color: #309FB5;color: white;}
+option{font-weight: bold;}
 
 
 /* Data World */
