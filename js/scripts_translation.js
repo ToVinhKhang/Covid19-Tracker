@@ -36,24 +36,7 @@ $("#SwitchLanguages").change(function(){
 	$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
 	var nameCountry = document.getElementById("nameCountry");
 	var aboutTheData = document.getElementById("aboutTheData");
-	var aboutDataInEN = `Changes rapidly`+
-						`<h6>This data updates every 15 minutes and might not reflect some cases still being reported.</h6>`+
-					`Only includes people tested`+
-						`<h6>Numbers are based on official estimates, which may not account for unverified cases in countries lacking the proper infrastructure to diagnose patients.</h6><h6 class="plusSign">The "+" sign means that the newly collected data is recorded during the day.</h6>`+
-					`May discrepancies from other sources`+
-						`<h6>A change may result in inaccurate/no data being reported for the associated region.</h6>`+
-					`New updates`+
-						`<h6>Detailed information on the Covid-19 epidemic situation by cities/provinces and weekly chart statistics in Vietnam has been supported at the button on the top-right screen.</h6>`;
-	var aboutDataInVN = `Thay đổi nhanh chóng`+
-						`<h6>Dữ liệu này cập nhật 15 phút một lần và có thể không phản ánh một số trường hợp vẫn đang được báo cáo.</h6>`+
-					`Chỉ bao gồm những người đã được xét nghiệm`+
-						`<h6>Các con số dựa trên ước tính chính thức, có thể không tính đến các trường hợp chưa được xác minh ở các quốc gia thiếu cơ sở hạ tầng thích hợp để chẩn đoán bệnh nhân.</h6><h6 class="plusSign">Dấu "+" có nghĩa là dữ liệu mới thu thập được ghi nhận trong ngày.</h6>`+
-					`Có thể có sự khác biệt so với các nguồn khác`+
-						`<h6>Thay đổi có thể dẫn đến dữ liệu không chính xác/không được báo cáo cho khu vực được liên kết.</h6>`+
-					`Cập nhật mới`+
-						`<h6>Thông tin chi tiết về tình hình dịch bệnh Covid-19 theo thành phố/tỉnh và thống kê biểu đồ hàng tuần tại Việt Nam đã được hỗ trợ tại nút trên màn hình bên phải.</h6>`;
-	
-	
+
 	
 	// -------
 	// English
@@ -86,8 +69,8 @@ $("#SwitchLanguages").change(function(){
 			searchInput.placeholder = dataEN.searching;
 			txtAboutData.innerHTML = dataEN.AboutData;
 			vnName.innerHTML = dataEN.vnName;
-			nameCountry.textContent = "About The Data";
-			aboutTheData.innerHTML = aboutDataInEN;
+			nameCountry.textContent = dataEN.AboutTheData.title;
+			aboutTheData.innerHTML = dataEN.AboutTheData.content;
 		}).catch(e => console.log(e));
 	}
 	
@@ -123,8 +106,8 @@ $("#SwitchLanguages").change(function(){
 			searchInput.placeholder = dataVN.searching;
 			txtAboutData.innerHTML = dataVN.AboutData;
 			vnName.innerHTML = dataVN.vnName;
-			nameCountry.textContent = "Thông tin về dữ liệu";
-			aboutTheData.innerHTML = aboutDataInVN;
+			nameCountry.textContent = dataVN.AboutTheData.title;
+			aboutTheData.innerHTML = dataVN.AboutTheData.content;
 		}).catch(e => console.log(e));
 	}
 });
