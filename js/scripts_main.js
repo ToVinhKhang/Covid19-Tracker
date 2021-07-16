@@ -136,8 +136,8 @@ function AboutData(){
 			document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutVaccineTechnology.content;
 			document.getElementById("nameVaccineDetails").textContent = dataEN.AboutVaccineDetails.title;
 			document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
-			document.getElementById("nameGuide").textContent = dataEN.Guide.title;
-			document.getElementById("aboutGuide").innerHTML = dataEN.Guide.content;
+			document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
+			document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
 		}).catch(e => console.log(e));
 }
 

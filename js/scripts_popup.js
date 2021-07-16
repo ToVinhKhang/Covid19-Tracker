@@ -25,8 +25,8 @@ $("#txtAboutData").change(function(){
 		ToggleOrHide("#viewModalVaccine");
 		$(this).val('');
 	}
-	// Guide
-	if(target=="Guide"){
+	// SoftwareInfo
+	if(target=="SoftwareInfo"){
 		ToggleOrHide("#viewModalGuide");
 		$(this).val('');
 	}
