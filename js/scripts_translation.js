@@ -16,7 +16,7 @@ $("#SwitchLanguages").change(function(){
 		.then(data => data.json())
 		.then(dataEN => {
 			displayDataTranslated(dataEN);
-			Population = Population.replace("M","Tr");
+			Population = Population.replace("Tr","M");
 		}).catch(e => console.log(e));
 	}
 	
@@ -26,7 +26,7 @@ $("#SwitchLanguages").change(function(){
 		.then(data => data.json())
 		.then(dataVN => {
 			displayDataTranslated(dataVN);
-			Population = Population.replace("Tr","M");
+			Population = Population.replace("M","Tr");
 		}).catch(e => console.log(e));
 	}
 });
