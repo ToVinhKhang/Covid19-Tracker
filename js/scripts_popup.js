@@ -10,7 +10,7 @@ $("#txtAboutData").change(function(){
 	// About Data
 	if(target=="Data"){
 		$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
-		$("#viewModal").modal("toggle");
+		$("#viewModalData").modal("toggle");
 		$(this).val('');
 	}
 	// About Vaccine

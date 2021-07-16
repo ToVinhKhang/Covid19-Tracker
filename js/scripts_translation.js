@@ -34,7 +34,7 @@ $("#SwitchLanguages").change(function(){
 	var txtAboutData = document.getElementById("txtAboutData");
 	var vnName = document.getElementById("vnName");
 	$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
-	var nameCountry = document.getElementById("nameCountry");
+	var nameAbData = document.getElementById("nameAbData");
 	var aboutTheData = document.getElementById("aboutTheData");
 
 	
@@ -69,7 +69,7 @@ $("#SwitchLanguages").change(function(){
 			searchInput.placeholder = dataEN.searching;
 			txtAboutData.innerHTML = dataEN.AboutData;
 			vnName.innerHTML = dataEN.vnName;
-			nameCountry.textContent = dataEN.AboutTheData.title;
+			nameAbData.textContent = dataEN.AboutTheData.title;
 			aboutTheData.innerHTML = dataEN.AboutTheData.content;
 		}).catch(e => console.log(e));
 	}
@@ -106,7 +106,7 @@ $("#SwitchLanguages").change(function(){
 			searchInput.placeholder = dataVN.searching;
 			txtAboutData.innerHTML = dataVN.AboutData;
 			vnName.innerHTML = dataVN.vnName;
-			nameCountry.textContent = dataVN.AboutTheData.title;
+			nameAbData.textContent = dataVN.AboutTheData.title;
 			aboutTheData.innerHTML = dataVN.AboutTheData.content;
 		}).catch(e => console.log(e));
 	}

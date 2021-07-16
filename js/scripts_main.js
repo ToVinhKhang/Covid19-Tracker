@@ -129,7 +129,7 @@ function AboutData(){
 	fetch("./lang/en.json")
 		.then(data => data.json())
 		.then(dataEN => {
-			document.getElementById("nameCountry").textContent = dataEN.AboutTheData.title;
+			document.getElementById("nameAbData").textContent = dataEN.AboutTheData.title;
 			document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
 			document.getElementById("nameVaccine").textContent = dataEN.AboutTheVaccine.title;
 			document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutTheVaccine.content;
