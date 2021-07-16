@@ -127,14 +127,14 @@ thead{display:table;width:100%;table-layout:fixed;}
 	#table td:nth-child(2), .th-contries-flags{display: none;}
 	#imgCfmCovid{display: none;}
 	.btnAboutTheData{width:115px;height:36.8px;}
-	#txtAboutData{width: 105px;font-size:16px;}
+	#txtAboutData{width: 105px;font-size:16px;padding-left:10px;top:5px;}
 	.search{width: 100%;max-width: 100%;margin: 20px 0px; height: 18px;}
 	.search-input{letter-spacing: 1px;border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
 	h5{font-size:110%;}h6{font-size:90%;}
 	#darkMode{position: absolute; right: 46px; top: 5px;font-size:1.5em;}
 	.SwitchBar{height:38.2px;width: 115px;}
 	.vnLogo,.WorldLogo{top: 1px;right: 76px;}
-	#SwitchLanguages{font-size:14px;top:5px;}
+	#SwitchLanguages{font-size:14px;top:5px;right:8px;}
 	.btnVNTracker:hover + .txtVNTracker {display: none;}
 	.theadCities{font-size: 10px;}
 	.theadCities th:nth-child(1){text-align: center;padding-left:0px;padding-right: 0px;width: 100px;}
