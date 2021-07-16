@@ -147,7 +147,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	#table{height:440px;}
 	#tableVN{font-size: 10px;height:400px;}
 	#countries{margin-bottom: 30px;}
-	.footer{font-size: 10px;}
+	.footer,#designedBy{font-size: 10px;}
 }
 @media screen and (max-width: 768px) {
 	.vnDetailsFlag{height: 50%;}
