@@ -160,11 +160,12 @@ thead{display:table;width:100%;table-layout:fixed;}
 	#TotalDeaths{font-size:30px;}
 	.Population{font-size:16px;}
 	#Population{font-size:30px;}
+	#aboutGuide{word-break: break-all;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
 	.vnTotal,.vnRate{border: 2px solid #ddd;margin: 10px;border-radius:25px;padding:25px 10px 10px 10px;}
-	.SoftwareInfo{font-size:12px;word-break: break-all;}
+	.SoftwareInfo{font-size:12px;}
 }
 
 @media screen and (max-width: 420px) {
