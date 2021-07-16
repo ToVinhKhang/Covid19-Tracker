@@ -8,7 +8,7 @@
 $("#SwitchLanguages").change(function(){
 	// LANG TARGET
 	lang = $(this).val();
-	var Population = document.getElementById("Population").innerHTML;
+	var Population = document.getElementById("Population");
 	
 	// English
 	if(lang=="EN"){
@@ -16,7 +16,7 @@ $("#SwitchLanguages").change(function(){
 		.then(data => data.json())
 		.then(dataEN => {
 			displayDataTranslated(dataEN);
-			Population = Population.replace("Tr","M");
+			Population.innerHTML = Population.innerHTML.replace("Tr","M");
 		}).catch(e => console.log(e));
 	}
 	
@@ -26,7 +26,7 @@ $("#SwitchLanguages").change(function(){
 		.then(data => data.json())
 		.then(dataVN => {
 			displayDataTranslated(dataVN);
-			Population = Population.replace("M","Tr");
+			Population.innerHTML = Population.innerHTML.replace("M","Tr");
 		}).catch(e => console.log(e));
 	}
 });
