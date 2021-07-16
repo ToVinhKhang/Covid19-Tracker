@@ -26,7 +26,7 @@ h2{text-align: center;margin: 20px; font-weight: bold;}
 #SwitchLanguages{position: absolute;top:2px; right:0px;padding:0px;color: black; font-weight: bold;font-size:20px;}
 #txtAboutData{position: absolute;top:1px; left:0px;padding:0px;color: black; font-weight: bold;font-size:18px;width: 125px;}
 option{font-weight: bold;}
-.SoftwareInfo{width: 100%;table-layout: fixed;text-align:justify;}
+.SoftwareInfo{table-layout: fixed;text-align:justify;}
 
 
 /* Data World */
