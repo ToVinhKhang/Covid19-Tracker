@@ -35,7 +35,7 @@ h5{font-weight:bold;margin: 15px 0px;letter-spacing: 1px;line-height: 200%; }
 h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;line-height: 200%; }
 .plusSign{margin-top: 0px;}
 #imgCfmCovid{width: 100%; bottom: 0; position: absolute;}
-#imgVaccine{width: 100%;border-radius: 20px;}
+#imgVaccine{width: 100%;border-radius: 25px;}
 .btnAboutTheData{border-radius: 0px 0px 18px 0px;font-weight:bold;padding-right:0px;padding-left:8px;}
 .btnAboutTheData:hover{font-weight: bold;}
 .modal-content{padding: 10px;}
@@ -120,7 +120,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.title{display: block;}
 	.loader {margin-top: 25%;}
 	#table td:nth-child(2), .th-contries-flags{display: none;}
-	#imgCfmCovid,#imgVaccine{display: none;}
+	#imgCfmCovid{display: none;}
 	.btnAboutTheData{font-size: 14px;}
 	.search{width: 100%;max-width: 100%;margin: 20px 0px; height: 18px;}
 	.search-input{letter-spacing: 1px;border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
