@@ -38,7 +38,8 @@ $("#SwitchLanguages").change(function(){
 	var aboutTheData = document.getElementById("aboutTheData");
 	var nameVaccine = document.getElementById("nameVaccine");
 	var aboutTheVaccine = document.getElementById("aboutTheVaccine");
-
+	var nameVaccineDetails = document.getElementById("nameVaccineDetails");
+	var aboutTheVaccineDetails = document.getElementById("aboutTheVaccineDetails");
 	
 	// -------
 	// English
@@ -73,8 +74,10 @@ $("#SwitchLanguages").change(function(){
 			vnName.innerHTML = dataEN.vnName;
 			nameAbData.textContent = dataEN.AboutTheData.title;
 			aboutTheData.innerHTML = dataEN.AboutTheData.content;
-			nameVaccine.textContent = dataEN.AboutTheVaccine.title;
-			aboutTheVaccine.innerHTML = dataEN.AboutTheVaccine.content;
+			nameVaccine.textContent = dataEN.AboutVaccineTechnology.title;
+			aboutTheVaccine.innerHTML = dataEN.AboutVaccineTechnology.content;
+			nameVaccineDetails.textContent = dataEN.AboutVaccineDetails.title;
+			aboutTheVaccineDetails.innerHTML = dataEN.AboutVaccineDetails.content;
 		}).catch(e => console.log(e));
 	}
 	
@@ -112,8 +115,10 @@ $("#SwitchLanguages").change(function(){
 			vnName.innerHTML = dataVN.vnName;
 			nameAbData.textContent = dataVN.AboutTheData.title;
 			aboutTheData.innerHTML = dataVN.AboutTheData.content;
-			nameVaccine.textContent = dataVN.AboutTheVaccine.title;
-			aboutTheVaccine.innerHTML = dataVN.AboutTheVaccine.content;
+			nameVaccine.textContent = dataVN.AboutVaccineTechnology.title;
+			aboutTheVaccine.innerHTML = dataVN.AboutVaccineTechnology.content;
+			nameVaccineDetails.textContent = dataVN.AboutVaccineDetails.title;
+			aboutTheVaccineDetails.innerHTML = dataVN.AboutVaccineDetails.content;
 		}).catch(e => console.log(e));
 	}
 });

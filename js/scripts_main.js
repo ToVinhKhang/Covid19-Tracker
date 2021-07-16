@@ -124,15 +124,17 @@ function Countries_Ajax(){
 	xmlHttpRequest.responseType = 'json';
 	xmlHttpRequest.send();
 }
-// Load data in MoreAbout
+// Load data in ReadMore button
 function AboutData(){
 	fetch("./lang/en.json")
 		.then(data => data.json())
 		.then(dataEN => {
 			document.getElementById("nameAbData").textContent = dataEN.AboutTheData.title;
 			document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
-			document.getElementById("nameVaccine").textContent = dataEN.AboutTheVaccine.title;
-			document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutTheVaccine.content;
+			document.getElementById("nameVaccine").textContent = dataEN.AboutVaccineTechnology.title;
+			document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutVaccineTechnology.content;
+			document.getElementById("nameVaccineDetails").textContent = dataEN.AboutVaccineDetails.title;
+			document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
 		}).catch(e => console.log(e));
 }
 
