@@ -119,7 +119,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.title{display: block;}
 	.loader {margin-top: 25%;}
 	#table td:nth-child(2), .th-contries-flags{display: none;}
-	#imgCfmCovid{display: none;}
+	#imgCfmCovid,#imgVaccine{display: none;}
 	.btnAboutTheData{font-size: 14px;}
 	.search{width: 100%;max-width: 100%;margin: 20px 0px; height: 18px;}
 	.search-input{letter-spacing: 1px;border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
