@@ -44,6 +44,6 @@
 	},
 	"Guide": {
 		"title": "GUIDE",
-		"content": "<tr><td>DarkLight</td><td>HelloDarkLight</td></tr><tr><td>DarkLight</td><td>HelloDarkLight</td></tr><tr><td>DarkLight</td><td>HelloDarkLight</td></tr>"
+		"content": "<tr><td>DarkLight</td><td>DarkLight</td><td>HelloDarkLight</td></tr><tr><td>DarkLight</td><td>DarkLight</td><td>HelloDarkLight</td></tr><tr><td>DarkLight</td><td>DarkLight</td><td>HelloDarkLight</td></tr>"
 	}
 }
