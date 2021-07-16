@@ -29,7 +29,7 @@
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
 	"footer": "Được thiết kế bởi ",
 	"vnName" : "VIỆT NAM",
-	"AboutData" : "<option value=''>Xem Thêm</option><option value='AboutTheData'>• Về Dữ liệu</option><option value='VaccineDetails'>• Chi Tiết Vắcxin</option><option value='VaccineTechnology'>• Công nghệ Vắcxin</option>",
+	"AboutData" : "<option value=''>Xem Thêm</option><option value='AboutTheData'>• Về Dữ liệu</option><option value='VaccineDetails'>• Chi Tiết Vắcxin</option><option value='VaccineTechnology'>• Công nghệ Vắcxin</option><option value='Guide'>Guide</option>",
 	"AboutTheData": {
 		"title": "VỀ DỮ LIỆU",
 		"content": "THAY ĐỔI NHANH CHÓNG<h6>Dữ liệu này cập nhật 15 phút một lần và có thể không phản ánh một số trường hợp vẫn đang được báo cáo.</h6><h6 class='plusSign'>Các con số dựa trên ước tính chính thức, có thể không tính đến các trường hợp chưa được xác minh ở các quốc gia thiếu cơ sở hạ tầng thích hợp để chẩn đoán bệnh nhân.</h6><h6 class='plusSign'>Dấu '+' có nghĩa là dữ liệu mới thu thập được ghi nhận trong ngày.</h6>CÓ THỂ CÓ SỰ KHÁC BIỆT VỚI CÁC NGUỒN KHÁC<h6>Thay đổi có thể dẫn đến dữ liệu không chính xác/không được báo cáo cho khu vực được liên kết.</h6>CẬP NHẬT MỚI<h6>Thông tin chi tiết về tình hình dịch bệnh Covid-19 theo thành phố/tỉnh và thống kê biểu đồ hàng tuần tại Việt Nam đã được hỗ trợ tại nút trên màn hình bên phải.</h6>"
