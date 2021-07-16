@@ -34,7 +34,7 @@ option{font-weight: bold;}
 #global{width: 100%; height: 400px;margin-bottom:50px;}
 span{font-size: 12px;}
 .flagCountry{width: 70px; height: 50px;}
-#nameAbData,#nameVaccine,#nameVaccineDetails{font-weight: bold;}
+#nameAbData,#nameVaccine,#nameVaccineDetails,#nameGuide{font-weight: bold;}
 h5{font-weight:bold;margin: 15px 0px;letter-spacing: 1px;line-height: 200%; }
 h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;line-height: 200%; }
 .plusSign{margin-top: 0px;}
