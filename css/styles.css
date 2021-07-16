@@ -28,7 +28,7 @@ h2{text-align: center;margin: 20px; font-weight: bold;}
 option{font-weight: bold;}
 .SoftwareInfo{table-layout: fixed;text-align:justify;}
 #aboutGuide{line-height: 50px;}
-#aboutGuide td:nth-child(1){width:30%;}
+#aboutGuide td:nth-child(1){width:30%;font-weight: bold;}
 
 /* Data World */
 #global{width: 100%; height: 400px;margin-bottom:50px;}
