@@ -44,6 +44,6 @@
 	},
 	"SoftwareInfo": {
 		"title": "SOFTWARE INFORMATION",
-		"content": "<tr><td>Name</td><td>Covid-19 Tracker</td></tr><tr><td>Description</td><td>The situation of the Coronavirus epidemic data around the World and details Vietnam country</td></tr><tr><td>Additional Features</td><td>Information about Vaccine</td></tr><tr><td>Version</td><td>2.0</td></tr><tr><td>Author</td><td>To Vinh Khang</td></tr><tr><td>Contact</td><td>https://www.facebook.com/VinceKent1996/</td></tr>"
+		"content": "<tr><td>Name</td><td>Covid-19 Tracker</td></tr><tr><td>Description</td><td>The situation of the Coronavirus epidemic data around the World and details Vietnam country</td></tr><tr><td>Additional Features</td><td>Information about Vaccine</td></tr><tr><td>Version</td><td>2.0</td></tr><tr><td>Author</td><td>To Vinh Khang</td></tr><tr><td>Contact</td><td>https://www.facebook.com/VinceKent1996/</td></tr><tr><td>Best Browser Support</td><td>Chrome/Edge/Safari</td></tr>"
 	}
 }

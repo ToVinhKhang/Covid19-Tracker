@@ -60,6 +60,8 @@ function displayDataTranslated(dataLang){
 	var aboutTheVaccine = document.getElementById("aboutTheVaccine");
 	var nameVaccineDetails = document.getElementById("nameVaccineDetails");
 	var aboutTheVaccineDetails = document.getElementById("aboutTheVaccineDetails");
+	var nameGuide = document.getElementById("nameGuide");
+	var aboutGuide = document.getElementById("aboutGuide");
 	
 	txtTitle.innerHTML = dataLang.title;
 	txtDesc.innerHTML = dataLang.desc;
@@ -90,6 +92,8 @@ function displayDataTranslated(dataLang){
 	aboutTheVaccine.innerHTML = dataLang.AboutVaccineTechnology.content;
 	nameVaccineDetails.textContent = dataLang.AboutVaccineDetails.title;
 	aboutTheVaccineDetails.innerHTML = dataLang.AboutVaccineDetails.content;
+	nameGuide.textContent = dataLang.SoftwareInfo.title;
+	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
 }
 
 // ----
