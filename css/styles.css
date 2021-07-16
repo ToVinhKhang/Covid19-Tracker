@@ -24,6 +24,8 @@ h2{text-align: center;margin: 20px; font-weight: bold;}
 .txtVNTracker {display: none;}
 .btnVNTracker:hover + .txtVNTracker {display: block;position: absolute;background-color: #309FB5;color: white;border-radius: 6px;font-size: 12px;padding: 5px;right: 10px;top: 50px;width: 100%;}
 #SwitchLanguages{position: absolute;top:2px; right:0px;padding:0px;color: black; font-weight: bold;font-size:20px;}
+#txtAboutData{position: absolute;top:1px; left:0px;padding:0px;color: black; font-weight: bold;font-size:18px;width: 125px;}
+
 
 /* Data World */
 #global{width: 100%; height: 400px;margin-bottom:50px;}
@@ -35,8 +37,7 @@ h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;li
 .plusSign{margin-top: 0px;}
 #imgCfmCovid{width: 100%; bottom: 0; position: absolute;}
 #imgVaccine{width: 100%;border-radius: 25px;}
-.btnAboutTheData{border-radius: 0px 0px 18px 0px;font-weight:bold;padding: 5px 0px 5px 5px;width:123.6px;color: #fff;background-color: #17a2b8;border-color: #17a2b8;text-align: center;font-size: 1rem;}
-.btnAboutTheData:hover{font-weight: bold;}
+.btnAboutTheData{position:relative; left: 0px; padding: 0px; margin: 0px; width: 135px; border-radius: 0px 0px 20px 0px; height: 38px;}
 .modal-content{padding: 10px;}
 thead{display:table;width:100%;table-layout:fixed;}
 .theadCities th{border: 2.5px solid #ddd;}
@@ -125,7 +126,8 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.loader {margin-top: 25%;}
 	#table td:nth-child(2), .th-contries-flags{display: none;}
 	#imgCfmCovid{display: none;}
-	.btnAboutTheData{font-size: 14px;width:115px;height:36.8px;}
+	.btnAboutTheData{width:115px;height:36.8px;}
+	#txtAboutData{width: 105px;font-size:16px;}
 	.search{width: 100%;max-width: 100%;margin: 20px 0px; height: 18px;}
 	.search-input{letter-spacing: 1px;border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
 	h5{font-size:110%;}h6{font-size:90%;}
