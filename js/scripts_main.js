@@ -131,6 +131,7 @@ function AboutData(){
 		.then(dataEN => {
 			document.getElementById("nameAbData").textContent = dataEN.AboutTheData.title;
 			document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
+			$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
 			document.getElementById("nameVaccine").textContent = dataEN.AboutVaccineTechnology.title;
 			document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutVaccineTechnology.content;
 			document.getElementById("nameVaccineDetails").textContent = dataEN.AboutVaccineDetails.title;

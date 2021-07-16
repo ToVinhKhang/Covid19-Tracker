@@ -9,7 +9,26 @@ $("#SwitchLanguages").change(function(){
 	// LANG TARGET
 	lang = $(this).val();
 	
-	// SETUP
+	// English
+	if(lang=="EN"){
+		fetch("./lang/en.json")
+		.then(data => data.json())
+		.then(dataEN => {
+			displayDataTranslated(dataEN);
+		}).catch(e => console.log(e));
+	}
+	
+	// Vietnamses
+	if(lang=="VN"){
+		fetch("./lang/vn.json")
+		.then(data => data.json())
+		.then(dataVN => {
+			displayDataTranslated(dataVN);
+		}).catch(e => console.log(e));
+	}
+});
+
+function displayDataTranslated(dataLang){
 	var txtTitle = document.getElementById("txtTitle");
 	var txtDesc = document.getElementById("txtDesc");
 	var tspan = document.getElementsByTagName("tspan")[0];
@@ -33,7 +52,6 @@ $("#SwitchLanguages").change(function(){
 	var searchInput = document.getElementById("searchInput");
 	var txtAboutData = document.getElementById("txtAboutData");
 	var vnName = document.getElementById("vnName");
-	$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
 	var nameAbData = document.getElementById("nameAbData");
 	var aboutTheData = document.getElementById("aboutTheData");
 	var nameVaccine = document.getElementById("nameVaccine");
@@ -41,87 +59,37 @@ $("#SwitchLanguages").change(function(){
 	var nameVaccineDetails = document.getElementById("nameVaccineDetails");
 	var aboutTheVaccineDetails = document.getElementById("aboutTheVaccineDetails");
 	
-	// -------
-	// English
-	// -------
-	if(lang=="EN"){
-		fetch("./lang/en.json")
-		.then(data => data.json())
-		.then(dataEN => {
-			txtTitle.innerHTML = dataEN.title;
-			txtDesc.innerHTML = dataEN.desc;
-			tspan.innerHTML = dataEN.global;
-			th_contries.innerHTML = dataEN.tableWorld.th1;
-			th_cases.innerHTML = dataEN.tableWorld.th2;
-			th_recovered.innerHTML = dataEN.tableWorld.th3;
-			th_deaths.innerHTML = dataEN.tableWorld.th4;
-			th_tests.innerHTML = dataEN.tableWorld.th5;
-			th_citiesprovinces.innerHTML = dataEN.tableVietnam.th1;
-			th_citiesCases.innerHTML = dataEN.tableVietnam.th2;
-			th_citiesRecovered.innerHTML = dataEN.tableVietnam.th3;
-			th_citiesDeaths.innerHTML = dataEN.tableVietnam.th4;
-			txtTotalCases.innerHTML = dataEN.totalVietnam.txt1;
-			txtTotalRecovered.innerHTML = dataEN.totalVietnam.txt2;
-			txtTotalDeaths.innerHTML = dataEN.totalVietnam.txt3;
-			txtPopulation.innerHTML = dataEN.totalVietnam.txt4;
-			Population.innerHTML = Population.innerHTML.replace("Tr","M");
-			txtIncidenceRate.innerHTML = dataEN.rateVietnam.txt1;
-			txtRecoveryRate.innerHTML = dataEN.rateVietnam.txt2;
-			txtDeathRate.innerHTML = dataEN.rateVietnam.txt3;
-			designedBy.innerHTML = dataEN.footer;
-			searchInput.placeholder = dataEN.searching;
-			txtAboutData.innerHTML = dataEN.AboutData;
-			vnName.innerHTML = dataEN.vnName;
-			nameAbData.textContent = dataEN.AboutTheData.title;
-			aboutTheData.innerHTML = dataEN.AboutTheData.content;
-			nameVaccine.textContent = dataEN.AboutVaccineTechnology.title;
-			aboutTheVaccine.innerHTML = dataEN.AboutVaccineTechnology.content;
-			nameVaccineDetails.textContent = dataEN.AboutVaccineDetails.title;
-			aboutTheVaccineDetails.innerHTML = dataEN.AboutVaccineDetails.content;
-		}).catch(e => console.log(e));
-	}
-	
-	
-	// ----------
-	// Vietnamses
-	// ----------
-	if(lang=="VN"){
-		fetch("./lang/vn.json")
-		.then(data => data.json())
-		.then(dataVN => {
-			txtTitle.innerHTML = dataVN.title;
-			txtDesc.innerHTML = dataVN.desc;
-			tspan.innerHTML = dataVN.global;
-			th_contries.innerHTML = dataVN.tableWorld.th1;
-			th_cases.innerHTML = dataVN.tableWorld.th2;
-			th_recovered.innerHTML = dataVN.tableWorld.th3;
-			th_deaths.innerHTML = dataVN.tableWorld.th4;
-			th_tests.innerHTML = dataVN.tableWorld.th5;
-			th_citiesprovinces.innerHTML = dataVN.tableVietnam.th1;
-			th_citiesCases.innerHTML = dataVN.tableVietnam.th2;
-			th_citiesRecovered.innerHTML = dataVN.tableVietnam.th3;
-			th_citiesDeaths.innerHTML = dataVN.tableVietnam.th4;
-			txtTotalCases.innerHTML = dataVN.totalVietnam.txt1;
-			txtTotalRecovered.innerHTML = dataVN.totalVietnam.txt2;
-			txtTotalDeaths.innerHTML = dataVN.totalVietnam.txt3;
-			txtPopulation.innerHTML = dataVN.totalVietnam.txt4;
-			Population.innerHTML = Population.innerHTML.replace("M","Tr");
-			txtIncidenceRate.innerHTML = dataVN.rateVietnam.txt1;
-			txtRecoveryRate.innerHTML = dataVN.rateVietnam.txt2;
-			txtDeathRate.innerHTML = dataVN.rateVietnam.txt3;
-			designedBy.innerHTML = dataVN.footer;
-			searchInput.placeholder = dataVN.searching;
-			txtAboutData.innerHTML = dataVN.AboutData;
-			vnName.innerHTML = dataVN.vnName;
-			nameAbData.textContent = dataVN.AboutTheData.title;
-			aboutTheData.innerHTML = dataVN.AboutTheData.content;
-			nameVaccine.textContent = dataVN.AboutVaccineTechnology.title;
-			aboutTheVaccine.innerHTML = dataVN.AboutVaccineTechnology.content;
-			nameVaccineDetails.textContent = dataVN.AboutVaccineDetails.title;
-			aboutTheVaccineDetails.innerHTML = dataVN.AboutVaccineDetails.content;
-		}).catch(e => console.log(e));
-	}
-});
+	txtTitle.innerHTML = dataLang.title;
+	txtDesc.innerHTML = dataLang.desc;
+	tspan.innerHTML = dataLang.global;
+	th_contries.innerHTML = dataLang.tableWorld.th1;
+	th_cases.innerHTML = dataLang.tableWorld.th2;
+	th_recovered.innerHTML = dataLang.tableWorld.th3;
+	th_deaths.innerHTML = dataLang.tableWorld.th4;
+	th_tests.innerHTML = dataLang.tableWorld.th5;
+	th_citiesprovinces.innerHTML = dataLang.tableVietnam.th1;
+	th_citiesCases.innerHTML = dataLang.tableVietnam.th2;
+	th_citiesRecovered.innerHTML = dataLang.tableVietnam.th3;
+	th_citiesDeaths.innerHTML = dataLang.tableVietnam.th4;
+	txtTotalCases.innerHTML = dataLang.totalVietnam.txt1;
+	txtTotalRecovered.innerHTML = dataLang.totalVietnam.txt2;
+	txtTotalDeaths.innerHTML = dataLang.totalVietnam.txt3;
+	txtPopulation.innerHTML = dataLang.totalVietnam.txt4;
+	Population.innerHTML = Population.innerHTML.replace("Tr","M");
+	txtIncidenceRate.innerHTML = dataLang.rateVietnam.txt1;
+	txtRecoveryRate.innerHTML = dataLang.rateVietnam.txt2;
+	txtDeathRate.innerHTML = dataLang.rateVietnam.txt3;
+	designedBy.innerHTML = dataLang.footer;
+	searchInput.placeholder = dataLang.searching;
+	txtAboutData.innerHTML = dataLang.AboutData;
+	vnName.innerHTML = dataLang.vnName;
+	nameAbData.textContent = dataLang.AboutTheData.title;
+	aboutTheData.innerHTML = dataLang.AboutTheData.content;
+	nameVaccine.textContent = dataLang.AboutVaccineTechnology.title;
+	aboutTheVaccine.innerHTML = dataLang.AboutVaccineTechnology.content;
+	nameVaccineDetails.textContent = dataLang.AboutVaccineDetails.title;
+	aboutTheVaccineDetails.innerHTML = dataLang.AboutVaccineDetails.content;
+}
 
 // ----
 // END
