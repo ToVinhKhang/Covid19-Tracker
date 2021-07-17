@@ -6,22 +6,32 @@
 
 
 // Init
-const API_Global    = "https://api.covid19api.com/summary";
 const API_Countries = "https://corona.lmao.ninja/v2/countries";
 let table;
 
 window.addEventListener('load',() => {
 	table = document.getElementById("table");
-	Global_FetchAndDrawChart();
-	Countries_Fetch();
+	getData_Fetch();
 	AboutData();
 });
-
 
 // Display
 function displayData(jsonData){
 	table.innerHTML = '';
+	var GlobalCases = 0;
+	var GlobalRecovered = 0;
+	var GlobalDeaths = 0;
 	jsonData.forEach(u => {
+		// Global
+		GlobalCases+=u.cases;
+		GlobalRecovered+=u.recovered;
+		GlobalDeaths+=u.deaths;
+		
+		document.getElementById("GlobalCases").innerHTML = GlobalCases.toLocaleString('en-US');
+		document.getElementById("GlobalRecovered").innerHTML = GlobalRecovered.toLocaleString('en-US');
+		document.getElementById("GlobalDeaths").innerHTML = GlobalDeaths.toLocaleString('en-US');
+		
+		// Countries		
 		let tr = document.createElement('tr');
 		let td0 = document.createElement('td');
 		let td1 = document.createElement('td');
@@ -29,7 +39,8 @@ function displayData(jsonData){
 		let td3 = document.createElement('td');
 		let td4 = document.createElement('td');
 		let td5 = document.createElement('td');
-
+		
+		
 		td0.innerHTML = `<img class="flagCountry" src="`+u.countryInfo.flag+`">`;
 		td1.innerHTML = u.country;
 		td2.innerHTML = u.cases.toLocaleString('en-US')+`<br><span>+`+u.todayCases.toLocaleString('en-US')+`</span>`; //Commas thousands
@@ -76,41 +87,19 @@ function displayRate(incidenceRate,recoveryRate,deathRate){
 // ---------
 // Load Data
 // ---------
-
-// Fetch and Draw Chart
-function Global_FetchAndDrawChart(){
-	fetch(API_Global)
+// Fetch
+function getData_Fetch(){
+	fetch(API_Countries) /* [Promise] Method */
 		.then(data => data.json())
 		.then(jsonData => {
-			var GlobalCases = jsonData.Global.TotalConfirmed;
-			var GlobalRecovered = jsonData.Global.TotalRecovered;
-			var GlobalDeaths = jsonData.Global.TotalDeaths;
-			
-			if(GlobalCases==0){
-				document.getElementById("GlobalCases").innerHTML = "Updating";
-				document.getElementById("GlobalRecovered").innerHTML = "Updating";
-				document.getElementById("GlobalDeaths").innerHTML = "Updating";
-			}
-			else{
-				document.getElementById("GlobalCases").innerHTML = GlobalCases;
-				document.getElementById("GlobalRecovered").innerHTML = GlobalRecovered;
-				document.getElementById("GlobalDeaths").innerHTML = GlobalDeaths;
-			}
-
-			// Hide Loading after display success
+			displayData(jsonData);
+			// Hide loader when success
 			document.getElementById("loader").style.display = "none";
 		})
 		.catch(e => console.log(e));
 }
-// Fetch
-function Countries_Fetch(){
-	fetch(API_Countries) /* [Promise] Method */
-		.then(data => data.json())
-		.then(jsonData => {displayData(jsonData);})
-		.catch(e => console.log(e));
-}
 // AJAX
-function Countries_Ajax(){
+function getData_AJAX(){
 	let xmlHttpRequest = new XMLHttpRequest();
 	xmlHttpRequest.addEventListener('load',e => {
 		if(xmlHttpRequest.readyState === 4 && xmlHttpRequest.status === 200){
@@ -162,7 +151,7 @@ setInterval(()=>{
 
 
 // Update data every 15 mins
-setInterval(()=>{Countries_Ajax();},(1000*60*15));
+setInterval(()=>{getData_AJAX();},(1000*60*15));
 
 //------
 // END
