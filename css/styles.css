@@ -31,7 +31,6 @@ option{font-weight: bold;background-color: #309FB5;}
 #aboutGuide td:nth-child(1){width:30%;font-weight: bold;}
 fieldset {margin:0;padding:0;border: 3px solid #ddd; border-radius: 30px;}
 legend{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
-#countries{display: none;}
 #footer{display: none;}
 
 /* Data World */
