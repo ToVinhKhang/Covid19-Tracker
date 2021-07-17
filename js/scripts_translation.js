@@ -34,7 +34,6 @@ $("#SwitchLanguages").change(function(){
 function displayDataTranslated(dataLang){
 	var txtTitle = document.getElementById("txtTitle");
 	var txtDesc = document.getElementById("txtDesc");
-	var tspan = document.getElementsByTagName("tspan")[0];
 	var th_contries = document.getElementById("th-contries");
 	var th_cases = document.getElementById("th-cases");
 	var th_recovered = document.getElementById("th-recovered");
@@ -44,6 +43,10 @@ function displayDataTranslated(dataLang){
 	var th_citiesCases = document.getElementById("th-citiesCases");
 	var th_citiesRecovered = document.getElementById("th-citiesRecovered");
 	var th_citiesDeaths = document.getElementById("th-citiesDeaths");
+	var txtGlobal = document.getElementById("txtGlobal");
+	var txtGlobalCases = document.getElementById("txtGlobalCases");
+	var txtGlobalRecovered = document.getElementById("txtGlobalRecovered");
+	var txtGlobalDeaths = document.getElementById("txtGlobalDeaths");
 	var txtTotalCases = document.getElementById("txtTotalCases");
 	var txtTotalRecovered = document.getElementById("txtTotalRecovered");
 	var txtTotalDeaths = document.getElementById("txtTotalDeaths");
@@ -65,7 +68,10 @@ function displayDataTranslated(dataLang){
 	
 	txtTitle.innerHTML = dataLang.title;
 	txtDesc.innerHTML = dataLang.desc;
-	tspan.innerHTML = dataLang.global;
+	txtGlobal.innerHTML = dataLang.global;
+	txtGlobalCases.innerHTML = dataLang.totalVietnam.txt1;
+	txtGlobalRecovered.innerHTML = dataLang.totalVietnam.txt2;
+	txtGlobalDeaths.innerHTML = dataLang.totalVietnam.txt3;
 	th_contries.innerHTML = dataLang.tableWorld.th1;
 	th_cases.innerHTML = dataLang.tableWorld.th2;
 	th_recovered.innerHTML = dataLang.tableWorld.th3;

@@ -82,23 +82,10 @@ function Global_FetchAndDrawChart(){
 	fetch(API_Global)
 		.then(data => data.json())
 		.then(jsonData => {
-			anychart.onDocumentReady(function() {
-				var data = {header: ["Name", "Number"],
-				rows:[
-					["Cases", jsonData.Global.TotalConfirmed],
-					["Recovered", jsonData.Global.TotalRecovered],
-					["Deaths", jsonData.Global.TotalDeaths],
-				]};
-				var chart = anychart.bar();
-				anychart.theme(anychart.themes.darkTurquoise);chart.data(data);
-				chart.title("COVID-19 DATA IN GLOBAL");
-				chart.yScale().ticks().interval(50000);chart.yScale().minorTicks().interval(10000);
-				chart.padding().right("60px");
-				chart.yAxis().labels().format("{%value}{groupsSeparator:.}");
-				chart.yGrid().enabled(true);chart.yMinorGrid().enabled(true);
-				chart.background().cornerType("round");chart.background().corners(10);
-				chart.animation(true);chart.container("global");chart.draw();
-			});
+			document.getElementById("GlobalCases").innerHTML = jsonData.Global.TotalConfirmed.toLocaleString('en-US');
+			document.getElementById("GlobalRecovered").innerHTML = jsonData.Global.TotalRecovered.toLocaleString('en-US');
+			document.getElementById("GlobalDeaths").innerHTML = jsonData.Global.TotalDeaths.toLocaleString('en-US');
+
 			// Hide Loading after display success
 			document.getElementById("loader").style.display = "none";
 		})

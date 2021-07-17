@@ -1,7 +1,7 @@
 {
 	"title": "Covid-19 Tracker",
 	"desc": "The situation of the Coronavirus epidemic data around the World",
-	"global": "COVID-19 DATA IN GLOBAL",
+	"global": "GLOBAL",
 	"tableWorld": {
 		"th1": "Countries",
 		"th2": "Cases",
