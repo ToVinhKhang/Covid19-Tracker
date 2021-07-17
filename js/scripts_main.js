@@ -27,9 +27,9 @@ function displayData(jsonData){
 		GlobalRecovered+=u.recovered;
 		GlobalDeaths+=u.deaths;
 		
-		document.getElementById("GlobalCases").innerHTML = GlobalCases.toLocaleString('en-US');
-		document.getElementById("GlobalRecovered").innerHTML = GlobalRecovered.toLocaleString('en-US');
-		document.getElementById("GlobalDeaths").innerHTML = GlobalDeaths.toLocaleString('en-US');
+		document.getElementById("GlobalCases").innerHTML = ShorterNum(GlobalCases);
+		document.getElementById("GlobalRecovered").innerHTML = ShorterNum(GlobalRecovered);
+		document.getElementById("GlobalDeaths").innerHTML = ShorterNum(GlobalDeaths);
 		
 		// Countries		
 		let tr = document.createElement('tr');
