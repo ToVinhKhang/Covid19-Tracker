@@ -82,9 +82,20 @@ function Global_FetchAndDrawChart(){
 	fetch(API_Global)
 		.then(data => data.json())
 		.then(jsonData => {
-			document.getElementById("GlobalCases").innerHTML = jsonData.Global.TotalConfirmed.toLocaleString('en-US');
-			document.getElementById("GlobalRecovered").innerHTML = jsonData.Global.TotalRecovered.toLocaleString('en-US');
-			document.getElementById("GlobalDeaths").innerHTML = jsonData.Global.TotalDeaths.toLocaleString('en-US');
+			var GlobalCases = jsonData.Global.TotalConfirmed;
+			var GlobalRecovered = jsonData.Global.TotalRecovered;
+			var GlobalDeaths = jsonData.Global.TotalDeaths;
+			
+			if(GlobalCases==0){
+				document.getElementById("GlobalCases").innerHTML = "Updating";
+				document.getElementById("GlobalRecovered").innerHTML = "Updating";
+				document.getElementById("GlobalDeaths").innerHTML = "Updating";
+			}
+			else{
+				document.getElementById("GlobalCases").innerHTML = GlobalCases;
+				document.getElementById("GlobalRecovered").innerHTML = GlobalRecovered;
+				document.getElementById("GlobalDeaths").innerHTML = GlobalDeaths;
+			}
 
 			// Hide Loading after display success
 			document.getElementById("loader").style.display = "none";
