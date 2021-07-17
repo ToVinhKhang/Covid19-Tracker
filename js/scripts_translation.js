@@ -9,6 +9,9 @@ $("#SwitchLanguages").change(function(){
 	// LANG TARGET
 	lang = $(this).val();
 	var Population = document.getElementById("Population");
+	var GlobalCases = document.getElementById("GlobalCases");
+	var GlobalRecovered = document.getElementById("GlobalRecovered");
+	var GlobalDeaths = document.getElementById("GlobalDeaths");
 	
 	// English
 	if(lang=="EN"){
@@ -17,6 +20,9 @@ $("#SwitchLanguages").change(function(){
 		.then(dataEN => {
 			displayDataTranslated(dataEN);
 			Population.innerHTML = Population.innerHTML.replace("Tr","M");
+			GlobalCases.innerHTML = GlobalCases.innerHTML.replace("Tr","M");
+			GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace("Tr","M");
+			GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace("Tr","M");
 		}).catch(e => console.log(e));
 	}
 	
@@ -27,6 +33,9 @@ $("#SwitchLanguages").change(function(){
 		.then(dataVN => {
 			displayDataTranslated(dataVN);
 			Population.innerHTML = Population.innerHTML.replace("M","Tr");
+			GlobalCases.innerHTML = GlobalCases.innerHTML.replace("M","Tr");
+			GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace("M","Tr");
+			GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace("M","Tr");
 		}).catch(e => console.log(e));
 	}
 });
