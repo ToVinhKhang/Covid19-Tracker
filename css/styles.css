@@ -201,7 +201,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.imgBrowserIcon{width:20px; height:20px;}
 	.imgBrowserEdge{width:18px; height:18px;}
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
 	.IncidenceRate{font-size:7px;}
 	#IncidenceRate{font-size:18px;}
 	.RecoveryRate{font-size:7px;}
