@@ -25,7 +25,7 @@ h2{text-align: center;margin: 20px; font-weight: bold;}
 .btnVNTracker:hover + .txtVNTracker {display: block;position: absolute;background-color: #309FB5;color: white;border-radius: 6px;font-size: 12px;padding: 5px;right: 10px;top: 50px;width: 100%;}
 #SwitchLanguages{position: absolute;top:2px; right:0px;padding:0px;color: black; font-weight: bold;font-size:20px;}
 #txtAboutData{position: absolute;top:1px; left:0px;padding:0px;color: black; font-weight: bold;font-size:18px;width: 125px;}
-option{font-weight: bold;}
+option{font-weight: bold;background-color: #309FB5;}
 .SoftwareInfo{table-layout: fixed;text-align:justify;}
 #aboutGuide{line-height: 50px;}
 #aboutGuide td:nth-child(1){width:30%;font-weight: bold;}
@@ -89,10 +89,8 @@ thead{display:table;width:100%;table-layout:fixed;}
 	
 /* Dark Mode */
 #darkMode{position: absolute; right: 57px; top: 5.8px;font-size:1.6em;}
-.fa-sun-o{color: black;}
-.fa-sun-o:hover{color: white;}
-.fa-moon-o{color: white;}
-.fa-moon-o:hover{color: black;}
+.fa-sun-o,.fa-moon-o{color: black;}
+.fa-sun-o:hover,.fa-moon-o:hover{color: white;}
 .dark-mode {background-color: black!important;}
 .dark-mode > div > #countries > table{background-color: #1c1e21!important;color: white;}
 .dark-mode > #viewModalData > div > div{background-color: #1c1e21!important;}
