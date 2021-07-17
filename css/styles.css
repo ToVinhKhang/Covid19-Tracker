@@ -158,11 +158,11 @@ legend{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 
 @media screen and (max-width: 768px) {
 	.vnDetailsFlag{height: 50%;}
 	.TotalCases{font-size:16px;}
-	#TotalCases{font-size:30px;}
+	#TotalCases,#GlobalCases{font-size:30px;}
 	.TotalRecovered{font-size:16px;}
-	#TotalRecovered{font-size:30px;}
+	#TotalRecovered,#GlobalRecovered{font-size:30px;}
 	.TotalDeaths{font-size:16px;}
-	#TotalDeaths{font-size:30px;}
+	#TotalDeaths,#GlobalDeaths{font-size:30px;}
 	.Population{font-size:16px;}
 	#Population{font-size:30px;}
 	.SoftwareInfo{font-size:12px;}
