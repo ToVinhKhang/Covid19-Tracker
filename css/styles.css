@@ -29,6 +29,9 @@ option{font-weight: bold;background-color: #309FB5;}
 .SoftwareInfo{table-layout: fixed;text-align:justify;}
 #aboutGuide{line-height: 50px;}
 #aboutGuide td:nth-child(1){width:30%;font-weight: bold;}
+fieldset {margin:0;padding:0;border: 3px solid #ddd; border-radius: 30px;}
+legend{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
+
 
 /* Data World */
 #global{width: 100%;margin-bottom:50px;}
@@ -86,8 +89,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 #RecoveryRate{font-size:22px;margin:0px;}
 .DeathRate{font-size:14px;margin:0px;}
 #DeathRate{font-size:22px;margin:0px;}
-fieldset {margin:0;padding:0;border: 3px solid #999; border-radius: 30px;}
-legend{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
+
 	
 /* Dark Mode */
 #darkMode{position: absolute; right: 57px; top: 5.8px;font-size:1.6em;}
@@ -170,6 +172,7 @@ legend{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 
 	#Population{font-size:30px;}
 	.SoftwareInfo{font-size:12px;}
 	#aboutGuide{word-break: break-all;}
+	legend{width: 100px;font-size: 20px;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
