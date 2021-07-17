@@ -93,10 +93,12 @@ function getData_Fetch(){
 		.then(data => data.json())
 		.then(jsonData => {
 			displayData(jsonData);
-			// Hide loader when success
+			// Hide loader When success
 			document.getElementById("loader").style.display = "none";
 			// Then Appear Global
 			document.getElementById("global").style.display = "block";
+			// Then Appear Footer
+			document.getElementById("footer").style.display = "block";
 		})
 		.catch(e => console.log(e));
 }
