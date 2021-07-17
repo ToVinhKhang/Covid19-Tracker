@@ -97,6 +97,8 @@ function getData_Fetch(){
 			document.getElementById("loader").style.display = "none";
 			// Then Appear Global
 			document.getElementById("global").style.display = "block";
+			// Then Appear Countries
+			document.getElementById("countries").style.display = "block";
 			// Then Appear Footer
 			document.getElementById("footer").style.display = "block";
 		})
