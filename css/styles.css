@@ -97,6 +97,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 .fa-sun-o,.fa-moon-o{color: black;}
 .fa-sun-o:hover,.fa-moon-o:hover{color: white;}
 .dark-mode {background-color: black!important;}
+.dark-mode > #contentWorld > #global > fieldset > legend{color: white!important;}
 .dark-mode > div > #countries > table{background-color: #1c1e21!important;color: white;}
 .dark-mode > #viewModalData > div > div{background-color: #1c1e21!important;}
 .dark-mode > #viewModalData > div > div > .modal-header{color: #17a2b8!important;}
