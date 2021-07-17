@@ -95,6 +95,8 @@ function getData_Fetch(){
 			displayData(jsonData);
 			// Hide loader when success
 			document.getElementById("loader").style.display = "none";
+			// Then Appear Global
+			document.getElementById("global").style.display = "block";
 		})
 		.catch(e => console.log(e));
 }

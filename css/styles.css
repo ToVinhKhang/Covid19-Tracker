@@ -34,7 +34,7 @@ legend{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 
 
 
 /* Data World */
-#global{width: 100%;margin-bottom:50px;}
+#global{width: 100%;margin-bottom:50px;display: none;}
 span{font-size: 12px;}
 .flagCountry{width: 70px; height: 50px;}
 #nameAbData,#nameVaccine,#nameVaccineDetails,#nameGuide{font-weight: bold;}
