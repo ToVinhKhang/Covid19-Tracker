@@ -1,30 +1,26 @@
 # Covid-19 Tracker
-
+#### The situation of the Coronavirus Epidemic data around The World.
 #### Includes the following functions:
 <br>
 
-+ World Data: Total and Today data about The situation of the Coronavirus Epidemic data around the World.
++ World Tracker: Total data in Global/Detail info each Countries (total and today data).
 <br>
 
-+ Vietnam Data: Detail info from each City, Weekly chart statistics and Rate Info in Vietnam.
++ Vietnam Tracker: Total data in Vietnam/Detail info from each City (total data).
 <br>
 
 + Table: Searching Countries and Sort.
 <br>
 
-+ Switch languages: English/Vietnamese.
++ Languages: Switch English/Vietnamese.
 <br>
 
-+ Vaccine Information: Vaccine Details/Technology.
++ Vaccine: Info Details/Technology.
 <br>
 
-+ Mode: Dark-Light and Responsive.
++ Other: Dark-Light and Responsive.
 <br>
 
-Link API_Global:
-`
-https://api.covid19api.com/summary
-`
 
 Link API_Countries:
 `
