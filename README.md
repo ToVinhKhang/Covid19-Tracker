@@ -1,6 +1,6 @@
 # Covid-19 Tracker
 #### https://covid19-kent.netlify.app/
-
+<br>
 #### The situation of the Coronavirus Epidemic data around The World.
 #### Includes the following functions:
 <br>
@@ -44,6 +44,6 @@ Link API_HcKey:
 https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST
 `
 
-# References:
+## References
 #### https://www.who.int/
 #### https://ncov.moh.gov.vn/
