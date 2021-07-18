@@ -45,6 +45,7 @@ _Link API_HcKey:_
 ```
 https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST
 ```
+<br>
 
 ## References
 #### _https://www.who.int/_
