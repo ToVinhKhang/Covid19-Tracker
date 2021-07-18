@@ -14,7 +14,13 @@ const API_City  = "https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/r
 const API_HcKey = "https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST";
 
 
-let table = document.getElementById("tableVN");
+let table;
+window.addEventListener('load',() => {
+	table = document.getElementById("tableVN");
+	getDataCity();
+	getDataChart(API_Chart);
+});
+
 // Get Data City 
 async function getDataCity(){
 	table.innerHTML = '';
@@ -87,9 +93,7 @@ function ConvertVnCityString(s){var string = "";
 }
 function CapitalizeString(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 
-// Display
-getDataCity();
-getDataChart(API_Chart);
+
 
 // Update data every 15 mins
 setInterval(()=>{getDataCity();getDataChart(API_Chart);},(1000*15));
