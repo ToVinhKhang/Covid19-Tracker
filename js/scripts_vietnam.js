@@ -5,7 +5,7 @@
 // -----------------------------------------------
 
 // API for Chart
-var API_Chart = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
+const API_Chart = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
 const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
 const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 
@@ -19,14 +19,14 @@ async function getDataCity(){
     var {key}    = await(await fetch(API_HcKey)).json();
 	
     for(let i=0; i<detail.length; i++){
-		var tr = document.createElement("tr");
-		var name = key.find(k => k["hec-key"] == detail[i]["hc-key"]);
+		let tr = document.createElement("tr");
+		let name = key.find(k => k["hec-key"] == detail[i]["hc-key"]);
 		
         if(name){
-			var City = document.createElement("td");City.textContent = ConvertVnCityString(name.name).toLocaleString('en-US');
-            var Cases = document.createElement("td");Cases.textContent = detail[i].value.toLocaleString('en-US');
-            var Recovered = document.createElement("td");Recovered.textContent = detail[i].socakhoi.toLocaleString('en-US');
-            var Deaths = document.createElement("td");Deaths.textContent = detail[i].socatuvong.toLocaleString('en-US');
+			let City = document.createElement("td");City.textContent = ConvertVnCityString(name.name).toLocaleString('en-US');
+            let Cases = document.createElement("td");Cases.textContent = detail[i].value.toLocaleString('en-US');
+            let Recovered = document.createElement("td");Recovered.textContent = detail[i].socakhoi.toLocaleString('en-US');
+            let Deaths = document.createElement("td");Deaths.textContent = detail[i].socatuvong.toLocaleString('en-US');
 			
             tr.appendChild(City);
             tr.appendChild(Cases);
@@ -89,7 +89,7 @@ getDataCity();
 getDataChart(API_Chart);
 
 // Update data every 15 mins
-setInterval(()=>{getDataCity();getDataChart(API_Chart);},(1000*60*15));
+setInterval(()=>{getDataCity();getDataChart(API_Chart);},(1000*15));
 
 // -----
 // END
