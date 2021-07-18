@@ -1,4 +1,4 @@
-# Covid-19 Tracker
+# _Covid-19 Tracker_
 ```
 https://covid19-kent.netlify.app/
 ```
