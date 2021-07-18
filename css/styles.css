@@ -34,7 +34,7 @@ legend{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 
 #footer{display: none;}
 .imgBrowserIcon{width:40px; height:40px;margin-right:10px;}
 .imgBrowserEdge{width:36px; height:36px;margin-right:10px;}
-
+.reference{float:right;}
 
 /* Data World */
 #global{width: 100%;margin-bottom:50px;display: none;}
