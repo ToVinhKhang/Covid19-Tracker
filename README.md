@@ -6,22 +6,22 @@
 #### Includes the following functions:
 <br>
 
-+ World Tracker: Total data in Global/Detail info each Countries (total and today data).
++ World Tracker: Total Data in Global/Detail info each Countries (Total and Today Data).
 <br>
 
-+ Vietnam Tracker: Total data in Vietnam/Detail info from each City (total data).
++ Vietnam Tracker: Total Data in Vietnam/Details info from each City (Total Data and Rate Info).
 <br>
 
 + Table: Searching Countries and Sort.
 <br>
 
-+ Languages: Switch English/Vietnamese.
++ Languages: Switching English/Vietnamese.
 <br>
 
-+ Vaccine: Info Details/Technology.
++ Vaccines: Details/Technology.
 <br>
 
-+ Other: Dark-Light and Responsive.
++ Others: Dark-Light and Responsive.
 <br>
 
 
