@@ -14,16 +14,16 @@ const API_City  = "https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/r
 const API_HcKey = "https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST";
 
 
-let table;
+let tableVN;
 window.addEventListener('load',() => {
-	table = document.getElementById("tableVN");
+	tableVN = document.getElementById("tableVN");
 	getDataCity();
 	getDataChart(API_Chart);
 });
 
 // Get Data City 
 async function getDataCity(){
-	table.innerHTML = '';
+	tableVN.innerHTML = '';
 	var {detail} = await(await fetch(API_City)).json();
     var {key}    = await(await fetch(API_HcKey)).json();
 	
@@ -41,7 +41,7 @@ async function getDataCity(){
             tr.appendChild(Cases);
             tr.appendChild(Recovered);
             tr.appendChild(Deaths);
-            table.appendChild(tr);
+            tableVN.appendChild(tr);
         }
     }
 }
@@ -75,7 +75,7 @@ function getDataChart(API_Chart){
 		.catch(err => {console.error(err);});
 }
 
-// Some Support Functions
+// Create Chart
 function createChart(dateArray, dataArray, name, color, idChart){
     var data = {labels: dateArray,datasets:[{
 			label: name,
@@ -87,12 +87,13 @@ function createChart(dateArray, dataArray, name, color, idChart){
     var config = {type:'line',data,options:{tension: 0.3}};
     var myChart = new Chart(document.getElementById(idChart),config);
 }
+
+// Format String
 function ConvertVnCityString(s){var string = "";
 	s.split("-").forEach(t => {string += CapitalizeString(t);string += " ";});
 	return string.trim();
 }
 function CapitalizeString(s){return s.charAt(0).toUpperCase()+s.slice(1);}
-
 
 
 // Update data every 15 mins
