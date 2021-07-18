@@ -13,7 +13,7 @@ const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 const API_City  = "https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/records/LATEST";
 const API_HcKey = "https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST";
 
-
+// Init
 let tableVN;
 window.addEventListener('load',() => {
 	tableVN = document.getElementById("tableVN");
@@ -97,7 +97,7 @@ function CapitalizeString(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 
 
 // Update data every 15 mins
-setInterval(()=>{getDataCity();getDataChart(API_Chart);},(1000*15));
+setInterval(()=>{getDataCity();getDataChart(API_Chart);},(1000*60*15));
 
 // -----
 // END
