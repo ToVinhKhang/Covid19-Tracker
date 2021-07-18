@@ -36,7 +36,7 @@ legend{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 
 .imgBrowserEdge{width:36px; height:36px;margin-right:10px;}
 .reference{float:right;}
 .linkContact{color: #212529;}
-.linkContact:hover{text-decoration: none;font-weight: bold;}
+a:hover{text-decoration: none;color: black;font-weight:bold;}
 
 /* Data World */
 #global{width: 100%;margin-bottom:50px;display: none;}
@@ -119,6 +119,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 .dark-mode > #viewModalGuide > div > div > .modal-header{color: #17a2b8!important;}
 .dark-mode > #viewModalGuide > div > div > .modal-body > table > tbody > tr > td{color: white!important;}
 .dark-mode > #viewModalGuide > div > div > .modal-body > table > tbody > tr > td > a{color: white!important;}
+.dark-mode > #viewModalGuide > div > div > .modal-body > table > tbody > tr > td > a:hover{color: white!important;}
 .dark-mode > #viewModalGuide > div > div > .modal-header > .close{color: white;}
 .dark-mode > .footer{color: #a4adc8!important;}
 .dark-mode h2{color: white!important;}
