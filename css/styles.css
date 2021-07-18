@@ -37,6 +37,8 @@ legend{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 
 .reference{float:right;}
 .linkContact{color: #212529;}
 a:hover{text-decoration: none;color: black;font-weight:bold;}
+.Line{height:1px;}
+
 
 /* Data World */
 #global{width: 100%;margin-bottom:50px;display: none;}
