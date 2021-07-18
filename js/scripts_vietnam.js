@@ -77,6 +77,7 @@ function getDataChart(API_Chart){
 
 // Create Chart
 function createChart(dateArray, dataArray, name, color, idChart){
+	var targetChart = document.getElementById(idChart);
     var data = {labels: dateArray,datasets:[{
 			label: name,
 			backgroundColor: color,
@@ -85,8 +86,9 @@ function createChart(dateArray, dataArray, name, color, idChart){
 		}]
 	};
     var config = {type:'line',data,options:{tension: 0.3}};
-    var myChart = new Chart(document.getElementById(idChart),config);
+	var myChart = new Chart(document.getElementById(idChart),config);
 }
+
 
 // Format String
 function ConvertVnCityString(s){var string = "";
