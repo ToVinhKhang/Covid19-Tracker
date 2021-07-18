@@ -15,8 +15,8 @@ const API_HcKey = "https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/r
 
 // Get Data City 
 async function getDataCity(){
-	var {detail} = await(await fetch(API_City)).json();
-    var {key}    = await(await fetch(API_HcKey)).json();
+	let {detail} = await(await fetch(API_City)).json();
+    let {key}    = await(await fetch(API_HcKey)).json();
 	
     for(let i=0; i<detail.length; i++){
 		let tr = document.createElement("tr");
