@@ -13,10 +13,13 @@ const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 const API_City  = "https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/records/LATEST";
 const API_HcKey = "https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST";
 
+
+let table = document.getElementById("tableVN");
 // Get Data City 
 async function getDataCity(){
-	let {detail} = await(await fetch(API_City)).json();
-    let {key}    = await(await fetch(API_HcKey)).json();
+	table.innerHTML = '';
+	var {detail} = await(await fetch(API_City)).json();
+    var {key}    = await(await fetch(API_HcKey)).json();
 	
     for(let i=0; i<detail.length; i++){
 		let tr = document.createElement("tr");
@@ -32,7 +35,7 @@ async function getDataCity(){
             tr.appendChild(Cases);
             tr.appendChild(Recovered);
             tr.appendChild(Deaths);
-            document.getElementById("tableVN").appendChild(tr)
+            table.appendChild(tr);
         }
     }
 }
