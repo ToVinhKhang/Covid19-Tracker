@@ -13,12 +13,13 @@ const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 const API_City  = "https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/records/LATEST";
 const API_HcKey = "https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST";
 
+
 // Init
 let tableVN;
 window.addEventListener('load',() => {
 	tableVN = document.getElementById("tableVN");
 	getDataCity();
-	getDataChart(API_Chart);
+	getDataChart();
 });
 
 // Get Data City 
@@ -46,7 +47,7 @@ async function getDataCity(){
     }
 }
 // Get Data Chart
-function getDataChart(API_Chart){
+function getDataChart(){
 	fetch(API_Chart, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
 		.then(data => data.json())
 		.then(jsonData => {var dataChart = jsonData.data;
@@ -88,7 +89,6 @@ function createChart(dateArray, dataArray, name, color, idChart){
     var config = {type:'line',data,options:{tension: 0.3}};
 	var myChart = new Chart(document.getElementById(idChart),config);
 }
-
 
 // Format String
 function ConvertVnCityString(s){var string = "";

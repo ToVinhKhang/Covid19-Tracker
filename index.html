@@ -127,20 +127,25 @@
 						<span><h2 id="vnName">VIETNAM</h2></span>
 					</div>
 					<!-- Rate -->
-					<div class="col-md-4 col-4">
+					<div class="col-md-6 col-6 box">
 						<div><h3 class="IncidenceRate" id="txtIncidenceRate">Incidence Rate</h3><h1 id="IncidenceRate"></h1></div>
 					</div>
-					<div class="col-md-4 col-4">
+					<div class="col-md-6 col-6 box">
 						<div><h3 class="RecoveryRate" id="txtRecoveryRate">Recovery Rate</h3><h1 id="RecoveryRate"></h1></div>
 					</div>
-					<div class="col-md-4 col-4">
+					<div class="col-md-6 col-6 box">
 						<div><h3 class="DeathRate" id="txtDeathRate">Death Rate</h3><h1 id="DeathRate"></h1></div>
+					</div>
+					<div class="col-md-6 col-6 box">
+						<div><h3 class="vacFullyVaccinatedRate" id="txtFullyVaccinatedRate">Fully Vaccinated Rate</h3><h1 id="vacFullyVaccinatedRate"></h1></div>
 					</div>
 				</div>
 			</div>
 			
+			
+				
 			<!-- Table -->
-			<div class="col-lg-7 col-md-8  col-12">
+			<div class="col-lg-7 col-md-8 col-12">
 				<table class="table table-striped sortable-table">
 					<thead class="theadCities">
 						<tr>
@@ -155,12 +160,26 @@
 				</table>
 			</div>
 			
+			<div class="row vnRate" style="width: 100%;">
+				<!-- Vaccine -->
+				<div class="col-md-4 col-4 VaccinesInfo">
+					<div><h3 class="vaccines" id="txtOneDose">One Dose</h3><h1 id="vacOneDose"></h1></div>
+				</div>
+				<div class="col-md-4 col-4 VaccinesInfo">
+					<div><h3 class="vaccines" id="txtVaccines">Provided Vaccines</h3><h1 id="vacTotal"></h1></div>
+				</div>
+				<div class="col-md-4 col-4 VaccinesInfo">
+					<div><h3 class="vaccines" id="txtTwoDose">Two Dose</h3><h1 id="vacTwoDose"></h1></div>
+				</div>
+			</div>
+			
 			<!-- Chart JS -->
-			<div class="col-md-12 col-12">
+			<div class="col-md-12 col-12 chart">
 				<div class="row">
-				  <div class="col-md-4"><canvas id="casesChart" class="chart"></canvas></div>
-				  <div class="col-md-4"><canvas id="recoveredChart" class="chart"></canvas></div>
-				  <div class="col-md-4"><canvas id="deathsChart" class="chart"></canvas></div>
+				  <div class="col-md-6"><canvas id="casesChart" class="chart"></canvas></div>
+				  <div class="col-md-6"><canvas id="recoveredChart" class="chart"></canvas></div>
+				  <div class="col-md-6"><canvas id="deathsChart" class="chart"></canvas></div>
+				  <div class="col-md-6"><canvas id="vaccineChart" class="chart"></canvas></div>
 				</div>
 			</div>
 		</div>
@@ -245,7 +264,6 @@
 	<script src="./js/scripts_darkmode.js"></script>
 	<script src="./js/scripts_sortTable.js"></script>
 	<script src="./js/scripts_switchTracker.js"></script>
-	<script src="./js/scripts_popup.js"></script>
 	
 	<!-- Footer -->
 	<div class="footer" id="footer"><span id="designedBy">Designed by </span><a href="https://tovinhkhang.netlify.app/" target="_blank">ToVinhKhang</a></div>

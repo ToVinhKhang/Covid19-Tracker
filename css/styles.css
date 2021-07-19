@@ -40,6 +40,7 @@ a:hover{text-decoration: none;color: black;font-weight:bold;}
 .Line{height:1px;}
 
 
+
 /* Data World */
 #global{width: 100%;margin-bottom:50px;display: none;}
 span{font-size: 12px;}
@@ -89,6 +90,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 .IncidenceRate,#IncidenceRate,.TotalCases,#TotalCases,#GlobalCases{color: #186FB5;text-align: center;}
 .RecoveryRate,#RecoveryRate,.TotalRecovered,#TotalRecovered,#GlobalRecovered{color: #006233;text-align: center;}
 .DeathRate,#DeathRate,.TotalDeaths,#TotalDeaths,#GlobalDeaths{color: #E41E20;text-align: center;}
+#TotalCases,#TotalRecovered,#TotalDeaths,#Population,#IncidenceRate,#RecoveryRate,#DeathRate{font-weight:610;}
 .Population,#Population{color: grey;text-align: center;}
 .IncidenceRate{font-size:14px;margin:0px;}
 #IncidenceRate{font-size:22px;margin:0px;}
@@ -96,7 +98,14 @@ thead{display:table;width:100%;table-layout:fixed;}
 #RecoveryRate{font-size:22px;margin:0px;}
 .DeathRate{font-size:14px;margin:0px;}
 #DeathRate{font-size:22px;margin:0px;}
-
+.vacFullyVaccinatedRate{font-size:14px;margin:0px;color: grey;text-align: center;}
+#vacFullyVaccinatedRate{font-size:22px;margin:0px;color: grey!important;}
+.chart{padding:25px;}
+.vaccines{font-size:18px;margin-top:20px;text-align: center;color:#666666;}
+#vacFullyVaccinatedRate{margin:0px;text-align: center;color:grey;font-size:22px;font-weight:bold;}
+#vacTotal,#vacOneDose,#vacTwoDose{margin:0px;text-align: center;color:#666666;font-size:40px;font-weight:bold;}
+.box{margin:10px 0px;}
+	
 	
 /* Dark Mode */
 #darkMode{position: absolute; right: 57px; top: 5.8px;font-size:1.6em;}
@@ -198,7 +207,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.vnTotal{padding-bottom:0px;}
 	.vnRate{padding:10px;}
 	h2{display: none;}
-	.IncidenceRate{font-size:10px;}
+	.IncidenceRate,.vaccines,.vacFullyVaccinatedRate{font-size:10px;margin:0px;}
 	.RecoveryRate{font-size:10px;}
 	.DeathRate{font-size:10px;}
 	.SwitchBar{height:36.8px;}
@@ -206,9 +215,11 @@ thead{display:table;width:100%;table-layout:fixed;}
 	#aboutGuide td:nth-child(1){width:48%;}
 	.imgBrowserIcon{width:20px; height:20px;}
 	.imgBrowserEdge{width:18px; height:18px;}
+	#vacTotal,#vacOneDose,#vacTwoDose{font-size:18px;margin:5px;}
+	#TotalCases,#TotalRecovered,#TotalDeaths,#Population,#IncidenceRate,#RecoveryRate,#DeathRate{font-weight:500;}
 }
 @media screen and (max-width: 376px) {
-	.IncidenceRate{font-size:7px;}
+	.IncidenceRate,.vaccines{font-size:7px;}
 	#IncidenceRate{font-size:18px;}
 	.RecoveryRate{font-size:7px;}
 	#RecoveryRate{font-size:18px;}

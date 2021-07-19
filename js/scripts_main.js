@@ -5,10 +5,14 @@
 // -----------------------------------------------
 
 
-// Init
+// API for Countries
 const API_Countries = "https://corona.lmao.ninja/v2/countries";
-let table;
 
+// API for Vaccines
+const API_Vaccines = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json";
+
+
+let table;
 window.addEventListener('load',() => {
 	table = document.getElementById("table");
 	getData_Fetch();
@@ -66,6 +70,8 @@ function displayData(jsonData){
 			var incidenceRate = parseFloat((totalCases/Population)*100).toFixed(2)+`%`;
 			var recoveryRate  = parseFloat((totalRecovered/totalCases)*100).toFixed(2)+`%`;
 			var deathRate     = parseFloat((totalDeaths/totalCases)*100).toFixed(2)+`%`;
+			
+			getDataVaccines(Population);
 			displayTotal(totalCases,totalRecovered,totalDeaths,ShorterNum(Population));
 			displayRate(incidenceRate,recoveryRate,deathRate);
 		}
@@ -132,6 +138,47 @@ function AboutData(){
 		}).catch(e => console.log(e));
 }
 
+// Get Data Vaccines
+function getDataVaccines(Population){
+	fetch(API_Vaccines)
+		.then(data => data.json())
+		.then(dataJson => {
+			var dateArray = [];
+			var vaccineArray = [];
+			var lastedUpdateData = dataJson[224].data.length-1;
+			var vaccineData = dataJson[224].data[lastedUpdateData];
+			
+			vacTotal = vaccineData.total_vaccinations;
+			vacOneDose = vaccineData.people_vaccinated;
+			vacTwoDose = vaccineData.people_fully_vaccinated;
+			
+			document.getElementById("vacTotal").innerHTML = vacTotal.toLocaleString('en-US');
+			document.getElementById("vacOneDose").innerHTML = vacOneDose.toLocaleString('en-US');
+			document.getElementById("vacTwoDose").innerHTML = vacTwoDose.toLocaleString('en-US');
+			document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
+			
+			for(i=lastedUpdateData-7; i<=lastedUpdateData; i++){
+				dateArray.push(dataJson[224].data[i].date);
+				vaccineArray.push(dataJson[224].data[i].total_vaccinations);
+			}
+			createChart(dateArray,vaccineArray,"Vaccines","#666666","vaccineChart");
+		})
+		.catch(e => console.log(e));
+}
+
+// Create Chart
+function createChart(dateArray, dataArray, name, color, idChart){
+	var targetChart = document.getElementById(idChart);
+    var data = {labels: dateArray,datasets:[{
+			label: name,
+			backgroundColor: color,
+			borderColor: color,
+			data: dataArray,
+		}]
+	};
+    var config = {type:'line',data,options:{tension: 0.3}};
+	var myChart = new Chart(document.getElementById(idChart),config);
+}
 
 // Shorter Num
 function ShorterNum(num) {
