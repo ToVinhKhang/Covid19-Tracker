@@ -7,33 +7,17 @@ https://covid19-kent.netlify.app/
 ### Includes the following functions:
 <br>
 
-+ World Tracker: Total Data in Global/Detail info each Countries (Total and Today Data).
-<br>
-
-+ Vietnam Tracker: Total Data in Vietnam/Details info from each City (Total Data and Rate Info).
-<br>
-
-+ Table: Searching Countries and Sort.
-<br>
-
-+ Languages: Switching English/Vietnamese.
-<br>
-
-+ Vaccines: Details/Technology.
-<br>
-
-+ Others: Dark-Light and Responsive.
-<br>
-
-|Name API|Link API|
+|Name Functions|Description|
 |-|-|
-|API_Countries|https://corona.lmao.ninja/v2/countries|
+|World Tracker|Total Data in Global/Detail info each Countries (Total and Today Data)|
 |-|-|
-|API_Chart|https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam|
+|Vietnam Tracker|Total Data in Vietnam/Details info from each City (Total Data and Rate Info)|
 |-|-|
-|API_City|https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/records/LATEST|
+|Vaccines|Details/Technology|
 |-|-|
-|API_HcKey|https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST|
+|Languages|Switching English/Vietnamese|
+|-|-|
+|Others|Searching Countries, Sort, Dark-Light and Responsive|
 |-|-|
 
 _Link API_Countries:_
