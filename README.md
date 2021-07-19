@@ -26,7 +26,6 @@ https://covid19-kent.netlify.app/
 <br>
 
 |Name API|Link API|
-|-|-|
 |API_Countries|https://corona.lmao.ninja/v2/countries|
 |API_Chart|
 https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam|
