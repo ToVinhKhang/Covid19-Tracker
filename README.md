@@ -26,15 +26,15 @@ https://covid19-kent.netlify.app/
 <br>
 
 |Name API|Link API|
-<br>
+|||
 |API_Countries|https://corona.lmao.ninja/v2/countries|
-<br>
+|||
 |API_Chart|https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam|
-<br>
+|||
 |API_City|https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/records/LATEST|
-<br>
+|||
 |API_HcKey|https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST|
-<br>
+|||
 
 _Link API_Countries:_
 ```
