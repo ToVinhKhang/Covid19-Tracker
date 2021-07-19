@@ -3,8 +3,8 @@ https://covid19-kent.netlify.app/
 
 <br>
 
-#### The situation of the Coronavirus Epidemic data around The World.
-#### Includes the following functions:
+### The situation of the Coronavirus Epidemic data around The World.
+### Includes the following functions:
 <br>
 
 + World Tracker: Total Data in Global/Detail info each Countries (Total and Today Data).
