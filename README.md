@@ -25,6 +25,13 @@ https://covid19-kent.netlify.app/
 + Others: Dark-Light and Responsive.
 <br>
 
+|Name API|Link API|
+|-|-|
+|API_Countries|https://corona.lmao.ninja/v2/countries|
+|API_Chart|
+https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam|
+|API_City|https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/records/LATEST|
+|API_HcKey|https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST|
 
 _Link API_Countries:_
 ```
