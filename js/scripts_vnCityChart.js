@@ -6,8 +6,9 @@
 
 // API for Chart
 const API_Chart = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
-const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
-const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
+const {rapidApi_Key,rapidApi_Host} = fetch('./env/.json')).json();
+console.log(rapidApi_Key);
+console.log(rapidApi_Host);
 
 // API for City
 const API_City  = "https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/records/LATEST";
@@ -99,7 +100,7 @@ function CapitalizeString(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 
 
 // Update data every 15 mins
-setInterval(()=>{getDataCity();getDataChart(API_Chart);},(1000*60*15));
+setInterval(()=>{getDataCity();getDataChart();},(1000*60*15));
 
 // -----
 // END

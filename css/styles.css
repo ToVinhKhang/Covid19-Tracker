@@ -106,7 +106,6 @@ thead{display:table;width:100%;table-layout:fixed;}
 #vacTotal,#vacOneDose,#vacTwoDose{margin:0px;text-align: center;color:#666666;font-size:40px;font-weight:bold;}
 .box{margin:10px 0px;}
 	
-	
 /* Dark Mode */
 #darkMode{position: absolute; right: 57px; top: 5.8px;font-size:1.6em;}
 .fa-sun-o,.fa-moon-o{color: black;}
