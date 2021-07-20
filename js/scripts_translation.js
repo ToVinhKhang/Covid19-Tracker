@@ -74,7 +74,12 @@ function displayDataTranslated(dataLang){
 	var aboutTheVaccineDetails = document.getElementById("aboutTheVaccineDetails");
 	var nameGuide = document.getElementById("nameGuide");
 	var aboutGuide = document.getElementById("aboutGuide");
-	
+	var txtOneDose = document.getElementById("txtOneDose");
+	var txtVaccines = document.getElementById("txtVaccines");
+	var txtTwoDose = document.getElementById("txtTwoDose");
+	var txtFullyVaccinatedRate = document.getElementById("txtFullyVaccinatedRate");
+			
+			
 	txtTitle.innerHTML = dataLang.title;
 	txtDesc.innerHTML = dataLang.desc;
 	txtGlobal.innerHTML = dataLang.global;
@@ -109,6 +114,10 @@ function displayDataTranslated(dataLang){
 	aboutTheVaccineDetails.innerHTML = dataLang.AboutVaccineDetails.content;
 	nameGuide.textContent = dataLang.SoftwareInfo.title;
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
+	txtOneDose.innerHTML = dataLang.Vaccines.txtOneDose;
+	txtVaccines.innerHTML = dataLang.Vaccines.txtVaccines;
+	txtTwoDose.innerHTML  = dataLang.Vaccines.txtTwoDose;
+	txtFullyVaccinatedRate.innerHTML = dataLang.Vaccines.txtFullyVaccinatedRate;
 }
 
 // ----

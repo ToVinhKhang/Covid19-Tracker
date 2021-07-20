@@ -24,7 +24,13 @@
 	"rateVietnam": {
 		"txt1": "Tỉ lệ mắc bệnh",
 		"txt2": "Tỉ lệ bình phục",
-		"txt3": "Tỉ lệ tử vong"
+		"txt3": "Tỉ lệ tử vong",
+		"txt4": "Tỉ lệ tiêm đủ liều"
+	},
+	"Vaccines": {
+		"txt1": "Một Liều",
+		"txt2": "Vắcxin cung cấp",
+		"txt3": "Đủ liều"
 	},
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
 	"footer": "Được thiết kế bởi ",

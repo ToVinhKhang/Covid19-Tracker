@@ -102,7 +102,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 #vacFullyVaccinatedRate{font-size:22px;margin:0px;color: grey!important;}
 .chart{padding:25px;}
 .vaccines{font-size:18px;margin-top:20px;text-align: center;color:#666666;}
-#vacFullyVaccinatedRate{margin:0px;text-align: center;color:grey;font-size:22px;font-weight:bold;}
+#vacFullyVaccinatedRate{margin:0px;text-align: center;color:grey;font-size:22px;font-weight:610;}
 #vacTotal,#vacOneDose,#vacTwoDose{margin:0px;text-align: center;color:#666666;font-size:40px;font-weight:bold;}
 .box{margin:10px 0px;}
 	

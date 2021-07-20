@@ -135,7 +135,12 @@ function AboutData(){
 			document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
 			document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
 			document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
-		}).catch(e => console.log(e));
+			document.getElementById("txtOneDose").innerHTML  = dataEN.Vaccines.txtOneDose;
+			document.getElementById("txtVaccines").innerHTML = dataEN.Vaccines.txtVaccines;
+			document.getElementById("txtTwoDose").innerHTML  = dataEN.Vaccines.txtTwoDose;
+			document.getElementById("txtFullyVaccinatedRate").innerHTML = dataEN.Vaccines.txtFullyVaccinatedRate;
+		})
+		.catch(e => console.log(e));
 }
 
 // Get Data Vaccines
