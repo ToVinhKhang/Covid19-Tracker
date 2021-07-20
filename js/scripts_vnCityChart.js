@@ -6,10 +6,8 @@
 
 // API for Chart
 const API_Chart = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
-async function getRapidKeyHost(){
-	const {rapidApi_Key,rapidApi_Host} = await(await fetch('./env/.json')).json();
-}
-
+const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
+const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 
 // API for City
 const API_City  = "https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/records/LATEST";
@@ -50,7 +48,6 @@ async function getDataCity(){
 }
 // Get Data Chart
 function getDataChart(){
-	getRapidKeyHost();
 	fetch(API_Chart, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
 		.then(data => data.json())
 		.then(jsonData => {var dataChart = jsonData.data;
