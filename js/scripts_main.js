@@ -50,7 +50,7 @@ function displayData(jsonData){
 		td2.innerHTML = u.cases.toLocaleString('en-US')+`<br><span>+`+u.todayCases.toLocaleString('en-US')+`</span>`; //Commas thousands
 		td3.innerHTML = u.recovered.toLocaleString('en-US')+`<br><span>+`+u.todayRecovered.toLocaleString('en-US')+`</span>`;
 		td4.innerHTML = u.deaths.toLocaleString('en-US')+`<br><span>+`+u.todayDeaths.toLocaleString('en-US')+`</span>`;
-		td5.innerHTML = u.tests.toLocaleString('en-US');
+		td5.innerHTML = u.population.toLocaleString('en-US');
 		
 		tr.appendChild(td0);
 		tr.appendChild(td1);
@@ -72,7 +72,7 @@ function displayData(jsonData){
 			var deathRate     = parseFloat((totalDeaths/totalCases)*100).toFixed(2)+`%`;
 			
 			getDataVaccines(Population);
-			displayTotal(totalCases,totalRecovered,totalDeaths,ShorterNum(Population));
+			displayTotal(totalCases,totalRecovered,totalDeaths,ShorterValue(Population));
 			displayRate(incidenceRate,recoveryRate,deathRate);
 		}
 	});
@@ -185,13 +185,30 @@ function createChart(dateArray, dataArray, name, color, idChart){
 	var myChart = new Chart(document.getElementById(idChart),config);
 }
 
-// Shorter Num
+// Shorter Num - Just Million
 function ShorterNum(num) {
-    var units = ["M"]
-    var unit = Math.floor((num / 1.0e+1).toFixed(0).toString().length)
-    var r = unit%3
-    var x =  Math.abs(Number(num))/Number('1.0e+'+(unit-r)).toFixed(2)
-    return x.toFixed(0) + units[Math.floor(unit/3)-2]
+    var units = ["M"];
+    var unit = Math.floor((num / 1.0e+1).toFixed(0).toString().length);
+    var r = unit%3;
+    var x =  Math.abs(Number(num))/Number('1.0e+'+(unit-r)).toFixed(2);
+    return x.toFixed(0) + units[Math.floor(unit/3)-2];
+}
+// Shorter Value - For All
+function ShorterValue(value) {
+    var newValue = value;
+    if (value >= 1000) {
+        var suffixes = ["", "K", "M", "B","T"];
+        var suffixNum = Math.floor( (""+value).length/3 );
+        var shortValue = '';
+        for (var precision = 2; precision >= 1; precision--) {
+            shortValue = parseFloat( (suffixNum != 0 ? (value / Math.pow(1000,suffixNum) ) : value).toPrecision(precision));
+            var dotLessShortValue = (shortValue + '').replace(/[^a-zA-Z 0-9]+/g,'');
+            if (dotLessShortValue.length <= 2) { break; }
+        }
+        if (shortValue % 1 != 0)  shortValue = shortValue.toFixed(1);
+        newValue = shortValue+suffixes[suffixNum];
+    }
+    return newValue;
 }
 
 // DateTime

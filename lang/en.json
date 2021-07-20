@@ -7,7 +7,7 @@
 		"th2": "Cases",
 		"th3": "Recovered",
 		"th4": "Deaths",
-		"th5": "Tests"
+		"th5": "Population"
 	},
 	"tableVietnam": {
 		"th1": "Cities/Provinces",
