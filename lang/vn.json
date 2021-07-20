@@ -22,15 +22,15 @@
 		"txt4": "Dân số"
 	},
 	"rateVietnam": {
-		"txt1": "Tỉ lệ mắc bệnh",
-		"txt2": "Tỉ lệ bình phục",
-		"txt3": "Tỉ lệ tử vong",
-		"txt4": "Tỉ lệ tiêm đủ liều"
+		"txt1": "Tỉ lệ Mắc bệnh",
+		"txt2": "Tỉ lệ Hồi phục",
+		"txt3": "Tỉ lệ Tử vong",
+		"txt4": "Tỉ lệ Tiêm đủ liều"
 	},
 	"Vaccines": {
-		"txt1": "Một Liều",
-		"txt2": "Vắcxin cung cấp",
-		"txt3": "Đủ liều"
+		"txt1": "Tiêm Một Liều",
+		"txt2": "Vắcxin Cung Cấp",
+		"txt3": "Tiêm Đủ Liều"
 	},
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
 	"footer": "Được thiết kế bởi ",
