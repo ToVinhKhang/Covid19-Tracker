@@ -9,9 +9,9 @@ https://covid19-kent.netlify.app/
 
 |Name Functions|Descriptions|
 |-|-|
-|World Tracker|Covid19 Data in Global / Details info each Countries|
+|World Tracker|Details info each Country / Covid19 Data|
 |-|-|
-|Vietnam Tracker|Covid19 and Vaccines Data in Vietnam / Details info from each City|
+|Vietnam Tracker|Details info from each City / Covid19 Data / Vaccines Data|
 |-|-|
 |Languages|Switching English / Vietnamese|
 |-|-|
