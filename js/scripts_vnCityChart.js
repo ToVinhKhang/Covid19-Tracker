@@ -6,7 +6,7 @@
 
 // API for Chart
 const API_Chart = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
-const {rapidApi_Key,rapidApi_Host} = fetch('./env/.json')).json();
+const {rapidApi_Key,rapidApi_Host} = fetch('./env/.json').json();
 console.log(rapidApi_Key);
 console.log(rapidApi_Host);
 
