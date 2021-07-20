@@ -227,5 +227,6 @@ thead{display:table;width:100%;table-layout:fixed;}
 	#DeathRate{font-size:18px;}
 	h2{display: none;}
 	#aboutGuide td:nth-child(1){width:50%;}
+	#table td:nth-child(6){font-size:7px;}
 }
 
