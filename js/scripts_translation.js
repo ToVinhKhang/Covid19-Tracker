@@ -114,10 +114,10 @@ function displayDataTranslated(dataLang){
 	aboutTheVaccineDetails.innerHTML = dataLang.AboutVaccineDetails.content;
 	nameGuide.textContent = dataLang.SoftwareInfo.title;
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
-	txtOneDose.innerHTML = dataLang.Vaccines.txtOneDose;
-	txtVaccines.innerHTML = dataLang.Vaccines.txtVaccines;
-	txtTwoDose.innerHTML  = dataLang.Vaccines.txtTwoDose;
-	txtFullyVaccinatedRate.innerHTML = dataLang.Vaccines.txtFullyVaccinatedRate;
+	txtOneDose.innerHTML = dataLang.Vaccines.txt1;
+	txtVaccines.innerHTML = dataLang.Vaccines.txt2;
+	txtTwoDose.innerHTML  = dataLang.Vaccines.txt3;
+	txtFullyVaccinatedRate.innerHTML = dataLang.rateVietnam.txt4;
 }
 
 // ----

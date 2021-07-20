@@ -16,7 +16,7 @@ let table;
 window.addEventListener('load',() => {
 	table = document.getElementById("table");
 	getData_Fetch();
-	AboutData();
+	loadDataInEnglishAtFirst();
 });
 
 // Display
@@ -121,8 +121,8 @@ function getData_AJAX(){
 	xmlHttpRequest.responseType = 'json';
 	xmlHttpRequest.send();
 }
-// Load data in ReadMore button
-function AboutData(){
+// Load data in English at first
+function loadDataInEnglishAtFirst(){
 	fetch("./lang/en.json")
 		.then(data => data.json())
 		.then(dataEN => {
@@ -135,10 +135,10 @@ function AboutData(){
 			document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
 			document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
 			document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
-			document.getElementById("txtOneDose").innerHTML  = dataEN.Vaccines.txtOneDose;
-			document.getElementById("txtVaccines").innerHTML = dataEN.Vaccines.txtVaccines;
-			document.getElementById("txtTwoDose").innerHTML  = dataEN.Vaccines.txtTwoDose;
-			document.getElementById("txtFullyVaccinatedRate").innerHTML = dataEN.Vaccines.txtFullyVaccinatedRate;
+			document.getElementById("txtOneDose").innerHTML  = dataEN.Vaccines.txt1;
+			document.getElementById("txtVaccines").innerHTML = dataEN.Vaccines.txt2;
+			document.getElementById("txtTwoDose").innerHTML  = dataEN.Vaccines.txt3;
+			document.getElementById("txtFullyVaccinatedRate").innerHTML = dataEN.rateVietnam.txt4;
 		})
 		.catch(e => console.log(e));
 }
