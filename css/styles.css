@@ -211,7 +211,7 @@ thead{display:table;width:100%;table-layout:fixed;}
 	.DeathRate{font-size:10px;}
 	.SwitchBar{height:36.8px;}
 	#aboutGuide{line-height: 30px;}
-	#table td:nth-child(6){font-size:8px; font-weight: 500;}
+	#table td:nth-child(1),#table td:nth-child(6){margin-right: 0px;}
 	#aboutGuide td:nth-child(1){width:48%;}
 	.imgBrowserIcon{width:20px; height:20px;}
 	.imgBrowserEdge{width:18px; height:18px;}
