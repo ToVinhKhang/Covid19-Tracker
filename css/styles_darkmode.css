@@ -1,0 +1,38 @@
+/* -----------------------------------------------
+	COVID19 TRACKER
+	Author: ToVinhKhang
+	Portfolio: https://tovinhkhang.netlify.app/
+------------------------------------------------*/
+
+/* Dark Mode */
+#darkMode{position: absolute; right: 57px; top: 5.8px;font-size:1.6em;}
+.fa-sun-o,.fa-moon-o{color: black;}
+.fa-sun-o:hover,.fa-moon-o:hover{color: white;}
+.dark-mode {background-color: black!important;}
+.dark-mode > #contentWorld > #global > fieldset > legend{color: white!important;}
+.dark-mode > div > #countries > table{background-color: #1c1e21!important;color: white;}
+.dark-mode > #viewModalData > div > div{background-color: #1c1e21!important;}
+.dark-mode > #viewModalData > div > div > .modal-header{color: #17a2b8!important;}
+.dark-mode > #viewModalData > div > div > .modal-body{color: white!important;}
+.dark-mode > #viewModalData > div > div > .modal-header > .close{color: white;}
+.dark-mode > #viewModalVaccine > div > div{background-color: #1c1e21!important;}
+.dark-mode > #viewModalVaccine > div > div > .modal-header{color: #17a2b8!important;}
+.dark-mode > #viewModalVaccine > div > div > .modal-body{color: white!important;}
+.dark-mode > #viewModalVaccine > div > div > .modal-header > .close{color: white;}
+.dark-mode > #viewModalVaccineDetails > div > div{background-color: #1c1e21!important;}
+.dark-mode > #viewModalVaccineDetails > div > div > .modal-header{color: #17a2b8!important;}
+.dark-mode > #viewModalVaccineDetails > div > div > .modal-body{color: white!important;}
+.dark-mode > #viewModalVaccineDetails > div > div > .modal-header > .close{color: white;}
+.dark-mode > #viewModalGuide > div > div{background-color: #1c1e21!important;}
+.dark-mode > #viewModalGuide > div > div > .modal-header{color: #17a2b8!important;}
+.dark-mode > #viewModalGuide > div > div > .modal-body > table > tbody > tr > td{color: white!important;}
+.dark-mode > #viewModalGuide > div > div > .modal-body > table > tbody > tr > td > a{color: white!important;}
+.dark-mode > #viewModalGuide > div > div > .modal-body > table > tbody > tr > td > a:hover{color: white!important;}
+.dark-mode > #viewModalGuide > div > div > .modal-header > .close{color: white;}
+.dark-mode > .footer{color: #a4adc8!important;}
+.dark-mode h2{color: white!important;}
+.dark-mode #tableVN > tr{background-color: #1c1e21!important;color: white;}
+.dark-mode #tableVN td{border: 2px solid #309FB5!important;}
+.dark-mode #tableVN th{border: 2px solid #309FB5!important;}
+.dark-mode .theadCities{color:white!important;border: 2px solid #309FB5!important;background:#309FB5!important; }
+

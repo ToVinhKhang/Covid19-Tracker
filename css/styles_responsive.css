@@ -1,0 +1,91 @@
+/* -----------------------------------------------
+	COVID19 TRACKER
+	Author: ToVinhKhang
+	Portfolio: https://tovinhkhang.netlify.app/
+------------------------------------------------*/
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+	#global{width: 100%;margin-bottom: 30px;}
+	#countries{font-size:55%;width: 100%;}
+	span{font-size: 8px;}
+	.flagCountry{width: 30px; height: 25px;}
+	.description{display: none;}
+	.logo{margin-right: 0px;}
+	.title{display: block;}
+	.loader {margin-top: 25%;}
+	#table td:nth-child(2), .th-contries-flags{display: none;}
+	#imgCfmCovid{display: none;}
+	.btnAboutTheData{width:115px;height:36.8px;}
+	#txtAboutData{width: 105px;font-size:16px;padding-left:10px;top:5px;}
+	.search{width: 100%;max-width: 100%;margin: 20px 0px; height: 18px;}
+	.search-input{letter-spacing: 1px;border: 0;outline: none;width: 100%;padding: 0 15px; color: #1B7EB5; background-color: #E8E8E8;font-style: italic;}
+	h5{font-size:110%;}h6{font-size:90%;}
+	#darkMode{position: absolute; right: 46px; top: 5px;font-size:1.5em;}
+	.SwitchBar{height:38.2px;width: 115px;}
+	.vnLogo,.WorldLogo{top: 1px;right: 76px;}
+	#SwitchLanguages{font-size:15px;top:5px;right:9px;}
+	.btnVNTracker:hover + .txtVNTracker {display: none;}
+	.theadCities{font-size: 10px;}
+	.theadCities th:nth-child(1){text-align: center;padding-left:0px;padding-right: 0px;width: 100px;}
+	#tableVN td:nth-child(1){width: 100px;padding-left:14px;padding-right: 14px;}
+	#table{height:440px;}
+	#tableVN{font-size: 10px;height:400px;}
+	#countries{margin-bottom: 30px;}
+	.footer,#designedBy{font-size: 10px;}
+}
+@media screen and (max-width: 768px) {
+	.vnDetailsFlag{height: 50%;}
+	.TotalCases{font-size:16px;}
+	#TotalCases{font-size:30px;}
+	#GlobalCases{font-size:26px;}
+	.TotalRecovered{font-size:16px;}
+	#TotalRecovered{font-size:30px;}
+	#GlobalRecovered{font-size:26px;}
+	.TotalDeaths{font-size:16px;}
+	#TotalDeaths{font-size:30px;}
+	#GlobalDeaths{font-size:26px;}
+	.Population{font-size:16px;}
+	#Population{font-size:30px;}
+	.SoftwareInfo{font-size:12px;}
+	#aboutGuide{word-break: break-all;}
+	legend{width: 100px;font-size: 20px;}
+}
+@media screen and (max-width: 720px) {
+	.vnDetailsFlag{height: 80%;}
+	.vnTotal,.vnRate{border: 2px solid #ddd;margin: 10px;border-radius:25px;padding:25px 10px 10px 10px;}
+}
+
+@media screen and (max-width: 420px) {
+	.vnLogo{padding:0.5px;}
+	.theadCities{font-size: 9px;}
+	#tableVN{font-size: 9px;}
+	.vnDetailsFlag{display:none;}
+	#content > .row > div{margin-bottom:15px;}
+	.vnTotal{padding-bottom:0px;}
+	.vnRate{padding:10px;}
+	h2{display: none;}
+	.IncidenceRate,.vaccines,.vacFullyVaccinatedRate{font-size:10px;margin:0px;}
+	.RecoveryRate{font-size:10px;}
+	.DeathRate{font-size:10px;}
+	.SwitchBar{height:36.8px;}
+	#aboutGuide{line-height: 30px;}
+	#table td:nth-child(6){font-size:7.5px;}
+	#aboutGuide td:nth-child(1){width:48%;}
+	.imgBrowserIcon{width:20px; height:20px;}
+	.imgBrowserEdge{width:18px; height:18px;}
+	#vacTotal,#vacOneDose,#vacTwoDose{font-size:18px;margin:5px;}
+	#TotalCases,#TotalRecovered,#TotalDeaths,#Population,#IncidenceRate,#RecoveryRate,#DeathRate{font-weight:500;}
+}
+@media screen and (max-width: 376px) {
+	.IncidenceRate,.vaccines{font-size:7px;}
+	#IncidenceRate{font-size:18px;}
+	.RecoveryRate{font-size:7px;}
+	#RecoveryRate{font-size:18px;}
+	.DeathRate{font-size:7px;}
+	#DeathRate{font-size:18px;}
+	h2{display: none;}
+	#aboutGuide td:nth-child(1){width:50%;}
+	#table td:nth-child(6){font-size:7px;}
+}
+

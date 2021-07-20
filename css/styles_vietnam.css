@@ -1,0 +1,49 @@
+/* -----------------------------------------------
+	COVID19 TRACKER
+	Author: ToVinhKhang
+	Portfolio: https://tovinhkhang.netlify.app/
+------------------------------------------------*/
+
+
+/* Data Vietnam */
+#content{display: none; margin-top: 20px;}
+#content > .row > div{margin-bottom: 50px;}
+.theadCities th:nth-child(2){text-align:center;}
+.theadCities th:nth-child(3){text-align:center;}
+.theadCities th:nth-child(4){text-align:center;}
+#tableVN td, #tableVN th{border: 2.5px solid #ddd;padding: 8px;width: 100%;}
+#tableVN th{padding-top: 12px;padding-bottom: 12px;background-color: #309FB5;color: white;}
+#tableVN td:nth-child(1){padding-left:11px;padding-right: 11px;}
+#tableVN td:nth-child(2){font-weight: bold; color: #186FB5;text-align:center;}
+#tableVN td:nth-child(3){font-weight: bold; color: #006233;text-align:center;}
+#tableVN td:nth-child(4){font-weight: bold; color: #E41E20;text-align:center;}
+#tableVN tr:nth-child(even){background-color: #f2f2f2;}
+#tableVN tr:hover {background-color: #ddd;}
+#tableVN{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
+#tableVN tr {display:table;width:100%;table-layout:fixed;}
+#tableVN::-webkit-scrollbar {display: none;}
+.sortable-table thead .theadCitiesProvinces[data-sort-direction="1"]:after{content:"\25B4";}
+.sortable-table thead .theadCitiesProvinces[data-sort-direction="-1"]:after{content:"\25BE"}
+.IncidenceRate,#IncidenceRate,.TotalCases,#TotalCases,#GlobalCases{color: #186FB5;text-align: center;}
+.RecoveryRate,#RecoveryRate,.TotalRecovered,#TotalRecovered,#GlobalRecovered{color: #006233;text-align: center;}
+.DeathRate,#DeathRate,.TotalDeaths,#TotalDeaths,#GlobalDeaths{color: #E41E20;text-align: center;}
+#TotalCases,#TotalRecovered,#TotalDeaths,#Population,#IncidenceRate,#RecoveryRate,#DeathRate{font-weight:610;}
+.Population,#Population{color: grey;text-align: center;}
+.IncidenceRate{font-size:14px;margin:0px;}
+#IncidenceRate{font-size:22px;margin:0px;}
+.RecoveryRate{font-size:14px;margin:0px;}
+#RecoveryRate{font-size:22px;margin:0px;}
+.DeathRate{font-size:14px;margin:0px;}
+#DeathRate{font-size:22px;margin:0px;}
+.vacFullyVaccinatedRate{font-size:14px;margin:0px;color: grey;text-align: center;}
+#vacFullyVaccinatedRate{font-size:22px;margin:0px;color: grey!important;}
+.chart{padding:25px;}
+.vaccines{font-size:18px;margin-top:20px;text-align: center;color:#666666;}
+#vacFullyVaccinatedRate{margin:0px;text-align: center;color:grey;font-size:22px;font-weight:610;}
+#vacTotal,#vacOneDose,#vacTwoDose{margin:0px;text-align: center;color:#666666;font-size:40px;font-weight:bold;}
+.box{margin:10px 0px;}
+	
+
+
+
+
