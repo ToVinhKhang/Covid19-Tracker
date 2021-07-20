@@ -116,7 +116,7 @@ function displayDataTranslated(dataLang){
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
 	txtOneDose.innerHTML = dataLang.Vaccines.txt1;
 	txtVaccines.innerHTML = dataLang.Vaccines.txt2;
-	txtTwoDose.innerHTML  = dataLang.Vaccines.txt3;
+	txtTwoDose.innerHTML = dataLang.Vaccines.txt3;
 	txtFullyVaccinatedRate.innerHTML = dataLang.rateVietnam.txt4;
 }
 

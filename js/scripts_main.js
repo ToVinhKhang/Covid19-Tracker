@@ -135,7 +135,7 @@ function loadDataInEnglishAtFirst(){
 			document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
 			document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
 			document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
-			document.getElementById("txtOneDose").innerHTML  = dataEN.Vaccines.txt1;
+			document.getElementById("txtOneDose").innerHTML = dataEN.Vaccines.txt1;
 			document.getElementById("txtVaccines").innerHTML = dataEN.Vaccines.txt2;
 			document.getElementById("txtTwoDose").innerHTML  = dataEN.Vaccines.txt3;
 			document.getElementById("txtFullyVaccinatedRate").innerHTML = dataEN.rateVietnam.txt4;
