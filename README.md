@@ -7,15 +7,15 @@ https://covid19-kent.netlify.app/
 ### Includes the following functions:
 <br>
 
-|Name Functions|Description|
+|Name Functions|Descriptions|
 |-|-|
-|World Tracker|Total Data in Global/Detail info each Countries (Total and Today Data)|
+|World Tracker|Covid19 Data in Global / Details info each Countries|
 |-|-|
-|Vietnam Tracker|Total Data in Vietnam/Details info from each City (Total Data and Rate Info)|
+|Vietnam Tracker|Covid19 and Vaccines Data in Vietnam / Details info from each City|
 |-|-|
-|Vaccines|Details/Technology|
+|Languages|Switching English / Vietnamese|
 |-|-|
-|Languages|Switching English/Vietnamese|
+|Read More|About The Data / Vaccine Details and Technology / Software Info|
 |-|-|
 |Others|Searching Countries, Sort, Dark-Light and Responsive|
 <br>
@@ -24,6 +24,11 @@ https://covid19-kent.netlify.app/
 _Link API_Countries:_
 ```
 https://corona.lmao.ninja/v2/countries
+```
+
+_Link API_Vaccines:_
+```
+https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json
 ```
 
 _Link API_Chart:_
@@ -43,5 +48,6 @@ https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST
 <br>
 
 ### References
+#### _https://ourworldindata.org/covid-vaccinations_
 #### _https://www.who.int/_
 #### _https://ncov.moh.gov.vn/_
