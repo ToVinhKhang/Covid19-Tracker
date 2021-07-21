@@ -37,7 +37,7 @@
 	"vnName" : "VIETNAM",
 	"Chart": {
 		"title1": "NEW BY DAY",
-		"title2": "TOTAL BY DAY",
+		"title2": "TOTAL BY DAY"
 	},
 	"AboutData" : "<option value=''>Read More</option><option value='AboutTheData'>• About The Data </option><option value='VaccineDetails'>• Vaccine Details </option><option value='VaccineTechnology'>• Vaccine Technology </option><option value='SoftwareInfo'>• Software Info </option>",
 	"AboutTheData": {
