@@ -10,7 +10,7 @@ https://covid19-kent.netlify.app/
 |Name Functions|Descriptions|
 |-|-|
 |World Tracker|Global Data / Details info each Country|
-|-|(Total and Daily)|
+| |(Total and Daily)|
 |Vietnam Tracker|Vietnam Data / Details info from each City / Vaccines Data|
 |-|(Total, Daily, Rate and Chart)|
 |Languages|Switching English / Vietnamese|
