@@ -9,16 +9,16 @@ https://covid19-kent.netlify.app/
 
 |Name Functions|Descriptions|
 |-|-|
-|World Tracker|Global Data / Details info each Country|
-| |(Total and Daily)|
-|Vietnam Tracker|Vietnam Data / Details info from each City / Vaccines Data|
-| |(Total, Daily, Rate and Chart)|
+|World Tracker|Global Data / Country Data|
+| |(Display Total Data and Daily Data)|
+|Vietnam Tracker|Vietnam Data / City-Province Data / Vaccines Data|
+| |(Display Total Data, Daily Data, Rate Info and Chart)|
 |Languages|Switching English / Vietnamese|
-| |(English At First)|
+| |(Display English At First)|
 |Read More|About The Data / Vaccine Details and Technology / Software Info|
-| |(Popup Modal)|
-|Others|Filter, Sort, Dark-Light and Responsive|
-| |(Filter Name of Countries, Sort Increase Decrease, All Devices)|
+| |(Display Info by Popup Modal)|
+|Others|Filter, Sort, Mode and Devices|
+| |(Filter Name of Countries, Sort Increase Decrease, Dark-Light, Responsive)|
 <br>
 <br>
 
