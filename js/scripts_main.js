@@ -5,7 +5,7 @@
 // -----------------------------------------------
 
 // Choose Language At First
-var lang = "./lang/en.json";
+var lang = "./lang/vn.json";
 
 // API for Countries
 const API_Countries = "https://corona.lmao.ninja/v2/countries";
