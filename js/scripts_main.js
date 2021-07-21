@@ -150,6 +150,7 @@ function getDataVaccines(Population){
 		.then(dataJson => {
 			var dateArray = [];
 			var vaccineArray = [];
+			var vaccineArray_New = [];
 			var lastedUpdateData = dataJson[224].data.length-1;
 			var vaccineData = dataJson[224].data[lastedUpdateData];
 			
@@ -162,27 +163,16 @@ function getDataVaccines(Population){
 			document.getElementById("vacTwoDose").innerHTML = vacTwoDose.toLocaleString('en-US');
 			document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
 			
-			for(i=lastedUpdateData-7; i<=lastedUpdateData; i++){
+			for(i=lastedUpdateData-6; i<=lastedUpdateData; i++){
 				dateArray.push(dataJson[224].data[i].date);
 				vaccineArray.push(dataJson[224].data[i].total_vaccinations);
+				vaccineArray_New.push(dataJson[224].data[i].total_vaccinations - dataJson[224].data[i-1].total_vaccinations);
 			}
-			createChart(dateArray,vaccineArray,"Vaccines","#666666","vaccineChart");
+			
+			createChart(dateArray,vaccineArray,"Total Vaccines","#666666","vaccineChart");
+			createChart(dateArray,vaccineArray_New,"New Vaccines","#666666","newvaccineChart");
 		})
 		.catch(e => console.log(e));
-}
-
-// Create Chart
-function createChart(dateArray, dataArray, name, color, idChart){
-	var targetChart = document.getElementById(idChart);
-    var data = {labels: dateArray,datasets:[{
-			label: name,
-			backgroundColor: color,
-			borderColor: color,
-			data: dataArray,
-		}]
-	};
-    var config = {type:'line',data,options:{tension: 0.3}};
-	var myChart = new Chart(document.getElementById(idChart),config);
 }
 
 // Shorter Num - Just Million

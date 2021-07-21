@@ -56,22 +56,36 @@ function getDataChart(){
 			var deathsArray = [];
 			var recoveredArray = [];
 			
+			var casesArray_New = [];
+			var deathsArray_New = [];
+			var recoveredArray_New = [];
+			
 			const MapJsonData = Object.entries(dataChart).map(([date, detail]) => ({date,detail,}));
 			const {date,detail: {total_cases,recovered,deaths},} = MapJsonData[0];
 			const MapJsonData_Week = Object.entries(dataChart).map(([date, detail]) => ({date,detail,}));
 			
-			for(i=7; i>=0; i--){
+			for(i=6; i>=0; i--){
 				var dataChart_Date = MapJsonData_Week[i].date;
 				var dataChart_Detail = MapJsonData_Week[i].detail;
+				var dataChart_Yesterday = MapJsonData_Week[i+1].detail;
 				
 				dateArray.push(dataChart_Date);
 				casesArray.push(dataChart_Detail.total_cases);
 				recoveredArray.push(dataChart_Detail.recovered);
 				deathsArray.push(dataChart_Detail.deaths);
+
+				casesArray_New.push(Math.abs(dataChart_Detail.total_cases - dataChart_Yesterday.total_cases));
+				recoveredArray_New.push(Math.abs(dataChart_Detail.recovered - dataChart_Yesterday.recovered));
+				deathsArray_New.push(Math.abs(dataChart_Detail.deaths - dataChart_Yesterday.deaths));
 			}
-			createChart(dateArray,casesArray,"Cases","#186FB5","casesChart");
-			createChart(dateArray,recoveredArray,"Recovered","#006233","recoveredChart");
-			createChart(dateArray,deathsArray,"Deaths","#E41E20","deathsChart");
+			
+			createChart(dateArray,casesArray,"Total Cases","#186FB5","casesChart");
+			createChart(dateArray,recoveredArray,"Total Recovered","#006233","recoveredChart");
+			createChart(dateArray,deathsArray,"Total Deaths","#E41E20","deathsChart");
+			
+			createChart(dateArray,casesArray_New,"New Cases","#186FB5","newcasesChart");
+			createChart(dateArray,recoveredArray_New,"New Recovered","#006233","newrecoveredChart");
+			createChart(dateArray,deathsArray_New,"New Deaths","#E41E20","newdeathsChart");
 		})
 		.catch(err => {console.error(err);});
 }
@@ -80,6 +94,7 @@ function getDataChart(){
 function createChart(dateArray, dataArray, name, color, idChart){
 	var targetChart = document.getElementById(idChart);
     var data = {labels: dateArray,datasets:[{
+			barPercentage: 0.25,
 			label: name,
 			backgroundColor: color,
 			borderColor: color,

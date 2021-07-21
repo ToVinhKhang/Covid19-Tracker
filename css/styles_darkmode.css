@@ -35,4 +35,4 @@
 .dark-mode #tableVN td{border: 2px solid #309FB5!important;}
 .dark-mode #tableVN th{border: 2px solid #309FB5!important;}
 .dark-mode .theadCities{color:white!important;border: 2px solid #309FB5!important;background:#309FB5!important; }
-
+.dark-mode > #content > div > div > fieldset > legend{color: white!important;}

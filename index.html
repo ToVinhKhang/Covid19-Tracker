@@ -64,7 +64,7 @@
 		
 		<!-- Global -->
 		<div id="global">
-			<fieldset>
+			<fieldset id="fieldsetGlobal">
 				<legend id="txtGlobal">Global</legend>
 				<div class="row">
 					<div class="col-md-4 col-4">
@@ -178,13 +178,27 @@
 			</div>
 			
 			<!-- Chart JS -->
-			<div class="col-md-12 col-12 chart">
-				<div class="row">
-				  <div class="col-md-6"><canvas id="casesChart" class="chart"></canvas></div>
-				  <div class="col-md-6"><canvas id="recoveredChart" class="chart"></canvas></div>
-				  <div class="col-md-6"><canvas id="deathsChart" class="chart"></canvas></div>
-				  <div class="col-md-6"><canvas id="vaccineChart" class="chart"></canvas></div>
-				</div>
+			<div class="col-md-12 col-12 chart ChartData">
+				<!-- New Data Chart -->
+				<fieldset id="fieldsetNewDataChart">
+					<legend id="txtNewDataChart">NEW BY DAY</legend>
+					<div class="row">
+					  <div class="col-md-6"><canvas id="newcasesChart" class="chart"></canvas></div>
+					  <div class="col-md-6"><canvas id="newrecoveredChart" class="chart"></canvas></div>
+					  <div class="col-md-6"><canvas id="newdeathsChart" class="chart"></canvas></div>
+					  <div class="col-md-6"><canvas id="newvaccineChart" class="chart"></canvas></div>
+					</div>
+				</fieldset>
+				<!-- Total Data Chart -->
+				<fieldset id="fieldsetTotalDataChart">
+					<legend id="txtTotalDataChart">TOTAL BY DAY</legend>
+					<div class="row">
+					  <div class="col-md-6"><canvas id="casesChart" class="chart"></canvas></div>
+					  <div class="col-md-6"><canvas id="recoveredChart" class="chart"></canvas></div>
+					  <div class="col-md-6"><canvas id="deathsChart" class="chart"></canvas></div>
+					  <div class="col-md-6"><canvas id="vaccineChart" class="chart"></canvas></div>
+					</div>
+				</fieldset>
 			</div>
 		</div>
 	</div>

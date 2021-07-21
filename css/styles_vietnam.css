@@ -42,8 +42,9 @@
 #vacFullyVaccinatedRate{margin:0px;text-align: center;color:grey;font-size:22px;font-weight:610;}
 #vacTotal,#vacOneDose,#vacTwoDose{margin:0px;text-align: center;color:#666666;font-size:40px;font-weight:bold;}
 .box{margin:10px 0px;}
-	
-
+#fieldsetNewDataChart{margin:0;padding:0;border: 3px solid #ddd; border-radius: 30px;}
+#fieldsetTotalDataChart{margin:50px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
+#txtNewDataChart,#txtTotalDataChart{width: 400px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
 
 
 
