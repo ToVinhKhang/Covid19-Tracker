@@ -4,6 +4,8 @@
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
 
+// Choose Language At First
+const lang = "./lang/vn.json";
 
 // API for Countries
 const API_Countries = "https://corona.lmao.ninja/v2/countries";
@@ -16,7 +18,7 @@ let table;
 window.addEventListener('load',() => {
 	table = document.getElementById("table");
 	getData_Fetch();
-	loadDataInEnglishAtFirst();
+	loadDataAtFirstByLang(lang);
 });
 
 // Display
@@ -122,23 +124,25 @@ function getData_AJAX(){
 	xmlHttpRequest.send();
 }
 // Load data in English at first
-function loadDataInEnglishAtFirst(){
-	fetch("./lang/en.json")
+function loadDataAtFirstByLang(lang){
+	fetch(lang)
 		.then(data => data.json())
-		.then(dataEN => {
-			document.getElementById("nameAbData").textContent = dataEN.AboutTheData.title;
-			document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
+		.then(dataInLang => {
+			document.getElementById("nameAbData").textContent = dataInLang.AboutTheData.title;
+			document.getElementById("aboutTheData").innerHTML = dataInLang.AboutTheData.content;
 			$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
-			document.getElementById("nameVaccine").textContent = dataEN.AboutVaccineTechnology.title;
-			document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutVaccineTechnology.content;
-			document.getElementById("nameVaccineDetails").textContent = dataEN.AboutVaccineDetails.title;
-			document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
-			document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
-			document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
-			document.getElementById("txtOneDose").innerHTML = dataEN.Vaccines.txt1;
-			document.getElementById("txtVaccines").innerHTML = dataEN.Vaccines.txt2;
-			document.getElementById("txtTwoDose").innerHTML  = dataEN.Vaccines.txt3;
-			document.getElementById("txtFullyVaccinatedRate").innerHTML = dataEN.rateVietnam.txt4;
+			document.getElementById("nameVaccine").textContent = dataInLang.AboutVaccineTechnology.title;
+			document.getElementById("aboutTheVaccine").innerHTML = dataInLang.AboutVaccineTechnology.content;
+			document.getElementById("nameVaccineDetails").textContent = dataInLang.AboutVaccineDetails.title;
+			document.getElementById("aboutTheVaccineDetails").innerHTML = dataInLang.AboutVaccineDetails.content;
+			document.getElementById("nameGuide").textContent = dataInLang.SoftwareInfo.title;
+			document.getElementById("aboutGuide").innerHTML = dataInLang.SoftwareInfo.content;
+			document.getElementById("txtOneDose").innerHTML = dataInLang.Vaccines.txt1;
+			document.getElementById("txtVaccines").innerHTML = dataInLang.Vaccines.txt2;
+			document.getElementById("txtTwoDose").innerHTML  = dataInLang.Vaccines.txt3;
+			document.getElementById("txtFullyVaccinatedRate").innerHTML = dataInLang.rateVietnam.txt4;
+			document.getElementById("txtNewDataChart").innerHTML  = dataInLang.Chart.title1;
+			document.getElementById("txtTotalDataChart").innerHTML = dataInLang.Chart.title2;
 		})
 		.catch(e => console.log(e));
 }
