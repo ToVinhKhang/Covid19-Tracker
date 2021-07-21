@@ -171,8 +171,8 @@ function getDataVaccines(Population){
 				vaccineArray_New.push(dataJson[224].data[i].total_vaccinations - dataJson[224].data[i-1].total_vaccinations);
 			}
 			
-			createChart(dateArray,vaccineArray,"Total Vaccines","#666666","vaccineChart");
-			createChart(dateArray,vaccineArray_New,"New Vaccines","#666666","newvaccineChart");
+			createChart(dateArray,vaccineArray,"Total Provided Vaccines","#666666","vaccineChart");
+			createChart(dateArray,vaccineArray_New,"New Provided Vaccines","#666666","newvaccineChart");
 		})
 		.catch(e => console.log(e));
 }
