@@ -14,7 +14,7 @@ https://covid19-kent.netlify.app/
 |Vietnam Tracker|Vietnam Data / Details info from each City / Vaccines Data|
 |-|(Total, Daily, Rate and Chart)|
 |Languages|Switching English / Vietnamese|
-|-|-|
+|-|(English At First)|
 |Read More|About The Data / Vaccine Details and Technology / Software Info|
 |-|(Popup Modal)|
 |Others|Filter, Sort, Dark-Light and Responsive|
