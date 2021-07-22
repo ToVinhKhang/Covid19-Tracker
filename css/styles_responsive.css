@@ -30,6 +30,9 @@
 	.theadCities th:nth-child(1){text-align: center;padding-left:0px;padding-right: 0px;width: 100px;}
 	#tableVN td:nth-child(1){width: 100px;padding-left:14px;padding-right: 14px;}
 	#tableVNdose td:nth-child(1){width: 100px;padding-left:14px;padding-right: 14px;}
+	.theadCities th:nth-child(2){text-align: center;padding-left:0px;padding-right: 0px;width: 105px;}
+	#tableVN td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
+	#tableVNdose td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
 	#table{height:440px;}
 	#tableVN{font-size: 10px;height:250px;}
 	#tableVNdose{font-size: 10px;height:250px;}
