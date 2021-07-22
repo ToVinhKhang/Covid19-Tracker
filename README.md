@@ -28,6 +28,11 @@ _Link API_Countries:_
 https://corona.lmao.ninja/v2/countries
 ```
 
+_Link API_City:_
+```
+https://tovinhkhang.github.io/VNCityDetails/data.json
+```
+
 _Link API_Vaccines:_
 ```
 https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json
@@ -38,13 +43,14 @@ _Link API_Chart:_
 https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam
 ```
 
-_Link API_City:_
-```
-https://tovinhkhang.github.io/VNCityDetails/data.json
-```
+
 <br>
 
 ### References
-#### _https://www.who.int/_
-#### _https://ncov.moh.gov.vn/_
-#### _https://ourworldindata.org/covid-vaccinations_
+|1|https://www.who.int/|
+| |_World Health Organization_|
+|2|https://ncov.moh.gov.vn/|
+| |_Vietnam Ministry of Health_|
+|3|https://ourworldindata.org/covid-vaccinations|
+| |_Our World in Data_|
+<br>
