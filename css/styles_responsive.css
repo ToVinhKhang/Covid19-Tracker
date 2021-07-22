@@ -60,7 +60,7 @@
 	.vnTotal,.vnRate{border: 2px solid #ddd;margin: 10px;border-radius:25px;padding:25px 10px 10px 10px;}
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 540px) {
 	.vnLogo{padding:0.5px;}
 	.theadCities{font-size: 9px;}
 	#tableVN{font-size: 9px;}
@@ -70,9 +70,8 @@
 	.vnTotal{padding-bottom:0px;}
 	.vnRate{padding:10px;}
 	h2{display: none;}
-	.IncidenceRate,.vaccines,.vacFullyVaccinatedRate{font-size:10px;margin:0px;}
-	.RecoveryRate{font-size:10px;}
-	.DeathRate{font-size:10px;}
+	.vaccines{font-size:8px;margin:0px;font-weight:bold;}
+	.IncidenceRate,.RecoveryRate,.DeathRate,.vacFullyVaccinatedRate{font-size:10px;margin:0px;}
 	.SwitchBar{height:36.8px;}
 	#aboutGuide{line-height: 30px;}
 	#table td:nth-child(6){font-size:7.5px;}
@@ -84,12 +83,16 @@
 	#txtNewDataChart,#txtTotalDataChart{width: 150px!important;}
 }
 @media screen and (max-width: 376px) {
-	.IncidenceRate,.vaccines{font-size:7px;}
+	.IncidenceRate{font-size:7px;}
 	#IncidenceRate{font-size:18px;}
 	.RecoveryRate{font-size:7px;}
 	#RecoveryRate{font-size:18px;}
 	.DeathRate{font-size:7px;}
 	#DeathRate{font-size:18px;}
+	.vacFullyVaccinatedRate{font-size:7px;}
+	.vaccines{font-size:6px;}
+	#vacTotal,#vacOneDose,#vacTwoDose{font-size:15px;}
+	#vacFullyVaccinatedRate{font-size:18px;}
 	h2{display: none;}
 	#aboutGuide td:nth-child(1){width:50%;}
 	#table td:nth-child(6){font-size:7px;}
