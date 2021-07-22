@@ -47,10 +47,10 @@ https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam
 <br>
 
 ### References
-|1|https://www.who.int/|
-| d|_World Health Organization_|
-|2|https://ncov.moh.gov.vn/|
-|d |_Vietnam Ministry of Health_|
-|3|https://ourworldindata.org/covid-vaccinations|
-|d |_Our World in Data_|
+|1| https://www.who.int/ |
+| | _World Health Organization_ |
+|2| https://ncov.moh.gov.vn/ |
+| | _Vietnam Ministry of Health_ |
+|3| https://ourworldindata.org/covid-vaccinations |
+| | _Our World in Data_ |
 <br>
