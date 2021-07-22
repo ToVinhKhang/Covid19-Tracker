@@ -34,7 +34,7 @@ function getDataCity(){
 		.then(jsonData => {
 			for(i=0; i<=62;i++){
 				let tr = document.createElement("tr");
-				let City = document.createElement("td");City.textContent = jsonData.data[i].name;
+				let City = document.createElement("td");City.textContent = jsonData.data[i].name.replace("TP. ","");
 				let Cases = document.createElement("td");Cases.textContent = jsonData.data[i].cases.replace(".",",");
 				let Recovered = document.createElement("td");Recovered.textContent = jsonData.data[i].recovered.replace(".",",");
 				let Deaths = document.createElement("td");Deaths.textContent = jsonData.data[i].deaths.replace(".",",");
@@ -45,6 +45,8 @@ function getDataCity(){
 				tr.appendChild(Deaths);
 				tableVN.appendChild(tr);
 			}
+			//Make sure focus max value at first
+			setTimeout(()=>{$('#th-citiesCases').trigger('click');$('#th-citiesCases').trigger('click');}, 2000);	
 		})
 		.catch(err => {console.error(err);});
 }
@@ -55,8 +57,6 @@ function getDataDose(){
 	fetch(API_Dose)
 		.then(data => data.json())
 		.then(jsonData => {
-			
-			console.log(vacTotal)
 			for(i=0; i<=62;i++){
 				let tr = document.createElement("tr");
 				let City = document.createElement("td");City.textContent = jsonData.data[i].name;
@@ -70,6 +70,8 @@ function getDataDose(){
 				tr.appendChild(Fulldose);
 				tableVNdose.appendChild(tr);
 			}
+			//Make sure focus max value at first
+			setTimeout(()=>{$('#th-citiesProVac').trigger('click');$('#th-citiesProVac').trigger('click');}, 2000);	
 		})
 		.catch(err => {console.error(err);});
 }
