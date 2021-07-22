@@ -47,6 +47,8 @@ https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam
 <br>
 
 ### References
+
+|Name Functions|Descriptions|
 |1| https://www.who.int/ |
 | | World Health Organization |
 |2| https://ncov.moh.gov.vn/ |
