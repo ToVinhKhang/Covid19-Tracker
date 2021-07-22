@@ -10,7 +10,7 @@ const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
 const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 
 // API for City
-const API_City  = "https://tovinhkhang.github.io/API/data.json";
+const API_City  = "https://tovinhkhang.github.io/API/data/VNCityData.json";
 
 // Init
 let tableVN;
