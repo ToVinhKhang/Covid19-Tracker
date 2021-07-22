@@ -73,7 +73,7 @@
 	.vnTotal{padding-bottom:0px;}
 	.vnRate{padding:10px;}
 	h2{display: none;}
-	.vaccines{font-size:7.5px;margin:0px;font-weight:bold;}
+	.vaccines{font-size:7px;margin:0px;font-weight:bold;}
 	.IncidenceRate,.RecoveryRate,.DeathRate,.vacFullyVaccinatedRate{font-size:10px;margin:0px;}
 	.SwitchBar{height:36.8px;}
 	#aboutGuide{line-height: 30px;}
