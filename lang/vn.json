@@ -17,9 +17,9 @@
 	},
 	"tableVietnamVac": {
 		"th1": "TP/Tỉnh",
-		"th2": "Vắcxin Cung cấp",
-		"th3": "Tiêm Một liều",
-		"th4": "Tiêm Đủ liều"
+		"th2": "Tổng Vắcxin Cung cấp",
+		"th3": "Tổng Tiêm Một liều",
+		"th4": "Tổng Tiêm Đủ liều"
 	},
 	"totalVietnam": {
 		"txt1": "Ca nhiễm",
