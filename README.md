@@ -30,7 +30,12 @@ https://corona.lmao.ninja/v2/countries
 
 _Link API_City:_
 ```
-https://tovinhkhang.github.io/VNCityDetails/data.json
+https://tovinhkhang.github.io/API/data/VNCityData.json
+```
+
+_Link API_Dose:_
+```
+https://tovinhkhang.github.io/API/data/VNVaccineData.json
 ```
 
 _Link API_Vaccines:_
