@@ -10,9 +10,7 @@ const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
 const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 
 // API for City
-const API_City  = "https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/records/LATEST";
-const API_HcKey = "https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST";
-
+const API_City  = "https://tovinhkhang.github.io/VNCityDetails/data.json";
 
 // Init
 let tableVN;
@@ -25,26 +23,24 @@ window.addEventListener('load',() => {
 // Get Data City 
 async function getDataCity(){
 	tableVN.innerHTML = '';
-	var {detail} = await(await fetch(API_City)).json();
-    var {key}    = await(await fetch(API_HcKey)).json();
-	
-    for(let i=0; i<detail.length; i++){
-		let tr = document.createElement("tr");
-		let name = key.find(k => k["hec-key"] == detail[i]["hc-key"]);
-		
-        if(name){
-			let City = document.createElement("td");City.textContent = ConvertVnCityString(name.name).toLocaleString('en-US');
-            let Cases = document.createElement("td");Cases.textContent = detail[i].value.toLocaleString('en-US');
-            let Recovered = document.createElement("td");Recovered.textContent = detail[i].socakhoi.toLocaleString('en-US');
-            let Deaths = document.createElement("td");Deaths.textContent = detail[i].socatuvong.toLocaleString('en-US');
-			
-            tr.appendChild(City);
-            tr.appendChild(Cases);
-            tr.appendChild(Recovered);
-            tr.appendChild(Deaths);
-            tableVN.appendChild(tr);
-        }
-    }
+	fetch(API_City)
+		.then(data => data.json())
+		.then(jsonData => {
+			for(i=0; i<=62;i++){
+				let tr = document.createElement("tr");
+				let City = document.createElement("td");City.textContent = jsonData.data[i].name;
+				let Cases = document.createElement("td");Cases.textContent = jsonData.data[i].cases.replace(".",",");
+				let Recovered = document.createElement("td");Recovered.textContent = jsonData.data[i].recovered.replace(".",",");
+				let Deaths = document.createElement("td");Deaths.textContent = jsonData.data[i].deaths.replace(".",",");
+				
+				tr.appendChild(City);
+				tr.appendChild(Cases);
+				tr.appendChild(Recovered);
+				tr.appendChild(Deaths);
+				tableVN.appendChild(tr);
+			}
+		})
+		.catch(err => {console.error(err);});
 }
 // Get Data Chart
 function getDataChart(){
@@ -104,13 +100,6 @@ function createChart(dateArray, dataArray, name, color, idChart){
     var config = {type:'line',data,options:{tension: 0.3}};
 	var myChart = new Chart(document.getElementById(idChart),config);
 }
-
-// Format String
-function ConvertVnCityString(s){var string = "";
-	s.split("-").forEach(t => {string += CapitalizeString(t);string += " ";});
-	return string.trim();
-}
-function CapitalizeString(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 
 
 // Update data every 15 mins

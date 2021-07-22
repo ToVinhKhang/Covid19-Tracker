@@ -40,12 +40,7 @@ https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam
 
 _Link API_City:_
 ```
-https://api.apify.com/v2/key-value-stores/ZsOpZgeg7dFS1rgfM/records/LATEST
-```
-
-_Link API_HcKey:_
-```
-https://api.apify.com/v2/key-value-stores/p3nS2Q9TUn6kUOriJ/records/LATEST
+https://tovinhkhang.github.io/VNCityDetails/data.json
 ```
 <br>
 
