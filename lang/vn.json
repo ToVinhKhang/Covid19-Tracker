@@ -15,6 +15,12 @@
 		"th3": "Khỏi bệnh",
 		"th4": "Tử vong"
 	},
+	"tableVietnamVac": {
+		"th1": "TP/Tỉnh",
+		"th2": "Vắcxin Cung cấp",
+		"th3": "Tiêm Một liều",
+		"th4": "Tiêm Đủ liều"
+	},
 	"totalVietnam": {
 		"txt1": "Ca nhiễm",
 		"txt2": "Khỏi bệnh",

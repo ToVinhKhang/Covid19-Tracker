@@ -167,14 +167,30 @@
 			<div class="row vnRate" style="width: 100%;">
 				<!-- Vaccine -->
 				<div class="col-md-4 col-4 VaccinesInfo">
-					<div><h3 class="vaccines" id="txtOneDose">One Dose</h3><h1 id="vacOneDose"></h1></div>
+					<div><h3 class="vaccines" id="txtVaccines">Provided Vaccines</h3><h1 id="vacTotal"></h1></div>
 				</div>
 				<div class="col-md-4 col-4 VaccinesInfo">
-					<div><h3 class="vaccines" id="txtVaccines">Provided Vaccines</h3><h1 id="vacTotal"></h1></div>
+					<div><h3 class="vaccines" id="txtOneDose">One Dose</h3><h1 id="vacOneDose"></h1></div>
 				</div>
 				<div class="col-md-4 col-4 VaccinesInfo">
 					<div><h3 class="vaccines" id="txtTwoDose">Fully Dose</h3><h1 id="vacTwoDose"></h1></div>
 				</div>
+			</div>
+			
+			<!-- Table -->
+			<div class="col-lg-12 col-md-12 col-12">
+				<table class="table table-striped sortable-table">
+					<thead class="theadCities">
+						<tr>
+						  <th class="theadCitiesProvinces" id="th-citiesprovincesVac">Cities/Provinces</th>
+						  <th class="numeric-sort" id="th-citiesProVac">Provided Vaccines</th>
+						  <th class="numeric-sort" id="th-citiesOneDose">One Dose</th>
+						  <th class="numeric-sort" id="th-citiesTwoDose">Fully Dose</th>
+						</tr>
+					</thead>
+					<tbody id="tableVNdose">
+					</tbody>
+				</table>
 			</div>
 			
 			<!-- Chart JS -->

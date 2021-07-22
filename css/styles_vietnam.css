@@ -22,6 +22,18 @@
 #tableVN{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
 #tableVN tr {display:table;width:100%;table-layout:fixed;}
 #tableVN::-webkit-scrollbar {display: none;}
+
+#tableVNdose td, #tableVNdose th{border: 2.5px solid #ddd;padding: 8px;width: 100%;}
+#tableVNdose th{padding-top: 12px;padding-bottom: 12px;background-color: #309FB5;color: white;}
+#tableVNdose td:nth-child(1){padding-left:11px;padding-right: 11px;}
+#tableVNdose td:nth-child(2){font-weight: bold; color: #7D58CC;text-align:center;}
+#tableVNdose td:nth-child(3){font-weight: bold; color: #CC497F;text-align:center;}
+#tableVNdose td:nth-child(4){font-weight: bold; color: #CC6634;text-align:center;}
+#tableVNdose tr:nth-child(even){background-color: #f2f2f2;}
+#tableVNdose tr:hover {background-color: #ddd;}
+#tableVNdose{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
+#tableVNdose tr {display:table;width:100%;table-layout:fixed;}
+#tableVNdose::-webkit-scrollbar {display: none;}
 .sortable-table thead .theadCitiesProvinces[data-sort-direction="1"]:after{content:"\25B4";}
 .sortable-table thead .theadCitiesProvinces[data-sort-direction="-1"]:after{content:"\25BE"}
 .IncidenceRate,#IncidenceRate,.TotalCases,#TotalCases,#GlobalCases{color: #186FB5;text-align: center;}
@@ -40,7 +52,9 @@
 .chart{padding:25px;}
 .vaccines{font-size:18px;margin-top:20px;text-align: center;color:#666666;}
 #vacFullyVaccinatedRate{margin:0px;text-align: center;color:grey;font-size:22px;font-weight:610;}
-#vacTotal,#vacOneDose,#vacTwoDose{margin:0px;text-align: center;color:#666666;font-size:40px;font-weight:bold;}
+#vacTotal{margin:0px;text-align: center;color:#7D58CC;font-size:40px;font-weight:bold;}
+#vacOneDose{margin:0px;text-align: center;color:#CC497F;font-size:40px;font-weight:bold;}
+#vacTwoDose{margin:0px;text-align: center;color:#CC6634;font-size:40px;font-weight:bold;}
 .box{margin:10px 0px;}
 #fieldsetNewDataChart{margin:0;padding:0;border: 3px solid #ddd; border-radius: 30px;}
 #fieldsetTotalDataChart{margin:50px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}

@@ -29,8 +29,10 @@
 	.theadCities{font-size: 10px;}
 	.theadCities th:nth-child(1){text-align: center;padding-left:0px;padding-right: 0px;width: 100px;}
 	#tableVN td:nth-child(1){width: 100px;padding-left:14px;padding-right: 14px;}
+	#tableVNdose td:nth-child(1){width: 100px;padding-left:14px;padding-right: 14px;}
 	#table{height:440px;}
-	#tableVN{font-size: 10px;height:400px;}
+	#tableVN{font-size: 10px;height:250px;}
+	#tableVNdose{font-size: 10px;height:250px;}
 	#countries{margin-bottom: 30px;}
 	.footer,#designedBy{font-size: 10px;}
 }
@@ -62,6 +64,7 @@
 	.vnLogo{padding:0.5px;}
 	.theadCities{font-size: 9px;}
 	#tableVN{font-size: 9px;}
+	#tableVNdose{font-size: 9px;}
 	.vnDetailsFlag{display:none;}
 	#content > .row > div{margin-bottom:15px;}
 	.vnTotal{padding-bottom:0px;}

@@ -12,16 +12,22 @@ const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 // API for City
 const API_City  = "https://tovinhkhang.github.io/API/data/VNCityData.json";
 
+// API for Dose Vaccine 
+const API_Dose = "https://tovinhkhang.github.io/API/data/VNVaccineData.json";
+
 // Init
 let tableVN;
+let tableVNdose;
 window.addEventListener('load',() => {
 	tableVN = document.getElementById("tableVN");
+	tableVNdose = document.getElementById("tableVNdose");
 	getDataCity();
+	getDataDose();
 	getDataChart();
 });
 
 // Get Data City 
-async function getDataCity(){
+function getDataCity(){
 	tableVN.innerHTML = '';
 	fetch(API_City)
 		.then(data => data.json())
@@ -42,6 +48,32 @@ async function getDataCity(){
 		})
 		.catch(err => {console.error(err);});
 }
+
+// Get Data Dose Vaccine 
+function getDataDose(){
+	tableVNdose.innerHTML = '';
+	fetch(API_Dose)
+		.then(data => data.json())
+		.then(jsonData => {
+			
+			console.log(vacTotal)
+			for(i=0; i<=62;i++){
+				let tr = document.createElement("tr");
+				let City = document.createElement("td");City.textContent = jsonData.data[i].name;
+				let Vaccines = document.createElement("td");Vaccines.textContent = jsonData.data[i].vaccines;
+				let Onedose = document.createElement("td");Onedose.textContent = jsonData.data[i].onedose;
+				let Fulldose = document.createElement("td");Fulldose.textContent = jsonData.data[i].fulldose;
+
+				tr.appendChild(City);
+				tr.appendChild(Vaccines);
+				tr.appendChild(Onedose);
+				tr.appendChild(Fulldose);
+				tableVNdose.appendChild(tr);
+			}
+		})
+		.catch(err => {console.error(err);});
+}
+
 // Get Data Chart
 function getDataChart(){
 	fetch(API_Chart, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
@@ -103,7 +135,7 @@ function createChart(dateArray, dataArray, name, color, idChart){
 
 
 // Update data every 15 mins
-setInterval(()=>{getDataCity();getDataChart();},(1000*60*15));
+setInterval(()=>{getDataCity();getDataChart();getDataDose();},(1000*60*15));
 
 // -----
 // END

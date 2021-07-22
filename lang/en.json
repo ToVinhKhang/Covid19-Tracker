@@ -15,6 +15,12 @@
 		"th3": "Recovered",
 		"th4": "Deaths"
 	},
+	"tableVietnamVac": {
+		"th1": "Cities/Provinces",
+		"th2": "Provided Vaccines",
+		"th3": "One Dose",
+		"th4": "Fully Dose"
+	},
 	"totalVietnam": {
 		"txt1": "Cases",
 		"txt2": "Recovered",

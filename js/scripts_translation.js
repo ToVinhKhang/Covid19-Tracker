@@ -52,6 +52,10 @@ function displayDataTranslated(dataLang){
 	var th_citiesCases = document.getElementById("th-citiesCases");
 	var th_citiesRecovered = document.getElementById("th-citiesRecovered");
 	var th_citiesDeaths = document.getElementById("th-citiesDeaths");
+	var th_citiesprovincesVac = document.getElementById("th-citiesprovincesVac");
+	var th_citiesProVac = document.getElementById("th-citiesProVac");
+	var th_citiesOneDose = document.getElementById("th-citiesOneDose");
+	var th_citiesTwoDose = document.getElementById("th-citiesTwoDose");
 	var txtGlobal = document.getElementById("txtGlobal");
 	var txtGlobalCases = document.getElementById("txtGlobalCases");
 	var txtGlobalRecovered = document.getElementById("txtGlobalRecovered");
@@ -96,6 +100,10 @@ function displayDataTranslated(dataLang){
 	th_citiesCases.innerHTML = dataLang.tableVietnam.th2;
 	th_citiesRecovered.innerHTML = dataLang.tableVietnam.th3;
 	th_citiesDeaths.innerHTML = dataLang.tableVietnam.th4;
+	th_citiesprovincesVac.innerHTML = dataLang.tableVietnamVac.th1;
+	th_citiesProVac.innerHTML = dataLang.tableVietnamVac.th2;
+	th_citiesOneDose.innerHTML = dataLang.tableVietnamVac.th3;
+	th_citiesTwoDose.innerHTML = dataLang.tableVietnamVac.th4;
 	txtTotalCases.innerHTML = dataLang.totalVietnam.txt1;
 	txtTotalRecovered.innerHTML = dataLang.totalVietnam.txt2;
 	txtTotalDeaths.innerHTML = dataLang.totalVietnam.txt3;
