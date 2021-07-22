@@ -28,8 +28,8 @@
 	.btnVNTracker:hover + .txtVNTracker {display: none;}
 	.theadCities{font-size: 10px;}
 	.theadCities th:nth-child(1){text-align: center;padding-left:0px;padding-right: 0px;width: 100px;}
-	#tableVN td:nth-child(1){width: 100px;padding-left:12px;padding-right: 12px;}
-	#tableVNdose td:nth-child(1){width: 100px;padding-left:12px;padding-right: 12px;}
+	#tableVN td:nth-child(1){width: 100px;padding-left:10px;padding-right: 10px;}
+	#tableVNdose td:nth-child(1){width: 100px;padding-left:10px;padding-right: 10px;}
 	.theadCities th:nth-child(2){text-align: center;padding-left:0px;padding-right: 0px;width: 105px;}
 	#tableVN td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
 	#tableVNdose td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
