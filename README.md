@@ -49,7 +49,7 @@ https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam
 ### References
 
 |Name Functions|Descriptions|
-|1| https://www.who.int/ |
+|1| j|
 | | World Health Organization |
 |2| https://ncov.moh.gov.vn/ |
 | | _Vietnam Ministry of Health_ |
