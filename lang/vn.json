@@ -18,8 +18,8 @@
 	"tableVietnamVac": {
 		"th1": "TP/Tỉnh",
 		"th2": "Liều Đã Tiêm",
-		"th3": "Tiêm Một Liều",
-		"th4": "Tiêm Đủ Liều"
+		"th3": "Một Liều",
+		"th4": "Đủ Liều"
 	},
 	"totalVietnam": {
 		"txt1": "Ca nhiễm",

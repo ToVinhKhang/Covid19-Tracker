@@ -60,6 +60,7 @@
 	#txtGlobal{width: 100px;font-size: 20px;}
 	#txtNewDataChart{width: 100px;font-size: 20px;}
 	#txtTotalDataChart{width: 100px;font-size: 20px;}
+	.hrChart{display: block;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
