@@ -22,16 +22,16 @@
 		"th4": "Đủ Liều"
 	},
 	"totalVietnam": {
-		"txt1": "Ca nhiễm",
-		"txt2": "Khỏi bệnh",
-		"txt3": "Tử vong",
-		"txt4": "Dân số"
+		"txt1": "Tổng Nhiễm",
+		"txt2": "Tổng Phục Hồi",
+		"txt3": "Tổng Tử Vong",
+		"txt4": "Tổng Dân Số"
 	},
 	"rateVietnam": {
-		"txt1": "Tỉ lệ Mắc bệnh",
-		"txt2": "Tỉ lệ Hồi phục",
-		"txt3": "Tỉ lệ Tử vong",
-		"txt4": "Tỉ lệ Tiêm đủ liều"
+		"txt1": "Tỉ lệ Nhiễm",
+		"txt2": "Tỉ lệ Phục Hồi",
+		"txt3": "Tỉ lệ Tử Vong",
+		"txt4": "Tỉ lệ Tiêm Đủ"
 	},
 	"Vaccines": {
 		"txt1": "Tổng Tiêm Một Liều",

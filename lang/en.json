@@ -22,10 +22,10 @@
 		"th4": "Fully Dose"
 	},
 	"totalVietnam": {
-		"txt1": "Cases",
-		"txt2": "Recovered",
-		"txt3": "Deaths",
-		"txt4": "Population"
+		"txt1": "Total Cases",
+		"txt2": "Total Recovered",
+		"txt3": "Total Deaths",
+		"txt4": "Total Population"
 	},
 	"rateVietnam": {
 		"txt1": "Incidence Rate",
