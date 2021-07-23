@@ -38,6 +38,7 @@ option{font-weight: bold;background-color: #309FB5;}
 .linkContact{color: #212529;}
 a:hover{text-decoration: none;color: black;font-weight:bold;}
 .Line{height:1px;}
+hr{border: 0;border-top: 2px solid #ddd;text-align: center; width: 35%;}
 
 /* Loader */
 .loader {margin-top: 15%;border: 10px solid #f3f3f3;border-top: 10px solid #65506D;border-radius: 50%;width: 120px; height: 120px;-webkit-animation: spin 1.75s linear infinite;animation: spin 1.75s linear infinite;}

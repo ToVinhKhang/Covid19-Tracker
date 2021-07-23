@@ -48,7 +48,6 @@ function getDataCity(){
 				let Recovered = document.createElement("td");Recovered.textContent = jsonData.data[i].recovered.replace(".",",");
 				let Deaths = document.createElement("td");Deaths.textContent = jsonData.data[i].deaths.replace(".",",");
 				
-				
 				totalCases += parseInt(jsonData.data[i].cases.replace(".",""));
 				totalRecovered += parseInt(jsonData.data[i].recovered.replace(".",""));
 				totalDeaths += parseInt(jsonData.data[i].deaths.replace(".",""));
@@ -85,6 +84,7 @@ function getDataDose(){
 				tr.appendChild(Fulldose);
 				tableVNdose.appendChild(tr);
 			}
+			
 			//Make sure focus max value at first
 			setTimeout(()=>{$('#th-citiesProVac').trigger('click');$('#th-citiesProVac').trigger('click');}, 2000);	
 		})

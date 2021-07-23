@@ -38,6 +38,11 @@ _Link API_Dose:_
 https://tovinhkhang.github.io/API/data/VNVaccineData.json
 ```
 
+_Link API_VacType:_
+```
+https://tovinhkhang.github.io/API/data/VNVacTypeData.json
+```
+
 _Link API_Vaccines:_
 ```
 https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json
