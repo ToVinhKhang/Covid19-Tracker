@@ -12,6 +12,7 @@ $("#SwitchLanguages").change(function(){
 	var GlobalCases = document.getElementById("GlobalCases");
 	var GlobalRecovered = document.getElementById("GlobalRecovered");
 	var GlobalDeaths = document.getElementById("GlobalDeaths");
+	var LastUpdated = document.getElementById("LastUpdated");
 	
 	// English
 	if(lang=="EN"){
@@ -23,6 +24,7 @@ $("#SwitchLanguages").change(function(){
 			GlobalCases.innerHTML = GlobalCases.innerHTML.replace("Tr","M");
 			GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace("Tr","M");
 			GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace("Tr","M");
+			LastUpdated.innerHTML = LastUpdated.innerHTML.replace("Cập nhật lần cuối","Last Updated");
 		}).catch(e => console.log(e));
 	}
 	
@@ -36,6 +38,7 @@ $("#SwitchLanguages").change(function(){
 			GlobalCases.innerHTML = GlobalCases.innerHTML.replace("M","Tr");
 			GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace("M","Tr");
 			GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace("M","Tr");
+			LastUpdated.innerHTML = LastUpdated.innerHTML.replace("Last Updated","Cập nhật lần cuối");
 		}).catch(e => console.log(e));
 	}
 });
