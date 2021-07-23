@@ -22,6 +22,7 @@
 #tableVN{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
 #tableVN tr {display:table;width:100%;table-layout:fixed;}
 #tableVN::-webkit-scrollbar {display: none;}
+#LastUpdated{float: right; font-weight: 500;font-style: italic; color: #999; font-size:16px;padding: 15px 5px 0px 0px;}
 
 #tableVNdose td, #tableVNdose th{border: 2.5px solid #ddd;padding: 8px;width: 100%;}
 #tableVNdose th{padding-top: 12px;padding-bottom: 12px;background-color: #309FB5;color: white;}
@@ -62,6 +63,7 @@
 #DeathRate{font-size:22px;margin:0px;}
 .vacFullyVaccinatedRate{font-size:14px;margin:0px;color: grey;text-align: center;}
 #vacFullyVaccinatedRate{font-size:22px;margin:0px;color: grey!important;}
+
 .chart{padding:25px;}
 .vaccines{font-size:18px;margin-top:20px;text-align: center;color:#666666;}
 #vacFullyVaccinatedRate{margin:0px;text-align: center;color:grey;font-size:22px;font-weight:610;}

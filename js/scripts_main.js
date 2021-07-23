@@ -57,7 +57,6 @@ function getDataDailyVaccines(Population){
 	fetch(API_DailyVaccines)
 		.then(data => data.json())
 		.then(jsonData => {
-			console.log(jsonData)
 			displayDailyVaccines(jsonData,Population);
 		})
 		.catch(e => console.log(e));

@@ -89,6 +89,7 @@ function displayCity(jsonData){
 		tableVN.appendChild(tr);
 	}
 	displayTotalVN(totalCases,totalRecovered,totalDeaths);
+	document.getElementById("LastUpdated").innerHTML = "(Last Updated: "+jsonData.lastUpdated+")";
 	//Make sure focus max value at first
 	setTimeout(()=>{$('#th-citiesCases').trigger('click');$('#th-citiesCases').trigger('click');}, 2000);	
 }
