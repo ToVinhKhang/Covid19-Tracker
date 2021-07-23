@@ -43,7 +43,7 @@ _Link API_DailyVaccines:_
 https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json
 ```
 
-_Link API_Chart:_
+_Link API_DailyVietnam:_
 ```
 https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam
 ```
