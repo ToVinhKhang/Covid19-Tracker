@@ -12,11 +12,8 @@ const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 // API for City
 const API_City  = "https://tovinhkhang.github.io/API/data/VNCityData.json";
 
-// API for Dose Vaccine 
-const API_Dose = "https://tovinhkhang.github.io/API/data/VNVaccineData.json";
-
-// API for Vaccine Type
-const API_VacType = "https://tovinhkhang.github.io/API/data/VNVacTypeData.json";
+// API for Detail Vaccine 
+const API_DetailVaccine = "https://tovinhkhang.github.io/API/data/VNVaccineData.json";
 
 // Init
 let tableVN;
@@ -27,8 +24,7 @@ window.addEventListener('load',() => {
 	tableVNdose = document.getElementById("tableVNdose");
 	tableVNvacType = document.getElementById("tableVNvacType");
 	getDataCity();
-	getDataDose();
-	getDataVacType();
+	getDataDetailVaccine();
 	getDataChart();
 });
 
@@ -65,65 +61,62 @@ function getDataCity(){
 		.catch(err => {console.error(err);});
 }
 
-// Get Data Dose Vaccine 
-function getDataDose(){
+// Get Data Detail Vaccine 
+function getDataDetailVaccine(){
+	fetch(API_DetailVaccine)
+		.then(data => data.json())
+		.then(jsonData => {
+			console.log(jsonData)
+			displayVacDose(jsonData);
+			displayVacType(jsonData);
+		})
+		.catch(err => {console.error(err);});
+}
+
+function displayVacDose(jsonData){
 	tableVNdose.innerHTML = '';
-	fetch(API_Dose)
-		.then(data => data.json())
-		.then(jsonData => {
-			for(i=0; i<=62;i++){
-				let tr = document.createElement("tr");
-				let City = document.createElement("td");City.textContent = jsonData.data[i].name;
-				let Vaccines = document.createElement("td");Vaccines.textContent = jsonData.data[i].vaccines;
-				let Onedose = document.createElement("td");Onedose.textContent = jsonData.data[i].onedose;
-				let Fulldose = document.createElement("td");Fulldose.textContent = jsonData.data[i].fulldose;
+	for(i=0; i<=62;i++){
+		let tr = document.createElement("tr");
+		let City = document.createElement("td");City.textContent = jsonData.dataVacDose[i].name;
+		let Vaccines = document.createElement("td");Vaccines.textContent = jsonData.dataVacDose[i].vaccines;
+		let Onedose = document.createElement("td");Onedose.textContent = jsonData.dataVacDose[i].onedose;
+		let Fulldose = document.createElement("td");Fulldose.textContent = jsonData.dataVacDose[i].fulldose;
 
-				tr.appendChild(City);
-				tr.appendChild(Vaccines);
-				tr.appendChild(Onedose);
-				tr.appendChild(Fulldose);
-				tableVNdose.appendChild(tr);
-			}
-			
-			//Make sure focus max value at first
-			setTimeout(()=>{$('#th-citiesProVac').trigger('click');$('#th-citiesProVac').trigger('click');}, 2000);	
-		})
-		.catch(err => {console.error(err);});
+		tr.appendChild(City);
+		tr.appendChild(Vaccines);
+		tr.appendChild(Onedose);
+		tr.appendChild(Fulldose);
+		tableVNdose.appendChild(tr);
+	}
+	//Make sure focus max value at first
+	setTimeout(()=>{$('#th-citiesProVac').trigger('click');$('#th-citiesProVac').trigger('click');}, 2000);
 }
-
-// Get Data Vaccine Type
-function getDataVacType(){
+function displayVacType(jsonData){
 	tableVNvacType.innerHTML = '';
-	fetch(API_VacType)
-		.then(data => data.json())
-		.then(jsonData => {
-			var totalAstraZ = 0;
-			var totalPfizer = 0;
-			var totalModerna = 0;
-			for(i=0; i<=62;i++){
-				let tr = document.createElement("tr");
-				let City = document.createElement("td");City.textContent = jsonData.data[i].name;
-				let AstraZ = document.createElement("td");AstraZ.textContent = parseInt(jsonData.data[i].astraz).toLocaleString('en-US');
-				let Pfizer = document.createElement("td");Pfizer.textContent = parseInt(jsonData.data[i].pfizer).toLocaleString('en-US');
-				let Moderna = document.createElement("td");Moderna.textContent = parseInt(jsonData.data[i].moderna).toLocaleString('en-US');
+	var totalAstraZ = 0;
+	var totalPfizer = 0;
+	var totalModerna = 0;
+	for(i=0; i<=62;i++){
+		let tr = document.createElement("tr");
+		let City = document.createElement("td");City.textContent = jsonData.dataVacType[i].name;
+		let AstraZ = document.createElement("td");AstraZ.textContent = parseInt(jsonData.dataVacType[i].astraz).toLocaleString('en-US');
+		let Pfizer = document.createElement("td");Pfizer.textContent = parseInt(jsonData.dataVacType[i].pfizer).toLocaleString('en-US');
+		let Moderna = document.createElement("td");Moderna.textContent = parseInt(jsonData.dataVacType[i].moderna).toLocaleString('en-US');
 
-				totalAstraZ += parseInt(jsonData.data[i].astraz);
-				totalPfizer += parseInt(jsonData.data[i].pfizer);
-				totalModerna += parseInt(jsonData.data[i].moderna);
-				
-				tr.appendChild(City);
-				tr.appendChild(AstraZ);
-				tr.appendChild(Pfizer);
-				tr.appendChild(Moderna);
-				tableVNvacType.appendChild(tr);
-			}
-			displayTotalVacType(totalAstraZ,totalPfizer,totalModerna);
-			//Make sure focus max value at first
-			setTimeout(()=>{$('#th-citiesAstraZ').trigger('click');$('#th-citiesAstraZ').trigger('click');}, 2000);	
-		})
-		.catch(err => {console.error(err);});
+		totalAstraZ += parseInt(jsonData.dataVacType[i].astraz);
+		totalPfizer += parseInt(jsonData.dataVacType[i].pfizer);
+		totalModerna += parseInt(jsonData.dataVacType[i].moderna);
+		
+		tr.appendChild(City);
+		tr.appendChild(AstraZ);
+		tr.appendChild(Pfizer);
+		tr.appendChild(Moderna);
+		tableVNvacType.appendChild(tr);
+	}
+	displayTotalVacType(totalAstraZ,totalPfizer,totalModerna);
+	//Make sure focus max value at first
+	setTimeout(()=>{$('#th-citiesAstraZ').trigger('click');$('#th-citiesAstraZ').trigger('click');}, 2000);	
 }
-
 // Get Data Chart
 function getDataChart(){
 	fetch(API_Chart, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
