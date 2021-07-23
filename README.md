@@ -33,14 +33,14 @@ _Link API_City:_
 https://tovinhkhang.github.io/API/data/VNCityData.json
 ```
 
-_Link API_DailyVaccines:_
-```
-https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json
-```
-
 _Link API_DetailVaccine:_
 ```
 https://tovinhkhang.github.io/API/data/VNVaccineData.json
+```
+
+_Link API_DailyVaccines:_
+```
+https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json
 ```
 
 _Link API_Chart:_
