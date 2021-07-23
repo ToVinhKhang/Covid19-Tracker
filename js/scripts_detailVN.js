@@ -4,8 +4,8 @@
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
 
-// API for Chart
-const API_Chart = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
+// API for DailyVietnam
+const API_DailyVietnam = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
 const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
 const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 
@@ -25,7 +25,7 @@ window.addEventListener('load',() => {
 	tableVNvacType = document.getElementById("tableVNvacType");
 	getDataCity();
 	getDataDetailVaccine();
-	getDataChart();
+	getDataDailyVietnam();
 });
 
 
@@ -53,12 +53,12 @@ function getDataDetailVaccine(){
 		})
 		.catch(err => {console.error(err);});
 }
-// Get Data Chart
-function getDataChart(){
-	fetch(API_Chart, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
+// Get Data DailyVietnam
+function getDataDailyVietnam(){
+	fetch(API_DailyVietnam, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
 		.then(data => data.json())
 		.then(jsonData => {
-			displayChart(jsonData);
+			displayDailyVietnam(jsonData);
 		})
 		.catch(err => {console.error(err);});
 }
@@ -137,7 +137,7 @@ function displayVacType(jsonData){
 	//Make sure focus max value at first
 	setTimeout(()=>{$('#th-citiesAstraZ').trigger('click');$('#th-citiesAstraZ').trigger('click');}, 2000);	
 }
-function displayChart(jsonData){
+function displayDailyVietnam(jsonData){
 	var dataChart = jsonData.data;
 	var dateArray = [];
 	var casesArray = [];
