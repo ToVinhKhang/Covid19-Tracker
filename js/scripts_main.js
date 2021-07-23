@@ -9,18 +9,73 @@
 const API_Countries = "https://corona.lmao.ninja/v2/countries";
 
 // API for Vaccines
-const API_Vaccines = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json";
+const API_DailyVaccines = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json";
 
-
+// Init
 let table;
 window.addEventListener('load',() => {
 	table = document.getElementById("table");
-	getData_Fetch();
-	loadDataAtFirstInEnglish();
+	getDataGlobal();
+	loadDataForPopupAtFirst();
 });
 
+//----------
+// Get Data
+//----------
+function getDataGlobal(){
+	fetch(API_Countries)
+		.then(data => data.json())
+		.then(jsonData => {
+			displayDataGlobal(jsonData);
+			// Hide loader When success
+			document.getElementById("loader").style.display = "none";
+			// Then Appear Global
+			document.getElementById("global").style.display = "block";
+			document.getElementById("footer").style.display = "block";
+		})
+		.catch(e => console.log(e));
+}
+// In English at first
+function loadDataForPopupAtFirst(){
+	fetch("./lang/en.json")
+		.then(data => data.json())
+		.then(dataEN => {
+			document.getElementById("nameAbData").textContent = dataEN.AboutTheData.title;
+			document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
+			$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
+			document.getElementById("nameVaccine").textContent = dataEN.AboutVaccineTechnology.title;
+			document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutVaccineTechnology.content;
+			document.getElementById("nameVaccineDetails").textContent = dataEN.AboutVaccineDetails.title;
+			document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
+			document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
+			document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
+		})
+		.catch(e => console.log(e));
+}
+// Get Data Daily Vaccines
+function getDataDailyVaccines(Population){
+	fetch(API_DailyVaccines)
+		.then(data => data.json())
+		.then(jsonData => {
+			console.log(jsonData)
+			displayDailyVaccines(jsonData,Population);
+		})
+		.catch(e => console.log(e));
+}
+// AJAX
+function getDataGlobalAgain(){
+	let xmlHttpRequest = new XMLHttpRequest();xmlHttpRequest.addEventListener('load',e => {
+		if(xmlHttpRequest.readyState === 4 && xmlHttpRequest.status === 200){let jsonData = xmlHttpRequest.response;
+			displayDataGlobal(jsonData);
+		}else{console.log(e);}
+	});xmlHttpRequest.open('GET',API_Countries,true);xmlHttpRequest.responseType = 'json';xmlHttpRequest.send();
+}
+
+
+//---------
 // Display
-function displayData(jsonData){
+//---------
+function displayDataGlobal(jsonData){
 	table.innerHTML = '';
 	var GlobalCases = 0;
 	var GlobalRecovered = 0;
@@ -30,7 +85,6 @@ function displayData(jsonData){
 		GlobalCases+=u.cases;
 		GlobalRecovered+=u.recovered;
 		GlobalDeaths+=u.deaths;
-		
 		document.getElementById("GlobalCases").innerHTML = ShorterNum(GlobalCases);
 		document.getElementById("GlobalRecovered").innerHTML = ShorterNum(GlobalRecovered);
 		document.getElementById("GlobalDeaths").innerHTML = ShorterNum(GlobalDeaths);
@@ -43,7 +97,6 @@ function displayData(jsonData){
 		let td3 = document.createElement('td');
 		let td4 = document.createElement('td');
 		let td5 = document.createElement('td');
-		
 		
 		td0.innerHTML = `<img class="flagCountry" src="`+u.countryInfo.flag+`">`;
 		td1.innerHTML = u.country;
@@ -71,103 +124,45 @@ function displayData(jsonData){
 			var recoveryRate  = parseFloat((totalRecovered/totalCases)*100).toFixed(2)+`%`;
 			var deathRate     = parseFloat((totalDeaths/totalCases)*100).toFixed(2)+`%`;
 			
-			getDataVaccines(Population);
+			document.getElementById("Population").innerHTML = ShorterValue(Population);
+			getDataDailyVaccines(Population);
 			displayRate(incidenceRate,recoveryRate,deathRate);
-			displayPopulation(Population);
 		}
 	});
 }
-
 function displayRate(incidenceRate,recoveryRate,deathRate){
 	document.getElementById("IncidenceRate").innerHTML = incidenceRate;
 	document.getElementById("RecoveryRate").innerHTML  = recoveryRate;
 	document.getElementById("DeathRate").innerHTML     = deathRate;
 }
-function displayPopulation(Population){
-	document.getElementById("Population").innerHTML = ShorterValue(Population);
+function displayDailyVaccines(jsonData,Population){
+	var dateArray = [];
+	var vaccineArray = [];
+	var vaccineArray_New = [];
+	var lastedUpdateData = jsonData[224].data.length-1;
+	var vaccineData = jsonData[224].data[lastedUpdateData];
+	
+	vacTotal = vaccineData.total_vaccinations;
+	vacOneDose = vaccineData.people_vaccinated;
+	vacTwoDose = vaccineData.people_fully_vaccinated;
+	
+	document.getElementById("vacTotal").innerHTML = vacTotal.toLocaleString('en-US');
+	document.getElementById("vacOneDose").innerHTML = vacOneDose.toLocaleString('en-US');
+	document.getElementById("vacTwoDose").innerHTML = vacTwoDose.toLocaleString('en-US');
+	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
+	
+	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
+		dateArray.push(jsonData[224].data[i].date);
+		vaccineArray.push(jsonData[224].data[i].total_vaccinations);
+		vaccineArray_New.push(jsonData[224].data[i].total_vaccinations - jsonData[224].data[i-1].total_vaccinations);
+	}
+	createChart(dateArray,vaccineArray,"Total Provided Vaccines","#666666","vaccineChart");
+	createChart(dateArray,vaccineArray_New,"New Provided Vaccines","#666666","newvaccineChart");
 }
 
-// ---------
-// Load Data
-// ---------
-// Fetch
-function getData_Fetch(){
-	fetch(API_Countries) /* [Promise] Method */
-		.then(data => data.json())
-		.then(jsonData => {
-			displayData(jsonData);
-			// Hide loader When success
-			document.getElementById("loader").style.display = "none";
-			// Then Appear Global
-			document.getElementById("global").style.display = "block";
-			// Then Appear Footer
-			document.getElementById("footer").style.display = "block";
-		})
-		.catch(e => console.log(e));
-}
-// AJAX
-function getData_AJAX(){
-	let xmlHttpRequest = new XMLHttpRequest();
-	xmlHttpRequest.addEventListener('load',e => {
-		if(xmlHttpRequest.readyState === 4 && xmlHttpRequest.status === 200){
-			let jsonData = xmlHttpRequest.response;
-			displayData(jsonData);
-		}else{console.log(e);}
-	});
-	xmlHttpRequest.open('GET',API_Countries,true);
-	xmlHttpRequest.responseType = 'json';
-	xmlHttpRequest.send();
-}
-// Load data in English at first
-function loadDataAtFirstInEnglish(){
-	fetch("./lang/en.json")
-		.then(data => data.json())
-		.then(dataEN => {
-			document.getElementById("nameAbData").textContent = dataEN.AboutTheData.title;
-			document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
-			$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
-			document.getElementById("nameVaccine").textContent = dataEN.AboutVaccineTechnology.title;
-			document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutVaccineTechnology.content;
-			document.getElementById("nameVaccineDetails").textContent = dataEN.AboutVaccineDetails.title;
-			document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
-			document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
-			document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
-		})
-		.catch(e => console.log(e));
-}
-
-// Get Data Vaccines
-function getDataVaccines(Population){
-	fetch(API_Vaccines)
-		.then(data => data.json())
-		.then(dataJson => {
-			var dateArray = [];
-			var vaccineArray = [];
-			var vaccineArray_New = [];
-			var lastedUpdateData = dataJson[224].data.length-1;
-			var vaccineData = dataJson[224].data[lastedUpdateData];
-			
-			vacTotal = vaccineData.total_vaccinations;
-			vacOneDose = vaccineData.people_vaccinated;
-			vacTwoDose = vaccineData.people_fully_vaccinated;
-			
-			document.getElementById("vacTotal").innerHTML = vacTotal.toLocaleString('en-US');
-			document.getElementById("vacOneDose").innerHTML = vacOneDose.toLocaleString('en-US');
-			document.getElementById("vacTwoDose").innerHTML = vacTwoDose.toLocaleString('en-US');
-			document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
-			
-			for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
-				dateArray.push(dataJson[224].data[i].date);
-				vaccineArray.push(dataJson[224].data[i].total_vaccinations);
-				vaccineArray_New.push(dataJson[224].data[i].total_vaccinations - dataJson[224].data[i-1].total_vaccinations);
-			}
-			
-			createChart(dateArray,vaccineArray,"Total Provided Vaccines","#666666","vaccineChart");
-			createChart(dateArray,vaccineArray_New,"New Provided Vaccines","#666666","newvaccineChart");
-		})
-		.catch(e => console.log(e));
-}
-
+//---------
+// SHORTER 
+//---------
 // Shorter Num - Just Million
 function ShorterNum(num) {
     var units = ["M"];
@@ -194,6 +189,7 @@ function ShorterValue(value) {
     return newValue;
 }
 
+
 // DateTime
 function Zero(num) {return (num >= 0 && num < 10) ? "0" + num : num + "";}
 setInterval(()=>{
@@ -205,9 +201,8 @@ setInterval(()=>{
     document.getElementById("time").innerHTML = strDateTime;
 },1000);
 
-
 // Update data every 15 mins
-setInterval(()=>{getData_AJAX();},(1000*60*15));
+setInterval(()=>{getDataGlobalAgain();},(1000*60*15));
 
 //------
 // END
