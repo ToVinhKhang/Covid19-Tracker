@@ -17,7 +17,7 @@
 	},
 	"tableVietnamVac": {
 		"th1": "Cities/Provinces",
-		"th2": "Provided Vaccines",
+		"th2": "Dose Vaccinated",
 		"th3": "One Dose",
 		"th4": "Fully Dose"
 	},
@@ -35,8 +35,13 @@
 	},
 	"Vaccines": {
 		"txt1": "Total One Dose",
-		"txt2": "Total Provided Vaccines",
+		"txt2": "Dose Vaccinated",
 		"txt3": "Total Full Dose"
+	},
+	"VaccinesType": {
+		"txt1": "Total AstraZeneca Vaccines",
+		"txt2": "Total Pfizer Vaccines",
+		"txt3": "Total Moderna Vaccines"
 	},
 	"searching" : "Searching by names of countries . . .",
 	"footer": "Designed by ",

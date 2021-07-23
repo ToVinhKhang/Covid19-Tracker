@@ -37,5 +37,8 @@
 .dark-mode #tableVNdose > tr{background-color: #1c1e21!important;color: white;}
 .dark-mode #tableVNdose td{border: 2px solid #309FB5!important;}
 .dark-mode #tableVNdose th{border: 2px solid #309FB5!important;}
+.dark-mode #tableVNvacType > tr{background-color: #1c1e21!important;color: white;}
+.dark-mode #tableVNvacType td{border: 2px solid #309FB5!important;}
+.dark-mode #tableVNvacType th{border: 2px solid #309FB5!important;}
 .dark-mode .theadCities{color:white!important;border: 2px solid #309FB5!important;background:#309FB5!important; }
 .dark-mode > #content > div > div > fieldset > legend{color: white!important;}

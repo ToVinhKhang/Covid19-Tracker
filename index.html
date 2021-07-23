@@ -105,7 +105,7 @@
 	
 	<!-- DATA VIETNAM -->
 	<div class="container" id="content">
-		<!-- Total Info -->
+		<!-- Total Covid Data -->
 		<div class="row vnTotal">
 			<div class="col-md-3 col-6">
 				<div><h3 class="TotalCases" id="txtTotalCases">Cases</h3><h1 id="TotalCases"></h1></div>
@@ -123,14 +123,13 @@
 		
 		<!-- Detail Info -->
 		<div class="row">
+			<!-- Rate Info -->
 			<div class="col-lg-5 col-md-4 col-12">
 				<div class="row vnRate">
-					<!-- Flag -->
 					<div class="col-md-12 col-12">
 						<img class="vnDetailsFlag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/640px-Flag_of_Vietnam.svg.png">
 						<span><h2 id="vnName">VIETNAM</h2></span>
 					</div>
-					<!-- Rate -->
 					<div class="col-md-6 col-6 box">
 						<div><h3 class="IncidenceRate" id="txtIncidenceRate">Incidence Rate</h3><h1 id="IncidenceRate"></h1></div>
 					</div>
@@ -146,9 +145,7 @@
 				</div>
 			</div>
 			
-			
-				
-			<!-- Table -->
+			<!-- Table City Data -->
 			<div class="col-lg-7 col-md-8 col-12">
 				<table class="table table-striped sortable-table">
 					<thead class="theadCities">
@@ -164,10 +161,10 @@
 				</table>
 			</div>
 			
+			<!-- Total Vaccines Data -->
 			<div class="row vnRate" style="width: 100%;">
-				<!-- Vaccine -->
 				<div class="col-md-4 col-4 VaccinesInfo">
-					<div><h3 class="vaccines" id="txtVaccines">Total Provided Vaccines</h3><h1 id="vacTotal"></h1></div>
+					<div><h3 class="vaccines" id="txtVaccines">Total Dose Vaccinated</h3><h1 id="vacTotal"></h1></div>
 				</div>
 				<div class="col-md-4 col-4 VaccinesInfo">
 					<div><h3 class="vaccines" id="txtOneDose">Total One Dose</h3><h1 id="vacOneDose"></h1></div>
@@ -177,13 +174,13 @@
 				</div>
 			</div>
 			
-			<!-- Table -->
+			<!-- Table Details Vaccines Data -->
 			<div class="col-lg-12 col-md-12 col-12">
 				<table class="table table-striped sortable-table">
 					<thead class="theadCities">
 						<tr>
 						  <th class="theadCitiesProvinces" id="th-citiesprovincesVac">Cities/Provinces</th>
-						  <th class="numeric-sort" id="th-citiesProVac">Provided Vaccines</th>
+						  <th class="numeric-sort" id="th-citiesProVac">Dose Vaccinated</th>
 						  <th class="numeric-sort" id="th-citiesOneDose">One Dose</th>
 						  <th class="numeric-sort" id="th-citiesTwoDose">Fully Dose</th>
 						</tr>
@@ -192,6 +189,36 @@
 					</tbody>
 				</table>
 			</div>
+			
+			<!-- Total Vaccines by Type Data -->
+			<div class="row vnRate" style="width: 100%;">
+				<div class="col-md-4 col-4 VaccinesInfo">
+					<div><h3 class="vaccines" id="txtAstraZ">Total AstraZeneca Vaccines</h3><h1 id="totalAstraZ"></h1></div>
+				</div>
+				<div class="col-md-4 col-4 VaccinesInfo">
+					<div><h3 class="vaccines" id="txtPfizer">Total Pfizer Vaccines</h3><h1 id="totalPfizer"></h1></div>
+				</div>
+				<div class="col-md-4 col-4 VaccinesInfo">
+					<div><h3 class="vaccines" id="txtModerna">Total Moderna Vaccines</h3><h1 id="totalModerna"></h1></div>
+				</div>
+			</div>
+			
+			<!-- Table Detail Vaccines by Type Data-->
+			<div class="col-lg-12 col-md-12 col-12">
+				<table class="table table-striped sortable-table">
+					<thead class="theadCities">
+						<tr>
+						  <th class="theadCitiesProvinces" id="th-citiesprovincesVacType">Cities/Provinces</th>
+						  <th class="numeric-sort" id="th-citiesAstraZ">AstraZeneca</th>
+						  <th class="numeric-sort" id="th-citiesPfizer">Pfizer</th>
+						  <th class="numeric-sort" id="th-citiesModerna">Moderna</th>
+						</tr>
+					</thead>
+					<tbody id="tableVNvacType">
+					</tbody>
+				</table>
+			</div>
+			
 			
 			<!-- Chart JS -->
 			<div class="col-md-12 col-12 chart ChartData">

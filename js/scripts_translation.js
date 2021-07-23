@@ -81,6 +81,9 @@ function displayDataTranslated(dataLang){
 	var txtOneDose = document.getElementById("txtOneDose");
 	var txtVaccines = document.getElementById("txtVaccines");
 	var txtTwoDose = document.getElementById("txtTwoDose");
+	var txtAstraZ = document.getElementById("txtAstraZ");
+	var txtPfizer = document.getElementById("txtPfizer");
+	var txtModerna = document.getElementById("txtModerna");
 	var txtFullyVaccinatedRate = document.getElementById("txtFullyVaccinatedRate");
 	var txtNewDataChart = document.getElementById("txtNewDataChart");
 	var txtTotalDataChart = document.getElementById("txtTotalDataChart");		
@@ -126,6 +129,9 @@ function displayDataTranslated(dataLang){
 	txtOneDose.innerHTML = dataLang.Vaccines.txt1;
 	txtVaccines.innerHTML = dataLang.Vaccines.txt2;
 	txtTwoDose.innerHTML = dataLang.Vaccines.txt3;
+	txtAstraZ.innerHTML = dataLang.VaccinesType.txt1;
+	txtPfizer.innerHTML = dataLang.VaccinesType.txt2;
+	txtModerna.innerHTML = dataLang.VaccinesType.txt3;
 	txtFullyVaccinatedRate.innerHTML = dataLang.rateVietnam.txt4;
 	txtNewDataChart.innerHTML = dataLang.Chart.title1;
 	txtTotalDataChart.innerHTML = dataLang.Chart.title2;

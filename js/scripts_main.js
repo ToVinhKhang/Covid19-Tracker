@@ -72,23 +72,20 @@ function displayData(jsonData){
 			var deathRate     = parseFloat((totalDeaths/totalCases)*100).toFixed(2)+`%`;
 			
 			getDataVaccines(Population);
-			displayTotal(totalCases,totalRecovered,totalDeaths,ShorterValue(Population));
 			displayRate(incidenceRate,recoveryRate,deathRate);
+			displayPopulation(Population);
 		}
 	});
 }
-function displayTotal(TotalCases,TotalRecovered,TotalDeaths,Population){
-	document.getElementById("TotalCases").innerHTML      = TotalCases.toLocaleString('en-US');
-	document.getElementById("TotalRecovered").innerHTML  = TotalRecovered.toLocaleString('en-US');
-	document.getElementById("TotalDeaths").innerHTML     = TotalDeaths.toLocaleString('en-US');
-	document.getElementById("Population").innerHTML      = Population;
-}
+
 function displayRate(incidenceRate,recoveryRate,deathRate){
 	document.getElementById("IncidenceRate").innerHTML = incidenceRate;
 	document.getElementById("RecoveryRate").innerHTML  = recoveryRate;
 	document.getElementById("DeathRate").innerHTML     = deathRate;
 }
-
+function displayPopulation(Population){
+	document.getElementById("Population").innerHTML = ShorterValue(Population);
+}
 
 // ---------
 // Load Data
@@ -135,12 +132,6 @@ function loadDataAtFirstInEnglish(){
 			document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
 			document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
 			document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
-			document.getElementById("txtOneDose").innerHTML = dataEN.Vaccines.txt1;
-			document.getElementById("txtVaccines").innerHTML = dataEN.Vaccines.txt2;
-			document.getElementById("txtTwoDose").innerHTML  = dataEN.Vaccines.txt3;
-			document.getElementById("txtFullyVaccinatedRate").innerHTML = dataEN.rateVietnam.txt4;
-			document.getElementById("txtNewDataChart").innerHTML  = dataEN.Chart.title1;
-			document.getElementById("txtTotalDataChart").innerHTML = dataEN.Chart.title2;
 		})
 		.catch(e => console.log(e));
 }
@@ -165,7 +156,7 @@ function getDataVaccines(Population){
 			document.getElementById("vacTwoDose").innerHTML = vacTwoDose.toLocaleString('en-US');
 			document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
 			
-			for(i=lastedUpdateData-6; i<=lastedUpdateData; i++){
+			for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
 				dateArray.push(dataJson[224].data[i].date);
 				vaccineArray.push(dataJson[224].data[i].total_vaccinations);
 				vaccineArray_New.push(dataJson[224].data[i].total_vaccinations - dataJson[224].data[i-1].total_vaccinations);

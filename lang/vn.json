@@ -17,9 +17,9 @@
 	},
 	"tableVietnamVac": {
 		"th1": "TP/Tỉnh",
-		"th2": "Vắcxin Cung cấp",
-		"th3": "Tiêm Một liều",
-		"th4": "Tiêm Đủ liều"
+		"th2": "Liều Đã Tiêm",
+		"th3": "Tiêm Một Liều",
+		"th4": "Tiêm Đủ Liều"
 	},
 	"totalVietnam": {
 		"txt1": "Ca nhiễm",
@@ -35,8 +35,13 @@
 	},
 	"Vaccines": {
 		"txt1": "Tổng Tiêm Một Liều",
-		"txt2": "Tổng Vắcxin Cung Cấp",
+		"txt2": "Tổng Liều Đã Tiêm",
 		"txt3": "Tổng Tiêm Đủ Liều"
+	},
+	"VaccinesType": {
+		"txt1": "Tổng Vắcxin AstraZeneca",
+		"txt2": "Tổng Vắcxin Pfizer",
+		"txt3": "Tổng Vắcxin Moderna"
 	},
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
 	"footer": "Được thiết kế bởi ",
