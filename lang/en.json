@@ -35,7 +35,7 @@
 	},
 	"Vaccines": {
 		"txt1": "Total One Dose",
-		"txt2": "Dose Vaccinated",
+		"txt2": "Total Dose Vaccinated",
 		"txt3": "Total Full Dose"
 	},
 	"VaccinesType": {
