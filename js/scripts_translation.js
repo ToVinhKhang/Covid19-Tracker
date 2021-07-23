@@ -107,6 +107,7 @@ function displayDataTranslated(dataLang){
 	th_citiesProVac.innerHTML = dataLang.tableVietnamVac.th2;
 	th_citiesOneDose.innerHTML = dataLang.tableVietnamVac.th3;
 	th_citiesTwoDose.innerHTML = dataLang.tableVietnamVac.th4;
+	th_citiesprovincesVacType.innerHTML = dataLang.tableVietnamVac.th1;
 	txtTotalCases.innerHTML = dataLang.totalVietnam.txt1;
 	txtTotalRecovered.innerHTML = dataLang.totalVietnam.txt2;
 	txtTotalDeaths.innerHTML = dataLang.totalVietnam.txt3;
