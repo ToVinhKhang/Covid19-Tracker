@@ -56,6 +56,7 @@ function displayDataTranslated(dataLang){
 	var th_citiesProVac = document.getElementById("th-citiesProVac");
 	var th_citiesOneDose = document.getElementById("th-citiesOneDose");
 	var th_citiesTwoDose = document.getElementById("th-citiesTwoDose");
+	var th_citiesprovincesVacType = document.getElementById("th-citiesprovincesVacType");
 	var txtGlobal = document.getElementById("txtGlobal");
 	var txtGlobalCases = document.getElementById("txtGlobalCases");
 	var txtGlobalRecovered = document.getElementById("txtGlobalRecovered");
