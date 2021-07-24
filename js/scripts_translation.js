@@ -23,7 +23,7 @@ $("#SwitchLanguages").change(function(){
 		fetch("./lang/vn.json")
 		.then(data => data.json())
 		.then(dataVN => {displayDataTranslated(dataVN);
-			Swap("M","Tr","Last Updated","Cập nhật lần cuối");
+			Swap("M","Tr","Last Updated","test");
 		}).catch(e => console.log(e));
 	}
 });
