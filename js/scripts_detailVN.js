@@ -14,7 +14,7 @@ const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
 const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 
 // API for CityVietnam
-const API_CityVietnam = "https://tovinhkhang.github.io/API/data/VNCityData.json";
+const API_CityVietnam = "https://api-kent.netlify.app/.netlify/functions/api";
 
 // API for Detail Vaccine 
 const API_DetailVaccine = "https://tovinhkhang.github.io/API/data/VNVaccineData.json";

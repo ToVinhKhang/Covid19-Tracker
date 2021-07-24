@@ -30,7 +30,7 @@ https://corona.lmao.ninja/v2/countries
 
 _Link API_CityVietnam:_
 ```
-https://tovinhkhang.github.io/API/data/VNCityData.json
+https://api-kent.netlify.app/.netlify/functions/api
 ```
 
 _Link API_DetailVaccine:_
