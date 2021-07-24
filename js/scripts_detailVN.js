@@ -4,6 +4,10 @@
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
 
+//----------
+// 	API
+//----------
+
 // API for DailyVietnam
 const API_DailyVietnam = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
 const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
@@ -71,17 +75,18 @@ function displayCity(jsonData){
 	var totalCases = 0;
 	var totalRecovered = 0;
 	var totalDeaths = 0;
-	for(i=0; i<=62;i++){
+	for(i=0; i<=61;i++){
+		
 		let tr = document.createElement("tr");
-		let City = document.createElement("td");City.textContent = jsonData.data[i].name.replace("TP. ","");
-		let Cases = document.createElement("td");Cases.textContent = jsonData.data[i].cases.replace(".",",");
-		let Recovered = document.createElement("td");Recovered.textContent = jsonData.data[i].recovered.replace(".",",");
-		let Deaths = document.createElement("td");Deaths.textContent = jsonData.data[i].deaths.replace(".",",");
+		let City = document.createElement("td");City.textContent = jsonData.detail[i].name.replace("TP. ","");
+		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases.replace(".",",");
+		let Recovered = document.createElement("td");Recovered.textContent = jsonData.detail[i].recovered.replace(".",",");
+		let Deaths = document.createElement("td");Deaths.textContent = jsonData.detail[i].deaths.replace(".",",");
 		
-		totalCases += parseInt(jsonData.data[i].cases.replace(".",""));
-		totalRecovered += parseInt(jsonData.data[i].recovered.replace(".",""));
-		totalDeaths += parseInt(jsonData.data[i].deaths.replace(".",""));
-		
+		totalCases += parseInt(jsonData.detail[i].cases.replace(".",""));
+		totalRecovered += parseInt(jsonData.detail[i].recovered.replace(".",""));
+		totalDeaths += parseInt(jsonData.detail[i].deaths.replace(".",""));
+		console.log(jsonData.detail[i])
 		tr.appendChild(City);
 		tr.appendChild(Cases);
 		tr.appendChild(Recovered);
@@ -200,7 +205,7 @@ function createChart(dateArray, dataArray, name, color, idChart){
 }
 
 // Update data every 15 mins
-setInterval(()=>{getDataCity();getDataChart();getDataDose();},(1000*60*15));
+setInterval(()=>{getDataCity();getDataDetailVaccine();getDataDailyVietnam();},(1000*60*15));
 
 // -----
 // END

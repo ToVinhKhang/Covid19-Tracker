@@ -4,11 +4,14 @@
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
 
+//----------
+// 	API
+//----------
 
 // API for Countries
 const API_Countries = "https://corona.lmao.ninja/v2/countries";
 
-// API for Vaccines
+// API for Daily Vaccines
 const API_DailyVaccines = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json";
 
 // Init
@@ -16,49 +19,37 @@ let table;
 window.addEventListener('load',() => {
 	table = document.getElementById("table");
 	getDataGlobal();
-	loadDataForPopupAtFirst();
+	loadDataPopupAtFirst();
 });
+
 
 //----------
 // Get Data
 //----------
+
+// Get Data Global
 function getDataGlobal(){
 	fetch(API_Countries)
 		.then(data => data.json())
-		.then(jsonData => {
-			displayDataGlobal(jsonData);
-			// Hide loader When success
+		.then(jsonData => {displayDataGlobal(jsonData);
 			document.getElementById("loader").style.display = "none";
-			// Then Appear Global
 			document.getElementById("global").style.display = "block";
 			document.getElementById("footer").style.display = "block";
 		})
 		.catch(e => console.log(e));
 }
-// In English at first
-function loadDataForPopupAtFirst(){
+function loadDataPopupAtFirst(){
 	fetch("./lang/en.json")
 		.then(data => data.json())
-		.then(dataEN => {
-			document.getElementById("nameAbData").textContent = dataEN.AboutTheData.title;
-			document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
-			$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
-			document.getElementById("nameVaccine").textContent = dataEN.AboutVaccineTechnology.title;
-			document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutVaccineTechnology.content;
-			document.getElementById("nameVaccineDetails").textContent = dataEN.AboutVaccineDetails.title;
-			document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
-			document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
-			document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
-		})
+		.then(dataEN => {loadDataPopup(dataEN);})
 		.catch(e => console.log(e));
 }
+
 // Get Data Daily Vaccines
 function getDataDailyVaccines(Population){
 	fetch(API_DailyVaccines)
 		.then(data => data.json())
-		.then(jsonData => {
-			displayDailyVaccines(jsonData,Population);
-		})
+		.then(jsonData => {displayDailyVaccines(jsonData,Population);})
 		.catch(e => console.log(e));
 }
 // AJAX
@@ -158,6 +149,18 @@ function displayDailyVaccines(jsonData,Population){
 	createChart(dateArray,vaccineArray,"Total Provided Vaccines","#666666","vaccineChart");
 	createChart(dateArray,vaccineArray_New,"New Provided Vaccines","#666666","newvaccineChart");
 }
+function loadDataPopup(dataEN){
+	document.getElementById("nameAbData").textContent = dataEN.AboutTheData.title;
+	document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
+	$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
+	document.getElementById("nameVaccine").textContent = dataEN.AboutVaccineTechnology.title;
+	document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutVaccineTechnology.content;
+	document.getElementById("nameVaccineDetails").textContent = dataEN.AboutVaccineDetails.title;
+	document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
+	document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
+	document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
+}
+
 
 //---------
 // SHORTER 
