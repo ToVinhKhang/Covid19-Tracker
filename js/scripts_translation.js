@@ -14,7 +14,7 @@ $("#SwitchLanguages").change(function(){
 		fetch("./lang/en.json")
 		.then(data => data.json())
 		.then(dataEN => {displayDataTranslated(dataEN);
-			Swap("Tr","M","Cập nhật lần cuối","Last Updated");
+			Swap("Tr","M");
 		}).catch(e => console.log(e));
 	}
 	
@@ -23,24 +23,22 @@ $("#SwitchLanguages").change(function(){
 		fetch("./lang/vn.json")
 		.then(data => data.json())
 		.then(dataVN => {displayDataTranslated(dataVN);
-			Swap("M","Tr","Last Updated","Cập nhật lần cuối");
+			Swap("M","Tr");
 		}).catch(e => console.log(e));
 	}
 });
 
 // Custom
-function Swap(Tr,M,value1,value2){
+function Swap(Tr,M){
 	var Population = document.getElementById("Population");
 	var GlobalCases = document.getElementById("GlobalCases");
 	var GlobalRecovered = document.getElementById("GlobalRecovered");
 	var GlobalDeaths = document.getElementById("GlobalDeaths");
-	var LastUpdated = document.getElementById("LastUpdated");
 	
 	Population.innerHTML = Population.innerHTML.replace(Tr,M);
 	GlobalCases.innerHTML = GlobalCases.innerHTML.replace(Tr,M);
 	GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace(Tr,M);
 	GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace(Tr,M);
-	LastUpdated.innerHTML = LastUpdated.textContent.replace(value1,value2);
 }
 
 function displayDataTranslated(dataLang){
