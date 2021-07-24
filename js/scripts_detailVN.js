@@ -68,9 +68,9 @@ function displayCity(jsonData){
 	for(i=0; i<=61;i++){
 		let tr = document.createElement("tr");
 		let City = document.createElement("td");City.textContent = jsonData.detail[i].name;
-		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases.toLocaleString('en-US');;
-		let Recovered = document.createElement("td");Recovered.textContent = jsonData.detail[i].recovered.toLocaleString('en-US');;
-		let Deaths = document.createElement("td");Deaths.textContent = jsonData.detail[i].deaths.toLocaleString('en-US');;
+		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases.toLocaleString('en-US');
+		let Recovered = document.createElement("td");Recovered.textContent = jsonData.detail[i].recovered.toLocaleString('en-US');
+		let Deaths = document.createElement("td");Deaths.textContent = jsonData.detail[i].deaths.toLocaleString('en-US');
 		
 		tr.appendChild(City);
 		tr.appendChild(Cases);
@@ -87,9 +87,9 @@ function displayVacDose(jsonData){
 	for(i=0; i<=62;i++){
 		let tr = document.createElement("tr");
 		let City = document.createElement("td");City.textContent = jsonData.dataVacDose[i].name;
-		let Vaccines = document.createElement("td");Vaccines.textContent = jsonData.dataVacDose[i].vaccines;
-		let Onedose = document.createElement("td");Onedose.textContent = jsonData.dataVacDose[i].onedose;
-		let Fulldose = document.createElement("td");Fulldose.textContent = jsonData.dataVacDose[i].fulldose;
+		let Vaccines = document.createElement("td");Vaccines.textContent = jsonData.dataVacDose[i].vaccines.toLocaleString('en-US');
+		let Onedose = document.createElement("td");Onedose.textContent = jsonData.dataVacDose[i].onedose.toLocaleString('en-US');
+		let Fulldose = document.createElement("td");Fulldose.textContent = jsonData.dataVacDose[i].fulldose.toLocaleString('en-US');
 
 		tr.appendChild(City);
 		tr.appendChild(Vaccines);
