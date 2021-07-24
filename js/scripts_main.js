@@ -45,13 +45,7 @@ function loadDataPopupAtFirst(){
 		.catch(e => console.log(e));
 }
 
-// Get Data Daily Vaccines
-function getDataDailyVaccines(Population){
-	fetch(API_DailyVaccines)
-		.then(data => data.json())
-		.then(jsonData => {displayDailyVaccines(jsonData,Population);})
-		.catch(e => console.log(e));
-}
+
 // AJAX
 function getDataGlobalAgain(){
 	let xmlHttpRequest = new XMLHttpRequest();xmlHttpRequest.addEventListener('load',e => {
@@ -125,30 +119,7 @@ function displayRate(incidenceRate,recoveryRate,deathRate){
 	document.getElementById("RecoveryRate").innerHTML  = recoveryRate;
 	document.getElementById("DeathRate").innerHTML     = deathRate;
 }
-function displayDailyVaccines(jsonData,Population){
-	var dateArray = [];
-	var vaccineArray = [];
-	var vaccineArray_New = [];
-	var lastedUpdateData = jsonData[224].data.length-1;
-	var vaccineData = jsonData[224].data[lastedUpdateData];
-	
-	vacTotal = vaccineData.total_vaccinations;
-	vacOneDose = vaccineData.people_vaccinated;
-	vacTwoDose = vaccineData.people_fully_vaccinated;
-	
-	document.getElementById("vacTotal").innerHTML = vacTotal.toLocaleString('en-US');
-	document.getElementById("vacOneDose").innerHTML = vacOneDose.toLocaleString('en-US');
-	document.getElementById("vacTwoDose").innerHTML = vacTwoDose.toLocaleString('en-US');
-	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
-	
-	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
-		dateArray.push(jsonData[224].data[i].date);
-		vaccineArray.push(jsonData[224].data[i].total_vaccinations);
-		vaccineArray_New.push(jsonData[224].data[i].total_vaccinations - jsonData[224].data[i-1].total_vaccinations);
-	}
-	createChart(dateArray,vaccineArray,"Total Provided Vaccines","#666666","vaccineChart");
-	createChart(dateArray,vaccineArray_New,"New Provided Vaccines","#666666","newvaccineChart");
-}
+
 function loadDataPopup(dataEN){
 	document.getElementById("nameAbData").textContent = dataEN.AboutTheData.title;
 	document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;

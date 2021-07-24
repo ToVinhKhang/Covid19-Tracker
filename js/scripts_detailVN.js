@@ -57,9 +57,15 @@ function getDataDailyVietnam(){
 	fetch(API_DailyVietnam, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
 		.then(data => data.json())
 		.then(jsonData => {displayDailyVietnam(jsonData);})
-		.catch(err => {console.error(err);});
+		.catch(err => {console.error(err);unDisplayChart();});
 }
-
+// Get Data Daily Vaccines
+function getDataDailyVaccines(Population){
+	fetch(API_DailyVaccines)
+		.then(data => data.json())
+		.then(jsonData => {displayDailyVaccines(jsonData,Population);})
+		.catch(e => {console.log(e);unDisplayChart();});
+}
 
 //---------
 // Display
@@ -154,6 +160,30 @@ function displayDailyVietnam(jsonData){
 	createChart(dateArray,recoveredArray_New,"New Recovered","#006233","newrecoveredChart");
 	createChart(dateArray,deathsArray_New,"New Deaths","#E41E20","newdeathsChart");
 }
+function displayDailyVaccines(jsonData,Population){
+	var dateArray = [];
+	var vaccineArray = [];
+	var vaccineArray_New = [];
+	var lastedUpdateData = jsonData[224].data.length-1;
+	var vaccineData = jsonData[224].data[lastedUpdateData];
+	
+	vacTotal = vaccineData.total_vaccinations;
+	vacOneDose = vaccineData.people_vaccinated;
+	vacTwoDose = vaccineData.people_fully_vaccinated;
+	
+	document.getElementById("vacTotal").innerHTML = vacTotal.toLocaleString('en-US');
+	document.getElementById("vacOneDose").innerHTML = vacOneDose.toLocaleString('en-US');
+	document.getElementById("vacTwoDose").innerHTML = vacTwoDose.toLocaleString('en-US');
+	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
+	
+	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
+		dateArray.push(jsonData[224].data[i].date);
+		vaccineArray.push(jsonData[224].data[i].total_vaccinations);
+		vaccineArray_New.push(jsonData[224].data[i].total_vaccinations - jsonData[224].data[i-1].total_vaccinations);
+	}
+	createChart(dateArray,vaccineArray,"Total Provided Vaccines","#666666","vaccineChart");
+	createChart(dateArray,vaccineArray_New,"New Provided Vaccines","#666666","newvaccineChart");
+}
 function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths,LastUpdated){
 	document.getElementById("TotalCases").innerHTML      = TotalCases.toLocaleString('en-US');
 	document.getElementById("TotalRecovered").innerHTML  = TotalRecovered.toLocaleString('en-US');
@@ -165,7 +195,9 @@ function displayTotalVacType(totalAstraZ,totalPfizer,totalModerna){
 	document.getElementById("totalPfizer").innerHTML = totalPfizer.toLocaleString('en-US');
 	document.getElementById("totalModerna").innerHTML = totalModerna.toLocaleString('en-US');
 }
-
+function unDisplayChart(){
+	document.getElementById("AllChart").style.display="none";
+}
 
 // Create Chart
 function createChart(dateArray, dataArray, name, color, idChart){
