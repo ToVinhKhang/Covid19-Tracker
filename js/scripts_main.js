@@ -8,8 +8,8 @@
 // 	API
 //----------
 
-// API for Countries
-const API_Countries = "https://corona.lmao.ninja/v2/countries";
+// API for GlobalCountries
+const API_GlobalCountries = "https://corona.lmao.ninja/v2/countries";
 
 // API for Daily Vaccines
 const API_DailyVaccines = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json";
@@ -29,7 +29,7 @@ window.addEventListener('load',() => {
 
 // Get Data Global
 function getDataGlobal(){
-	fetch(API_Countries)
+	fetch(API_GlobalCountries)
 		.then(data => data.json())
 		.then(jsonData => {displayDataGlobal(jsonData);
 			document.getElementById("loader").style.display = "none";
@@ -52,7 +52,7 @@ function getDataGlobalAgain(){
 		if(xmlHttpRequest.readyState === 4 && xmlHttpRequest.status === 200){let jsonData = xmlHttpRequest.response;
 			displayDataGlobal(jsonData);
 		}else{console.log(e);}
-	});xmlHttpRequest.open('GET',API_Countries,true);xmlHttpRequest.responseType = 'json';xmlHttpRequest.send();
+	});xmlHttpRequest.open('GET',API_GlobalCountries,true);xmlHttpRequest.responseType = 'json';xmlHttpRequest.send();
 }
 
 

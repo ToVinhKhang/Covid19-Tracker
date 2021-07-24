@@ -13,8 +13,8 @@ const API_DailyVietnam = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?r
 const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
 const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 
-// API for City
-const API_City  = "https://tovinhkhang.github.io/API/data/VNCityData.json";
+// API for CityVietnam
+const API_CityVietnam = "https://tovinhkhang.github.io/API/data/VNCityData.json";
 
 // API for Detail Vaccine 
 const API_DetailVaccine = "https://tovinhkhang.github.io/API/data/VNVaccineData.json";
@@ -39,7 +39,7 @@ window.addEventListener('load',() => {
 // Get Data City 
 function getDataCity(){
 	tableVN.innerHTML = '';
-	fetch(API_City)
+	fetch(API_CityVietnam)
 		.then(data => data.json())
 		.then(jsonData => {displayCity(jsonData);})
 		.catch(err => {console.error(err);});
@@ -215,7 +215,7 @@ function createChart(dateArray, dataArray, name, color, idChart){
 }
 
 // Update data every 15 mins
-setInterval(()=>{getDataCity();getDataDetailVaccine();getDataDailyVietnam();},(1000*60*15));
+setInterval(()=>{getDataCity();getDataDetailVaccine();},(1000*60*15));
 
 // -----
 // END
