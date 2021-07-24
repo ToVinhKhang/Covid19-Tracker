@@ -41,9 +41,7 @@ function getDataCity(){
 	tableVN.innerHTML = '';
 	fetch(API_City)
 		.then(data => data.json())
-		.then(jsonData => {
-			displayCity(jsonData);
-		})
+		.then(jsonData => {displayCity(jsonData);})
 		.catch(err => {console.error(err);});
 }
 
@@ -51,19 +49,14 @@ function getDataCity(){
 function getDataDetailVaccine(){
 	fetch(API_DetailVaccine)
 		.then(data => data.json())
-		.then(jsonData => {
-			displayVacDose(jsonData);
-			displayVacType(jsonData);
-		})
+		.then(jsonData => {displayVacDose(jsonData);displayVacType(jsonData);})
 		.catch(err => {console.error(err);});
 }
 // Get Data DailyVietnam
 function getDataDailyVietnam(){
 	fetch(API_DailyVietnam, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
 		.then(data => data.json())
-		.then(jsonData => {
-			displayDailyVietnam(jsonData);
-		})
+		.then(jsonData => {displayDailyVietnam(jsonData);})
 		.catch(err => {console.error(err);});
 }
 
@@ -75,9 +68,9 @@ function displayCity(jsonData){
 	for(i=0; i<=61;i++){
 		let tr = document.createElement("tr");
 		let City = document.createElement("td");City.textContent = jsonData.detail[i].name;
-		let Cases = document.createElement("td");Cases.textContent = parseInt(jsonData.detail[i].cases).toLocaleString('en-US');;
-		let Recovered = document.createElement("td");Recovered.textContent = parseInt(jsonData.detail[i].recovered).toLocaleString('en-US');;
-		let Deaths = document.createElement("td");Deaths.textContent = parseInt(jsonData.detail[i].deaths).toLocaleString('en-US');;
+		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases.toLocaleString('en-US');;
+		let Recovered = document.createElement("td");Recovered.textContent = jsonData.detail[i].recovered.toLocaleString('en-US');;
+		let Deaths = document.createElement("td");Deaths.textContent = jsonData.detail[i].deaths.toLocaleString('en-US');;
 		
 		tr.appendChild(City);
 		tr.appendChild(Cases);
@@ -112,9 +105,9 @@ function displayVacType(jsonData){
 	for(i=0; i<=62;i++){
 		let tr = document.createElement("tr");
 		let City = document.createElement("td");City.textContent = jsonData.dataVacType[i].name;
-		let AstraZ = document.createElement("td");AstraZ.textContent = parseInt(jsonData.dataVacType[i].astraz).toLocaleString('en-US');
-		let Pfizer = document.createElement("td");Pfizer.textContent = parseInt(jsonData.dataVacType[i].pfizer).toLocaleString('en-US');
-		let Moderna = document.createElement("td");Moderna.textContent = parseInt(jsonData.dataVacType[i].moderna).toLocaleString('en-US');
+		let AstraZ = document.createElement("td");AstraZ.textContent = jsonData.dataVacType[i].astraz.toLocaleString('en-US');
+		let Pfizer = document.createElement("td");Pfizer.textContent = jsonData.dataVacType[i].pfizer.toLocaleString('en-US');
+		let Moderna = document.createElement("td");Moderna.textContent = jsonData.dataVacType[i].moderna.toLocaleString('en-US');
 		
 		tr.appendChild(City);
 		tr.appendChild(AstraZ);
