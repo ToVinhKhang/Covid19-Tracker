@@ -67,7 +67,7 @@ function getDataDailyVietnam(){
 function displayCity(jsonData){
 	for(i=0; i<=61;i++){
 		let tr = document.createElement("tr");
-		let City = document.createElement("td");City.textContent = jsonData.detail[i].name;
+		let City = document.createElement("td");City.textContent = jsonData.detail[i].name.replace("- ","");
 		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases.toLocaleString('en-US');
 		let Recovered = document.createElement("td");Recovered.textContent = jsonData.detail[i].recovered.toLocaleString('en-US');
 		let Deaths = document.createElement("td");Deaths.textContent = jsonData.detail[i].deaths.toLocaleString('en-US');
@@ -86,7 +86,7 @@ function displayVacDose(jsonData){
 	tableVNdose.innerHTML = '';
 	for(i=0; i<=62;i++){
 		let tr = document.createElement("tr");
-		let City = document.createElement("td");City.textContent = jsonData.dataVacDose[i].name;
+		let City = document.createElement("td");City.textContent = jsonData.dataVacDose[i].name.replace("- ","");
 		let Vaccines = document.createElement("td");Vaccines.textContent = jsonData.dataVacDose[i].vaccines.toLocaleString('en-US');
 		let Onedose = document.createElement("td");Onedose.textContent = jsonData.dataVacDose[i].onedose.toLocaleString('en-US');
 		let Fulldose = document.createElement("td");Fulldose.textContent = jsonData.dataVacDose[i].fulldose.toLocaleString('en-US');
@@ -104,7 +104,7 @@ function displayVacType(jsonData){
 	tableVNvacType.innerHTML = '';
 	for(i=0; i<=62;i++){
 		let tr = document.createElement("tr");
-		let City = document.createElement("td");City.textContent = jsonData.dataVacType[i].name;
+		let City = document.createElement("td");City.textContent = jsonData.dataVacType[i].name.replace("- ","");
 		let AstraZ = document.createElement("td");AstraZ.textContent = jsonData.dataVacType[i].astraz.toLocaleString('en-US');
 		let Pfizer = document.createElement("td");Pfizer.textContent = jsonData.dataVacType[i].pfizer.toLocaleString('en-US');
 		let Moderna = document.createElement("td");Moderna.textContent = jsonData.dataVacType[i].moderna.toLocaleString('en-US');
