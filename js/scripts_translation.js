@@ -23,13 +23,13 @@ $("#SwitchLanguages").change(function(){
 		fetch("./lang/vn.json")
 		.then(data => data.json())
 		.then(dataVN => {displayDataTranslated(dataVN);
-			Swap("M","Tr","Last Updated","test");
+			Swap("M","Tr","Last Updated","Cập nhật lần cuối");
 		}).catch(e => console.log(e));
 	}
 });
 
 // Custom
-function Swap(Tr,M,Capnhatlancuoi,LastUpdated){
+function Swap(Tr,M,value1,value2){
 	var Population = document.getElementById("Population");
 	var GlobalCases = document.getElementById("GlobalCases");
 	var GlobalRecovered = document.getElementById("GlobalRecovered");
@@ -40,11 +40,7 @@ function Swap(Tr,M,Capnhatlancuoi,LastUpdated){
 	GlobalCases.innerHTML = GlobalCases.innerHTML.replace(Tr,M);
 	GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace(Tr,M);
 	GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace(Tr,M);
-	console.log(Tr);
-	console.log(M);
-	console.log(Capnhatlancuoi);
-	console.log(LastUpdated);
-	LastUpdated.innerHTML = LastUpdated.textContent.replace(Capnhatlancuoi,LastUpdated);
+	LastUpdated.innerHTML = LastUpdated.textContent.replace(value1,value2);
 }
 
 function displayDataTranslated(dataLang){
