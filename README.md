@@ -3,7 +3,7 @@ https://covid19-kent.netlify.app/
 
 <br>
 
-### The situation of the Coronavirus Epidemic data around The World.
+### The situation of the Coronavirus Epidemic data around The World and Detail Vietnam Country.
 ### Includes the following functions:
 <br>
 
@@ -23,12 +23,12 @@ https://covid19-kent.netlify.app/
 <br>
 
 
-_Link API_Countries:_
+_Link API_GlobalCountries:_
 ```
 https://corona.lmao.ninja/v2/countries
 ```
 
-_Link API_City:_
+_Link API_CityVietnam:_
 ```
 https://tovinhkhang.github.io/API/data/VNCityData.json
 ```
