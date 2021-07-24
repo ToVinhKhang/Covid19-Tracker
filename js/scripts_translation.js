@@ -44,7 +44,7 @@ function Swap(Tr,M,Capnhatlancuoi,LastUpdated){
 	console.log(M);
 	console.log(Capnhatlancuoi);
 	console.log(LastUpdated);
-	LastUpdated.innerHTML = LastUpdated.innerHTML.replace(Capnhatlancuoi,LastUpdated);
+	LastUpdated.innerHTML = LastUpdated.textContent.replace(Capnhatlancuoi,LastUpdated);
 }
 
 function displayDataTranslated(dataLang){
