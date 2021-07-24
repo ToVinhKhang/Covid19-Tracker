@@ -10,8 +10,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js"></script>
-	<script src="https://cdn.anychart.com/releases/8.7.1/themes/dark_turquoise.min.js"></script>
 	<link rel="stylesheet" href="./css/styles_main.css">
 	<link rel="stylesheet" href="./css/styles_global.css">
 	<link rel="stylesheet" href="./css/styles_vietnam.css">
@@ -22,6 +20,9 @@
 
 <!-- Covid-19 Tracker -->
 <body>
+	<!-- ScrollTop -->
+	<i class="fa fa-arrow-up" id="scrollTop" title="Go to top"></i>
+	
 	<!-- Read More Selection -->
 	<div class="btn btn-info btnAboutTheData">
 		<select class="btn" id="txtAboutData">
@@ -107,7 +108,6 @@
 	<div class="container" id="content">
 		<!-- Total Covid Data -->
 		<div class="row vnTotal">
-			
 			<div class="col-md-3 col-6">
 				<div><h3 class="TotalCases" id="txtTotalCases">Total Cases</h3><h1 id="TotalCases"></h1></div>
 			</div>
@@ -332,6 +332,7 @@
 	<script src="./js/scripts_darkmode.js"></script>
 	<script src="./js/scripts_sortTable.js"></script>
 	<script src="./js/scripts_switchTracker.js"></script>
+	<script src="./js/scripts_scrollTop.js"></script>
 	
 	<!-- Footer -->
 	<div class="footer" id="footer"><span id="designedBy">Designed by </span><a href="https://tovinhkhang.netlify.app/" target="_blank">ToVinhKhang</a></div>
