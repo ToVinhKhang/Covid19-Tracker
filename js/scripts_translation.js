@@ -8,23 +8,13 @@
 $("#SwitchLanguages").change(function(){
 	// LANG TARGET
 	lang = $(this).val();
-	var Population = document.getElementById("Population");
-	var GlobalCases = document.getElementById("GlobalCases");
-	var GlobalRecovered = document.getElementById("GlobalRecovered");
-	var GlobalDeaths = document.getElementById("GlobalDeaths");
-	var LastUpdated = document.getElementById("LastUpdated");
 	
 	// English
 	if(lang=="EN"){
 		fetch("./lang/en.json")
 		.then(data => data.json())
-		.then(dataEN => {
-			displayDataTranslated(dataEN);
-			Population.innerHTML = Population.innerHTML.replace("Tr","M");
-			GlobalCases.innerHTML = GlobalCases.innerHTML.replace("Tr","M");
-			GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace("Tr","M");
-			GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace("Tr","M");
-			LastUpdated.innerHTML = LastUpdated.innerHTML.replace("Cập nhật lần cuối","Last Updated");
+		.then(dataEN => {displayDataTranslated(dataEN);
+			Swap("Tr","M","Cập nhật lần cuối","Last Updated");
 		}).catch(e => console.log(e));
 	}
 	
@@ -32,16 +22,26 @@ $("#SwitchLanguages").change(function(){
 	if(lang=="VN"){
 		fetch("./lang/vn.json")
 		.then(data => data.json())
-		.then(dataVN => {
-			displayDataTranslated(dataVN);
-			Population.innerHTML = Population.innerHTML.replace("M","Tr");
-			GlobalCases.innerHTML = GlobalCases.innerHTML.replace("M","Tr");
-			GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace("M","Tr");
-			GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace("M","Tr");
-			LastUpdated.innerHTML = LastUpdated.innerHTML.replace("Last Updated","Cập nhật lần cuối");
+		.then(dataVN => {displayDataTranslated(dataVN);
+			Swap("M","Tr","Last Updated","Cập nhật lần cuối");
 		}).catch(e => console.log(e));
 	}
 });
+
+// Custom
+function Swap(Tr,M,Capnhatlancuoi,LastUpdated){
+	var Population = document.getElementById("Population");
+	var GlobalCases = document.getElementById("GlobalCases");
+	var GlobalRecovered = document.getElementById("GlobalRecovered");
+	var GlobalDeaths = document.getElementById("GlobalDeaths");
+	var LastUpdated = document.getElementById("LastUpdated");
+	
+	Population.innerHTML = Population.innerHTML.replace(Tr,M);
+	GlobalCases.innerHTML = GlobalCases.innerHTML.replace(Tr,M);
+	GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace(Tr,M);
+	GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace(Tr,M);
+	LastUpdated.innerHTML = LastUpdated.innerHTML.replace(Capnhatlancuoi,LastUpdated);
+}
 
 function displayDataTranslated(dataLang){
 	var txtTitle = document.getElementById("txtTitle");
@@ -90,7 +90,8 @@ function displayDataTranslated(dataLang){
 	var txtModerna = document.getElementById("txtModerna");
 	var txtFullyVaccinatedRate = document.getElementById("txtFullyVaccinatedRate");
 	var txtNewDataChart = document.getElementById("txtNewDataChart");
-	var txtTotalDataChart = document.getElementById("txtTotalDataChart");		
+	var txtTotalDataChart = document.getElementById("txtTotalDataChart");
+	var dailyChart = document.getElementById("dailyChart");	
 			
 	txtTitle.innerHTML = dataLang.title;
 	txtDesc.innerHTML = dataLang.desc;
@@ -140,6 +141,7 @@ function displayDataTranslated(dataLang){
 	txtFullyVaccinatedRate.innerHTML = dataLang.rateVietnam.txt4;
 	txtNewDataChart.innerHTML = dataLang.Chart.title1;
 	txtTotalDataChart.innerHTML = dataLang.Chart.title2;
+	dailyChart.innerHTML = dataLang.Chart.title3;
 }
 
 // ----
