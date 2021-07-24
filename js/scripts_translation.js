@@ -40,6 +40,10 @@ function Swap(Tr,M,Capnhatlancuoi,LastUpdated){
 	GlobalCases.innerHTML = GlobalCases.innerHTML.replace(Tr,M);
 	GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace(Tr,M);
 	GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace(Tr,M);
+	console.log(Tr);
+	console.log(M);
+	console.log(Capnhatlancuoi);
+	console.log(LastUpdated);
 	LastUpdated.innerHTML = LastUpdated.innerHTML.replace(Capnhatlancuoi,LastUpdated);
 }
 

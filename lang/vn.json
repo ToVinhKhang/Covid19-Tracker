@@ -49,7 +49,7 @@
 	"Chart": {
 		"title1": "MỚI",
 		"title2": "TỔNG",
-		"title3": "BIỂU ĐỒ THỐNG KÊ HÀNG NGÀY"
+		"title3": "BIỂU ĐỒ HẰNG NGÀY"
 	},
 	"AboutData" : "<option value=''>Xem Thêm</option><option value='AboutTheData'>• Về Dữ liệu </option><option value='VaccineDetails'>• Chi Tiết Vắcxin </option><option value='VaccineTechnology'>• Công nghệ Vắcxin </option><option value='SoftwareInfo'>• Về Phần mềm </option>",
 	"AboutTheData": {
