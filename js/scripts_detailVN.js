@@ -72,29 +72,20 @@ function getDataDailyVietnam(){
 // Display
 //---------
 function displayCity(jsonData){
-	var totalCases = 0;
-	var totalRecovered = 0;
-	var totalDeaths = 0;
 	for(i=0; i<=61;i++){
-		
 		let tr = document.createElement("tr");
 		let City = document.createElement("td");City.textContent = jsonData.detail[i].name.replace("TP. ","");
 		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases.replace(".",",");
 		let Recovered = document.createElement("td");Recovered.textContent = jsonData.detail[i].recovered.replace(".",",");
 		let Deaths = document.createElement("td");Deaths.textContent = jsonData.detail[i].deaths.replace(".",",");
 		
-		totalCases += parseInt(jsonData.detail[i].cases.replace(".",""));
-		totalRecovered += parseInt(jsonData.detail[i].recovered.replace(".",""));
-		totalDeaths += parseInt(jsonData.detail[i].deaths.replace(".",""));
-		console.log(jsonData.detail[i])
 		tr.appendChild(City);
 		tr.appendChild(Cases);
 		tr.appendChild(Recovered);
 		tr.appendChild(Deaths);
 		tableVN.appendChild(tr);
 	}
-	displayTotalVN(totalCases,totalRecovered,totalDeaths);
-	document.getElementById("LastUpdated").innerHTML = "(Last Updated: "+jsonData.lastUpdated+")";
+	displayTotalVN(jsonData.total.totalCases,jsonData.total.totalRecovered,jsonData.total.totalDeaths,jsonData.lastUpdated);
 	//Make sure focus max value at first
 	setTimeout(()=>{$('#th-citiesCases').trigger('click');$('#th-citiesCases').trigger('click');}, 2000);	
 }
@@ -177,10 +168,11 @@ function displayDailyVietnam(jsonData){
 	createChart(dateArray,recoveredArray_New,"New Recovered","#006233","newrecoveredChart");
 	createChart(dateArray,deathsArray_New,"New Deaths","#E41E20","newdeathsChart");
 }
-function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
+function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths,LastUpdated){
 	document.getElementById("TotalCases").innerHTML      = TotalCases.toLocaleString('en-US');
 	document.getElementById("TotalRecovered").innerHTML  = TotalRecovered.toLocaleString('en-US');
 	document.getElementById("TotalDeaths").innerHTML     = TotalDeaths.toLocaleString('en-US');
+	document.getElementById("LastUpdated").innerHTML     = "(Last Updated: "+LastUpdated+")";
 }
 function displayTotalVacType(totalAstraZ,totalPfizer,totalModerna){
 	document.getElementById("totalAstraZ").innerHTML = totalAstraZ.toLocaleString('en-US');
