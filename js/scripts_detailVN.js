@@ -74,10 +74,10 @@ function getDataDailyVietnam(){
 function displayCity(jsonData){
 	for(i=0; i<=61;i++){
 		let tr = document.createElement("tr");
-		let City = document.createElement("td");City.textContent = jsonData.detail[i].name.replace("TP. ","");
-		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases.replace(".",",");
-		let Recovered = document.createElement("td");Recovered.textContent = jsonData.detail[i].recovered.replace(".",",");
-		let Deaths = document.createElement("td");Deaths.textContent = jsonData.detail[i].deaths.replace(".",",");
+		let City = document.createElement("td");City.textContent = jsonData.detail[i].name;
+		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases;
+		let Recovered = document.createElement("td");Recovered.textContent = jsonData.detail[i].recovered;
+		let Deaths = document.createElement("td");Deaths.textContent = jsonData.detail[i].deaths;
 		
 		tr.appendChild(City);
 		tr.appendChild(Cases);
@@ -109,19 +109,12 @@ function displayVacDose(jsonData){
 }
 function displayVacType(jsonData){
 	tableVNvacType.innerHTML = '';
-	var totalAstraZ = 0;
-	var totalPfizer = 0;
-	var totalModerna = 0;
 	for(i=0; i<=62;i++){
 		let tr = document.createElement("tr");
 		let City = document.createElement("td");City.textContent = jsonData.dataVacType[i].name;
 		let AstraZ = document.createElement("td");AstraZ.textContent = parseInt(jsonData.dataVacType[i].astraz).toLocaleString('en-US');
 		let Pfizer = document.createElement("td");Pfizer.textContent = parseInt(jsonData.dataVacType[i].pfizer).toLocaleString('en-US');
 		let Moderna = document.createElement("td");Moderna.textContent = parseInt(jsonData.dataVacType[i].moderna).toLocaleString('en-US');
-
-		totalAstraZ += parseInt(jsonData.dataVacType[i].astraz);
-		totalPfizer += parseInt(jsonData.dataVacType[i].pfizer);
-		totalModerna += parseInt(jsonData.dataVacType[i].moderna);
 		
 		tr.appendChild(City);
 		tr.appendChild(AstraZ);
@@ -129,7 +122,7 @@ function displayVacType(jsonData){
 		tr.appendChild(Moderna);
 		tableVNvacType.appendChild(tr);
 	}
-	displayTotalVacType(totalAstraZ,totalPfizer,totalModerna);
+	displayTotalVacType(jsonData.totalVacType.totalAstraZ,jsonData.totalVacType.totalPfizer,jsonData.totalVacType.totalModerna);
 	//Make sure focus max value at first
 	setTimeout(()=>{$('#th-citiesAstraZ').trigger('click');$('#th-citiesAstraZ').trigger('click');}, 2000);	
 }
