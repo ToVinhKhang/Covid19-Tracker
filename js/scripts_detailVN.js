@@ -75,9 +75,9 @@ function displayCity(jsonData){
 	for(i=0; i<=61;i++){
 		let tr = document.createElement("tr");
 		let City = document.createElement("td");City.textContent = jsonData.detail[i].name;
-		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases;
-		let Recovered = document.createElement("td");Recovered.textContent = jsonData.detail[i].recovered;
-		let Deaths = document.createElement("td");Deaths.textContent = jsonData.detail[i].deaths;
+		let Cases = document.createElement("td");Cases.textContent = parseInt(jsonData.detail[i].cases).toLocaleString('en-US');;
+		let Recovered = document.createElement("td");Recovered.textContent = parseInt(jsonData.detail[i].recovered).toLocaleString('en-US');;
+		let Deaths = document.createElement("td");Deaths.textContent = parseInt(jsonData.detail[i].deaths).toLocaleString('en-US');;
 		
 		tr.appendChild(City);
 		tr.appendChild(Cases);
