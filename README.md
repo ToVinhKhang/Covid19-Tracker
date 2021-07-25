@@ -35,7 +35,7 @@ https://api-kent.netlify.app/.netlify/functions/api
 
 _Link API_DetailVaccine:_
 ```
-https://tovinhkhang.github.io/API/data/VNVaccineData.json
+https://api-kent.netlify.app/.netlify/functions/api/vaccines
 ```
 
 _Link API_DailyVaccines:_
