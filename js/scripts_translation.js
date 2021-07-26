@@ -90,7 +90,8 @@ function displayDataTranslated(dataLang){
 	var txtNewDataChart = document.getElementById("txtNewDataChart");
 	var txtTotalDataChart = document.getElementById("txtTotalDataChart");
 	var dailyChart = document.getElementById("dailyChart");	
-			
+	var message = document.getElementById("message");	
+	
 	txtTitle.innerHTML = dataLang.title;
 	txtDesc.innerHTML = dataLang.desc;
 	txtGlobal.innerHTML = dataLang.global;
@@ -140,6 +141,7 @@ function displayDataTranslated(dataLang){
 	txtNewDataChart.innerHTML = dataLang.Chart.title1;
 	txtTotalDataChart.innerHTML = dataLang.Chart.title2;
 	dailyChart.innerHTML = dataLang.Chart.title3;
+	message.innerHTML = dataLang.forEr;
 }
 
 // ----

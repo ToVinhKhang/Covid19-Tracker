@@ -42,7 +42,7 @@ function getDataCity(){
 	fetch(API_CityVietnam)
 		.then(data => data.json())
 		.then(jsonData => {displayCity(jsonData);})
-		.catch(err => {console.error(err);});
+		.catch(err => {ForEr();console.error(err);});
 }
 
 // Get Data Detail Vaccine 
@@ -66,6 +66,7 @@ function getDataDailyVaccines(Population){
 		.then(jsonData => {displayDailyVaccines(jsonData,Population);})
 		.catch(e => {console.log(e);unDisplayChart();});
 }
+
 
 //---------
 // Display
@@ -194,9 +195,19 @@ function displayTotalVacType(totalAstraZ,totalPfizer,totalModerna){
 	document.getElementById("totalPfizer").innerHTML = totalPfizer.toLocaleString('en-US');
 	document.getElementById("totalModerna").innerHTML = totalModerna.toLocaleString('en-US');
 }
+
+// Handle Error
 function unDisplayChart(){
 	document.getElementById("AllChart").style.display="none";
 }
+function ForEr(){
+	document.getElementById("message").style.display="block";
+	document.getElementById("content-total").style.display="none";
+	document.getElementById("content-detail").style.display="none";
+	document.getElementById("footer").style.display="none";
+}
+
+
 
 // Create Chart
 function createChart(dateArray, dataArray, name, color, idChart){
