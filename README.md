@@ -3,8 +3,7 @@ https://covid19-kent.netlify.app/
 
 <br>
 
-### The situation of the Coronavirus Epidemic data around The World and Detail Vietnam Country.
-### Includes the following functions:
+### The situation of the Coronavirus Epidemic data around The World and Detail Vietnam Country. Includes the following functions:
 <br>
 
 |Name Functions|Descriptions|
