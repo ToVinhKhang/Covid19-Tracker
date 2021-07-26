@@ -47,7 +47,9 @@ _Link API_DailyVietnam:_
 ```
 https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam
 ```
+<br>
 
+Note: the API_DailyVietnam need "key-host", you need to signup to get these at https://rapidapi.com/Yatko/api/coronavirus-map/
 <br>
 
 ## References
