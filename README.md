@@ -49,7 +49,7 @@ https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam
 ```
 <br>
 
-Note: Link API_DailyVietnam need "key-host" to use, so you need to signup to get these at https://rapidapi.com/Yatko/api/coronavirus-map/
+Note: The "Link API_DailyVietnam" need "key-host" to use, so you need to signup to get these at [Here](https://rapidapi.com/Yatko/api/coronavirus-map/)
 
 <br>
 <br>
