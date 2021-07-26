@@ -72,7 +72,7 @@ function getDataDailyVaccines(Population){
 // Display
 //---------
 function displayCity(jsonData){
-	for(i=0; i<=61;i++){
+	for(i=0; i<=62;i++){
 		let tr = document.createElement("tr");
 		let City = document.createElement("td");City.textContent = jsonData.detail[i].name.replace("- ","");
 		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases.toLocaleString('en-US');
