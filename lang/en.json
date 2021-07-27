@@ -40,7 +40,7 @@
 		"txt3": "Total Full Dose"
 	},
 	"VaccinesDistribution": {
-		"title":"VACCINE DISTRIBUTION",
+		"title": "VACCINE DISTRIBUTION",
 		"txt1": "Total Planned Vaccines",
 		"txt2": "Total Realistic Vaccines",
 		"txt3": "Distributed Rate",
