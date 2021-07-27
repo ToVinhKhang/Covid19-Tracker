@@ -8,6 +8,7 @@
 /* Data Vietnam */
 #content{display: none; margin-top: 20px;}
 #content > .row > div{margin-bottom: 50px;}
+.boxTitleDetails{text-align: center; margin-bottom:20px!important;color:#141A21;}
 .theadCities th:nth-child(2){text-align:center;}
 .theadCities th:nth-child(3){text-align:center;}
 .theadCities th:nth-child(4){text-align:center;}
@@ -78,5 +79,5 @@
 #fieldsetNewDataChart{margin:40px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
 #fieldsetTotalDataChart{margin:20px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
 #txtNewDataChart,#txtTotalDataChart{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
-.dailyChart,.TitleDetails{text-align: center; font-weight: bold; font-size: 280%;margin: 0px;letter-spacing: 3px;}
+.dailyChart,.TitleDetails{text-align: center; font-weight: bold; font-size: 280%;margin: 0px;letter-spacing: 2.5px;}
 #message{text-align:center; display: none; font-size: 30px;}

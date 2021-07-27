@@ -130,11 +130,11 @@ function displayDataTranslated(dataLang){
 	txtIncidenceRate.innerHTML = dataLang.rateVietnam.txt1;
 	txtRecoveryRate.innerHTML = dataLang.rateVietnam.txt2;
 	txtDeathRate.innerHTML = dataLang.rateVietnam.txt3;
-	txtVaccineDistribution = dataLang.Vaccines.title;
+	txtDetailsVaccination = dataLang.Vaccines.title;
 	txtOneDose.innerHTML = dataLang.Vaccines.txt1;
 	txtVaccines.innerHTML = dataLang.Vaccines.txt2;
 	txtTwoDose.innerHTML = dataLang.Vaccines.txt3;
-	txtDetailsVaccination = dataLang.VaccinesDistribution.title;
+	txtVaccineDistribution = dataLang.VaccinesDistribution.title;
 	txtPlanned.innerHTML = dataLang.VaccinesDistribution.txt1;
 	txtRealistic.innerHTML = dataLang.VaccinesDistribution.txt2;
 	txtDistriRate.innerHTML = dataLang.VaccinesDistribution.txt3;
