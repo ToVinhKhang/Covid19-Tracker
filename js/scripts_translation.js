@@ -34,11 +34,21 @@ function Swap(Tr,M){
 	var GlobalCases = document.getElementById("GlobalCases");
 	var GlobalRecovered = document.getElementById("GlobalRecovered");
 	var GlobalDeaths = document.getElementById("GlobalDeaths");
+	var vacTotal = document.getElementById("vacTotal");
+	var vacOneDose = document.getElementById("vacOneDose");
+	var vacTwoDose = document.getElementById("vacTwoDose");
+	var totalPlanned = document.getElementById("totalPlanned");
+	var totalRealistic = document.getElementById("totalRealistic");
 	
 	Population.innerHTML = Population.innerHTML.replace(Tr,M);
 	GlobalCases.innerHTML = GlobalCases.innerHTML.replace(Tr,M);
 	GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace(Tr,M);
 	GlobalDeaths.innerHTML = GlobalDeaths.innerHTML.replace(Tr,M);
+	vacTotal.innerHTML = vacTotal.innerHTML.replace(Tr,M);
+	vacOneDose.innerHTML = vacOneDose.innerHTML.replace(Tr,M);
+	vacTwoDose.innerHTML = vacTwoDose.innerHTML.replace(Tr,M);
+	totalPlanned.innerHTML = totalPlanned.innerHTML.replace(Tr,M);
+	totalRealistic.innerHTML = totalRealistic.innerHTML.replace(Tr,M);
 }
 
 function displayDataTranslated(dataLang){

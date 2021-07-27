@@ -114,7 +114,7 @@ function displayVacDistribution(jsonData){
 		let City = document.createElement("td");City.textContent = jsonData.dataDistribution[i].name;
 		let Planned = document.createElement("td");Planned.textContent = jsonData.dataDistribution[i].Planned.toLocaleString('en-US');
 		let Realistic = document.createElement("td");Realistic.textContent = jsonData.dataDistribution[i].Realistic.toLocaleString('en-US');
-		let DistributedRate = document.createElement("td");DistributedRate.textContent = jsonData.dataDistribution[i].DistributedRate + `%`;
+		let DistributedRate = document.createElement("td");DistributedRate.textContent =  formatTailNum(jsonData.dataDistribution[i].DistributedRate) + `%`;
 		
 		tr.appendChild(City);
 		tr.appendChild(Planned);
@@ -122,14 +122,14 @@ function displayVacDistribution(jsonData){
 		tr.appendChild(DistributedRate);
 		tableVNvacDistribution.appendChild(tr);
 	}
-	var totalPlanned = jsonData.totalDistribution.totalPlanned;
-	var totalRealistic = jsonData.totalDistribution.totalRealistic;
+	var totalPlanned = ShorterValue(jsonData.totalDistribution.totalPlanned);
+	var totalRealistic = ShorterValue(jsonData.totalDistribution.totalRealistic);
 	var totalDistributedRate = jsonData.totalDistribution.totalDistributedRate;
-	
 	displayTotalVacDistribution(totalPlanned,totalRealistic,totalDistributedRate);
 	//Make sure focus max value at first
 	setTimeout(()=>{$('#th-citiesPlanned').trigger('click');$('#th-citiesPlanned').trigger('click');}, 2000);	
 }
+
 function displayDailyVietnam(jsonData){
 	var dataChart = jsonData.data;
 	var dateArray = [];
@@ -176,9 +176,9 @@ function displayDailyVaccines(jsonData,Population){
 	vacOneDose = vaccineData.people_vaccinated;
 	vacTwoDose = vaccineData.people_fully_vaccinated;
 	
-	document.getElementById("vacTotal").innerHTML = vacTotal.toLocaleString('en-US');
-	document.getElementById("vacOneDose").innerHTML = vacOneDose.toLocaleString('en-US');
-	document.getElementById("vacTwoDose").innerHTML = vacTwoDose.toLocaleString('en-US');
+	document.getElementById("vacTotal").innerHTML = ShorterValue(vacTotal);
+	document.getElementById("vacOneDose").innerHTML = ShorterValue(vacOneDose);
+	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose);
 	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
 	
 	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){

@@ -69,9 +69,9 @@ function displayDataGlobal(jsonData){
 		GlobalCases+=u.cases;
 		GlobalRecovered+=u.recovered;
 		GlobalDeaths+=u.deaths;
-		document.getElementById("GlobalCases").innerHTML = ShorterNum(GlobalCases);
-		document.getElementById("GlobalRecovered").innerHTML = ShorterNum(GlobalRecovered);
-		document.getElementById("GlobalDeaths").innerHTML = ShorterNum(GlobalDeaths);
+		document.getElementById("GlobalCases").innerHTML = ShorterValue(GlobalCases);
+		document.getElementById("GlobalRecovered").innerHTML = ShorterValue(GlobalRecovered);
+		document.getElementById("GlobalDeaths").innerHTML = ShorterValue(GlobalDeaths);
 		
 		// Countries		
 		let tr = document.createElement('tr');
@@ -147,19 +147,24 @@ function ShorterNum(num) {
 // Shorter Value - For All
 function ShorterValue(value) {
     var newValue = value;
-    if (value >= 1000) {
-        var suffixes = ["", "K", "M", "B","T"];
-        var suffixNum = Math.floor( (""+value).length/3 );
-        var shortValue = '';
-        for (var i = 1; i <= 2; i++) {
-            shortValue = parseFloat((suffixNum != 0 ? (value/Math.pow(1000,suffixNum)):value));
-            var dotLessShortValue = (shortValue + '').replace(/[^a-zA-Z 0-9]+/g,'');
-            if (dotLessShortValue.length <= 2){break;}
-        }
-        if(shortValue%1 != 0){shortValue = shortValue.toFixed(1)};
-        newValue = shortValue+suffixes[suffixNum];
-    }
+	var suffixes = ["", "K", "M", "M"];
+	var suffixNum = Math.floor((""+value).length/3 );
+	var shortValue = '';
+	shortValue = parseFloat((suffixNum != 0 ? (value/Math.pow(1000,suffixNum)):value));
+	if(shortValue<1 && suffixNum==3){shortValue*=1000}
+	shortValue = shortValue.toFixed(1);
+	newValue = shortValue+suffixes[suffixNum];
     return newValue;
+}
+// Format Tail Num
+function numDigitsAfterDecimal(x) {
+	var afterDecimalStr = x.toString().split('.')[1] || ''
+	return afterDecimalStr.length
+}
+function formatTailNum(num){
+	if(numDigitsAfterDecimal(num)==0){num+=`.00`}
+	if(numDigitsAfterDecimal(num)==1){num+=`0`}
+	return num;
 }
 
 
