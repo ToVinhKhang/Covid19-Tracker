@@ -44,9 +44,9 @@
 		"txt1": "Tổng Vắcxin Kế Hoạch",
 		"txt2": "Tổng Vắcxin Thực Tế",
 		"txt3": "Tổng Tỉ Lệ Đã Phân Phối",
-		"txt4": "Vắcxin Kế Hoạch",
-		"txt5": "Vắcxin Thực Tế",
-		"txt6": "Tỉ Lệ Đã Phân Phối"
+		"txt4": "Kế Hoạch",
+		"txt5": "Thực Tế",
+		"txt6": "Tỉ Lệ"
 	},
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
 	"forEr": "Hệ thống hiện đang quá tải. Vui lòng quay lại sau!",
