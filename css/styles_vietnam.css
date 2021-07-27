@@ -36,17 +36,17 @@
 #tableVNdose tr {display:table;width:100%;table-layout:fixed;}
 #tableVNdose::-webkit-scrollbar {display: none;}
 
-#tableVNvacType td, #tableVNvacType th{border: 2.5px solid #ddd;padding: 8px;width: 100%;}
-#tableVNvacType th{padding-top: 12px;padding-bottom: 12px;background-color: #309FB5;color: white;}
-#tableVNvacType td:nth-child(1){padding-left:11px;padding-right: 11px;}
-#tableVNvacType td:nth-child(2){font-weight: bold; color: #37736E;text-align:center;}
-#tableVNvacType td:nth-child(3){font-weight: bold; color: #37736E;text-align:center;}
-#tableVNvacType td:nth-child(4){font-weight: bold; color: #37736E;text-align:center;}
-#tableVNvacType tr:nth-child(even){background-color: #f2f2f2;}
-#tableVNvacType tr:hover {background-color: #ddd;}
-#tableVNvacType{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
-#tableVNvacType tr {display:table;width:100%;table-layout:fixed;}
-#tableVNvacType::-webkit-scrollbar {display: none;}
+#tableVNvacDistribution td, #tableVNvacDistribution th{border: 2.5px solid #ddd;padding: 8px;width: 100%;}
+#tableVNvacDistribution th{padding-top: 12px;padding-bottom: 12px;background-color: #309FB5;color: white;}
+#tableVNvacDistribution td:nth-child(1){padding-left:11px;padding-right: 11px;}
+#tableVNvacDistribution td:nth-child(2){font-weight: bold; color: #37736E;text-align:center;}
+#tableVNvacDistribution td:nth-child(3){font-weight: bold; color: #37736E;text-align:center;}
+#tableVNvacDistribution td:nth-child(4){font-weight: bold; color: #37736E;text-align:center;}
+#tableVNvacDistribution tr:nth-child(even){background-color: #f2f2f2;}
+#tableVNvacDistribution tr:hover {background-color: #ddd;}
+#tableVNvacDistribution{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
+#tableVNvacDistribution tr {display:table;width:100%;table-layout:fixed;}
+#tableVNvacDistribution::-webkit-scrollbar {display: none;}
 
 .sortable-table thead .theadCitiesProvinces[data-sort-direction="1"]:after{content:"\25B4";}
 .sortable-table thead .theadCitiesProvinces[data-sort-direction="-1"]:after{content:"\25BE"}
@@ -71,13 +71,12 @@
 #vacTotal{margin:0px;text-align: center;color:#7D58CC;font-size:40px;font-weight:bold;}
 #vacOneDose{margin:0px;text-align: center;color:#CC497F;font-size:40px;font-weight:bold;}
 #vacTwoDose{margin:0px;text-align: center;color:#CC6634;font-size:40px;font-weight:bold;}
-#totalAstraZ{margin:0px;text-align: center;color:#37736E;font-size:40px;font-weight:bold;}
-#totalPfizer{margin:0px;text-align: center;color:#37736E;font-size:40px;font-weight:bold;}
-#totalModerna{margin:0px;text-align: center;color:#37736E;font-size:40px;font-weight:bold;}
+#totalPlanned{margin:0px;text-align: center;color:#37736E;font-size:40px;font-weight:bold;}
+#totalRealistic{margin:0px;text-align: center;color:#37736E;font-size:40px;font-weight:bold;}
+#totalDistriRate{margin:0px;text-align: center;color:#37736E;font-size:40px;font-weight:bold;}
 .box{margin:10px 0px;}
 #fieldsetNewDataChart{margin:40px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
 #fieldsetTotalDataChart{margin:20px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
 #txtNewDataChart,#txtTotalDataChart{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
-.dailyChart{text-align: center; font-weight: bold; font-size: 300%;}
-
+.dailyChart,.TitleDetails{text-align: center; font-weight: bold; font-size: 280%;margin: 0px;letter-spacing: 3px;}
 #message{text-align:center; display: none; font-size: 30px;}

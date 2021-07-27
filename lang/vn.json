@@ -34,14 +34,19 @@
 		"txt4": "Tỉ lệ Tiêm Đủ"
 	},
 	"Vaccines": {
+		"title":"CHI TIẾT TIÊM CHỦNG",
 		"txt1": "Tổng Tiêm Một Liều",
 		"txt2": "Tổng Liều Đã Tiêm",
 		"txt3": "Tổng Tiêm Đủ Liều"
 	},
-	"VaccinesType": {
-		"txt1": "Tổng Vắcxin Astraz",
-		"txt2": "Tổng Vắcxin Pfizer",
-		"txt3": "Tổng Vắcxin Moderna"
+	"VaccinesDistribution": {
+		"title":"PHÂN PHỐI VẮCXIN",
+		"txt1": "Tổng Vắcxin Kế Hoạch",
+		"txt2": "Tổng Vắcxin Thực Tế",
+		"txt3": "Tổng Tỉ Lệ Đã Phân Phối",
+		"txt4": "Vắcxin Kế Hoạch",
+		"txt5": "Vắcxin Thực Tế",
+		"txt6": "Tỉ Lệ Đã Phân Phối"
 	},
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
 	"forEr": "Hệ thống hiện đang quá tải. Vui lòng quay lại sau!",
@@ -50,7 +55,7 @@
 	"Chart": {
 		"title1": "MỚI",
 		"title2": "TỔNG",
-		"title3": "BIỂU ĐỒ HẰNG NGÀY"
+		"title3": "LỊCH SỬ HẰNG NGÀY"
 	},
 	"AboutData" : "<option value=''>Xem Thêm</option><option value='AboutTheData'>• Về Dữ liệu </option><option value='VaccineDetails'>• Chi Tiết Vắcxin </option><option value='VaccineTechnology'>• Công nghệ Vắcxin </option><option value='SoftwareInfo'>• Về Phần mềm </option>",
 	"AboutTheData": {

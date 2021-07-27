@@ -30,15 +30,15 @@
 	.theadCities th:nth-child(1){text-align: center;padding-left:0px;padding-right: 0px;width: 100px;}
 	#tableVN td:nth-child(1){width: 100px;padding-left:10px;padding-right: 8px;}
 	#tableVNdose td:nth-child(1){width: 100px;padding-left:10px;padding-right: 8px;}
-	#tableVNvacType td:nth-child(1){width: 100px;padding-left:10px;padding-right: 8px;}
+	#tableVNvacDistribution td:nth-child(1){width: 100px;padding-left:10px;padding-right: 8px;}
 	.theadCities th:nth-child(2){text-align: center;padding-left:0px;padding-right: 0px;width: 105px;}
 	#tableVN td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
 	#tableVNdose td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
-	#tableVNvacType td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
+	#tableVNvacDistribution td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
 	#table{height:440px;}
 	#tableVN{font-size: 10px;height:250px;}
 	#tableVNdose{font-size: 10px;height:250px;}
-	#tableVNvacType{font-size: 10px;height:250px;}
+	#tableVNvacDistribution{font-size: 10px;height:250px;}
 	#countries{margin-bottom: 30px;}
 	.footer,#designedBy{font-size: 10px;}
 }
@@ -65,7 +65,7 @@
 	.vnDetailsFlag{height: 80%;}
 	.vnTotal,.vnRate{border: 2px solid #ddd;margin: 10px;border-radius:25px;padding:25px 10px 10px 10px;}
 	#LastUpdated{font-size:10px;}
-	.dailyChart{font-size: 200%;}
+	.dailyChart,.TitleDetails{font-size: 200%;}
 }
 
 @media screen and (max-width: 540px) {
@@ -88,12 +88,13 @@
 	.imgBrowserIcon{width:20px; height:20px;}
 	.imgBrowserEdge{width:18px; height:18px;}
 	#vacTotal,#vacOneDose,#vacTwoDose{font-size:18px;margin:5px;}
-	#totalAstraZ,#totalPfizer,#totalModerna{font-size:18px;margin:5px;}
+	#totalPlanned,#totalRealistic,#totalDistriRate{font-size:18px;margin:5px;}
 	#TotalCases,#TotalRecovered,#TotalDeaths,#Population,#IncidenceRate,#RecoveryRate,#DeathRate{font-weight:500;}
 	#txtNewDataChart,#txtTotalDataChart{width: 150px!important;}
-	.dailyChart{font-size: 150%;}
+	.dailyChart,.TitleDetails{font-size: 150%;}
 	#AllChart{padding-top:0px;}
 	#txtNewDataChart,#txtTotalDataChart{width: 150px}
+	#tableVNvacDistribution{font-size: 9px;}
 }
 @media screen and (max-width: 376px) {
 	.IncidenceRate{font-size:7px;}
@@ -105,10 +106,28 @@
 	.vacFullyVaccinatedRate{font-size:7px;}
 	.vaccines{font-size:6px;}
 	#vacTotal,#vacOneDose,#vacTwoDose{font-size:15px;}
-	#totalAstraZ,#totalPfizer,#totalModerna{font-size:15px}
+	#totalPlanned,#totalRealistic,#totalDistriRate{font-size:15px}
 	#vacFullyVaccinatedRate{font-size:18px;}
 	h2{display: none;}
 	#aboutGuide td:nth-child(1){width:50%;}
 	#table td:nth-child(6){font-size:7px;}
+}
+@media screen and (max-width: 360px) {
+	.TotalCases{font-size:12px;}
+	#TotalCases{font-size:25px;}
+	.TotalRecovered{font-size:12px;}
+	#TotalRecovered{font-size:25px;}
+	.TotalDeaths{font-size:12px;}
+	#TotalDeaths{font-size:25px;}
+	.Population{font-size:12px;}
+	#Population{font-size:25px;}
+	#tableVN td:nth-child(1){width: 81.88px;padding-left:10px;padding-right: 8px;}
+	#tableVNdose td:nth-child(1){width: 81.88px;padding-left:10px;padding-right: 8px;}
+	#tableVNvacDistribution td:nth-child(1){width: 81.88px;padding-left:10px;padding-right: 8px;}
+	.theadCities th:nth-child(1),.theadCities th:nth-child(2){text-align: center;padding-left:0px;padding-right: 0px;width: 81.88px;}
+	#tableVN td:nth-child(2){width: 81.88px;padding-left:14px;padding-right: 14px;}
+	#tableVNdose td:nth-child(2){width: 81.88px;padding-left:14px;padding-right: 14px;}
+	#tableVNvacDistribution td:nth-child(2){width: 81.88px;padding-left:14px;padding-right: 14px;}
+	
 }
 

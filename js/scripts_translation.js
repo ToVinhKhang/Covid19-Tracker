@@ -42,8 +42,6 @@ function Swap(Tr,M){
 }
 
 function displayDataTranslated(dataLang){
-	var txtTitle = document.getElementById("txtTitle");
-	var txtDesc = document.getElementById("txtDesc");
 	var th_contries = document.getElementById("th-contries");
 	var th_cases = document.getElementById("th-cases");
 	var th_recovered = document.getElementById("th-recovered");
@@ -57,7 +55,13 @@ function displayDataTranslated(dataLang){
 	var th_citiesProVac = document.getElementById("th-citiesProVac");
 	var th_citiesOneDose = document.getElementById("th-citiesOneDose");
 	var th_citiesTwoDose = document.getElementById("th-citiesTwoDose");
-	var th_citiesprovincesVacType = document.getElementById("th-citiesprovincesVacType");
+	var th_citiesprovincesVacDistribution = document.getElementById("th-citiesprovincesVacDistribution");
+	var th_citiesPlanned = document.getElementById("th-citiesPlanned");
+	var th_citiesRealistic = document.getElementById("th-citiesRealistic");
+	var th_citiesDistriRate = document.getElementById("th-citiesDistriRate");
+	
+	var txtTitle = document.getElementById("txtTitle");
+	var txtDesc = document.getElementById("txtDesc");
 	var txtGlobal = document.getElementById("txtGlobal");
 	var txtGlobalCases = document.getElementById("txtGlobalCases");
 	var txtGlobalRecovered = document.getElementById("txtGlobalRecovered");
@@ -68,6 +72,18 @@ function displayDataTranslated(dataLang){
 	var txtIncidenceRate = document.getElementById("txtIncidenceRate");
 	var txtRecoveryRate = document.getElementById("txtRecoveryRate");
 	var txtDeathRate = document.getElementById("txtDeathRate");
+	var txtOneDose = document.getElementById("txtOneDose");
+	var txtVaccines = document.getElementById("txtVaccines");
+	var txtTwoDose = document.getElementById("txtTwoDose");
+	var txtPlanned = document.getElementById("txtPlanned");
+	var txtRealistic = document.getElementById("txtRealistic");
+	var txtDistriRate = document.getElementById("txtDistriRate");
+	var txtFullyVaccinatedRate = document.getElementById("txtFullyVaccinatedRate");
+	var txtNewDataChart = document.getElementById("txtNewDataChart");
+	var txtTotalDataChart = document.getElementById("txtTotalDataChart");
+	var txtDetailsVaccination = document.getElementById("txtDetailsVaccination");
+	var txtVaccineDistribution = document.getElementById("txtVaccineDistribution");
+	
 	var designedBy = document.getElementById("designedBy");
 	var searchInput = document.getElementById("searchInput");
 	var txtAboutData = document.getElementById("txtAboutData");
@@ -80,24 +96,9 @@ function displayDataTranslated(dataLang){
 	var aboutTheVaccineDetails = document.getElementById("aboutTheVaccineDetails");
 	var nameGuide = document.getElementById("nameGuide");
 	var aboutGuide = document.getElementById("aboutGuide");
-	var txtOneDose = document.getElementById("txtOneDose");
-	var txtVaccines = document.getElementById("txtVaccines");
-	var txtTwoDose = document.getElementById("txtTwoDose");
-	var txtAstraZ = document.getElementById("txtAstraZ");
-	var txtPfizer = document.getElementById("txtPfizer");
-	var txtModerna = document.getElementById("txtModerna");
-	var txtFullyVaccinatedRate = document.getElementById("txtFullyVaccinatedRate");
-	var txtNewDataChart = document.getElementById("txtNewDataChart");
-	var txtTotalDataChart = document.getElementById("txtTotalDataChart");
 	var dailyChart = document.getElementById("dailyChart");	
 	var message = document.getElementById("message");	
 	
-	txtTitle.innerHTML = dataLang.title;
-	txtDesc.innerHTML = dataLang.desc;
-	txtGlobal.innerHTML = dataLang.global;
-	txtGlobalCases.innerHTML = dataLang.totalVietnam.txt1;
-	txtGlobalRecovered.innerHTML = dataLang.totalVietnam.txt2;
-	txtGlobalDeaths.innerHTML = dataLang.totalVietnam.txt3;
 	th_contries.innerHTML = dataLang.tableWorld.th1;
 	th_cases.innerHTML = dataLang.tableWorld.th2;
 	th_recovered.innerHTML = dataLang.tableWorld.th3;
@@ -111,7 +112,17 @@ function displayDataTranslated(dataLang){
 	th_citiesProVac.innerHTML = dataLang.tableVietnamVac.th2;
 	th_citiesOneDose.innerHTML = dataLang.tableVietnamVac.th3;
 	th_citiesTwoDose.innerHTML = dataLang.tableVietnamVac.th4;
-	th_citiesprovincesVacType.innerHTML = dataLang.tableVietnamVac.th1;
+	th_citiesprovincesVacDistribution.innerHTML = dataLang.tableVietnamVac.th1;
+	th_citiesPlanned = dataLang.VaccinesDistribution.txt4;
+	th_citiesRealistic = dataLang.VaccinesDistribution.txt5;
+	th_citiesDistriRate = dataLang.VaccinesDistribution.txt6;
+	
+	txtTitle.innerHTML = dataLang.title;
+	txtDesc.innerHTML = dataLang.desc;
+	txtGlobal.innerHTML = dataLang.global;
+	txtGlobalCases.innerHTML = dataLang.totalVietnam.txt1;
+	txtGlobalRecovered.innerHTML = dataLang.totalVietnam.txt2;
+	txtGlobalDeaths.innerHTML = dataLang.totalVietnam.txt3;
 	txtTotalCases.innerHTML = dataLang.totalVietnam.txt1;
 	txtTotalRecovered.innerHTML = dataLang.totalVietnam.txt2;
 	txtTotalDeaths.innerHTML = dataLang.totalVietnam.txt3;
@@ -119,6 +130,18 @@ function displayDataTranslated(dataLang){
 	txtIncidenceRate.innerHTML = dataLang.rateVietnam.txt1;
 	txtRecoveryRate.innerHTML = dataLang.rateVietnam.txt2;
 	txtDeathRate.innerHTML = dataLang.rateVietnam.txt3;
+	txtVaccineDistribution = dataLang.Vaccines.title;
+	txtOneDose.innerHTML = dataLang.Vaccines.txt1;
+	txtVaccines.innerHTML = dataLang.Vaccines.txt2;
+	txtTwoDose.innerHTML = dataLang.Vaccines.txt3;
+	txtDetailsVaccination = dataLang.VaccinesDistribution.title;
+	txtPlanned.innerHTML = dataLang.VaccinesDistribution.txt1;
+	txtRealistic.innerHTML = dataLang.VaccinesDistribution.txt2;
+	txtDistriRate.innerHTML = dataLang.VaccinesDistribution.txt3;
+	txtFullyVaccinatedRate.innerHTML = dataLang.rateVietnam.txt4;
+	txtNewDataChart.innerHTML = dataLang.Chart.title1;
+	txtTotalDataChart.innerHTML = dataLang.Chart.title2;
+	
 	designedBy.innerHTML = dataLang.footer;
 	searchInput.placeholder = dataLang.searching;
 	txtAboutData.innerHTML = dataLang.AboutData;
@@ -131,17 +154,9 @@ function displayDataTranslated(dataLang){
 	aboutTheVaccineDetails.innerHTML = dataLang.AboutVaccineDetails.content;
 	nameGuide.textContent = dataLang.SoftwareInfo.title;
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
-	txtOneDose.innerHTML = dataLang.Vaccines.txt1;
-	txtVaccines.innerHTML = dataLang.Vaccines.txt2;
-	txtTwoDose.innerHTML = dataLang.Vaccines.txt3;
-	txtAstraZ.innerHTML = dataLang.VaccinesType.txt1;
-	txtPfizer.innerHTML = dataLang.VaccinesType.txt2;
-	txtModerna.innerHTML = dataLang.VaccinesType.txt3;
-	txtFullyVaccinatedRate.innerHTML = dataLang.rateVietnam.txt4;
-	txtNewDataChart.innerHTML = dataLang.Chart.title1;
-	txtTotalDataChart.innerHTML = dataLang.Chart.title2;
 	dailyChart.innerHTML = dataLang.Chart.title3;
 	message.innerHTML = dataLang.forEr;
+	
 }
 
 // ----

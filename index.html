@@ -167,8 +167,12 @@
 				</table>
 			</div>
 
-			<hr>
+
 			<!-- Total Vaccines Data -->
+			<hr>
+			<div class="col-md-12 col-12" style="text-align: center;">
+				<div><h1 class="TitleDetails" id="txtDetailsVaccination">DETAILS VACCINATION</h1></div>
+			</div>
 			<div class="row vnRate" style="width: 100%;">
 				<div class="col-md-4 col-4 VaccinesInfo">
 					<div><h3 class="vaccines" id="txtVaccines">Total Dose Vaccinated</h3><h1 id="vacTotal"></h1></div>
@@ -197,17 +201,22 @@
 				</table>
 			</div>
 			
-			<hr>
+			
 			<!-- Total Vaccines by Type Data -->
+			<hr>
+			<div class="col-md-12 col-12" style="text-align: center;">
+				<div><h1 class="TitleDetails" id="txtVaccineDistribution">VACCINE DISTRIBUTION</h1></div>
+			</div>
 			<div class="row vnRate" style="width: 100%;">
+				
 				<div class="col-md-4 col-4 VaccinesInfo">
-					<div><h3 class="vaccines" id="txtAstraZ">Total Astraz Vaccines</h3><h1 id="totalAstraZ"></h1></div>
+					<div><h3 class="vaccines" id="txtPlanned">Total Planned Vaccines</h3><h1 id="totalPlanned"></h1></div>
 				</div>
 				<div class="col-md-4 col-4 VaccinesInfo">
-					<div><h3 class="vaccines" id="txtPfizer">Total Pfizer Vaccines</h3><h1 id="totalPfizer"></h1></div>
+					<div><h3 class="vaccines" id="txtRealistic">Total Realistic Vaccines</h3><h1 id="totalRealistic"></h1></div>
 				</div>
 				<div class="col-md-4 col-4 VaccinesInfo">
-					<div><h3 class="vaccines" id="txtModerna">Total Moderna Vaccines</h3><h1 id="totalModerna"></h1></div>
+					<div><h3 class="vaccines" id="txtDistriRate">Total Distributed Rate</h3><h1 id="totalDistriRate"></h1></div>
 				</div>
 			</div>
 			
@@ -216,13 +225,13 @@
 				<table class="table table-striped sortable-table">
 					<thead class="theadCities">
 						<tr>
-						  <th class="theadCitiesProvinces" id="th-citiesprovincesVacType">Cities/Provinces</th>
-						  <th class="numeric-sort" id="th-citiesAstraZ">Astraz</th>
-						  <th class="numeric-sort" id="th-citiesPfizer">Pfizer</th>
-						  <th class="numeric-sort" id="th-citiesModerna">Moderna</th>
+						  <th class="theadCitiesProvinces" id="th-citiesprovincesVacDistribution">Cities/Provinces</th>
+						  <th class="numeric-sort" id="th-citiesPlanned">Planned Vaccines</th>
+						  <th class="numeric-sort" id="th-citiesRealistic">Realistic Vaccines</th>
+						  <th class="numeric-sort" id="th-citiesDistriRate">Distributed Rate</th>
 						</tr>
 					</thead>
-					<tbody id="tableVNvacType">
+					<tbody id="tableVNvacDistribution">
 					</tbody>
 				</table>
 			</div>
@@ -231,7 +240,7 @@
 			<!-- Chart JS -->
 			<div class="col-md-12 col-12 ChartData" id="AllChart">
 				<hr>
-				<p class="dailyChart" id="dailyChart">DAILY STATISTICS CHART</p>
+				<p class="dailyChart" id="dailyChart">DAILY HISTORY</p>
 				<!-- Total Data Chart -->
 				<fieldset id="fieldsetTotalDataChart">
 					<legend id="txtTotalDataChart">TOTAL</legend>

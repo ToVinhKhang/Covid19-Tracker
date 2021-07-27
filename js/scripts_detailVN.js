@@ -17,16 +17,16 @@ const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
 const API_CityVietnam = "https://api-kent.netlify.app/.netlify/functions/api";
 
 // API for Detail Vaccine 
-const API_DetailVaccine = "https://api-kent.netlify.app/.netlify/functions/api/vaccines";
+const API_DetailVaccine = "https://api-kent.netlify.app/.netlify/functions/api/distribution";
 
 // Init
 let tableVN;
 let tableVNdose;
-let tableVNvacType;
+let tableVNvacDistribution;
 window.addEventListener('load',() => {
 	tableVN = document.getElementById("tableVN");
 	tableVNdose = document.getElementById("tableVNdose");
-	tableVNvacType = document.getElementById("tableVNvacType");
+	tableVNvacDistribution = document.getElementById("tableVNvacDistribution");
 	getDataCity();
 	getDataDetailVaccine();
 	getDataDailyVietnam();
@@ -49,7 +49,7 @@ function getDataCity(){
 function getDataDetailVaccine(){
 	fetch(API_DetailVaccine)
 		.then(data => data.json())
-		.then(jsonData => {displayVacDose(jsonData);displayVacType(jsonData);})
+		.then(jsonData => {displayVacDose(jsonData);displayVacDistribution(jsonData);})
 		.catch(err => {console.error(err);});
 }
 // Get Data DailyVietnam
@@ -93,7 +93,7 @@ function displayVacDose(jsonData){
 	tableVNdose.innerHTML = '';
 	for(i=0; i<=62;i++){
 		let tr = document.createElement("tr");
-		let City = document.createElement("td");City.textContent = jsonData.dataVacDose[i].name.replace("- ","");
+		let City = document.createElement("td");City.textContent = jsonData.dataVacDose[i].name;
 		let Vaccines = document.createElement("td");Vaccines.textContent = jsonData.dataVacDose[i].vaccines.toLocaleString('en-US');
 		let Onedose = document.createElement("td");Onedose.textContent = jsonData.dataVacDose[i].onedose.toLocaleString('en-US');
 		let Fulldose = document.createElement("td");Fulldose.textContent = jsonData.dataVacDose[i].fulldose.toLocaleString('en-US');
@@ -107,24 +107,28 @@ function displayVacDose(jsonData){
 	//Make sure focus max value at first
 	setTimeout(()=>{$('#th-citiesProVac').trigger('click');$('#th-citiesProVac').trigger('click');}, 2000);
 }
-function displayVacType(jsonData){
-	tableVNvacType.innerHTML = '';
+function displayVacDistribution(jsonData){
+	tableVNvacDistribution.innerHTML = '';
 	for(i=0; i<=62;i++){
 		let tr = document.createElement("tr");
-		let City = document.createElement("td");City.textContent = jsonData.dataVacType[i].name.replace("- ","");
-		let AstraZ = document.createElement("td");AstraZ.textContent = jsonData.dataVacType[i].astraz.toLocaleString('en-US');
-		let Pfizer = document.createElement("td");Pfizer.textContent = jsonData.dataVacType[i].pfizer.toLocaleString('en-US');
-		let Moderna = document.createElement("td");Moderna.textContent = jsonData.dataVacType[i].moderna.toLocaleString('en-US');
+		let City = document.createElement("td");City.textContent = jsonData.dataDistribution[i].name;
+		let Planned = document.createElement("td");Planned.textContent = jsonData.dataDistribution[i].Planned.toLocaleString('en-US');
+		let Realistic = document.createElement("td");Realistic.textContent = jsonData.dataDistribution[i].Realistic.toLocaleString('en-US');
+		let DistributedRate = document.createElement("td");DistributedRate.textContent = jsonData.dataDistribution[i].DistributedRate + `%`;
 		
 		tr.appendChild(City);
-		tr.appendChild(AstraZ);
-		tr.appendChild(Pfizer);
-		tr.appendChild(Moderna);
-		tableVNvacType.appendChild(tr);
+		tr.appendChild(Planned);
+		tr.appendChild(Realistic);
+		tr.appendChild(DistributedRate);
+		tableVNvacDistribution.appendChild(tr);
 	}
-	displayTotalVacType(jsonData.totalVacType.totalAstraZ,jsonData.totalVacType.totalPfizer,jsonData.totalVacType.totalModerna);
+	var totalPlanned = jsonData.totalDistribution.totalPlanned;
+	var totalRealistic = jsonData.totalDistribution.totalRealistic;
+	var totalDistributedRate = jsonData.totalDistribution.totalDistributedRate;
+	
+	displayTotalVacDistribution(totalPlanned,totalRealistic,totalDistributedRate);
 	//Make sure focus max value at first
-	setTimeout(()=>{$('#th-citiesAstraZ').trigger('click');$('#th-citiesAstraZ').trigger('click');}, 2000);	
+	setTimeout(()=>{$('#th-citiesPlanned').trigger('click');$('#th-citiesPlanned').trigger('click');}, 2000);	
 }
 function displayDailyVietnam(jsonData){
 	var dataChart = jsonData.data;
@@ -190,10 +194,10 @@ function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
 	document.getElementById("TotalRecovered").innerHTML  = TotalRecovered.toLocaleString('en-US');
 	document.getElementById("TotalDeaths").innerHTML     = TotalDeaths.toLocaleString('en-US');
 }
-function displayTotalVacType(totalAstraZ,totalPfizer,totalModerna){
-	document.getElementById("totalAstraZ").innerHTML = totalAstraZ.toLocaleString('en-US');
-	document.getElementById("totalPfizer").innerHTML = totalPfizer.toLocaleString('en-US');
-	document.getElementById("totalModerna").innerHTML = totalModerna.toLocaleString('en-US');
+function displayTotalVacDistribution(totalPlanned,totalRealistic,totalDistributedRate){
+	document.getElementById("totalPlanned").innerHTML = totalPlanned.toLocaleString('en-US');
+	document.getElementById("totalRealistic").innerHTML = totalRealistic.toLocaleString('en-US');
+	document.getElementById("totalDistriRate").innerHTML = totalDistributedRate + `%`;
 }
 
 // Handle Error
