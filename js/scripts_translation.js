@@ -113,9 +113,9 @@ function displayDataTranslated(dataLang){
 	th_citiesOneDose.innerHTML = dataLang.tableVietnamVac.th3;
 	th_citiesTwoDose.innerHTML = dataLang.tableVietnamVac.th4;
 	th_citiesprovincesVacDistribution.innerHTML = dataLang.tableVietnamVac.th1;
-	th_citiesPlanned = dataLang.VaccinesDistribution.txt4;
-	th_citiesRealistic = dataLang.VaccinesDistribution.txt5;
-	th_citiesDistriRate = dataLang.VaccinesDistribution.txt6;
+	th_citiesPlanned.innerHTML  = dataLang.VaccinesDistribution.txt4;
+	th_citiesRealistic.innerHTML  = dataLang.VaccinesDistribution.txt5;
+	th_citiesDistriRate.innerHTML  = dataLang.VaccinesDistribution.txt6;
 	
 	txtTitle.innerHTML = dataLang.title;
 	txtDesc.innerHTML = dataLang.desc;
