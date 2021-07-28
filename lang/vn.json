@@ -40,10 +40,10 @@
 		"txt3": "Tổng Tiêm Đủ Liều"
 	},
 	"VaccinesDistribution": {
-		"title": "PHÂN PHỐI VẮCXIN",
+		"title": "PHÂN BỔ VẮCXIN",
 		"txt1": "Tổng Vắcxin Kế Hoạch",
 		"txt2": "Tổng Vắcxin Thực Tế",
-		"txt3": "Tổng Tỉ Lệ Đã Phân Phối",
+		"txt3": "Tổng Tỉ Lệ Đã Phân Bổ",
 		"txt4": "Kế Hoạch",
 		"txt5": "Thực Tế",
 		"txt6": "Tỉ Lệ"
