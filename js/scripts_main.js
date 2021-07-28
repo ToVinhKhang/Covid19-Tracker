@@ -136,7 +136,7 @@ function loadDataPopup(dataEN){
 //---------
 // SHORTER 
 //---------
-// Shorter Num - Just Million
+// Shorter Num Million Not Tail
 function ShorterNum(num) {
     var units = ["M"];
     var unit = Math.floor((num / 1.0e+1).toFixed(0).toString().length);
@@ -144,21 +144,21 @@ function ShorterNum(num) {
     var x =  Math.abs(Number(num))/Number('1.0e+'+(unit-r)).toFixed(2);
     return x.toFixed(0) + units[Math.floor(unit/3)-2];
 }
-// Shorter Value - For All
-function ShorterValue(value) {
-    var newValue = value;
+// Shorter Num Million With Tail
+function ShorterValue(num) {
+    var newValue = num;
 	var suffixes = ["", "K", "M", "M"];
-	var suffixNum = Math.floor((""+value).length/3 );
+	var suffixNum = Math.floor((""+num).length/3 );
 	var shortValue = '';
-	shortValue = parseFloat((suffixNum != 0 ? (value/Math.pow(1000,suffixNum)):value));
+	shortValue = parseFloat((suffixNum != 0 ? (num/Math.pow(1000,suffixNum)):num));
 	if(shortValue<1 && suffixNum==3){shortValue*=1000}
 	shortValue = shortValue.toFixed(1);
 	newValue = shortValue+suffixes[suffixNum];
     return newValue;
 }
-// Format Tail Num
-function numDigitsAfterDecimal(x) {
-	var afterDecimalStr = x.toString().split('.')[1] || ''
+// Format Percent Num
+function numDigitsAfterDecimal(num) {
+	var afterDecimalStr = num.toString().split('.')[1] || ''
 	return afterDecimalStr.length
 }
 function formatTailNum(num){

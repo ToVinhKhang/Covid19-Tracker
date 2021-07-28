@@ -50,7 +50,7 @@ function getDataDetailVaccine(){
 	fetch(API_DetailVaccine)
 		.then(data => data.json())
 		.then(jsonData => {displayVacDose(jsonData);displayVacDistribution(jsonData);})
-		.catch(err => {console.error(err);});
+		.catch(err => {ForEr();console.error(err);});
 }
 // Get Data DailyVietnam
 function getDataDailyVietnam(){
