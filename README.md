@@ -28,7 +28,7 @@ https://api-kent.netlify.app/.netlify/functions/api
 
 #### • [GET] /global
 
-```json
+```javascript
    Example:
    [
          {
@@ -54,7 +54,7 @@ https://api-kent.netlify.app/.netlify/functions/api
 ```
 
 #### • [GET] /vn
-``javascript
+```javascript
    Example:
    {
          "total": {
@@ -75,7 +75,7 @@ https://api-kent.netlify.app/.netlify/functions/api
              ...
          }
    }
-``
+```
 
 #### • [GET] /vn/daily/covid
 ```javascript
