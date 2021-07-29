@@ -25,7 +25,8 @@ https://covid19-kent.netlify.app/
 ```
 https://api-kent.netlify.app/.netlify/functions/api
 ```
-#### [GET] /global
+
+#### • [GET] /global
 
 ```javascript
    Example:
@@ -52,7 +53,7 @@ https://api-kent.netlify.app/.netlify/functions/api
    ]
 ```
 
-#### [GET] /vn
+#### • [GET] /vn
 ```javascript
    Example:
    {
@@ -76,7 +77,7 @@ https://api-kent.netlify.app/.netlify/functions/api
    }
 ```
 
-#### [GET] /vn/daily/covid
+#### • [GET] /vn/daily/covid
 ```javascript
    Example:
    {
@@ -98,7 +99,7 @@ https://api-kent.netlify.app/.netlify/functions/api
    }
 ```
 
-#### [GET] /vn/daily/vaccines
+#### • [GET] /vn/daily/vaccines
 ```javascript
    Example:
    {
@@ -119,7 +120,7 @@ https://api-kent.netlify.app/.netlify/functions/api
    }
 ```
 
-#### [GET] /vn/vaccines/distribution
+#### • [GET] /vn/vaccines/distribution
 ```javascript
    Example:
    {
