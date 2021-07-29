@@ -21,24 +21,16 @@ https://covid19-kent.netlify.app/
 <br>
 <br>
 
-### API URL
+### API
 ```javascript
-https://api-kent.netlify.app/.netlify/functions/api
-```
-```
- [GET]: /global
-```
-```
- [GET]: /vn
-```
-```
- [GET]: /vn/daily/covid
-```
-```
- [GET]: /vn/daily/vaccines
-```
-```
- [GET]: /vn/vaccines/distribution
+   {
+        "Host":"https://api-kent.netlify.app/.netlify/functions/api",
+        "Method":"GET",
+        "Path": {
+              "0":"/global"
+        }
+        
+   }
 ```
 
 <br>
