@@ -21,7 +21,7 @@ https://covid19-kent.netlify.app/
 <br>
 <br>
 
-### API
+## API
 ```
 https://api-kent.netlify.app/.netlify/functions/api
 ```
