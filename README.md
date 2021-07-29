@@ -31,25 +31,19 @@ https://api-kent.netlify.app/.netlify/functions/api
    Example:
    [
          {
-               "updated":1627533622433,
                "country":"Afghanistan",
                "countryInfo": {
-                     "_id":4,"iso2":"AF","iso3":"AFG","lat":33,"long":65,
+                     "lat":33,
+                     "long":65,
                      "flag":"https://disease.sh/assets/img/flags/af.png"
                },
-               "cases":145996,"todayCases":0,
-               "deaths":6615,"todayDeaths":0,
-               "recovered":95726,"todayRecovered":0,
-               "active":43655,"critical":1124,
-               "casesPerOneMillion":3662,"deathsPerOneMillion":166,
-               "tests":699172,"testsPerOneMillion":17539,
-               "population":39864282,"continent":"Asia",
-               "oneCasePerPeople":273,
-               "oneDeathPerPeople":6026,
-               "oneTestPerPeople":57,
-               "activePerOneMillion":1095.09,
-               "recoveredPerOneMillion":2401.3,
-               "criticalPerOneMillion":28.2
+               "cases":145996,
+               "todayCases":0,
+               "deaths":6615,
+               "todayDeaths":0,
+               "recovered":95726,
+               "todayRecovered":0,
+               "active":43655
          },{
                ...
          },
@@ -61,8 +55,6 @@ https://api-kent.netlify.app/.netlify/functions/api
 ```javascript
    Example:
    {
-         "lastUpdated": "7/29/2021, 4:53:30 AM",
-         "author": "To Vinh Khang","portfolio": "https://tovinhkhang.netlify.app/",
          "total": {
              "totalCases": 127066,
              "totalRecovered": 31242,
@@ -87,7 +79,6 @@ https://api-kent.netlify.app/.netlify/functions/api
 ```javascript
    Example:
    {
-         "status":200,"type":"stack",
          "data":{
                "2021-07-29":{
                      "total_cases":101173,
@@ -110,7 +101,7 @@ https://api-kent.netlify.app/.netlify/functions/api
 ```javascript
    Example:
    {
-         "country":"Vietnam","iso_code":"VNM",
+         "country":"Vietnam",
          "data":
          [
                 {
@@ -131,8 +122,6 @@ https://api-kent.netlify.app/.netlify/functions/api
 ```javascript
    Example:
    {
-        "lastUpdated":"7/28/2021, 4:57:51 PM",
-        "author":"To Vinh Khang","portfolio":"https://tovinhkhang.netlify.app/",
         "totalDistribution":{
               "totalPlanned":130448510,
               "totalRealistic":17010250,
