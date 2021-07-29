@@ -21,18 +21,13 @@ https://covid19-kent.netlify.app/
 <br>
 <br>
 
-|Method|URL|Descriptions|
-|-|-|-|
-|GET|/global|Global Countries|
-|-|-|-|
-|GET|/vn|City Vietnam|
-|-|-|-|
-|GET|/vn/daily/covid|Daily Vietnam|
-|-|-|-|
-|GET|/vn/daily/vaccines|Daily Vaccines|
-|-|-|-|
-|GET|/vn/vaccines/distribution|Detail Vaccine|
-|-|-|-|
+### API
+#### https://api-kent.netlify.app/.netlify/functions/api
+#### /global
+#### /vn
+#### /vn/daily/covid
+#### /vn/daily/vaccines
+#### /vn/vaccines/distribution
 
 <br>
 <br>
