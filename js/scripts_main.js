@@ -12,7 +12,7 @@
 const API_GlobalCountries = "https://api-kent.netlify.app/.netlify/functions/api/global";
 
 // API for Daily Vaccines
-const API_DailyVaccines = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/vaccines";
+const API_DailyVaccines   = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/vaccines";
 
 // Init
 let table;

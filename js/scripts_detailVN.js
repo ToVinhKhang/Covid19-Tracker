@@ -8,11 +8,11 @@
 // 	API
 //----------
 
-// API for DailyVietnam
-const API_DailyVietnam = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/covid";
-
 // API for CityVietnam
-const API_CityVietnam = "https://api-kent.netlify.app/.netlify/functions/api/vn";
+const API_CityVietnam   = "https://api-kent.netlify.app/.netlify/functions/api/vn";
+
+// API for DailyVietnam
+const API_DailyVietnam  = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/covid";
 
 // API for Detail Vaccine 
 const API_DetailVaccine = "https://api-kent.netlify.app/.netlify/functions/api/vn/vaccines/distribution";
@@ -52,7 +52,7 @@ function getDataDetailVaccine(){
 }
 // Get Data DailyVietnam
 function getDataDailyVietnam(){
-	fetch(API_DailyVietnam, {"method": "GET","headers": {"x-rapidapi-key": rapidApi_Key,"x-rapidapi-host": rapidApi_Host}})
+	fetch(API_DailyVietnam)
 		.then(data => data.json())
 		.then(jsonData => {displayDailyVietnam(jsonData);})
 		.catch(err => {console.error(err);unDisplayChart();});
