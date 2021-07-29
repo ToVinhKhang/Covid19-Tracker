@@ -22,7 +22,9 @@ https://covid19-kent.netlify.app/
 <br>
 
 ### API URL
-_https://api-kent.netlify.app/.netlify/functions/api_
+``
+https://api-kent.netlify.app/.netlify/functions/api
+``
 
 ```
  [GET]: /global
@@ -45,9 +47,9 @@ _https://api-kent.netlify.app/.netlify/functions/api_
 
 ## References
 ### World
-#### [1] World Health Organization: https://www.who.int/
-#### [2] Our World in Data: https://ourworldindata.org/covid-vaccinations
+#### [1] World Health Organization: _https://www.who.int/_
+#### [2] Our World in Data: _https://ourworldindata.org/covid-vaccinations_
 ### Vietnam
-#### [3] Vietnam Ministry of Health: https://ncov.moh.gov.vn/
-#### [4] Vietnam Covid Vaccination Portal: https://tiemchungcovid19.gov.vn/portal
+#### [3] Vietnam Ministry of Health: _https://ncov.moh.gov.vn/_
+#### [4] Vietnam Covid Vaccination Portal: _https://tiemchungcovid19.gov.vn/portal_
 <br>
