@@ -22,10 +22,9 @@ https://covid19-kent.netlify.app/
 <br>
 
 ### API URL
-``
+```
 https://api-kent.netlify.app/.netlify/functions/api
-``
-
+```
 ```
  [GET]: /global
 ```
