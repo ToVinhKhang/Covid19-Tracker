@@ -111,7 +111,9 @@ https://api-kent.netlify.app/.netlify/functions/api
    Example:
    {
          "country":"Vietnam","iso_code":"VNM",
-         "data":[{
+         "data":
+         [
+                {
                      "date":"2021-03-07",
                      "total_vaccinations":0,
                      "people_vaccinated":0,
