@@ -43,7 +43,8 @@ https://api-kent.netlify.app/.netlify/functions/api
                "todayDeaths":0,
                "recovered":95726,
                "todayRecovered":0,
-               "active":43655
+               "active":43655,
+               "population":39864282
          },{
                ...
          },
@@ -105,11 +106,11 @@ https://api-kent.netlify.app/.netlify/functions/api
          "data":
          [
                 {
-                     "date":"2021-03-07",
-                     "total_vaccinations":0,
-                     "people_vaccinated":0,
-                     "total_vaccinations_per_hundred":0,
-                     "people_vaccinated_per_hundred":0
+                     "date":"2021-07-27",
+                     "total_vaccinations":5013175,
+                     "people_vaccinated":4562339,
+                     "people_fully_vaccinated":450836,
+                     "daily_vaccinations":96620
                 },{     
                      ...
                 },
