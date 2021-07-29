@@ -35,14 +35,19 @@ https://covid19-kent.netlify.app/
                      "_id":4,"iso2":"AF","iso3":"AFG","lat":33,"long":65,
                      "flag":"https://disease.sh/assets/img/flags/af.png"
                },
-               "cases":145996,"todayCases":0,"deaths":6615,
-               "todayDeaths":0,"recovered":95726,"todayRecovered":0,
+               "cases":145996,"todayCases":0,
+               "deaths":6615,"todayDeaths":0,
+               "recovered":95726,"todayRecovered":0,
                "active":43655,"critical":1124,
                "casesPerOneMillion":3662,"deathsPerOneMillion":166,
                "tests":699172,"testsPerOneMillion":17539,
                "population":39864282,"continent":"Asia",
-               "oneCasePerPeople":273,"oneDeathPerPeople":6026,"oneTestPerPeople":57,
-               "activePerOneMillion":1095.09,"recoveredPerOneMillion":2401.3,"criticalPerOneMillion":28.2
+               "oneCasePerPeople":273,
+               "oneDeathPerPeople":6026,
+               "oneTestPerPeople":57,
+               "activePerOneMillion":1095.09,
+               "recoveredPerOneMillion":2401.3,
+               "criticalPerOneMillion":28.2
          },{
                ...
          },
@@ -87,9 +92,13 @@ https://covid19-kent.netlify.app/
          "status":200,"type":"stack",
          "data":{
                "2021-07-29":{
-                     "total_cases":101173,"deaths":524,"recovered":19342,
-                     "critical":0,"tested":11890084,
-                     "death_ratio":0.005179247427673391,"recovery_ratio":0.19117748806499757
+                     "total_cases":101173,
+                     "deaths":524,
+                     "recovered":19342,
+                     "critical":0,
+                     "tested":11890084,
+                     "death_ratio":0.005179247427673391,
+                     "recovery_ratio":0.19117748806499757
                },
                "2021-07-28":{
                      ...
@@ -108,8 +117,10 @@ https://covid19-kent.netlify.app/
          "country":"Vietnam","iso_code":"VNM",
          "data":[{
                      "date":"2021-03-07",
-                     "total_vaccinations":0,"people_vaccinated":0,
-                     "total_vaccinations_per_hundred":0,"people_vaccinated_per_hundred":0
+                     "total_vaccinations":0,
+                     "people_vaccinated":0,
+                     "total_vaccinations_per_hundred":0,
+                     "people_vaccinated_per_hundred":0
                 },{     
                      ...
                 },
