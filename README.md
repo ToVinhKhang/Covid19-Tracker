@@ -27,7 +27,7 @@ https://covid19-kent.netlify.app/
 ```
 ```javascript
    Example:
-   {
+   [{
          "updated":1627533622433,
          "country":"Afghanistan",
          "countryInfo": {
@@ -42,7 +42,11 @@ https://covid19-kent.netlify.app/
          "population":39864282,"continent":"Asia",
          "oneCasePerPeople":273,"oneDeathPerPeople":6026,"oneTestPerPeople":57,
          "activePerOneMillion":1095.09,"recoveredPerOneMillion":2401.3,"criticalPerOneMillion":28.2
-   }
+   },{
+         ...
+   },
+   ...
+   }]
 ```
 
 ```
@@ -65,7 +69,9 @@ https://covid19-kent.netlify.app/
                  "recovered": "16613",
                  "deaths": "447"
              },
-             "1": {...},
+             "1": {
+                 ...
+             },
              ...
          }
    }
