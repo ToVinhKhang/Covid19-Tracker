@@ -32,11 +32,9 @@ function getDataGlobal(){
 	fetch(API_GlobalCountries)
 		.then(data => data.json())
 		.then(jsonData => {displayDataGlobal(jsonData);
-			setTimeout(()=>{
-				document.getElementById("loader").style.display = "none";
-				document.getElementById("global").style.display = "block";
-				document.getElementById("footer").style.display = "block";
-			}, 1000);
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("global").style.display = "block";
+			document.getElementById("footer").style.display = "block";
 		})
 		.catch(e => console.log(e));
 }
@@ -115,6 +113,8 @@ function displayDataGlobal(jsonData){
 			displayRate(incidenceRate,recoveryRate,deathRate);
 		}
 	});
+	//Wait 1s
+	setTimeout(()=>{}, 1000);
 }
 function displayRate(incidenceRate,recoveryRate,deathRate){
 	document.getElementById("IncidenceRate").innerHTML = incidenceRate;
