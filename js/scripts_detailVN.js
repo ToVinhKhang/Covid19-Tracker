@@ -167,8 +167,8 @@ function displayDailyVaccines(jsonData,Population){
 	var dateArray = [];
 	var vaccineArray = [];
 	var vaccineArray_New = [];
-	var lastedUpdateData = jsonData[224].data.length-1;
-	var vaccineData = jsonData[224].data[lastedUpdateData];
+	var lastedUpdateData = jsonData.data.length-1;
+	var vaccineData = jsonData.data[lastedUpdateData];
 	
 	vacTotal = vaccineData.total_vaccinations;
 	vacOneDose = vaccineData.people_vaccinated;
@@ -180,9 +180,9 @@ function displayDailyVaccines(jsonData,Population){
 	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
 	
 	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
-		dateArray.push(jsonData[224].data[i].date);
-		vaccineArray.push(jsonData[224].data[i].total_vaccinations);
-		vaccineArray_New.push(jsonData[224].data[i].total_vaccinations - jsonData[224].data[i-1].total_vaccinations);
+		dateArray.push(jsonData.data[i].date);
+		vaccineArray.push(jsonData.data[i].total_vaccinations);
+		vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
 	}
 	createChart(dateArray,vaccineArray,"Total Dose Vaccinated","#666666","vaccineChart");
 	createChart(dateArray,vaccineArray_New,"New Dose Vaccinated","#666666","newvaccineChart");
