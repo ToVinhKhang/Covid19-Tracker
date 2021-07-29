@@ -32,9 +32,11 @@ function getDataGlobal(){
 	fetch(API_GlobalCountries)
 		.then(data => data.json())
 		.then(jsonData => {displayDataGlobal(jsonData);
-			document.getElementById("loader").style.display = "none";
-			document.getElementById("global").style.display = "block";
-			document.getElementById("footer").style.display = "block";
+			setTimeout(()=>{
+				document.getElementById("loader").style.display = "none";
+				document.getElementById("global").style.display = "block";
+				document.getElementById("footer").style.display = "block";
+			}, 1000);
 		})
 		.catch(e => console.log(e));
 }
