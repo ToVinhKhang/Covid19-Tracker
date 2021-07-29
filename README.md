@@ -27,26 +27,27 @@ https://covid19-kent.netlify.app/
 ```
 ```javascript
    Example:
-   [{
-         "updated":1627533622433,
-         "country":"Afghanistan",
-         "countryInfo": {
-               "_id":4,"iso2":"AF","iso3":"AFG","lat":33,"long":65,
-               "flag":"https://disease.sh/assets/img/flags/af.png"
+   [
+         {
+               "updated":1627533622433,
+               "country":"Afghanistan",
+               "countryInfo": {
+                     "_id":4,"iso2":"AF","iso3":"AFG","lat":33,"long":65,
+                     "flag":"https://disease.sh/assets/img/flags/af.png"
+               },
+               "cases":145996,"todayCases":0,"deaths":6615,
+               "todayDeaths":0,"recovered":95726,"todayRecovered":0,
+               "active":43655,"critical":1124,
+               "casesPerOneMillion":3662,"deathsPerOneMillion":166,
+               "tests":699172,"testsPerOneMillion":17539,
+               "population":39864282,"continent":"Asia",
+               "oneCasePerPeople":273,"oneDeathPerPeople":6026,"oneTestPerPeople":57,
+               "activePerOneMillion":1095.09,"recoveredPerOneMillion":2401.3,"criticalPerOneMillion":28.2
+         },{
+               ...
          },
-         "cases":145996,"todayCases":0,"deaths":6615,
-         "todayDeaths":0,"recovered":95726,"todayRecovered":0,
-         "active":43655,"critical":1124,
-         "casesPerOneMillion":3662,"deathsPerOneMillion":166,
-         "tests":699172,"testsPerOneMillion":17539,
-         "population":39864282,"continent":"Asia",
-         "oneCasePerPeople":273,"oneDeathPerPeople":6026,"oneTestPerPeople":57,
-         "activePerOneMillion":1095.09,"recoveredPerOneMillion":2401.3,"criticalPerOneMillion":28.2
-   },{
          ...
-   },
-   ...
-   }]
+   ]
 ```
 
 ```
@@ -75,17 +76,75 @@ https://covid19-kent.netlify.app/
              ...
          }
    }
-      
+```
+
 ```
  [GET]: /vn/daily/covid
 ```
+```javascript
+   Example:
+   {
+         "status":200,"type":"stack",
+         "data":{
+               "2021-07-29":{
+                     "total_cases":101173,"deaths":524,"recovered":19342,
+                     "critical":0,"tested":11890084,
+                     "death_ratio":0.005179247427673391,"recovery_ratio":0.19117748806499757
+               },
+               "2021-07-28":{
+                     ...
+               },
+               ...
+         }
+   }
+```
+
 ```
  [GET]: /vn/daily/vaccines
 ```
+```javascript
+   Example:
+   {
+         "country":"Vietnam","iso_code":"VNM",
+         "data":[{
+                     "date":"2021-03-07",
+                     "total_vaccinations":0,"people_vaccinated":0,
+                     "total_vaccinations_per_hundred":0,"people_vaccinated_per_hundred":0
+                },{     
+                     ...
+                },
+                ...
+         ]
+   }
+```
+
 ```
  [GET]: /vn/vaccines/distribution
 ```
-
+```javascript
+   Example:
+   {
+        "lastUpdated":"7/28/2021, 4:57:51 PM",
+        "author":"To Vinh Khang","portfolio":"https://tovinhkhang.netlify.app/",
+        "totalDistribution":{
+              "totalPlanned":130448510,
+              "totalRealistic":17010250,
+              "totalDistributedRate":13.04
+        },
+        "dataDistribution":{
+              "0":{
+                    "name":"Hà Nội",
+                    "Planned":11376541,
+                    "Realistic":2371380,
+                    "DistributedRate":20.84
+              },
+              "1":{
+                    ...
+              },
+              ...
+        }
+   }
+```
 
 <br>
 <br>
