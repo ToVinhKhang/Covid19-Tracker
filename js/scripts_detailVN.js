@@ -120,8 +120,8 @@ function displayVacDistribution(jsonData){
 		tr.appendChild(DistributedRate);
 		tableVNvacDistribution.appendChild(tr);
 	}
-	var totalPlanned = ShorterValue(jsonData.totalDistribution.totalPlanned);
-	var totalRealistic = ShorterValue(jsonData.totalDistribution.totalRealistic);
+	var totalPlanned = ShorterValue(jsonData.totalDistribution.totalPlanned,2);
+	var totalRealistic = ShorterValue(jsonData.totalDistribution.totalRealistic,2);
 	var totalDistributedRate = jsonData.totalDistribution.totalDistributedRate;
 	displayTotalVacDistribution(totalPlanned,totalRealistic,totalDistributedRate);
 	//Make sure focus max value at first
@@ -174,9 +174,9 @@ function displayDailyVaccines(jsonData,Population){
 	vacOneDose = vaccineData.people_vaccinated;
 	vacTwoDose = vaccineData.people_fully_vaccinated;
 	
-	document.getElementById("vacTotal").innerHTML = ShorterValue(vacTotal);
-	document.getElementById("vacOneDose").innerHTML = ShorterValue(vacOneDose);
-	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose);
+	document.getElementById("vacTotal").innerHTML = ShorterValue(vacTotal,2);
+	document.getElementById("vacOneDose").innerHTML = ShorterValue(vacOneDose,2);
+	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose,2);
 	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
 	
 	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){

@@ -69,9 +69,9 @@ function displayDataGlobal(jsonData){
 		GlobalCases+=u.cases;
 		GlobalRecovered+=u.recovered;
 		GlobalDeaths+=u.deaths;
-		document.getElementById("GlobalCases").innerHTML = ShorterValue(GlobalCases);
-		document.getElementById("GlobalRecovered").innerHTML = ShorterValue(GlobalRecovered);
-		document.getElementById("GlobalDeaths").innerHTML = ShorterValue(GlobalDeaths);
+		document.getElementById("GlobalCases").innerHTML = ShorterValue(GlobalCases,2);
+		document.getElementById("GlobalRecovered").innerHTML = ShorterValue(GlobalRecovered,2);
+		document.getElementById("GlobalDeaths").innerHTML = ShorterValue(GlobalDeaths,2);
 		
 		// Countries		
 		let tr = document.createElement('tr');
@@ -108,7 +108,7 @@ function displayDataGlobal(jsonData){
 			var recoveryRate  = parseFloat((totalRecovered/totalCases)*100).toFixed(2)+`%`;
 			var deathRate     = parseFloat((totalDeaths/totalCases)*100).toFixed(2)+`%`;
 			
-			document.getElementById("Population").innerHTML = ShorterValue(Population);
+			document.getElementById("Population").innerHTML = ShorterValue(Population,2);
 			getDataDailyVaccines(Population);
 			displayRate(incidenceRate,recoveryRate,deathRate);
 		}
@@ -147,14 +147,14 @@ function ShorterNum(num) {
     return x.toFixed(0) + units[Math.floor(unit/3)-2];
 }
 // Shorter Num Million With Tail
-function ShorterValue(num) {
+function ShorterValue(num,n) {
     var newValue = num;
 	var suffixes = ["", "K", "M", "M"];
 	var suffixNum = Math.floor((""+num).length/3 );
 	var shortValue = '';
 	shortValue = parseFloat((suffixNum != 0 ? (num/Math.pow(1000,suffixNum)):num));
 	if(shortValue<1 && suffixNum==3){shortValue*=1000}
-	shortValue = shortValue.toFixed(1);
+	shortValue = shortValue.toFixed(n);
 	newValue = shortValue+suffixes[suffixNum];
     return newValue;
 }
