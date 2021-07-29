@@ -22,7 +22,7 @@ https://covid19-kent.netlify.app/
 <br>
 
 ### API URL
-```
+```javascript
 https://api-kent.netlify.app/.netlify/functions/api
 ```
 ```
