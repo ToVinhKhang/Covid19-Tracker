@@ -21,34 +21,18 @@ https://covid19-kent.netlify.app/
 <br>
 <br>
 
-
-_Link API_GlobalCountries:_
-```
-https://corona.lmao.ninja/v2/countries
-```
-
-_Link API_CityVietnam:_
-```
-https://api-kent.netlify.app/.netlify/functions/api
-```
-
-_Link API_DetailVaccine:_
-```
-https://api-kent.netlify.app/.netlify/functions/api/vaccines
-```
-
-_Link API_DailyVaccines:_
-```
-https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json
-```
-
-_Link API_DailyVietnam:_
-```
-https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam
-```
-<br>
-
-Note: The "Link API_DailyVietnam" need "key-host" to use, so you need to signup to get these at [Here](https://rapidapi.com/Yatko/api/coronavirus-map/)
+|Method|URL|Descriptions|
+|-|-|-|
+|GET|/global|Global Countries|
+|-|-|-|
+|GET|/vn|City Vietnam|
+|-|-|-|
+|GET|/vn/daily/covid|Daily Vietnam|
+|-|-|-|
+|GET|/vn/daily/vaccines|Daily Vaccines|
+|-|-|-|
+|GET|/vn/vaccines/distribution|Detail Vaccine|
+|-|-|-|
 
 <br>
 <br>
