@@ -22,21 +22,21 @@ https://covid19-kent.netlify.app/
 <br>
 
 ### API
-#### https://api-kent.netlify.app/.netlify/functions/api
+#### _https://api-kent.netlify.app/.netlify/functions/api_
 ```
- /global
-```
-```
- /vn
+ [GET]: /global
 ```
 ```
- /vn/daily/covid
+ [GET]: /vn
 ```
 ```
- /vn/daily/vaccines
+ [GET]: /vn/daily/covid
 ```
 ```
- /vn/vaccines/distribution
+ [GET]: /vn/daily/vaccines
+```
+```
+ [GET]: /vn/vaccines/distribution
 ```
 
 <br>
