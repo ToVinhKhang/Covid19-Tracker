@@ -22,7 +22,10 @@ https://covid19-kent.netlify.app/
 <br>
 
 ### API
-#### [GET]: /global
+```
+https://api-kent.netlify.app/.netlify/functions/api
+```
+#### [GET] /global
 
 ```javascript
    Example:
@@ -54,7 +57,7 @@ https://covid19-kent.netlify.app/
    ]
 ```
 
-#### [GET]: /vn
+#### [GET] /vn
 ```javascript
    Example:
    {
@@ -80,7 +83,7 @@ https://covid19-kent.netlify.app/
    }
 ```
 
-#### [GET]: /vn/daily/covid
+#### [GET] /vn/daily/covid
 ```javascript
    Example:
    {
@@ -103,7 +106,7 @@ https://covid19-kent.netlify.app/
    }
 ```
 
-#### [GET]: /vn/daily/vaccines
+#### [GET] /vn/daily/vaccines
 ```javascript
    Example:
    {
@@ -122,7 +125,7 @@ https://covid19-kent.netlify.app/
    }
 ```
 
-#### [GET]: /vn/vaccines/distribution
+#### [GET] /vn/vaccines/distribution
 ```javascript
    Example:
    {
