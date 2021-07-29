@@ -9,10 +9,10 @@
 //----------
 
 // API for GlobalCountries
-const API_GlobalCountries = "https://corona.lmao.ninja/v2/countries";
+const API_GlobalCountries = "https://api-kent.netlify.app/.netlify/functions/api/global";
 
 // API for Daily Vaccines
-const API_DailyVaccines = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json";
+const API_DailyVaccines = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/vaccines";
 
 // Init
 let table;

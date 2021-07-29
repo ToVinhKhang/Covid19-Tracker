@@ -9,15 +9,13 @@
 //----------
 
 // API for DailyVietnam
-const API_DailyVietnam = "https://coronavirus-map.p.rapidapi.com/v1/spots/week?region=vietnam";
-const rapidApi_Key  = "e31e70a2c1msh591d8f2e6b09477p127223jsn35e5e23857d4";
-const rapidApi_Host = "coronavirus-map.p.rapidapi.com";
+const API_DailyVietnam = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/covid";
 
 // API for CityVietnam
-const API_CityVietnam = "https://api-kent.netlify.app/.netlify/functions/api";
+const API_CityVietnam = "https://api-kent.netlify.app/.netlify/functions/api/vn";
 
 // API for Detail Vaccine 
-const API_DetailVaccine = "https://api-kent.netlify.app/.netlify/functions/api/distribution";
+const API_DetailVaccine = "https://api-kent.netlify.app/.netlify/functions/api/vn/vaccines/distribution";
 
 // Init
 let tableVN;
