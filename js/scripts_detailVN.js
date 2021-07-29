@@ -85,7 +85,7 @@ function displayCity(jsonData){
 	}
 	displayTotalVN(jsonData.total.totalCases,jsonData.total.totalRecovered,jsonData.total.totalDeaths);
 	//Make sure focus max value at first
-	setTimeout(()=>{$('#th-citiesCases').trigger('click');$('#th-citiesCases').trigger('click');}, 2000);	
+	setTimeout(()=>{$('#th-citiesCases').trigger('click');$('#th-citiesCases').trigger('click');}, 3000);	
 }
 function displayVacDose(jsonData){
 	tableVNdose.innerHTML = '';
@@ -103,7 +103,7 @@ function displayVacDose(jsonData){
 		tableVNdose.appendChild(tr);
 	}
 	//Make sure focus max value at first
-	setTimeout(()=>{$('#th-citiesProVac').trigger('click');$('#th-citiesProVac').trigger('click');}, 2000);
+	setTimeout(()=>{$('#th-citiesProVac').trigger('click');$('#th-citiesProVac').trigger('click');}, 3000);
 }
 function displayVacDistribution(jsonData){
 	tableVNvacDistribution.innerHTML = '';
@@ -125,7 +125,7 @@ function displayVacDistribution(jsonData){
 	var totalDistributedRate = jsonData.totalDistribution.totalDistributedRate;
 	displayTotalVacDistribution(totalPlanned,totalRealistic,totalDistributedRate);
 	//Make sure focus max value at first
-	setTimeout(()=>{$('#th-citiesPlanned').trigger('click');$('#th-citiesPlanned').trigger('click');}, 2000);	
+	setTimeout(()=>{$('#th-citiesPlanned').trigger('click');$('#th-citiesPlanned').trigger('click');}, 3000);	
 }
 
 function displayDailyVietnam(jsonData){
