@@ -101,7 +101,6 @@ function displayDataGlobal(jsonData){
 		if(u.country == "Vietnam"){
 			var Population     = u.population;
 			document.getElementById("Population").innerHTML = ShorterValue(Population,2);
-			document.getElementById("Population").setAttribute("data-population",Population);
 			getDataDailyVaccines(Population);
 		}
 	});

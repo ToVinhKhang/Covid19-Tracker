@@ -73,9 +73,9 @@ function displayCity(jsonData){
 	for(i=0; i<=62;i++){
 		let tr = document.createElement("tr");
 		let City = document.createElement("td");City.textContent = jsonData.detail[i].name.replace("- ","");
-		let Cases = document.createElement("td");Cases.textContent = jsonData.detail[i].cases.toLocaleString('en-US');
-		let Recovered = document.createElement("td");Recovered.textContent = jsonData.detail[i].recovered.toLocaleString('en-US');
-		let Deaths = document.createElement("td");Deaths.textContent = jsonData.detail[i].deaths.toLocaleString('en-US');
+		let Cases = document.createElement("td");Cases.textContent = parseInt(jsonData.detail[i].cases).toLocaleString('en-US');
+		let Recovered = document.createElement("td");Recovered.textContent = parseInt(jsonData.detail[i].recovered).toLocaleString('en-US');
+		let Deaths = document.createElement("td");Deaths.textContent = parseInt(jsonData.detail[i].deaths).toLocaleString('en-US');
 		
 		tr.appendChild(City);
 		tr.appendChild(Cases);
@@ -194,15 +194,14 @@ function displayDailyVaccines(jsonData,Population){
 	createChart(dateArray,vaccineArray_New,"New Dose Vaccinated","#666666","newvaccineChart");
 }
 function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
-	document.getElementById("TotalCases").innerHTML      = TotalCases.toLocaleString('en-US');
-	document.getElementById("TotalRecovered").innerHTML  = TotalRecovered.toLocaleString('en-US');
-	document.getElementById("TotalDeaths").innerHTML     = TotalDeaths.toLocaleString('en-US');
+	document.getElementById("TotalCases").innerHTML      = parseInt(TotalCases).toLocaleString('en-US');
+	document.getElementById("TotalRecovered").innerHTML  = parseInt(TotalRecovered).toLocaleString('en-US');
+	document.getElementById("TotalDeaths").innerHTML     = parseInt(TotalDeaths).toLocaleString('en-US');
 }
 function displayRate(totalCases,totalRecovered,totalDeaths){
-	var population    = document.getElementById("Population").dataset.population;
-	var incidenceRate = parseFloat((totalCases/population)*100).toFixed(2)+`%`;
-	var recoveryRate  = parseFloat((totalRecovered/totalCases)*100).toFixed(2)+`%`;
-	var deathRate     = parseFloat((totalDeaths/totalCases)*100).toFixed(2)+`%`;
+	var incidenceRate = parseFloat((parseInt(totalCases)/(98278872))*100).toFixed(2)+`%`;
+	var recoveryRate  = parseFloat((parseInt(totalRecovered)/totalCases)*100).toFixed(2)+`%`;
+	var deathRate     = parseFloat((parseInt(totalDeaths)/totalCases)*100).toFixed(2)+`%`;
 	
 	document.getElementById("IncidenceRate").innerHTML = incidenceRate;
 	document.getElementById("RecoveryRate").innerHTML  = recoveryRate;
