@@ -99,27 +99,14 @@ function displayDataGlobal(jsonData){
 		
 		// Custom Rate in Vietnam
 		if(u.country == "Vietnam"){
-			var totalCases     = u.cases;
-			var totalRecovered = u.recovered;
-			var totalDeaths    = u.deaths;
 			var Population     = u.population;
-			
-			var incidenceRate = parseFloat((totalCases/Population)*100).toFixed(2)+`%`;
-			var recoveryRate  = parseFloat((totalRecovered/totalCases)*100).toFixed(2)+`%`;
-			var deathRate     = parseFloat((totalDeaths/totalCases)*100).toFixed(2)+`%`;
-			
 			document.getElementById("Population").innerHTML = ShorterValue(Population,2);
+			document.getElementById("Population").setAttribute("data-population",Population);
 			getDataDailyVaccines(Population);
-			displayRate(incidenceRate,recoveryRate,deathRate);
 		}
 	});
 	//Wait 1s
 	setTimeout(()=>{}, 1000);
-}
-function displayRate(incidenceRate,recoveryRate,deathRate){
-	document.getElementById("IncidenceRate").innerHTML = incidenceRate;
-	document.getElementById("RecoveryRate").innerHTML  = recoveryRate;
-	document.getElementById("DeathRate").innerHTML     = deathRate;
 }
 
 function loadDataPopup(dataEN){

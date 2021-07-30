@@ -83,7 +83,13 @@ function displayCity(jsonData){
 		tr.appendChild(Deaths);
 		tableVN.appendChild(tr);
 	}
-	displayTotalVN(jsonData.total.totalCases,jsonData.total.totalRecovered,jsonData.total.totalDeaths);
+	var totalCases     = jsonData.total.totalCases;
+	var totalRecovered = jsonData.total.totalRecovered;
+	var totalDeaths    = jsonData.total.totalDeaths;
+	
+	displayTotalVN(totalCases,totalRecovered,totalDeaths);
+	displayRate(totalCases,totalRecovered,totalDeaths);
+	
 	//Make sure focus max value at first
 	setTimeout(()=>{$('#th-citiesCases').trigger('click');$('#th-citiesCases').trigger('click');}, 3000);	
 }
@@ -191,6 +197,16 @@ function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
 	document.getElementById("TotalCases").innerHTML      = TotalCases.toLocaleString('en-US');
 	document.getElementById("TotalRecovered").innerHTML  = TotalRecovered.toLocaleString('en-US');
 	document.getElementById("TotalDeaths").innerHTML     = TotalDeaths.toLocaleString('en-US');
+}
+function displayRate(totalCases,totalRecovered,totalDeaths){
+	var population    = document.getElementById("Population").dataset.population;
+	var incidenceRate = parseFloat((totalCases/population)*100).toFixed(2)+`%`;
+	var recoveryRate  = parseFloat((totalRecovered/totalCases)*100).toFixed(2)+`%`;
+	var deathRate     = parseFloat((totalDeaths/totalCases)*100).toFixed(2)+`%`;
+	
+	document.getElementById("IncidenceRate").innerHTML = incidenceRate;
+	document.getElementById("RecoveryRate").innerHTML  = recoveryRate;
+	document.getElementById("DeathRate").innerHTML     = deathRate;
 }
 function displayTotalVacDistribution(totalPlanned,totalRealistic,totalDistributedRate){
 	document.getElementById("totalPlanned").innerHTML = totalPlanned.toLocaleString('en-US');
