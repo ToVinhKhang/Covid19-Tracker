@@ -69,9 +69,9 @@ function displayDataGlobal(jsonData){
 		GlobalCases+=u.cases;
 		GlobalRecovered+=u.recovered;
 		GlobalDeaths+=u.deaths;
-		document.getElementById("GlobalCases").innerHTML = ShorterValue(GlobalCases,2);
-		document.getElementById("GlobalRecovered").innerHTML = ShorterValue(GlobalRecovered,2);
-		document.getElementById("GlobalDeaths").innerHTML = ShorterValue(GlobalDeaths,2);
+		document.getElementById("GlobalCases").innerHTML = ShorterValue(GlobalCases,1);
+		document.getElementById("GlobalRecovered").innerHTML = ShorterValue(GlobalRecovered,1);
+		document.getElementById("GlobalDeaths").innerHTML = ShorterValue(GlobalDeaths,1);
 		
 		// Countries		
 		let tr = document.createElement('tr');
