@@ -72,7 +72,7 @@
 	},
 	"AboutCoronavirusVariant": {
 		"title": "CORONAVIRUS VARIANT",
-		"content": "<img class='imgVariant' src='./img/Variant_EN_lang.png'><h6 class='plusSign reference'>- Aggregated Data Sources -</h6>"
+		"content": "<img class='imgVariant' src='./img/Variant_EN_lang.png'>"
 	},
 	"SoftwareInfo": {
 		"title": "SOFTWARE INFO",

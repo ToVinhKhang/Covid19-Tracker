@@ -72,7 +72,7 @@
 	},
 	"AboutCoronavirusVariant": {
 		"title": "BIẾN CHỦNG CORONA",
-		"content": "ALPHA<h6></h6><h6 class='plusSign'></h6><h6 class='plusSign'></h6>BETA<h6></h6><h6 class='plusSign'></h6><h6 class='plusSign'></h6>GAMMA<h6></h6><h6 class='plusSign'></h6><h6 class='plusSign'></h6>DELTA<h6></h6><h6 class='plusSign'></h6><h6 class='plusSign'></h6><h6 class='plusSign reference'>- Aggregated Data Sources -</h6>"
+		"content": "<img class='imgVariant' src='./img/Variant_VN_lang.png'>"
 	},
 	"SoftwareInfo": {
 		"title": "VỀ PHẦN MỀM",
