@@ -5,7 +5,7 @@
 </details>
 
 <details>
-   <summary>Illustration</summary>
+   <summary>Some Illustrations</summary>
    <p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="100%"></p>
    <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="100%"></p>
    <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="100%"></p>
