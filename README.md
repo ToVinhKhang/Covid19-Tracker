@@ -8,6 +8,18 @@ _The Covid19 Tracker project was developed to contribute to the community. This 
 <br>
 <br>
 
+## VISUALIZATION
+<details>
+   <summary>Show</summary>
+   <p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="100%"></p>
+   <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="100%"></p>
+   <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="100%"></p>
+   <p align="center"><img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%"></p>
+</details>
+
+<br>
+<br>
+
 ## FUNCTIONS
 | Name | Descriptions |
 |-|-|
@@ -148,19 +160,7 @@ https://api-kent.netlify.app/.netlify/functions/api
 <br>
 <br>
 
-## VISUALIZATION
-<details>
-   <summary>Show GitHub Stats</summary>
-   <p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="100%"></p>
-   <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="100%"></p>
-   <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="100%"></p>
-   <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%"></p>
-</details>
 
-
-
-<br>
-<br>
 
 ## REFERENCES
 ### World
