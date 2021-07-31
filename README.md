@@ -3,21 +3,26 @@ https://covid19-kent.netlify.app/
 
 <br>
 
-### The situation of the Coronavirus Epidemic data around The World and Detail Vietnam Country. Includes the following functions:
+## Introduction
+#### _The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
 <br>
 
-|Name Functions|Descriptions|
+|<img src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="400">|<img src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="400">|
+<br>
+
+## Functions
+|Name|Descriptions|
 |-|-|
 |World Tracker|Global Data / Country Data|
-| |(Display Total Data and Daily Data)|
+| |_(Display Total Data and Daily Data)_|
 |Vietnam Tracker|Vietnam Data / City-Province Data / Vaccines Data|
-| |(Display Total Data, Daily Data, Rate Info and Chart)|
+| |_(Display Total Data, Daily Data, Rate Info and Chart)_|
 |Languages|Switching English / Vietnamese|
-| |(Display English At First)|
+| |_(Display English At First)_|
 |Read More|About The Data / Vaccine Details and Technology / Software Info|
-| |(Display Info by Popup Modal)|
+| |_(Display Info by Popup Modal)_|
 |Others|Filter, Sort, Mode and Devices|
-| |(Filter Name of Countries, Sort Increase Decrease, Dark-Light, Responsive)|
+| |_(Filter Name of Countries, Sort Increase Decrease, Dark-Light, Responsive)_|
 <br>
 <br>
 
