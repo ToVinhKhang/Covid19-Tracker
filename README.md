@@ -17,6 +17,11 @@ _The Covid19 Tracker project was developed to contribute to the community. This 
    <p align="center"><img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%"></p>
 </details>
 
+<details>
+   <summary>Show</summary>
+   https://covid19-kent.netlify.app/
+</details>
+
 <br>
 <br>
 
