@@ -1,27 +1,19 @@
 # Covid-19 Tracker
-https://covid19-kent.netlify.app/
-
-<br>
-
-## INTRODUCTION
-_The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
-<br>
-<br>
-
-## VISUALIZATION
 <details>
-   <summary>Show</summary>
+   <summary>Release</summary>
+   https://covid19-kent.netlify.app/
+</details>
+<details>
+   <summary>Visualization</summary>
    <p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="100%"></p>
    <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="100%"></p>
    <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="100%"></p>
    <p align="center"><img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%"></p>
 </details>
+<br>
 
-<details>
-   <summary>Show</summary>
-   https://covid19-kent.netlify.app/
-</details>
-
+## INTRODUCTION
+_The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
 <br>
 <br>
 
