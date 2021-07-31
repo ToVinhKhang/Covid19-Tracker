@@ -1,7 +1,7 @@
 # Covid-19 Tracker
 <details>
    <summary>Release</summary>
-   >>  https://covid19-kent.netlify.app/
+   •  https://covid19-kent.netlify.app/
 </details>
 
 <details>
@@ -161,10 +161,10 @@ https://api-kent.netlify.app/.netlify/functions/api
 
 
 ## REFERENCES
-### World
 #### [1] World Health Organization: _https://www.who.int/_
 #### [2] Our World in Data: _https://ourworldindata.org/covid-vaccinations_
-### Vietnam
 #### [3] Vietnam Ministry of Health: _https://ncov.moh.gov.vn/_
 #### [4] Vietnam Covid Vaccination Portal: _https://tiemchungcovid19.gov.vn/portal_
+#### [5] Axios Variant Tracker: _https://www.axios.com/variants-tracker/_
+<br>
 <br>
