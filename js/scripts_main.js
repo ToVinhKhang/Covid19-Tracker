@@ -115,10 +115,10 @@ function loadDataPopup(dataEN){
 	document.getElementById("aboutTheVaccine").innerHTML = dataEN.AboutVaccineTechnology.content;
 	document.getElementById("nameVaccineDetails").textContent = dataEN.AboutVaccineDetails.title;
 	document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
+	document.getElementById("nameVariant").textContent = dataEN.AboutCoronavirusVariant.title;
+	document.getElementById("aboutTheVariant").innerHTML = dataEN.AboutCoronavirusVariant.content;
 	document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
 	document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
-	document.getElementById("nameVariant").textContent = dataEN.CoronavirusVariant.title;
-	document.getElementById("aboutVariant").innerHTML = dataEN.CoronavirusVariant.content;
 }
 
 
