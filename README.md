@@ -7,15 +7,14 @@ https://covid19-kent.netlify.app/
 #### _The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
 <br>
 
-<p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/World_Tracker.png" width="600"></p>
-<p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="400"></p>
-<p align="center"><img alt="DetailVaccination" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="400"></p>
+<p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="500"></p>
+<p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="500"></p>
+<p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="500"></p>
 
 
 <br>
 
 ## Functions
-<div align="center">
 |Name|Descriptions|
 |-|-|
 |World Tracker|Global Data / Country Data|
@@ -28,8 +27,6 @@ https://covid19-kent.netlify.app/
 | |_(Display Info by Popup Modal)_|
 |Others|Filter, Sort, Mode and Devices|
 | |_(Filter Name of Countries, Sort Increase Decrease, Dark-Light, Responsive)_|
-</div>
-
 <br>
 <br>
 
