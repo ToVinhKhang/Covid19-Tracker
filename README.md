@@ -4,8 +4,10 @@ https://covid19-kent.netlify.app/
 <br>
 
 ## Introduction
-### _The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
+#### _The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
 <br>
+
+![alt text](./img/Variant_EN.png)
 
 ## Functions
 |Name|Descriptions|
