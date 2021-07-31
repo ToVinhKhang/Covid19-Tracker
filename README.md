@@ -3,8 +3,8 @@ https://covid19-kent.netlify.app/
 
 <br>
 
-## Introduction
-#### _The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
+## INTRODUCTION
+_The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
 <br>
 
 <p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="100%"></p>
@@ -12,22 +12,21 @@ https://covid19-kent.netlify.app/
 <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="100%"></p>
 <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%"></p>
 
-
 <br>
 
-## Functions
-|Name|Descriptions|
+## FUNCTIONS
+| Name | Descriptions |
 |-|-|
-|World Tracker|Global Data / Country Data|
-| |_(Display Total Data and Daily Data)_|
-|Vietnam Tracker|Vietnam Data / City-Province Data / Vaccines Data|
-| |_(Display Total Data, Daily Data, Rate Info and Chart)_|
-|Languages|Switching English / Vietnamese|
-| |_(Display English At First)_|
-|Read More|About The Data / Vaccine Details and Technology / Coronavirus Variant / Software Info|
-| |_(Display Info by Popup Modal)_|
-|Others|Filter, Sort, Mode and Devices|
-| |_(Filter Name of Countries, Sort Increase Decrease, Dark-Light, Responsive)_|
+| World Tracker | Global Data / Country Data |
+| | _(Display Total Data and Daily Data)_ |
+| Vietnam Tracker | Vietnam Data / City-Province Data / Vaccines Data |
+| | _(Display Total Data, Daily Data, Rate Info and Chart)_ |
+| Languages | Switching English / Vietnamese |
+| | _(Display English At First)_ |
+| Read More | About The Data / Vaccine Details / Vaccine Technology / Coronavirus Variant / Software Info |
+| | _(Display Info by Popup Modal)_ |
+| Others | Filter, Sort, Mode and Devices |
+| | _(Filter Name of Countries, Sort Increase Decrease, Dark-Light, Responsive)_ |
 <br>
 <br>
 
