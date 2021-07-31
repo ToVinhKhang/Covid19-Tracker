@@ -2,7 +2,7 @@
 <details>
    <summary>Release</summary>
    >>  https://covid19-kent.netlify.app/
-   <details>
+   >> <details>
       <summary>Release</summary>
       >>  https://covid19-kent.netlify.app/
    </details>
