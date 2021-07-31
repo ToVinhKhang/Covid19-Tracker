@@ -239,27 +239,31 @@
 			
 			
 			<!-- Chart JS -->
-			<div class="col-md-12 col-12 ChartData" id="AllChart" style="display: none;">
+			<div class="col-md-12 col-12 ChartData" id="AllChart" >
 				<hr>
 				<p class="dailyChart" id="dailyChart">DAILY HISTORY</p>
 				<!-- Total Data Chart -->
-				<fieldset id="fieldsetTotalDataChart">
-					<legend id="txtTotalDataChart">TOTAL</legend>
+				<fieldset id="fieldsetCasesDataChart">
+					<legend id="txtCasesDataChart">CASES</legend>
 					<div class="row">
-					  <div class="col-md-6"><canvas id="casesChart" class="chart"></canvas></div>
-					  <div class="col-md-6"><canvas id="recoveredChart" class="chart"></canvas></div>
-					  <div class="col-md-6"><canvas id="deathsChart" class="chart"></canvas></div>
-					  <div class="col-md-6"><canvas id="vaccineChart" class="chart"></canvas></div>
+						<div class="col-md-6"><canvas id="newcasesChart" class="chart"></canvas></div>
+						<div class="col-md-6"><canvas id="casesChart" class="chart"></canvas></div>
 					</div>
 				</fieldset>
 				<!-- New Data Chart -->
-				<fieldset id="fieldsetNewDataChart">
-					<legend id="txtNewDataChart">NEW</legend>
+				<fieldset id="fieldsetDeathsDataChart">
+					<legend id="txtDeathsDataChart">DEATHS</legend>
 					<div class="row">
-					  <div class="col-md-6"><canvas id="newcasesChart" class="chart"></canvas></div>
-					  <div class="col-md-6"><canvas id="newrecoveredChart" class="chart"></canvas></div>
-					  <div class="col-md-6"><canvas id="newdeathsChart" class="chart"></canvas></div>
+						<div class="col-md-6"><canvas id="newdeathsChart" class="chart"></canvas></div>
+						<div class="col-md-6"><canvas id="deathsChart" class="chart"></canvas></div>
+					</div>
+				</fieldset>
+				<!-- New Data Chart -->
+				<fieldset id="fieldsetDoseVaccinatedDataChart">
+					<legend id="txtDoseVaccinatedDataChart">DOSE VACCINATED</legend>
+					<div class="row">
 					  <div class="col-md-6"><canvas id="newvaccineChart" class="chart"></canvas></div>
+					  <div class="col-md-6"><canvas id="vaccineChart" class="chart"></canvas></div>
 					</div>
 				</fieldset>
 			</div>

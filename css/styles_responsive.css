@@ -59,8 +59,8 @@
 	.SoftwareInfo{font-size:12px;}
 	#aboutGuide{word-break: break-all;}
 	#txtGlobal{width: 100px;font-size: 20px;}
-	#txtNewDataChart{width: 100px;font-size: 20px;}
-	#txtTotalDataChart{width: 100px;font-size: 20px;}
+	#txtCasesDataChart,#txtDeathsDataChart{width: 100px;font-size: 20px;}
+	#txtDoseVaccinatedDataChart{width: 200px;font-size: 20px;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
@@ -91,10 +91,10 @@
 	#vacTotal,#vacOneDose,#vacTwoDose{font-size:18px;margin:5px;}
 	#totalPlanned,#totalRealistic,#totalDistriRate{font-size:18px;margin:5px;}
 	#TotalCases,#TotalRecovered,#TotalDeaths,#Population,#IncidenceRate,#RecoveryRate,#DeathRate{font-weight:500;}
-	#txtNewDataChart,#txtTotalDataChart{width: 150px!important;}
+	#txtCasesDataChart,#txtDeathsDataChart{width: 150px;}
+	#txtDoseVaccinatedDataChart{width: 210px;}
 	.dailyChart,.TitleDetails{font-size: 150%;}
 	#AllChart{padding-top:0px;}
-	#txtNewDataChart,#txtTotalDataChart{width: 150px}
 	#tableVNvacDistribution{font-size: 9px;}
 }
 @media screen and (max-width: 376px) {

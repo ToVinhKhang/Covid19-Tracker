@@ -76,8 +76,10 @@
 #totalRealistic{margin:0px;text-align: center;color:#37736E;font-size:40px;font-weight:bold;}
 #totalDistriRate{margin:0px;text-align: center;color:#37736E;font-size:40px;font-weight:bold;}
 .box{margin:10px 0px;}
-#fieldsetNewDataChart{margin:40px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
-#fieldsetTotalDataChart{margin:20px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
-#txtNewDataChart,#txtTotalDataChart{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
+
+#fieldsetDeathsDataChart,#fieldsetDoseVaccinatedDataChart{margin:40px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
+#fieldsetCasesDataChart{margin:20px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
+#txtDeathsDataChart,#txtCasesDataChart{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
+#txtDoseVaccinatedDataChart{width: 400px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
 .dailyChart,.TitleDetails{text-align: center; font-weight: bold; font-size: 280%;margin: 0px;letter-spacing: 2.5px;}
 #message{text-align:center; display: none; font-size: 30px;}

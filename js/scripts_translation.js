@@ -89,8 +89,9 @@ function displayDataTranslated(dataLang){
 	var txtRealistic = document.getElementById("txtRealistic");
 	var txtDistriRate = document.getElementById("txtDistriRate");
 	var txtFullyVaccinatedRate = document.getElementById("txtFullyVaccinatedRate");
-	var txtNewDataChart = document.getElementById("txtNewDataChart");
-	var txtTotalDataChart = document.getElementById("txtTotalDataChart");
+	var txtCasesDataChart = document.getElementById("txtCasesDataChart");
+	var txtDeathsDataChart = document.getElementById("txtDeathsDataChart");
+	var txtDoseVaccinatedDataChart = document.getElementById("txtDoseVaccinatedDataChart");
 	var txtDetailsVaccination = document.getElementById("txtDetailsVaccination");
 	var txtVaccineDistribution = document.getElementById("txtVaccineDistribution");
 	
@@ -151,8 +152,9 @@ function displayDataTranslated(dataLang){
 	txtRealistic.innerHTML = dataLang.VaccinesDistribution.txt2;
 	txtDistriRate.innerHTML = dataLang.VaccinesDistribution.txt3;
 	txtFullyVaccinatedRate.innerHTML = dataLang.rateVietnam.txt4;
-	txtNewDataChart.innerHTML = dataLang.Chart.title1;
-	txtTotalDataChart.innerHTML = dataLang.Chart.title2;
+	txtCasesDataChart.innerHTML = dataLang.Chart.title1;
+	txtDeathsDataChart.innerHTML = dataLang.Chart.title2;
+	txtDoseVaccinatedDataChart.innerHTML = dataLang.Chart.title3;
 	
 	designedBy.innerHTML = dataLang.footer;
 	searchInput.placeholder = dataLang.searching;
@@ -168,7 +170,7 @@ function displayDataTranslated(dataLang){
 	aboutTheVariant.innerHTML = dataLang.AboutCoronavirusVariant.content;
 	nameGuide.textContent = dataLang.SoftwareInfo.title;
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
-	dailyChart.innerHTML = dataLang.Chart.title3;
+	dailyChart.innerHTML = dataLang.Chart.title0;
 	message.innerHTML = dataLang.forEr;
 	
 }

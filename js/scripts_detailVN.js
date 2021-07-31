@@ -144,30 +144,17 @@ function displayDailyVietnam(jsonData){
 	var deathsArray_New = [];
 	var recoveredArray_New = [];
 	
-	const MapJsonData = Object.entries(dataChart).map(([date, detail]) => ({date,detail,}));
-	const {date,detail: {total_cases,recovered,deaths},} = MapJsonData[0];
-	const MapJsonData_Week = Object.entries(dataChart).map(([date, detail]) => ({date,detail,}));
-	
-	for(i=6; i>0; i--){
-		var dataChart_Date = MapJsonData_Week[i].date;
-		var dataChart_Detail = MapJsonData_Week[i].detail;
-		var dataChart_Yesterday = MapJsonData_Week[i+1].detail;
-		
-		dateArray.push(dataChart_Date);
-		casesArray.push(dataChart_Detail.total_cases);
-		recoveredArray.push(dataChart_Detail.recovered);
-		deathsArray.push(dataChart_Detail.deaths);
-
-		casesArray_New.push(Math.abs(dataChart_Detail.total_cases - dataChart_Yesterday.total_cases));
-		recoveredArray_New.push(Math.abs(dataChart_Detail.recovered - dataChart_Yesterday.recovered));
-		deathsArray_New.push(Math.abs(dataChart_Detail.deaths - dataChart_Yesterday.deaths));
+	for(i=1; i<7; i++){
+		dateArray.push(jsonData.data[i].date);
+		casesArray.push(jsonData.data[i].total_cases);
+		deathsArray.push(jsonData.data[i].total_deaths);
+		casesArray_New.push(jsonData.data[i].new_cases);
+		deathsArray_New.push(jsonData.data[i].new_deaths);
 	}
-	createChart(dateArray,casesArray,"Total Cases","#186FB5","casesChart");
-	createChart(dateArray,recoveredArray,"Total Recovered","#006233","recoveredChart");
-	createChart(dateArray,deathsArray,"Total Deaths","#E41E20","deathsChart");
-	createChart(dateArray,casesArray_New,"New Cases","#186FB5","newcasesChart");
-	createChart(dateArray,recoveredArray_New,"New Recovered","#006233","newrecoveredChart");
-	createChart(dateArray,deathsArray_New,"New Deaths","#E41E20","newdeathsChart");
+	createChart(dateArray,casesArray,"Total Cases","#186FB5","casesChart","bar");
+	createChart(dateArray,deathsArray,"Total Deaths","#E41E20","deathsChart","bar");
+	createChart(dateArray,casesArray_New,"New Cases","#186FB5","newcasesChart","line");
+	createChart(dateArray,deathsArray_New,"New Deaths","#E41E20","newdeathsChart","line");
 }
 function displayDailyVaccines(jsonData,Population){
 	var dateArray = [];
@@ -190,8 +177,8 @@ function displayDailyVaccines(jsonData,Population){
 		vaccineArray.push(jsonData.data[i].total_vaccinations);
 		vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
 	}
-	createChart(dateArray,vaccineArray,"Total Dose Vaccinated","#666666","vaccineChart");
-	createChart(dateArray,vaccineArray_New,"New Dose Vaccinated","#666666","newvaccineChart");
+	createChart(dateArray,vaccineArray,"Total Dose Vaccinated","#666666","vaccineChart","bar");
+	createChart(dateArray,vaccineArray_New,"New Dose Vaccinated","#666666","newvaccineChart","line");
 }
 function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
 	document.getElementById("TotalCases").innerHTML      = parseInt(TotalCases).toLocaleString('en-US');
@@ -227,7 +214,7 @@ function ForEr(){
 
 
 // Create Chart
-function createChart(dateArray, dataArray, name, color, idChart){
+function createChart(dateArray, dataArray, name, color, idChart, type){
 	var targetChart = document.getElementById(idChart);
     var data = {labels: dateArray,datasets:[{
 			barPercentage: 0.25,
@@ -237,7 +224,7 @@ function createChart(dateArray, dataArray, name, color, idChart){
 			data: dataArray,
 		}]
 	};
-    var config = {type:'line',data,options:{tension: 0.3}};
+    var config = {type:type,data,options:{tension: 0.3}};
 	var myChart = new Chart(document.getElementById(idChart),config);
 }
 
