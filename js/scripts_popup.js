@@ -25,7 +25,13 @@ $("#txtAboutData").change(function(){
 		ToggleOrHide("#viewModalVaccine");
 		$(this).val('');
 	}
-	// SoftwareInfo
+	// Coronavirus Variant
+	if(target=="CoronavirusVariant"){
+		$("#imgVariant").attr("src", "https://cdn3.vox-cdn.com/thumbor/tI_pgtkb6RlfKrPJ2Z84NpV6VYI=/0x1080/volume-assets.voxmedia.com/production/a9369f3697a931e025b06cc49cad9f50/VDC_XEC_019_variants_explained_CLEAN.jpg");
+		ToggleOrHide("#viewModalVariant");
+		$(this).val('');
+	}
+	// Software Info
 	if(target=="SoftwareInfo"){
 		ToggleOrHide("#viewModalGuide");
 		$(this).val('');
