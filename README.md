@@ -2,11 +2,12 @@
 https://covid19-kent.netlify.app/
 
 <br>
-
-### The situation of the Coronavirus Epidemic data around The World and Detail Vietnam Country. Includes the following functions:
+## Introduction
+#### The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ...
 <br>
 
-|Name Functions|Descriptions|
+## Functions
+|Name|Descriptions|
 |-|-|
 |World Tracker|Global Data / Country Data|
 | |(Display Total Data and Daily Data)|
