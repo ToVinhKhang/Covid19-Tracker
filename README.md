@@ -7,7 +7,12 @@ https://covid19-kent.netlify.app/
 #### _The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
 <br>
 
-|<img src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="400">|<img src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="400">|
+<img src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/World_Tracker.png" width="450">
+<img src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Vietnam_Tracker.png" width="450">
+<img src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Detail_Vaccination.png" width="300">
+<img src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Daily_History.png" width="300">
+<img src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="300">
+
 <br>
 
 ## Functions
