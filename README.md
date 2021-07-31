@@ -7,10 +7,10 @@ https://covid19-kent.netlify.app/
 #### _The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
 <br>
 
-<p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" ></p>
-<p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" ></p>
-<p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png"></p>
-<p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" ></p>
+<p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="300"></p>
+<p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="300"></p>
+<p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="300"></p>
+<p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="300"></p>
 
 
 <br>
