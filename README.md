@@ -8,10 +8,9 @@ https://covid19-kent.netlify.app/
 <br>
 
 <p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/World_Tracker.png" width="600"></p>
-<img align="center" alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="400">
-<img align="center" alt="DetailVaccination" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="400">
-<img align="left" alt="DailyHistory" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Daily_History.png" width="400">
-<img align="right" alt="CoronaVariant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="400">
+<p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="400"></p>
+<p align="center"><img alt="DetailVaccination" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="400"></p>
+
 
 <br>
 
