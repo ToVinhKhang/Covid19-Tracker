@@ -2,14 +2,10 @@
 <details>
    <summary>Release</summary>
    >>  https://covid19-kent.netlify.app/
-   >> <details>
-      <summary>Release</summary>
-      >>  https://covid19-kent.netlify.app/
-   </details>
 </details>
 
 <details>
-   <summary>Visualization</summary>
+   <summary>Illustration</summary>
    <p align="center"><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="100%"></p>
    <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="100%"></p>
    <p align="center"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="100%"></p>
