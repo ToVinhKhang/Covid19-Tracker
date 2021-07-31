@@ -104,11 +104,13 @@ function displayDataTranslated(dataLang){
 	var aboutTheVaccine = document.getElementById("aboutTheVaccine");
 	var nameVaccineDetails = document.getElementById("nameVaccineDetails");
 	var aboutTheVaccineDetails = document.getElementById("aboutTheVaccineDetails");
+	var nameVariant = document.getElementById("nameVariant");
+	var aboutTheVariant = document.getElementById("aboutTheVariant");
 	var nameGuide = document.getElementById("nameGuide");
 	var aboutGuide = document.getElementById("aboutGuide");
 	var dailyChart = document.getElementById("dailyChart");	
 	var message = document.getElementById("message");	
-	
+
 	th_contries.innerHTML = dataLang.tableWorld.th1;
 	th_cases.innerHTML = dataLang.tableWorld.th2;
 	th_recovered.innerHTML = dataLang.tableWorld.th3;
@@ -162,6 +164,8 @@ function displayDataTranslated(dataLang){
 	aboutTheVaccine.innerHTML = dataLang.AboutVaccineTechnology.content;
 	nameVaccineDetails.textContent = dataLang.AboutVaccineDetails.title;
 	aboutTheVaccineDetails.innerHTML = dataLang.AboutVaccineDetails.content;
+	nameVariant.textContent = dataLang.AboutCoronavirusVariant.title;
+	aboutTheVariant.innerHTML = dataLang.AboutCoronavirusVariant.content;
 	nameGuide.textContent = dataLang.SoftwareInfo.title;
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
 	dailyChart.innerHTML = dataLang.Chart.title3;
