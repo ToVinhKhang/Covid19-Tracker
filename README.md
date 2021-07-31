@@ -82,19 +82,17 @@ https://api-kent.netlify.app/.netlify/functions/api
    Example:
    {
          "data":{
-               "2021-07-29":{
-                     "total_cases":101173,
-                     "deaths":524,
-                     "recovered":19342,
-                     "critical":0,
-                     "tested":11890084,
-                     "death_ratio":0.005179247427673391,
-                     "recovery_ratio":0.19117748806499757
-               },
-               "2021-07-28":{
-                     ...
-               },
+            "0":{
+               "date":"2021-07-24",
+               "total_cases":94913,
+               "new_cases":7956,
+               "total_deaths":370,
+               "new_deaths":0
+            },
+            "1":{
                ...
+            },
+            ...
          }
    }
 ```
