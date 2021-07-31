@@ -15,7 +15,7 @@ https://covid19-kent.netlify.app/
 <br>
 
 ## Functions
-<p align="center">
+<div align="center">
 |Name|Descriptions|
 |-|-|
 |World Tracker|Global Data / Country Data|
@@ -28,7 +28,8 @@ https://covid19-kent.netlify.app/
 | |_(Display Info by Popup Modal)_|
 |Others|Filter, Sort, Mode and Devices|
 | |_(Filter Name of Countries, Sort Increase Decrease, Dark-Light, Responsive)_|
-</p>
+</div>
+
 <br>
 <br>
 
