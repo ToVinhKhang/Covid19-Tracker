@@ -25,20 +25,15 @@
       <img align="left" alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Bar01.png?token=ALF7X7UKFPLW5KUY3BFDOI3BB6AM6" width="220">
       <img align="left"alt="ReadmoreList" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/ReadmoreList.png?token=ALF7X7W7GWTVBXDTWUCTKY3BB6ANW" width="220">
    </p>
-   <p >
-      
-   </p>
+
    <p >
       <img align="right" alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Bar02.png?token=ALF7X7Q7KOSX26KQ2B3KHILBB6AMC" width="220">
       <img align="right" alt="SwitchLang" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SwitchLangs.png?token=ALF7X7VYDTHIC4S4GK7P3NDBB6ALI" width="60">
       <img align="right" alt="DarkLight" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/DarkLight.png?token=ALF7X7UAXPAWALW2JOFAUJTBB6AJ4" width="60">
    </p>
-   <p>
-      
-   </p>
-   <p >
-      
-   </p>
+   <p align="center">&nbsp;</p>
+   
+   <h1 align="center">CORONAVIRUS VARIANT</h1>
 </details>
 <br>
 
