@@ -19,6 +19,10 @@
    
    <h1 align="center">CORONAVIRUS VARIANT</h1>
    <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%">
+
+   <h1 align="center">TOOL BARS</h1>
+   <img alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar01.png" width="100%">
+   <img alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar02.png" width="100%">
 </details>
 <br>
 
