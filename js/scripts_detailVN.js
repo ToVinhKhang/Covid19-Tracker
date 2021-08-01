@@ -87,7 +87,8 @@ function displayCity(jsonData){
 	var totalRecovered = jsonData.total.totalRecovered;
 	var totalDeaths    = jsonData.total.totalDeaths;
 	
-	displayTotalVN(totalCases,totalRecovered,totalDeaths);
+	displayTotalVN_Cases(totalCases);
+	displayTotalVN_Recovered(totalRecovered);
 	displayRate(totalCases,totalRecovered,totalDeaths);
 	
 	//Make sure focus max value at first
@@ -180,11 +181,20 @@ function displayDailyVaccines(jsonData,Population){
 	createChart(dateArray,vaccineArray,"Total Dose Vaccinated","#666666","vaccineChart","bar");
 	createChart(dateArray,vaccineArray_New,"New Dose Vaccinated","#666666","newvaccineChart","line");
 }
-function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
+
+function displayTotalVN_Cases(TotalCases){
 	document.getElementById("TotalCases").innerHTML      = parseInt(TotalCases).toLocaleString('en-US');
+}
+function displayTotalVN_Recovered(TotalRecovered){
 	document.getElementById("TotalRecovered").innerHTML  = parseInt(TotalRecovered).toLocaleString('en-US');
+}
+function displayTotalVN_Deaths(TotalDeaths){
 	document.getElementById("TotalDeaths").innerHTML     = parseInt(TotalDeaths).toLocaleString('en-US');
 }
+function displayTotalVN_Population(Population){
+	document.getElementById("Population").innerHTML      = ShorterValue(Population,2);
+}
+
 function displayRate(totalCases,totalRecovered,totalDeaths){
 	var incidenceRate = parseFloat((parseInt(totalCases)/(98278872))*100).toFixed(2)+`%`;
 	var recoveryRate  = parseFloat((parseInt(totalRecovered)/totalCases)*100).toFixed(2)+`%`;

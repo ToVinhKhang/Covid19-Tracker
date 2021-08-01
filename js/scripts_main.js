@@ -99,9 +99,9 @@ function displayDataGlobal(jsonData){
 		
 		// Custom Rate in Vietnam
 		if(u.country == "Vietnam"){
-			var Population     = u.population;
-			document.getElementById("Population").innerHTML = ShorterValue(Population,2);
-			getDataDailyVaccines(Population);
+			displayTotalVN_Deaths(u.deaths);
+			displayTotalVN_Population(u.population);
+			getDataDailyVaccines(u.population);
 		}
 	});
 	//Wait 1s
