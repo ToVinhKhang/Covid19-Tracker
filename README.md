@@ -8,17 +8,17 @@
    <summary>Some Illustrations</summary>
    <p align="left">
       <h1 align="center">WORLD TRACKER</h1>
-      <img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="100%">
+      <img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Pic0.png?token=ALF7X7XLXRGM3GHK4NVPVIDBB6FAU" width="100%">
    </p>
    
    <h1 align="center">VIETNAM TRACKER</h1>
-   <img align="left" alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="100%">
-   <img align="left" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="100%">
+   <img align="left" alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Pic1.png?token=ALF7X7T3KBQ6M4UNY7NQU53BB6FAY" width="100%">
+   <img align="left" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Pic2.png?token=ALF7X7XE7KW2IDHIWNDAEILBB6FA6" width="100%">
    
    <p align="center">&nbsp;</p>
    
    <h1 align="center">CORONAVIRUS VARIANT</h1>
-   <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%">
+   <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Variant_EN_lang.png?token=ALF7X7V45CGD3ZRWAXJ2LALBB6FEM" width="100%">
 
    <h1 align="center">TOOLS</h1>
    <p align="center">
