@@ -20,10 +20,10 @@
    <h1 align="center">CORONAVIRUS VARIANT</h1>
    <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%">
 
-   <h1 align="center">TOOL BARS</h1>
+   <h1 align="center">TOOLS</h1>
    <p align="center">
       <img alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Bar01.png?token=ALF7X7UKFPLW5KUY3BFDOI3BB6AM6" width="220">
-      <img alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Bar02.png?token=ALF7X7Q7KOSX26KQ2B3KHILBB6AMC" width="220">
+      <img alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Bar02.png?token=ALF7X7Q7KOSX26KQ2B3KHILBB6AMC" width="200">
    </p>
 
    <p align="center">
