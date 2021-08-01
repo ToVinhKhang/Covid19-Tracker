@@ -6,10 +6,10 @@
 
 <details>
    <summary>Some Illustrations</summary>
-   <p align="center"><h1 align="left">WORLD TRACKER</h1><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="100%"></p>
-   <p align="center"><h1 align="left">VIETNAM TRACKER</h1><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="100%"></p>
-   <p align="center"><h1 align="left">WORLD TRACKER</h1><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="100%"></p>
-   <p align="center"><h1 align="left">CORONAVIRUS VARIANT</h1><img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%"></p>
+   <p align="left"><h1 align="center">WORLD TRACKER</h1><img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="100%"></p>
+   <p align="left"><h1 align="center">VIETNAM TRACKER</h1><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="100%"></p>
+   <p align="left"><img alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="100%"></p>
+   <p align="left"><h1 align="center">CORONAVIRUS VARIANT</h1><img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%"></p>
 </details>
 <br>
 
