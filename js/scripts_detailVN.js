@@ -89,6 +89,7 @@ function displayCity(jsonData){
 	
 	displayTotalVN_Cases(totalCases);
 	displayTotalVN_Recovered(totalRecovered);
+	//displayTotalVN_Deaths(totalDeaths);
 	displayRate(totalCases,totalRecovered,totalDeaths);
 	
 	//Make sure focus max value at first
