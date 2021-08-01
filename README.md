@@ -22,10 +22,10 @@
 
    <h1 align="center">TOOL BARS</h1>
    <p align="center">
-      <img align="right" alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar01.png" width="220">
+      <img alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar01.png" width="220">
    </p>
    <p align="center">
-      <img align="left" alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar02.png" width="220">
+      <img alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar02.png" width="220">
    </p>
 </details>
 <br>
