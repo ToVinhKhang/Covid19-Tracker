@@ -28,8 +28,8 @@
 
    <p align="center">
       <img alt="ReadmoreList" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/ReadmoreList.png?token=ALF7X7W7GWTVBXDTWUCTKY3BB6ANW" width="210">
+      <img alt="DarkLight" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/DarkLight.png?token=ALF7X7UAXPAWALW2JOFAUJTBB6AJ4" width="70">
       <img alt="SwitchLang" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SwitchLangs.png?token=ALF7X7VYDTHIC4S4GK7P3NDBB6ALI" width="120">
-      <img alt="DarkLight" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/DarkLight.png?token=ALF7X7UAXPAWALW2JOFAUJTBB6AJ4" width="80">
    </p>
    <p align="center">&nbsp;</p>
 </details>
