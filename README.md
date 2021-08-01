@@ -15,6 +15,9 @@
    <img align="left" alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic1.png" width="100%">
    <img align="left" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic2.png" width="100%">
    
+   <br>
+   <br>
+   
    <h1 align="center">CORONAVIRUS VARIANT</h1>
    <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%">
 </details>
