@@ -21,8 +21,8 @@
    <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%">
 
    <h1 align="center">TOOL BARS</h1>
-   <img alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar01.png" width="200">
-   <img alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar02.png" width="200">
+   <img align="right" alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar01.png" width="250">
+   <img align="left" alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar02.png" width="250">
 </details>
 <br>
 
