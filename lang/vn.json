@@ -73,7 +73,7 @@
 	},
 	"AboutCoronavirusVariant": {
 		"title": "BIẾN CHỦNG CORONA",
-		"content": "<img class='imgVariant' src='./img/Variant_VN_lang.png'>"
+		"content": "<img class='imgVariant' src='https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Variant_VN_lang.png?token=ALF7X7VRWFDQEXSV3WY4S43BB6DIA'>"
 	},
 	"SoftwareInfo": {
 		"title": "VỀ PHẦN MỀM",

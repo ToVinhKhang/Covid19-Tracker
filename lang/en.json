@@ -73,7 +73,7 @@
 	},
 	"AboutCoronavirusVariant": {
 		"title": "CORONAVIRUS VARIANT",
-		"content": "<img class='imgVariant' src='./img/Variant_EN_lang.png'>"
+		"content": "<img class='imgVariant' src='https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Variant_EN_lang.png?token=ALF7X7WLFP46NI4ABWGWBY3BB6DH4'>"
 	},
 	"SoftwareInfo": {
 		"title": "SOFTWARE INFO",
