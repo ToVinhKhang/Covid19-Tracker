@@ -27,10 +27,10 @@
    </p>
 
    <p align="center">
-      <img alt="ReadmoreList" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/ReadmoreList.png?token=ALF7X7W7GWTVBXDTWUCTKY3BB6ANW" width="205">
+      <img alt="ReadmoreList" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/ReadmoreList.png?token=ALF7X7W7GWTVBXDTWUCTKY3BB6ANW" width="208">
       <img alt="VNTracker" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/iconVN.png?token=ALF7X7Q6HADO77D2HZL5UHTBB6DK2" width="52">
       <img alt="DarkLight" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/DarkLight.png?token=ALF7X7UAXPAWALW2JOFAUJTBB6AJ4" width="50">
-      <img alt="SwitchLang" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SwitchLangs.png?token=ALF7X7VYDTHIC4S4GK7P3NDBB6ALI" width="93">
+      <img alt="SwitchLang" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SwitchLangs.png?token=ALF7X7VYDTHIC4S4GK7P3NDBB6ALI" width="90">
    </p>
    <p align="center">&nbsp;</p>
 </details>
