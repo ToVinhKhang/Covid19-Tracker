@@ -21,20 +21,20 @@
    <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%">
 
    <h1 align="center">TOOL BARS</h1>
-   <p >
+   <p align="left">
       <img alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Bar01.png?token=ALF7X7UKFPLW5KUY3BFDOI3BB6AM6" width="220">
    </p>
-   <p >
+   <p align="left">
       <img alt="ReadmoreList" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/ReadmoreList.png?token=ALF7X7W7GWTVBXDTWUCTKY3BB6ANW" width="220">
    </p>
    <p align="right">
       <img alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Bar02.png?token=ALF7X7Q7KOSX26KQ2B3KHILBB6AMC" width="220">
    </p>
    <p align="right">
-      <img alt="SwitchLang" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SwitchLangs.png?token=ALF7X7VYDTHIC4S4GK7P3NDBB6ALI" width="100">
+      <img alt="SwitchLang" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SwitchLangs.png?token=ALF7X7VYDTHIC4S4GK7P3NDBB6ALI" width="60">
    </p>
    <p align="right">
-      <img alt="DarkLight" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/DarkLight.png?token=ALF7X7UAXPAWALW2JOFAUJTBB6AJ4" width="100">
+      <img alt="DarkLight" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/DarkLight.png?token=ALF7X7UAXPAWALW2JOFAUJTBB6AJ4" width="60">
    </p>
 </details>
 <br>
