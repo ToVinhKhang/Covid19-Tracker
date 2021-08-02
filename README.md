@@ -184,10 +184,10 @@ https://api-kent.netlify.app/.netlify/functions/api
 
 
 ## REFERENCES
-#### [1] World Health Organization: _https://www.who.int/_
-#### [2] Our World in Data: _https://ourworldindata.org/covid-vaccinations_
-#### [3] Vietnam Ministry of Health: _https://ncov.moh.gov.vn/_
-#### [4] Vietnam Covid Vaccination Portal: _https://tiemchungcovid19.gov.vn/portal_
-#### [5] Axios Variant Tracker: _https://www.axios.com/variants-tracker/_
+#### [1] World Health Organization: [Click Here](https://www.who.int/) _https://www.who.int/_
+#### [2] Our World in Data: [Click Here](https://ourworldindata.org/covid-vaccinations) _https://ourworldindata.org/covid-vaccinations_
+#### [3] Vietnam Ministry of Health: [Click Here](https://ncov.moh.gov.vn/) _https://ncov.moh.gov.vn/_
+#### [4] Vietnam Covid Vaccination Portal: [Click Here](https://tiemchungcovid19.gov.vn/portal) _https://tiemchungcovid19.gov.vn/portal_
+#### [5] Axios Variant Tracker: [Click Here](https://www.axios.com/variants-tracker/) _https://www.axios.com/variants-tracker/_
 <br>
 <br>
