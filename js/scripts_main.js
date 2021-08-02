@@ -99,7 +99,6 @@ function displayDataGlobal(jsonData){
 		
 		// Custom Rate in Vietnam
 		if(u.country == "Vietnam"){
-			displayTotalVN_Deaths(u.deaths);
 			displayTotalVN_Population(u.population);
 			getDataDailyVaccines(u.population);
 		}
