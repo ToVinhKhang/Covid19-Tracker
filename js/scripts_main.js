@@ -82,7 +82,14 @@ function displayDataGlobal(jsonData){
 		let td4 = document.createElement('td');
 		let td5 = document.createElement('td');
 		
-		td0.innerHTML = `<img class="flagCountry" src="`+u.countryInfo.flag+`">`;
+		// Custom in Vietnam
+		if(u.country == "Vietnam"){
+			td0.innerHTML = `<img onclick="SwitchTracker()" class="flagCountry" src="`+u.countryInfo.flag+`">`;
+			displayTotalVN_Population(u.population);
+			getDataDailyVaccines(u.population);
+		}
+		else{td0.innerHTML = `<img class="flagCountry" src="`+u.countryInfo.flag+`">`;}
+
 		td1.innerHTML = u.country;
 		td2.innerHTML = u.cases.toLocaleString('en-US')+`<br><span>+`+u.todayCases.toLocaleString('en-US')+`</span>`; //Commas thousands
 		td3.innerHTML = u.recovered.toLocaleString('en-US')+`<br><span>+`+u.todayRecovered.toLocaleString('en-US')+`</span>`;
@@ -96,15 +103,9 @@ function displayDataGlobal(jsonData){
 		tr.appendChild(td4);
 		tr.appendChild(td5);
 		table.appendChild(tr);
-		
-		// Custom Rate in Vietnam
-		if(u.country == "Vietnam"){
-			displayTotalVN_Population(u.population);
-			getDataDailyVaccines(u.population);
-		}
 	});
 	//Wait 1s
-	setTimeout(()=>{}, 1000);
+	setTimeout(()=>{}, 1500);
 }
 
 function loadDataPopup(dataEN){

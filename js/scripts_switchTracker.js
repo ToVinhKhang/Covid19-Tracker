@@ -5,6 +5,10 @@
 // -----------------------------------------------
 
 $("#switchTracker").click(function() {
+	SwitchTracker();
+});
+
+function SwitchTracker(){
 	var checkClass = document.getElementById("switchTracker").classList;
 	
 	// Display Vietnam Tracker
@@ -26,4 +30,8 @@ $("#switchTracker").click(function() {
 		$(".vnLogo").attr("src", "https://image.flaticon.com/icons/png/512/1652/1652844.png");
 		checkClass.remove("vnLogo");
 	}
-});
+	
+	// Scroll Top 
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+};
