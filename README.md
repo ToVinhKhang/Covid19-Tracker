@@ -187,6 +187,6 @@ https://api-kent.netlify.app/.netlify/functions/api
 #### [2] Our World in Data: [Click Here](https://ourworldindata.org/covid-vaccinations)
 #### [3] Vietnam Ministry of Health: [Click Here](https://ncov.moh.gov.vn/)
 #### [4] Vietnam Covid Vaccination Portal: [Click Here](https://tiemchungcovid19.gov.vn/portal)
-#### [5] Centers for Disease Control and Prevention: [Click Here](https://www.axios.com/variants-tracker/)
+#### [5] Centers for Disease Control and Prevention: [Click Here](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html)
 <br>
 <br>
