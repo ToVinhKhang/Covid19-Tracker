@@ -183,10 +183,10 @@ https://api-kent.netlify.app/.netlify/functions/api
 
 
 ## REFERENCES
-#### [1] World Health Organization: <a href="https://www.who.int/" target="_blank">Click Here</a> [Click Here](https://www.who.int/){:target="_blank" rel="noopener"}
-#### [2] Our World in Data: [Click Here](https://ourworldindata.org/covid-vaccinations){:target="_blank" rel="noopener"}
-#### [3] Vietnam Ministry of Health: [Click Here](https://ncov.moh.gov.vn/){:target="_blank" rel="noopener"}
-#### [4] Vietnam Covid Vaccination Portal: [Click Here](https://tiemchungcovid19.gov.vn/portal){:target="_blank" rel="noopener"}
-#### [5] Centers for Disease Control and Prevention: [Click Here](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html){:target="_blank" rel="noopener"}
+#### [1] World Health Organization: [Click Here](https://www.who.int/)
+#### [2] Our World in Data: [Click Here](https://ourworldindata.org/covid-vaccinations)
+#### [3] Vietnam Ministry of Health: [Click Here](https://ncov.moh.gov.vn/)
+#### [4] Vietnam Covid Vaccination Portal: [Click Here](https://tiemchungcovid19.gov.vn/portal)
+#### [5] Centers for Disease Control and Prevention: [Click Here](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html)
 <br>
 <br>
