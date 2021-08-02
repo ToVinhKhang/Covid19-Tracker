@@ -1,11 +1,11 @@
 # Covid-19 Tracker
 <details>
-   <summary>Release</summary>
+   > <summary>Release</summary>
    •  https://covid19-kent.netlify.app/
 </details>
 
 <details>
-   <summary>Some Illustrations</summary>
+   > <summary>Some Illustrations</summary>
    <p align="left">
       <h1 align="center">WORLD TRACKER</h1>
       <img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Pic0.png?token=ALF7X7XLXRGM3GHK4NVPVIDBB6FAU" width="100%">
