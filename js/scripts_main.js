@@ -20,6 +20,9 @@ window.addEventListener('load',() => {
 	table = document.getElementById("table");
 	getDataGlobal();
 	loadDataPopupAtFirst();
+	
+	//Again - For sure SortTable work
+	getDataGlobalAgain();
 });
 
 
