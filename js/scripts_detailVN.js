@@ -28,15 +28,8 @@ window.addEventListener('load',() => {
 	getDataCity();
 	getDataDetailVaccine();
 	getDataDailyVietnam();
-	
-	//Again - For sure SortTable work
-	getDataAgain();
 });
 
-function getDataAgain(){
-	getDataCity();
-	getDataDetailVaccine();
-}
 
 //---------
 // GET DATA
