@@ -82,20 +82,21 @@ function displayDataGlobal(jsonData){
 		let td4 = document.createElement('td');
 		let td5 = document.createElement('td');
 		
+		td0.innerHTML = `<img class="flagCountry" src="`+u.countryInfo.flag+`">`;
+		td1.innerHTML = u.country;
+		td2.innerHTML = u.cases.toLocaleString('en-US')+`<br><span>+`+u.todayCases.toLocaleString('en-US')+`</span>`;
+		td3.innerHTML = u.recovered.toLocaleString('en-US')+`<br><span>+`+u.todayRecovered.toLocaleString('en-US')+`</span>`;
+		td4.innerHTML = u.deaths.toLocaleString('en-US')+`<br><span>+`+u.todayDeaths.toLocaleString('en-US')+`</span>`;
+		
 		// Custom in Vietnam
 		if(u.country == "Vietnam"){
-			td0.innerHTML = `<img onclick="SwitchTracker()" class="flagCountry" src="`+u.countryInfo.flag+`">`;
+			td5.innerHTML = u.population.toLocaleString('en-US')+`<br><span class="cursorPointer" onclick="SwitchTracker()">See Details!</span>`;
+			
 			displayTotalVN_Population(u.population);
 			getDataDailyVaccines(u.population);
 		}
-		else{td0.innerHTML = `<img class="flagCountry" src="`+u.countryInfo.flag+`">`;}
+		else{td5.innerHTML = u.population.toLocaleString('en-US');}
 
-		td1.innerHTML = u.country;
-		td2.innerHTML = u.cases.toLocaleString('en-US')+`<br><span>+`+u.todayCases.toLocaleString('en-US')+`</span>`; //Commas thousands
-		td3.innerHTML = u.recovered.toLocaleString('en-US')+`<br><span>+`+u.todayRecovered.toLocaleString('en-US')+`</span>`;
-		td4.innerHTML = u.deaths.toLocaleString('en-US')+`<br><span>+`+u.todayDeaths.toLocaleString('en-US')+`</span>`;
-		td5.innerHTML = u.population.toLocaleString('en-US');
-		
 		tr.appendChild(td0);
 		tr.appendChild(td1);
 		tr.appendChild(td2);
@@ -104,8 +105,8 @@ function displayDataGlobal(jsonData){
 		tr.appendChild(td5);
 		table.appendChild(tr);
 	});
-	//Wait 1s
-	setTimeout(()=>{}, 1500);
+	//Wait 2s
+	setTimeout(()=>{}, 2000);
 }
 
 function loadDataPopup(dataEN){
