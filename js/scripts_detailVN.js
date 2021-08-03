@@ -220,10 +220,7 @@ function ForEr(){
 	document.getElementById("message").style.display="block";
 	document.getElementById("content-total").style.display="none";
 	document.getElementById("content-detail").style.display="none";
-	document.getElementById("footer").style.display="none";
 }
-
-
 
 // Create Chart
 function createChart(dateArray, dataArray, name, color, idChart, type){
