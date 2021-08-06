@@ -67,7 +67,7 @@
 		"title2": "DEATHS",
 		"title3": "DOSE VACCINATED"
 	},
-	"AboutData" : "<option value=''>Read More</option><option value='AboutTheData'>• About The Data </option><option value='VaccineDetails'>• Vaccine Details </option><option value='VaccineTechnology'>• Vaccine Technology </option><option value='CoronavirusVariant'>• Coronavirus Variant </option><option value='SoftwareInfo'>• Software Info </option>",
+	"AboutData" : "<option value=''>Read More</option><option value='AboutTheData'>• About The Data </option><option value='VaccineDetails'>• Vaccine Details </option><option value='VaccineTechnology'>• Vaccine Technology </option><option value='CoronavirusVariant'>• Coronavirus Variant </option><option value='TreatmentMedicine'>• Treatment Medicine</option><option value='SoftwareInfo'>• Software Info </option>",
 	"AboutTheData": {
 		"title": "ABOUT THE DATA",
 		"content": "CHANGES RAPIDLY<h6>The Data is loaded at the first and then updated every 15 minutes.</h6><h6 class='plusSign'>For World Tracker, it might not reflect some cases still being reported. Numbers are based on official estimates, which may not account for unverified cases in countries lacking the proper infrastructure to diagnose patients. The '+' sign means that the newly collected data is recorded during the day. Changes may result in untimely updates/unreported data for the linked region.</h6><h6 class='plusSign'>For Vietnam Tracker, the data on cities/provinces already includes pending cases numbered by the Ministry of Health of Vietnam.</h6><h6 class='Line'></h6>NEW UPDATES<h6>Information about Vaccine and Coronavirus Variant have been added in the 'Read More' selection.</h6>"

@@ -67,7 +67,7 @@
 		"title2": "TỬ VONG",
 		"title3": "LIỀU ĐÃ TIÊM"
 	},
-	"AboutData" : "<option value=''>Xem Thêm</option><option value='AboutTheData'>• Về Dữ Liệu </option><option value='VaccineDetails'>• Chi Tiết Vắcxin </option><option value='VaccineTechnology'>• Công Nghệ Vắcxin </option><option value='CoronavirusVariant'>• Biến Chủng Corona </option><option value='SoftwareInfo'>• Về Phần Mềm </option>",
+	"AboutData" : "<option value=''>Xem Thêm</option><option value='AboutTheData'>• Về Dữ Liệu </option><option value='VaccineDetails'>• Chi Tiết Vắcxin </option><option value='VaccineTechnology'>• Công Nghệ Vắcxin </option><option value='CoronavirusVariant'>• Biến Chủng Corona </option><option value='TreatmentMedicine'>• Thuốc Điều Trị</option><option value='SoftwareInfo'>• Về Phần Mềm </option>",
 	"AboutTheData": {
 		"title": "VỀ DỮ LIỆU",
 		"content": "THAY ĐỔI NHANH CHÓNG<h6>Dữ liệu được tải ở lần đầu tiên và sau đó được cập nhật 15 phút một lần. </h6><h6 class='plusSign'>Đối với Bộ theo dõi Thế giới, có thể không phản ánh một số trường hợp vẫn đang được báo cáo. Các con số dựa trên ước tính chính thức, có thể không tính đến các trường hợp chưa được xác minh ở các quốc gia thiếu cơ sở hạ tầng thích hợp để chẩn đoán bệnh nhân. Dấu '+' có nghĩa là dữ liệu mới thu thập được ghi nhận trong ngày. Thay đổi có thể dẫn đến dữ liệu chưa kịp cập nhật/chưa được báo cáo cho khu vực được liên kết.</h6><h6 class='plusSign'>Đối với Bộ theo dõi Việt Nam, dữ liệu về các tỉnh/thành phố đã bao gồm các ca đang chờ được Bộ Y Tế Việt Nam đánh số. </h6><h6 class='Line'></h6>CẬP NHẬT MỚI<h6>Thông tin về Vắcxin và Biến Chủng Coronavirus đã được bổ sung tại mục 'Xem Thêm'.</h6>"
