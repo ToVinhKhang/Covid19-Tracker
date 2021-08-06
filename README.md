@@ -44,13 +44,13 @@ _The Covid19 Tracker project was developed to contribute to the community. This 
 ## FUNCTIONS
 | Name | Descriptions |
 |-|-|
-| World Tracker | Global Data / Country Data |
+| World Tracker | Global Data / Country Data / Continent Data|
 | | _(Display Total Data and Daily Data)_ |
 | Vietnam Tracker | Vietnam Data / City-Province Data / Vaccines Data |
 | | _(Display Total Data, Daily Data, Rate Info and Chart)_ |
 | Languages | Switching English / Vietnamese |
 | | _(Display English At First)_ |
-| Read More | About The Data / Vaccine Details / Vaccine Technology / Coronavirus Variant / Software Info |
+| Read More | About The Data / Vaccine Details & Technology / Coronavirus Variant / Treatment Medicine |
 | | _(Display Info by Popup Modal)_ |
 | Others | Filter, Sort, Mode and Devices |
 | | _(Filter Name of Countries, Sort Increase Decrease, Dark-Light, Responsive)_ |
