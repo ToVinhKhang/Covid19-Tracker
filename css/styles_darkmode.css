@@ -37,10 +37,9 @@
 .dark-mode > #viewModalVariant > div > div > .modal-header > .close{color: white;}
 .dark-mode > #viewModalMedicine > div > div{background-color: #1c1e21!important;}
 .dark-mode > #viewModalMedicine > div > div > .modal-header{color: #17a2b8!important;}
-.dark-mode > #viewModalMedicine > div > div > .modal-body > table > tbody > tr > td{color: white!important;}
-.dark-mode > #viewModalMedicine > div > div > .modal-body > table > tbody > tr > td > a{color: white!important;}
-.dark-mode > #viewModalMedicine > div > div > .modal-body > table > tbody > tr > td > a:hover{color: white!important;}
+.dark-mode > #viewModalMedicine > div > div > .modal-body{color: white!important;}
 .dark-mode > #viewModalMedicine > div > div > .modal-header > .close{color: white;}
+
 .dark-mode > .footer{color: #a4adc8!important;}
 .dark-mode h2{color: white!important;}
 .dark-mode #tableVN > tr{background-color: #1c1e21!important;color: white;}
