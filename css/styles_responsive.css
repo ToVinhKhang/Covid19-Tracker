@@ -49,7 +49,6 @@
 	#txtAfrica,#Africa{font-size: 150%;}
 	#txtOceania,#Oceania{font-size: 150%;}
 	.continent{margin: 20px;}
-	fieldsetContinent
 }
 @media screen and (max-width: 768px) {
 	.vnDetailsFlag{height: 50%;}
@@ -79,6 +78,7 @@
 	#txtAfrica{font-size: 110%;}
 	#txtOceania{font-size: 110%;}
 	.continent{margin: 18px;}
+	.imgMedicine{width:100%;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
