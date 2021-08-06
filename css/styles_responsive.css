@@ -62,6 +62,7 @@
 	#txtCasesDataChart,#txtDeathsDataChart{width: 100px;font-size: 20px;}
 	#txtDoseVaccinatedDataChart{width: 200px;font-size: 20px;}
 	#message{font-size: 14px;}
+	.reference{font-size:75%;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
