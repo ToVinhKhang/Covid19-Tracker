@@ -10,7 +10,7 @@ $("#txtAboutData").change(function(){
 	// About The Data
 	if(target=="AboutTheData"){
 		$("#imgCfmCovid").attr("src", "https://img.icons8.com/bubbles/2x/question-mark.png");
-		ToggleOrHide("#viewModalData")
+		ToggleOrHide("#viewModalData");
 		$(this).val('');
 	}
 	// Vaccine Details
@@ -28,6 +28,11 @@ $("#txtAboutData").change(function(){
 	// Coronavirus Variant
 	if(target=="CoronavirusVariant"){
 		ToggleOrHide("#viewModalVariant");
+		$(this).val('');
+	}
+	// Treatment Medicine
+	if(target=="TreatmentMedicine"){
+		ToggleOrHide("#viewModalMedicine");
 		$(this).val('');
 	}
 	// Software Info

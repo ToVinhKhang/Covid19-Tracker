@@ -46,7 +46,6 @@ function Swap(Tr,M){
 	var Africa = document.getElementById("Africa");
 	var Oceania = document.getElementById("Oceania");
 	
-	
 	Population.innerHTML = Population.innerHTML.replace(Tr,M);
 	GlobalCases.innerHTML = GlobalCases.innerHTML.replace(Tr,M);
 	GlobalRecovered.innerHTML = GlobalRecovered.innerHTML.replace(Tr,M);
@@ -127,6 +126,8 @@ function displayDataTranslated(dataLang){
 	var aboutTheVaccineDetails = document.getElementById("aboutTheVaccineDetails");
 	var nameVariant = document.getElementById("nameVariant");
 	var aboutTheVariant = document.getElementById("aboutTheVariant");
+	var nameMedicine = document.getElementById("nameMedicine");
+	var aboutTheMedicine = document.getElementById("aboutTheMedicine");
 	var nameGuide = document.getElementById("nameGuide");
 	var aboutGuide = document.getElementById("aboutGuide");
 	var dailyChart = document.getElementById("dailyChart");	
@@ -183,7 +184,6 @@ function displayDataTranslated(dataLang){
 	txtAfrica.innerHTML = dataLang.Continent.txt5;
 	txtOceania.innerHTML = dataLang.Continent.txt6;
 	
-	
 	designedBy.innerHTML = dataLang.footer;
 	searchInput.placeholder = dataLang.searching;
 	txtAboutData.innerHTML = dataLang.AboutData;
@@ -196,11 +196,12 @@ function displayDataTranslated(dataLang){
 	aboutTheVaccineDetails.innerHTML = dataLang.AboutVaccineDetails.content;
 	nameVariant.textContent = dataLang.AboutCoronavirusVariant.title;
 	aboutTheVariant.innerHTML = dataLang.AboutCoronavirusVariant.content;
+	nameMedicine.textContent = dataLang.AboutTreatmentMedicine.title;
+	aboutTheMedicine.innerHTML = dataLang.AboutTreatmentMedicine.content;
 	nameGuide.textContent = dataLang.SoftwareInfo.title;
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
 	dailyChart.innerHTML = dataLang.Chart.title0;
 	message.innerHTML = dataLang.forEr;
-	
 }
 
 // ----
