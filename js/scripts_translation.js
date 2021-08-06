@@ -39,6 +39,13 @@ function Swap(Tr,M){
 	var vacTwoDose = document.getElementById("vacTwoDose");
 	var totalPlanned = document.getElementById("totalPlanned");
 	var totalRealistic = document.getElementById("totalRealistic");
+	var NorthAmerica = document.getElementById("NorthAmerica");
+	var SouthAmerica = document.getElementById("SouthAmerica");
+	var Asia = document.getElementById("Asia");
+	var Europe = document.getElementById("Europe");
+	var Africa = document.getElementById("Africa");
+	var Oceania = document.getElementById("Oceania");
+	
 	
 	Population.innerHTML = Population.innerHTML.replace(Tr,M);
 	GlobalCases.innerHTML = GlobalCases.innerHTML.replace(Tr,M);
@@ -49,6 +56,12 @@ function Swap(Tr,M){
 	vacTwoDose.innerHTML = vacTwoDose.innerHTML.replace(Tr,M);
 	totalPlanned.innerHTML = totalPlanned.innerHTML.replace(Tr,M);
 	totalRealistic.innerHTML = totalRealistic.innerHTML.replace(Tr,M);
+	NorthAmerica.innerHTML = NorthAmerica.innerHTML.replace(Tr,M);
+	SouthAmerica.innerHTML = SouthAmerica.innerHTML.replace(Tr,M);
+	Asia.innerHTML = Asia.innerHTML.replace(Tr,M);
+	Europe.innerHTML = Europe.innerHTML.replace(Tr,M);
+	Africa.innerHTML = Africa.innerHTML.replace(Tr,M);
+	Oceania.innerHTML = Oceania.innerHTML.replace(Tr,M);
 }
 
 function displayDataTranslated(dataLang){
