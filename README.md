@@ -81,7 +81,8 @@ https://api-kent.netlify.app/.netlify/functions/api
                "recovered":95726,
                "todayRecovered":0,
                "active":43655,
-               "population":39864282
+               "population":39864282,
+               "continent":"Asia"
          },{
                ...
          },
