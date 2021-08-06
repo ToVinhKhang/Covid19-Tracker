@@ -98,7 +98,7 @@
 	#AllChart{padding-top:0px;}
 	#tableVNvacDistribution{font-size: 9px;}
 	h4{font-size:100%;}
-	h6{font-size:70%;}
+	h5{font-size:70%;}
 	.reference{float: inherit;text-align: center;}
 }
 @media screen and (max-width: 376px) {
@@ -116,7 +116,7 @@
 	h2{display: none;}
 	#aboutGuide td:nth-child(1){width:50%;}
 	#table td:nth-child(6){font-size:7px;}
-	h6{font-size:60%;}
+	h5{font-size:60%;}
 	.reference{font-size:80%!important;}
 }
 @media screen and (max-width: 360px) {
