@@ -78,7 +78,6 @@
 	#txtAfrica{font-size: 110%;}
 	#txtOceania{font-size: 110%;}
 	.continent{margin: 18px;}
-	.imgMedicine{width:100%;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
