@@ -147,6 +147,8 @@ function loadDataPopup(dataEN){
 	document.getElementById("aboutTheVaccineDetails").innerHTML = dataEN.AboutVaccineDetails.content;
 	document.getElementById("nameVariant").textContent = dataEN.AboutCoronavirusVariant.title;
 	document.getElementById("aboutTheVariant").innerHTML = dataEN.AboutCoronavirusVariant.content;
+	document.getElementById("nameMedicine").textContent = dataEN.AboutTreatmentMedicine.title;
+	document.getElementById("aboutTheMedicine").innerHTML = dataEN.AboutTreatmentMedicine.content;
 	document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
 	document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
 }
