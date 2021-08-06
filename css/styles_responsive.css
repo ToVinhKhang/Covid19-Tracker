@@ -6,7 +6,7 @@
 
 /* Responsive */
 @media screen and (max-width: 1024px) {
-	#global{width: 100%;margin-bottom: 30px;}
+	#global,#continent{width: 100%;margin-bottom: 30px;}
 	#countries{font-size:55%;width: 100%;}
 	span{font-size: 8px;}
 	.flagCountry{width: 30px; height: 25px;}
@@ -35,13 +35,21 @@
 	#tableVN td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
 	#tableVNdose td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
 	#tableVNvacDistribution td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
-	#table{height:440px;}
-	#tableVN{font-size: 10px;height:250px;}
-	#tableVNdose{font-size: 10px;height:250px;}
-	#tableVNvacDistribution{font-size: 10px;height:250px;}
+	#table{height:225px;}
+	#tableVN{font-size: 10px;height:190px;}
+	#tableVNdose{font-size: 10px;height:155px;}
+	#tableVNvacDistribution{font-size: 10px;height:155px;}
 	#countries{margin-bottom: 30px;}
 	.footer,#designedBy{font-size: 10px;}
 	.imgVariant{border-radius:3px;}
+	#txtNorthAmerica,#NorthAmerica{font-size: 150%;}
+	#txtSouthAmerica,#SouthAmerica{font-size: 150%;}
+	#txtEurope,#Europe{font-size: 150%;}
+	#txtAsia,#Asia{font-size: 150%;}
+	#txtAfrica,#Africa{font-size: 150%;}
+	#txtOceania,#Oceania{font-size: 150%;}
+	.continent{margin: 20px;}
+	fieldsetContinent
 }
 @media screen and (max-width: 768px) {
 	.vnDetailsFlag{height: 50%;}
@@ -59,10 +67,18 @@
 	.SoftwareInfo{font-size:12px;}
 	#aboutGuide{word-break: break-all;}
 	#txtGlobal{width: 100px;font-size: 20px;}
+	#txtContinent{width: 140px;font-size: 20px;}
 	#txtCasesDataChart,#txtDeathsDataChart{width: 100px;font-size: 20px;}
 	#txtDoseVaccinatedDataChart{width: 200px;font-size: 20px;}
 	#message{font-size: 14px;}
 	.reference{font-size:75%;}
+	#txtNorthAmerica,#NorthAmerica{font-size: 110%;}
+	#txtSouthAmerica,#SouthAmerica{font-size: 110%;}
+	#txtEurope,#Europe{font-size: 110%;}
+	#txtAsia,#Asia{font-size: 110%;}
+	#txtAfrica,#Africa{font-size: 110%;}
+	#txtOceania,#Oceania{font-size: 110%;}
+	.continent{margin: 18px;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
@@ -136,6 +152,6 @@
 	#tableVN td:nth-child(2){width: 81.88px;padding-left:14px;padding-right: 14px;}
 	#tableVNdose td:nth-child(2){width: 81.88px;padding-left:14px;padding-right: 14px;}
 	#tableVNvacDistribution td:nth-child(2){width: 81.88px;padding-left:14px;padding-right: 14px;}
-	
+	.continent{margin: 12px;}
 }
 

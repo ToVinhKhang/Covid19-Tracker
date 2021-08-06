@@ -33,8 +33,11 @@ option{font-weight: bold;background-color: #309FB5;}
 .SoftwareInfo{table-layout: fixed;text-align:justify;}
 #aboutGuide{line-height: 50px;}
 #aboutGuide td:nth-child(1){width:30%;font-weight: bold;}
-#fieldsetGlobal {margin:0;padding:0;border: 3px solid #ddd; border-radius: 30px;}
+#countries{margin-bottom: 40px;}
+#fieldsetGlobal,#fieldsetContinent {margin:0;padding:0;border: 3px solid #ddd; border-radius: 30px;}
+#fieldsetContinent{margin-top:20px;}
 #txtGlobal{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
+#txtContinent{width: 300px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
 #footer{display: none;}
 .imgBrowserIcon{width:40px; height:40px;margin-right:10px;}
 .imgBrowserEdge{width:36px; height:36px;margin-right:10px;}

@@ -5,7 +5,7 @@
 ------------------------------------------------*/
 
 /* Data World */
-#global{width: 100%;margin-bottom:50px;display: none;}
+#global,#continent{width: 100%;margin-bottom:50px;display: none;}
 span{font-size: 12px;}
 .flagCountry{width: 70px; height: 50px;}
 #nameAbData,#nameVaccine,#nameVaccineDetails,#nameGuide,#nameVariant{font-weight: bold;}
@@ -32,4 +32,19 @@ thead{display:table;width:100%;table-layout:fixed;}
 .sortable-table thead .numeric-sort[data-sort-direction="-1"]:after{content:"\25BE"}
 .cursorPointer{cursor:pointer;color: #821CFB!important;}
 .cursorPointer:hover{color: #B50000!important;font-weight: bold!important;}
+
+.global{margin: 25px 25px 40px 25px;}
+#GlobalCases{color: #186FB5;text-align: center;}
+#GlobalRecovered{color: #006233;text-align: center;}
+#GlobalDeaths{color: #E41E20;text-align: center;}
+
+.continent{margin: 25px;}
+#txtNorthAmerica,#NorthAmerica{color: #F44336;text-align: center;}
+#txtSouthAmerica,#SouthAmerica{color: #3F51B5;text-align: center;}
+#txtEurope,#Europe{color: #62B300;text-align: center;}
+#txtAsia,#Asia{color: #FBB02D;text-align: center;}
+#txtAfrica,#Africa{color: #AA53C8;text-align: center;}
+#txtOceania,#Oceania{color: #42A5F5;text-align: center;}
+
+
 

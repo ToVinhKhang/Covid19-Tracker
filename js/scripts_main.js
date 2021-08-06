@@ -34,6 +34,7 @@ function getDataGlobal(){
 		.then(jsonData => {displayDataGlobal(jsonData);
 			document.getElementById("loader").style.display = "none";
 			document.getElementById("global").style.display = "block";
+			document.getElementById("continent").style.display = "block";
 			document.getElementById("footer").style.display = "block";
 		})
 		.catch(e => console.log(e));
@@ -60,10 +61,20 @@ function getDataGlobalAgain(){
 // Display
 //---------
 function displayDataGlobal(jsonData){
+	// Global
 	table.innerHTML = '';
 	var GlobalCases = 0;
 	var GlobalRecovered = 0;
 	var GlobalDeaths = 0;
+	
+	// Continent
+	var Asia = 0;
+	var Europe = 0;
+	var Africa = 0;
+	var NorthAmerica = 0;
+	var SouthAmerica = 0;
+	var Oceania = 0;
+	
 	jsonData.forEach(u => {
 		// Global
 		GlobalCases+=u.cases;
@@ -104,9 +115,27 @@ function displayDataGlobal(jsonData){
 		tr.appendChild(td4);
 		tr.appendChild(td5);
 		table.appendChild(tr);
+		
+		// Continent
+		if(u.continent == "Asia"){Asia+=u.cases;}
+		else if(u.continent == "Europe"){Europe+=u.cases;}
+		else if(u.continent == "North America"){NorthAmerica+=u.cases;}
+		else if(u.continent == "South America"){SouthAmerica+=u.cases;}
+		else if(u.continent == "Africa"){Africa+=u.cases;}
+		else if(u.continent == "Australia-Oceania"){Oceania+=u.cases;}
 	});
+	displayContinent(Asia,Europe,NorthAmerica,SouthAmerica,Africa,Oceania)
 	//Wait 2s
-	setTimeout(()=>{}, 2000);
+	setTimeout(()=>{$('#th-cases').trigger('click');$('#th-cases').trigger('click');}, 2000);
+}
+
+function displayContinent(Asia,Europe,NorthAmerica,SouthAmerica,Africa,Oceania){
+	document.getElementById("Asia").innerHTML = ShorterValue(Asia,2);
+	document.getElementById("Europe").innerHTML = ShorterValue(Europe,2);
+	document.getElementById("NorthAmerica").innerHTML = ShorterValue(NorthAmerica,2);
+	document.getElementById("SouthAmerica").innerHTML = ShorterValue(SouthAmerica,2);
+	document.getElementById("Africa").innerHTML = ShorterValue(Africa,2);
+	document.getElementById("Oceania").innerHTML = ShorterValue(Oceania,2);
 }
 
 function loadDataPopup(dataEN){
