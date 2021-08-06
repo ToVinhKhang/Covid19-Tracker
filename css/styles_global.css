@@ -8,7 +8,6 @@
 #global,#continent{width: 100%;margin-bottom:50px;display: none;}
 span{font-size: 12px;}
 .flagCountry{width: 70px; height: 50px;}
-#nameAbData,#nameVaccine,#nameVaccineDetails,#nameGuide,#nameVariant{font-weight: bold;}
 h5{font-weight:bold;margin: 15px 0px;letter-spacing: 1px;line-height: 200%; }
 h6{font-style:italic;margin: 20px 0px;text-align: justify;letter-spacing: 1px;line-height: 200%; }
 .plusSign{margin-top: 0px;}
