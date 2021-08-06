@@ -9,6 +9,14 @@
 		"th4": "Tử Vong",
 		"th5": "Dân Số"
 	},
+	"Continent": {
+		"txt1": "Ch.Bắc Mỹ",
+		"txt2": "Ch.Nam Mỹ",
+		"txt3": "Ch.Á",
+		"txt4": "Ch.Âu",
+		"txt5": "Ch.Phi",
+		"txt6": "Ch.Đại Dương"
+	},
 	"tableVietnam": {
 		"th1": "TP/Tỉnh",
 		"th2": "Ca Nhiễm",

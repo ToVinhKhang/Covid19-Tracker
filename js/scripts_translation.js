@@ -94,6 +94,12 @@ function displayDataTranslated(dataLang){
 	var txtDoseVaccinatedDataChart = document.getElementById("txtDoseVaccinatedDataChart");
 	var txtDetailsVaccination = document.getElementById("txtDetailsVaccination");
 	var txtVaccineDistribution = document.getElementById("txtVaccineDistribution");
+	var txtNorthAmerica = document.getElementById("txtNorthAmerica");
+	var txtSouthAmerica = document.getElementById("txtSouthAmerica");
+	var txtAsia = document.getElementById("txtAsia");
+	var txtEurope = document.getElementById("txtEurope");
+	var txtAfrica = document.getElementById("txtAfrica");
+	var txtOceania = document.getElementById("txtOceania");
 	
 	var designedBy = document.getElementById("designedBy");
 	var searchInput = document.getElementById("searchInput");
@@ -155,6 +161,12 @@ function displayDataTranslated(dataLang){
 	txtCasesDataChart.innerHTML = dataLang.Chart.title1;
 	txtDeathsDataChart.innerHTML = dataLang.Chart.title2;
 	txtDoseVaccinatedDataChart.innerHTML = dataLang.Chart.title3;
+	txtNorthAmerica.innerHTML = dataLang.Continent.txt1;
+	txtSouthAmerica.innerHTML = dataLang.Continent.txt2;
+	txtAsia.innerHTML = dataLang.Continent.txt3;
+	txtEurope.innerHTML = dataLang.Continent.txt4;
+	txtAfrica.innerHTML = dataLang.Continent.txt5;
+	txtOceania.innerHTML = dataLang.Continent.txt6;
 	
 	designedBy.innerHTML = dataLang.footer;
 	searchInput.placeholder = dataLang.searching;

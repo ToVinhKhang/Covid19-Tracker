@@ -9,6 +9,14 @@
 		"th4": "Deaths",
 		"th5": "Population"
 	},
+	"Continent": {
+		"txt1": "N.America",
+		"txt2": "S.America",
+		"txt3": "Asia",
+		"txt4": "Europe",
+		"txt5": "Africa",
+		"txt6": "Oceania"
+	},
 	"tableVietnam": {
 		"th1": "Cities/Provinces",
 		"th2": "Cases",
