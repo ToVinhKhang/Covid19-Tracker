@@ -72,12 +72,12 @@
 	#txtDoseVaccinatedDataChart{width: 200px;font-size: 20px;}
 	#message{font-size: 14px;}
 	.reference{font-size:75%;}
-	#txtNorthAmerica,#NorthAmerica{font-size: 110%;}
-	#txtSouthAmerica,#SouthAmerica{font-size: 110%;}
-	#txtEurope,#Europe{font-size: 110%;}
-	#txtAsia,#Asia{font-size: 110%;}
-	#txtAfrica,#Africa{font-size: 110%;}
-	#txtOceania,#Oceania{font-size: 110%;}
+	#txtNorthAmerica{font-size: 110%;}
+	#txtSouthAmerica{font-size: 110%;}
+	#txtEurope{font-size: 110%;}
+	#txtAsia{font-size: 110%;}
+	#txtAfrica{font-size: 110%;}
+	#txtOceania{font-size: 110%;}
 	.continent{margin: 18px;}
 }
 @media screen and (max-width: 720px) {
