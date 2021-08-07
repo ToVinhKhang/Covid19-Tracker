@@ -191,7 +191,7 @@ https://api-kent.netlify.app/.netlify/functions/api
 
 <details>
    <summary>Readmore</summary>
-   Pfizer: [Link](https://www.pfizer.com/)
+   Pfizer: <a src="https://www.pfizer.com/">Link</a>
    Moderna: [Link](https://www.modernatx.com/)
    Jassen: [Link](https://www.janssen.com/)
    AstraZeneca: [Link](https://www.astrazeneca.com/)
