@@ -188,26 +188,27 @@ https://api-kent.netlify.app/.netlify/functions/api
 #### [3] Vietnam Ministry of Health: [Link](https://ncov.moh.gov.vn/)
 #### [4] Vietnam Covid Vaccination Portal: [Link](https://tiemchungcovid19.gov.vn/portal)
 #### [5] Centers for Disease Control and Prevention: [Link](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html)
+<br>
 
 <details>
    <summary>Readmore</summary>
    Pfizer: <a href="https://www.pfizer.com/">Link</a>
-   Moderna: [Link](https://www.modernatx.com/)
-   Jassen: [Link](https://www.janssen.com/)
-   AstraZeneca: [Link](https://www.astrazeneca.com/)
-   Sputnik-V: [Link](https://sputnikvaccine.com/)
-   Sinovac: [Link](http://www.sinovac.com/index.php?lang=en)
-   Sinopharm: [Link](http://www.sinopharm.com/en/1156.html)
-   Novavax: [Link](https://www.novavax.com/)
-   NanoCovax: [Link](https://nanogenpharma.com/products/nanocovax-141.html)
-   mARN Techonology: [Link](https://en.wikipedia.org/wiki/RNA_vaccine)
-   Viral Vector Techonology: [Link](https://en.wikipedia.org/wiki/Viral_vector)
-   Inactivated Virus Techonology: [Link](https://en.wikipedia.org/wiki/Inactivated_vaccine)
-   Protein Subunit Techonology: [Link](https://en.wikipedia.org/wiki/Protein_subunit)
-   Remdesivir: [Link](https://en.wikipedia.org/wiki/Remdesivir)
-   Sotrovimab: [Link](https://en.wikipedia.org/wiki/Sotrovimab)
-   Molnupiravir: [Link](https://en.wikipedia.org/wiki/Molnupiravir)
-   Favipiravir: [Link](https://en.wikipedia.org/wiki/Favipiravir)
+   Moderna: <a href="https://www.modernatx.com/">Link</a>
+   Jassen: <a href="https://www.janssen.com/">Link</a>
+   AstraZeneca: <a href="https://www.astrazeneca.com/">Link</a>
+   Sputnik-V: <a href="https://sputnikvaccine.com/">Link</a>
+   Sinovac: <a href="http://www.sinovac.com/index.php?lang=en">Link</a>
+   Sinopharm: <a href="http://www.sinopharm.com/en/1156.html">Link</a>
+   Novavax: <a href="https://www.novavax.com/">Link</a>
+   NanoCovax: <a href="https://nanogenpharma.com/products/nanocovax-141.html">Link</a>
+   mARN Techonology: <a href="https://en.wikipedia.org/wiki/RNA_vaccine">Link</a>
+   Viral Vector Techonology: <a href="https://en.wikipedia.org/wiki/Viral_vector">Link</a>
+   Inactivated Virus Techonology: <a href="https://en.wikipedia.org/wiki/Inactivated_vaccine">Link</a>
+   Protein Subunit Techonology: <a href="https://en.wikipedia.org/wiki/Protein_subunit">Link</a>
+   Remdesivir: <a href="https://en.wikipedia.org/wiki/Remdesivir">Link</a>
+   Sotrovimab: <a href="https://en.wikipedia.org/wiki/Sotrovimab">Link</a>
+   Molnupiravir: <a href="https://en.wikipedia.org/wiki/Molnupiravir">Link</a>
+   Favipiravir: <a href="https://en.wikipedia.org/wiki/Favipiravir">Link</a>
 </details>
 
 <br>
