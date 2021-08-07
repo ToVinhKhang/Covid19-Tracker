@@ -191,7 +191,7 @@ https://api-kent.netlify.app/.netlify/functions/api
 <br>
 
 <details>
-   <summary>Readmore</summary>
+   <summary>Readmore</summary><h5>
     | 
    Pfizer: <a href="https://www.pfizer.com/">Link</a> | 
    Moderna: <a href="https://www.modernatx.com/">Link</a> | 
@@ -210,7 +210,7 @@ https://api-kent.netlify.app/.netlify/functions/api
    Sotrovimab: <a href="https://en.wikipedia.org/wiki/Sotrovimab">Link</a> | 
    Molnupiravir: <a href="https://en.wikipedia.org/wiki/Molnupiravir">Link</a> | 
    Favipiravir: <a href="https://en.wikipedia.org/wiki/Favipiravir">Link</a>
-    | 
+   | </h5>
 </details>
 
 <br>
