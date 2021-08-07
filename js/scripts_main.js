@@ -8,8 +8,11 @@
 // 	API
 //----------
 
+// API for GlobalAll
+const API_GlobalAll       = "https://api-kent.netlify.app/.netlify/functions/api/global/all";
+
 // API for GlobalCountries
-const API_GlobalCountries = "https://api-kent.netlify.app/.netlify/functions/api/global";
+const API_GlobalCountries = "https://api-kent.netlify.app/.netlify/functions/api/global/countries";
 
 // API for Daily Vaccines
 const API_DailyVaccines   = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/vaccines";
@@ -18,7 +21,8 @@ const API_DailyVaccines   = "https://api-kent.netlify.app/.netlify/functions/api
 let table;
 window.addEventListener('load',() => {
 	table = document.getElementById("table");
-	getDataGlobal();
+	getDataGlobalAll();
+	getDataGlobalDetails();
 	loadDataPopupAtFirst();
 });
 
@@ -28,45 +32,55 @@ window.addEventListener('load',() => {
 //----------
 
 // Get Data Global
-function getDataGlobal(){
+function getDataGlobalDetails(){
 	fetch(API_GlobalCountries)
 		.then(data => data.json())
-		.then(jsonData => {displayDataGlobal(jsonData);
-			document.getElementById("loader").style.display = "none";
-			document.getElementById("global").style.display = "block";
-			document.getElementById("continent").style.display = "block";
-			document.getElementById("footer").style.display = "block";
+		.then(jsonData => {
+			displayDataGlobalDetails(jsonData);
+			Loader();
 		})
 		.catch(e => console.log(e));
 }
+function getDataGlobalAll(){
+	fetch(API_GlobalAll)
+		.then(data => data.json())
+		.then(jsonData => {
+			displayDataGlobalAll(jsonData);
+		})
+		.catch(e => console.log(e));
+}
+// Popup Modal Need Load data at first
 function loadDataPopupAtFirst(){
 	fetch("./lang/en.json")
 		.then(data => data.json())
-		.then(dataEN => {loadDataPopup(dataEN);})
+		.then(dataEN => {
+			loadDataPopup(dataEN);
+		})
 		.catch(e => console.log(e));
 }
 
 
-// AJAX
-function getDataGlobalAgain(){
+// Just Test by AJAX :D
+function getDataGlobalDetailsAgain(){
 	let xmlHttpRequest = new XMLHttpRequest();xmlHttpRequest.addEventListener('load',e => {
 		if(xmlHttpRequest.readyState === 4 && xmlHttpRequest.status === 200){let jsonData = xmlHttpRequest.response;
-			displayDataGlobal(jsonData);
+			displayDataGlobalDetails(jsonData);
 		}else{console.log(e);}
 	});xmlHttpRequest.open('GET',API_GlobalCountries,true);xmlHttpRequest.responseType = 'json';xmlHttpRequest.send();
+}
+function getDataGlobalAllAgain(){
+	let xmlHttpRequest = new XMLHttpRequest();xmlHttpRequest.addEventListener('load',e => {
+		if(xmlHttpRequest.readyState === 4 && xmlHttpRequest.status === 200){let jsonData = xmlHttpRequest.response;
+			displayDataGlobalAll(jsonData);
+		}else{console.log(e);}
+	});xmlHttpRequest.open('GET',API_GlobalAll,true);xmlHttpRequest.responseType = 'json';xmlHttpRequest.send();
 }
 
 
 //---------
 // Display
 //---------
-function displayDataGlobal(jsonData){
-	// Global
-	table.innerHTML = '';
-	var GlobalCases = 0;
-	var GlobalRecovered = 0;
-	var GlobalDeaths = 0;
-	
+function displayDataGlobalDetails(jsonData){
 	// Continent
 	var Asia = 0;
 	var Europe = 0;
@@ -76,14 +90,6 @@ function displayDataGlobal(jsonData){
 	var Oceania = 0;
 	
 	jsonData.forEach(u => {
-		// Global
-		GlobalCases+=u.cases;
-		GlobalRecovered+=u.recovered;
-		GlobalDeaths+=u.deaths;
-		document.getElementById("GlobalCases").innerHTML = ShorterValue(GlobalCases,1);
-		document.getElementById("GlobalRecovered").innerHTML = ShorterValue(GlobalRecovered,1);
-		document.getElementById("GlobalDeaths").innerHTML = ShorterValue(GlobalDeaths,1);
-		
 		// Countries		
 		let tr = document.createElement('tr');
 		let td0 = document.createElement('td');
@@ -129,6 +135,14 @@ function displayDataGlobal(jsonData){
 	setTimeout(()=>{$('#th-cases').trigger('click');$('#th-cases').trigger('click');}, 2000);
 }
 
+function displayDataGlobalAll(jsonData){
+	document.getElementById("GlobalCases").innerHTML = ShorterValue(jsonData.cases,1);
+	document.getElementById("GlobalRecovered").innerHTML = ShorterValue(jsonData.recovered,1);
+	document.getElementById("GlobalDeaths").innerHTML = ShorterValue(jsonData.deaths,1);
+	document.getElementById("todayGlobalCases").innerHTML = `+`+jsonData.todayCases.toLocaleString('en-US');
+	document.getElementById("todayGlobalRecovered").innerHTML = `+`+jsonData.todayRecovered.toLocaleString('en-US');
+	document.getElementById("todayGlobalDeaths").innerHTML = `+`+jsonData.todayDeaths.toLocaleString('en-US');
+}
 function displayContinent(Asia,Europe,NorthAmerica,SouthAmerica,Africa,Oceania){
 	document.getElementById("Asia").innerHTML = ShorterValue(Asia,2);
 	document.getElementById("Europe").innerHTML = ShorterValue(Europe,2);
@@ -137,7 +151,6 @@ function displayContinent(Asia,Europe,NorthAmerica,SouthAmerica,Africa,Oceania){
 	document.getElementById("Africa").innerHTML = ShorterValue(Africa,2);
 	document.getElementById("Oceania").innerHTML = ShorterValue(Oceania,2);
 }
-
 function loadDataPopup(dataEN){
 	document.getElementById("nameAbData").textContent = dataEN.AboutTheData.title;
 	document.getElementById("aboutTheData").innerHTML = dataEN.AboutTheData.content;
@@ -152,7 +165,12 @@ function loadDataPopup(dataEN){
 	document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
 	document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
 }
-
+function Loader(){
+	document.getElementById("loader").style.display = "none";
+	document.getElementById("global").style.display = "block";
+	document.getElementById("continent").style.display = "block";
+	document.getElementById("footer").style.display = "block";
+}
 
 //---------
 // SHORTER 
@@ -201,7 +219,7 @@ setInterval(()=>{
 },1000);
 
 // Update data every 15 mins
-setInterval(()=>{getDataGlobalAgain();},(1000*60*15));
+setInterval(()=>{getDataGlobalDetailsAgain();getDataGlobalAllAgain();},(1000*60*15));
 
 //------
 // END
