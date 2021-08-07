@@ -36,7 +36,7 @@
 	#tableVNdose td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
 	#tableVNvacDistribution td:nth-child(2){width: 105px;padding-left:14px;padding-right: 14px;}
 	#table{height:225px;}
-	#tableVN{font-size: 10px;height:190px;}
+	#tableVN{font-size: 10px;height:450px;}
 	#tableVNdose{font-size: 10px;height:155px;}
 	#tableVNvacDistribution{font-size: 10px;height:155px;}
 	#countries{margin-bottom: 30px;}
@@ -51,6 +51,7 @@
 	.continent{margin: 20px;}
 }
 @media screen and (max-width: 768px) {
+	#tableVN{height:300px;}
 	.vnDetailsFlag{height: 50%;}
 	.TotalCases{font-size:16px;}
 	#TotalCases{font-size:30px;}
@@ -63,6 +64,7 @@
 	#GlobalDeaths{font-size:25px;}
 	.Population{font-size:16px;}
 	#Population{font-size:30px;}
+	.IncidenceRate,.RecoveryRate,.DeathRate,.vacFullyVaccinatedRate{font-size:12px;margin:0px;}
 	.SoftwareInfo{font-size:12px;}
 	#aboutGuide{word-break: break-all;}
 	#txtGlobal{width: 100px;font-size: 20px;}
@@ -84,9 +86,10 @@
 	.vnTotal,.vnRate{border: 2px solid #ddd;margin: 10px;border-radius:25px;padding:25px 10px 10px 10px;}
 	#LastUpdated{font-size:10px;}
 	.dailyChart,.TitleDetails{font-size: 200%;}
+	
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 540px)
 	.TotalCases{font-size:13px;}
 	.TotalRecovered{font-size:13px;}
 	.TotalDeaths{font-size:13px;}
@@ -94,7 +97,7 @@
 	#scrollTop{bottom: 15px;right: 15px;font-size: 16px;border: none;padding: 8px;border-radius: 6px;}
 	.vnLogo{padding:0.5px;}
 	.theadCities{font-size: 9px;}
-	#tableVN{font-size: 9px;}
+	#tableVN{font-size: 9px;height:190px;}
 	#tableVNdose{font-size: 9px;}
 	.vnDetailsFlag{display:none;}
 	#content > .row > div{margin-bottom:15px;}
@@ -102,7 +105,7 @@
 	.vnRate{padding:10px;}
 	h2{display: none;}
 	.vaccines{font-size:7px;margin:0px;font-weight:bold;}
-	.IncidenceRate,.RecoveryRate,.DeathRate,.vacFullyVaccinatedRate{font-size:10px;margin:0px;}
+	.IncidenceRate,.RecoveryRate,.DeathRate,.vacFullyVaccinatedRate{font-size:10px;}
 	.SwitchBar{height:36.8px;}
 	#aboutGuide{line-height: 30px;}
 	#table td:nth-child(6){font-size:7.5px;}
