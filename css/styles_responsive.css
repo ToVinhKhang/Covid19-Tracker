@@ -71,12 +71,12 @@
 	#txtDoseVaccinatedDataChart{width: 200px;font-size: 20px;}
 	#message{font-size: 14px;}
 	.reference{font-size:75%;}
-	#txtNorthAmerica{font-size: 90%;}#NorthAmerica{font-size: 120%;}
-	#txtSouthAmerica{font-size: 90%;}#SouthAmerica{font-size: 120%;}
-	#txtEurope{font-size: 90%;}#Europe{font-size: 120%;}
-	#txtAsia{font-size: 90%;}#Asia{font-size: 120%;}
-	#txtAfrica{font-size: 90%;}#Africa{font-size: 120%;}
-	#txtOceania{font-size: 90%;}#Oceania{font-size: 120%;}
+	#txtNorthAmerica{font-size: 90%;}
+	#txtSouthAmerica{font-size: 90%;}
+	#txtEurope{font-size: 90%;}
+	#txtAsia{font-size: 90%;}
+	#txtAfrica{font-size: 90%;}
+	#txtOceania{font-size: 90%;}
 	.continent{margin: 18px;}
 }
 @media screen and (max-width: 720px) {
@@ -90,7 +90,7 @@
 	.TotalCases{font-size:13px;}
 	.TotalRecovered{font-size:13px;}
 	.TotalDeaths{font-size:13px;}
-	.Population{font-size:14px;}
+	.Population{font-size:13px;}
 	#scrollTop{bottom: 15px;right: 15px;font-size: 16px;border: none;padding: 8px;border-radius: 6px;}
 	.vnLogo{padding:0.5px;}
 	.theadCities{font-size: 9px;}
@@ -120,12 +120,12 @@
 	h4{font-size:100%;}
 	h5{font-size:70%;}
 	.reference{float: inherit;text-align: center;}
-	#txtNorthAmerica{font-size: 70%;}#NorthAmerica{font-size: 110%;}
-	#txtSouthAmerica{font-size: 70%;}#SouthAmerica{font-size: 110%;}
-	#txtEurope{font-size: 70%;}#Europe{font-size: 110%;}
-	#txtAsia{font-size: 70%;}#Asia{font-size: 110%;}
-	#txtAfrica{font-size: 70%;}#Africa{font-size: 110%;}
-	#txtOceania{font-size: 70%;}#Oceania{font-size: 110%;}
+	#txtNorthAmerica{font-size: 70%;}#NorthAmerica{font-size: 130%;}
+	#txtSouthAmerica{font-size: 70%;}#SouthAmerica{font-size: 130%;}
+	#txtEurope{font-size: 70%;}#Europe{font-size: 130%;}
+	#txtAsia{font-size: 70%;}#Asia{font-size: 130%;}
+	#txtAfrica{font-size: 70%;}#Africa{font-size: 130%;}
+	#txtOceania{font-size: 70%;}#Oceania{font-size: 130%;}
 	#txtNorthAmerica,#txtSouthAmerica,#txtEurope,#txtAsia,#txtAfrica,#txtOceania{font-weight: bold;}
 }
 @media screen and (max-width: 376px) {
@@ -145,12 +145,12 @@
 	#table td:nth-child(6){font-size:7px;}
 	h5{font-size:60%;}
 	.reference{font-size:80%!important;}
-	#txtNorthAmerica{font-size: 46%;}#NorthAmerica{font-size: 95%;}
-	#txtSouthAmerica{font-size: 46%;}#SouthAmerica{font-size: 95%;}
-	#txtEurope{font-size: 46%;}#Europe{font-size: 95%;}
-	#txtAsia{font-size: 46%;}#Asia{font-size: 95%;}
-	#txtAfrica{font-size: 46%;}#Africa{font-size: 95%;}
-	#txtOceania{font-size: 46%;}#Oceania{font-size: 95%;}
+	#txtNorthAmerica{font-size: 58%;}#NorthAmerica{font-size: 100%;}
+	#txtSouthAmerica{font-size: 58%;}#SouthAmerica{font-size: 100%;}
+	#txtEurope{font-size: 58%;}#Europe{font-size: 100%;}
+	#txtAsia{font-size: 58%;}#Asia{font-size: 100%;}
+	#txtAfrica{font-size: 58%;}#Africa{font-size: 100%;}
+	#txtOceania{font-size: 58%;}#Oceania{font-size: 100%;}
 }
 @media screen and (max-width: 360px) {
 	.TotalCases{font-size:12px;}
@@ -186,10 +186,10 @@
 	#RecoveryRate{font-size:16px;}
 	#DeathRate{font-size:16px;}
 	
-	#txtNorthAmerica{font-size: 30%;}#NorthAmerica{font-size: 70%;}
-	#txtSouthAmerica{font-size: 30%;}#SouthAmerica{font-size: 70%;}
-	#txtEurope{font-size: 30%;}#Europe{font-size: 70%;}
-	#txtAsia{font-size: 30%;}#Asia{font-size: 70%;}
-	#txtAfrica{font-size: 30%;}#Africa{font-size: 70%;}
-	#txtOceania{font-size: 30%;}#Oceania{font-size: 70%;}
+	#txtNorthAmerica{font-size: 40%;}#NorthAmerica{font-size: 70%;}
+	#txtSouthAmerica{font-size: 40%;}#SouthAmerica{font-size: 70%;}
+	#txtEurope{font-size: 40%;}#Europe{font-size: 70%;}
+	#txtAsia{font-size: 40%;}#Asia{font-size: 70%;}
+	#txtAfrica{font-size: 40%;}#Africa{font-size: 70%;}
+	#txtOceania{font-size: 40%;}#Oceania{font-size: 70%;}
 }
