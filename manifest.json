@@ -8,7 +8,7 @@
 	"orientation": "portrait",
 	"icons": [
 		{
-		  "src": "https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=36",
+		  "src": "/",
 		  "sizes": "36x36",
 		  "type": "image/png"
 		},
