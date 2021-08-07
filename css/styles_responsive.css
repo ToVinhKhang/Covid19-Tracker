@@ -154,6 +154,7 @@
 	#txtAsia{font-size: 58%;}#Asia{font-size: 100%;}
 	#txtAfrica{font-size: 58%;}#Africa{font-size: 100%;}
 	#txtOceania{font-size: 58%;}#Oceania{font-size: 100%;}
+	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 60%;}
 }
 @media screen and (max-width: 360px) {
 	.TotalCases{font-size:12px;}
@@ -172,6 +173,7 @@
 	#tableVNdose td:nth-child(2){width: 81.88px;padding-left:14px;padding-right: 14px;}
 	#tableVNvacDistribution td:nth-child(2){width: 81.88px;padding-left:14px;padding-right: 14px;}
 	.continent{margin: 12px;}
+	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 58%;}
 }
 @media screen and (max-width: 320px) {
 	.TotalCases{font-size:9px;}

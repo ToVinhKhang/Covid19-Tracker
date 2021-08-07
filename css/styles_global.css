@@ -46,6 +46,6 @@ thead{display:table;width:100%;table-layout:fixed;}
 #txtAfrica,#Africa{color: #58676C;text-align: center;}
 #txtOceania,#Oceania{color: #01A2D4;text-align: center;}
 
-
+#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 70%;}
 
 
