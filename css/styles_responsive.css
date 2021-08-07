@@ -126,6 +126,7 @@
 	#txtAsia{font-size: 55%;}#Asia{font-size: 110%;}
 	#txtAfrica{font-size: 55%;}#Africa{font-size: 110%;}
 	#txtOceania{font-size: 55%;}#Oceania{font-size: 110%;}
+	#txtNorthAmerica,#txtSouthAmerica,#txtEurope,#txtAsia,#txtAfrica,#txtOceania{font-weight: bold;}
 }
 @media screen and (max-width: 376px) {
 	.IncidenceRate{font-size:7px;}
