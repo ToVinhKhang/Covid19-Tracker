@@ -89,7 +89,7 @@
 	
 }
 
-@media screen and (max-width: 540px)
+@media screen and (max-width: 540px){
 	.TotalCases{font-size:13px;}
 	.TotalRecovered{font-size:13px;}
 	.TotalDeaths{font-size:13px;}
