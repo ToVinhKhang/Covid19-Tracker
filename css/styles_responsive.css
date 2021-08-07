@@ -130,6 +130,7 @@
 	#txtAfrica{font-size: 70%;}#Africa{font-size: 130%;}
 	#txtOceania{font-size: 70%;}#Oceania{font-size: 130%;}
 	#txtNorthAmerica,#txtSouthAmerica,#txtEurope,#txtAsia,#txtAfrica,#txtOceania{font-weight: bold;}
+	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 70%;}
 }
 @media screen and (max-width: 376px) {
 	.IncidenceRate{font-size:7px;}
