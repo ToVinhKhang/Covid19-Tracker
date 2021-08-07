@@ -1,15 +1,16 @@
+var urlsToCache = [
+	"./",
+	"./css/styles_main.css",
+	"./css/styles_global.css",
+	"./css/styles_vietnam.css",
+	"./css/styles_darkmode.css",
+	"./css/styles_responsive.css",
+];
+
 self.addEventListener("install", e=>{
 	e.waitUntil(
-		caches.open("static").then(cache=>{
-			return cache.addAll([
-				"./",
-				"./css/styles_main.css",
-				"./css/styles_global.css",
-				"./css/styles_vietnam.css",
-				"./css/styles_darkmode.css",
-				"./css/styles_responsive.css",
-				"./img/Covid19.png"
-			]);
+		caches.open("static").then(cache =>{
+			return cache.addAll(urlsToCache);
 		})
 	);
 });
