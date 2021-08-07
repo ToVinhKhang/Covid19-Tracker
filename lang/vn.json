@@ -11,12 +11,12 @@
 	},
 	"Continent": {
 		"txt0": "CHÂU LỤC",
-		"txt1": "Ch.Bắc Mỹ",
-		"txt2": "Ch.Nam Mỹ",
-		"txt3": "Ch.Á",
-		"txt4": "Ch.Âu",
-		"txt5": "Ch.Phi",
-		"txt6": "Ch.Đại Dương"
+		"txt1": "Châu Bắc Mỹ",
+		"txt2": "Châu Nam Mỹ",
+		"txt3": "Châu Á",
+		"txt4": "Châu Âu",
+		"txt5": "Châu Phi",
+		"txt6": "Châu Đại Dương"
 	},
 	"tableVietnam": {
 		"th1": "TP/Tỉnh",

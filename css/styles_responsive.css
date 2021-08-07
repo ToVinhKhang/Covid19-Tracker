@@ -54,13 +54,13 @@
 	.vnDetailsFlag{height: 50%;}
 	.TotalCases{font-size:16px;}
 	#TotalCases{font-size:30px;}
-	#GlobalCases{font-size:26px;}
+	#GlobalCases{font-size:25px;}
 	.TotalRecovered{font-size:16px;}
 	#TotalRecovered{font-size:30px;}
-	#GlobalRecovered{font-size:26px;}
+	#GlobalRecovered{font-size:25px;}
 	.TotalDeaths{font-size:16px;}
 	#TotalDeaths{font-size:30px;}
-	#GlobalDeaths{font-size:26px;}
+	#GlobalDeaths{font-size:25px;}
 	.Population{font-size:16px;}
 	#Population{font-size:30px;}
 	.SoftwareInfo{font-size:12px;}
@@ -71,12 +71,12 @@
 	#txtDoseVaccinatedDataChart{width: 200px;font-size: 20px;}
 	#message{font-size: 14px;}
 	.reference{font-size:75%;}
-	#txtNorthAmerica{font-size: 110%;}
-	#txtSouthAmerica{font-size: 110%;}
-	#txtEurope{font-size: 110%;}
-	#txtAsia{font-size: 110%;}
-	#txtAfrica{font-size: 110%;}
-	#txtOceania{font-size: 110%;}
+	#txtNorthAmerica{font-size: 90%;}#NorthAmerica{font-size: 120%;}
+	#txtSouthAmerica{font-size: 90%;}#SouthAmerica{font-size: 120%;}
+	#txtEurope{font-size: 90%;}#Europe{font-size: 120%;}
+	#txtAsia{font-size: 90%;}#Asia{font-size: 120%;}
+	#txtAfrica{font-size: 90%;}#Africa{font-size: 120%;}
+	#txtOceania{font-size: 90%;}#Oceania{font-size: 120%;}
 	.continent{margin: 18px;}
 }
 @media screen and (max-width: 720px) {
@@ -116,6 +116,12 @@
 	h4{font-size:100%;}
 	h5{font-size:70%;}
 	.reference{float: inherit;text-align: center;}
+	#txtNorthAmerica{font-size: 55%;}#NorthAmerica{font-size: 110%;}
+	#txtSouthAmerica{font-size: 55%;}#SouthAmerica{font-size: 110%;}
+	#txtEurope{font-size: 55%;}#Europe{font-size: 110%;}
+	#txtAsia{font-size: 55%;}#Asia{font-size: 110%;}
+	#txtAfrica{font-size: 55%;}#Africa{font-size: 110%;}
+	#txtOceania{font-size: 55%;}#Oceania{font-size: 110%;}
 }
 @media screen and (max-width: 376px) {
 	.IncidenceRate{font-size:7px;}
@@ -134,6 +140,12 @@
 	#table td:nth-child(6){font-size:7px;}
 	h5{font-size:60%;}
 	.reference{font-size:80%!important;}
+	#txtNorthAmerica{font-size: 50%;}#NorthAmerica{font-size: 95%;}
+	#txtSouthAmerica{font-size: 50%;}#SouthAmerica{font-size: 95%;}
+	#txtEurope{font-size: 50%;}#Europe{font-size: 95%;}
+	#txtAsia{font-size: 50%;}#Asia{font-size: 95%;}
+	#txtAfrica{font-size: 50%;}#Africa{font-size: 95%;}
+	#txtOceania{font-size: 50%;}#Oceania{font-size: 95%;}
 }
 @media screen and (max-width: 360px) {
 	.TotalCases{font-size:12px;}
@@ -153,4 +165,26 @@
 	#tableVNvacDistribution td:nth-child(2){width: 81.88px;padding-left:14px;padding-right: 14px;}
 	.continent{margin: 12px;}
 }
-
+@media screen and (max-width: 320px) {
+	.TotalCases{font-size:9px;}
+	#TotalCases{font-size:16px;}
+	#GlobalCases{font-size:14px;}
+	.TotalRecovered{font-size:9px;}
+	#TotalRecovered{font-size:16px;}
+	#GlobalRecovered{font-size:14px;}
+	.TotalDeaths{font-size:9px;}
+	#TotalDeaths{font-size:16px;}
+	#GlobalDeaths{font-size:14px;}
+	.Population{font-size:9px;}
+	#Population{font-size:16px;}
+	#IncidenceRate{font-size:16px;}
+	#RecoveryRate{font-size:16px;}
+	#DeathRate{font-size:16px;}
+	
+	#txtNorthAmerica{font-size: 30%;}#NorthAmerica{font-size: 70%;}
+	#txtSouthAmerica{font-size: 30%;}#SouthAmerica{font-size: 70%;}
+	#txtEurope{font-size: 30%;}#Europe{font-size: 70%;}
+	#txtAsia{font-size: 30%;}#Asia{font-size: 70%;}
+	#txtAfrica{font-size: 30%;}#Africa{font-size: 70%;}
+	#txtOceania{font-size: 30%;}#Oceania{font-size: 70%;}
+}

@@ -11,8 +11,8 @@
 	},
 	"Continent": {
 		"txt0": "CONTINENT",
-		"txt1": "N.America",
-		"txt2": "S.America",
+		"txt1": "North America",
+		"txt2": "South America",
 		"txt3": "Asia",
 		"txt4": "Europe",
 		"txt5": "Africa",

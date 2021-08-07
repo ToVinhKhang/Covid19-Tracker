@@ -32,18 +32,20 @@ thead{display:table;width:100%;table-layout:fixed;}
 .cursorPointer{cursor:pointer;color: #821CFB!important;}
 .cursorPointer:hover{color: #B50000!important;font-weight: bold!important;}
 
+.imgContinent{width: 100%; margin-top: 60px;}
 .global{margin: 25px 25px 40px 25px;}
 #GlobalCases{color: #186FB5;text-align: center;}
 #GlobalRecovered{color: #006233;text-align: center;}
 #GlobalDeaths{color: #E41E20;text-align: center;}
 
 .continent{margin: 25px;}
-#txtNorthAmerica,#NorthAmerica{color: #F44336;text-align: center;}
-#txtSouthAmerica,#SouthAmerica{color: #3F51B5;text-align: center;}
-#txtEurope,#Europe{color: #62B300;text-align: center;}
-#txtAsia,#Asia{color: #FBB02D;text-align: center;}
-#txtAfrica,#Africa{color: #AA53C8;text-align: center;}
-#txtOceania,#Oceania{color: #42A5F5;text-align: center;}
+#txtNorthAmerica,#NorthAmerica{color: #FFC90F;text-align: center;}
+#txtSouthAmerica,#SouthAmerica{color: #19AA00;text-align: center;}
+#txtEurope,#Europe{color: #C82D63;text-align: center;}
+#txtAsia,#Asia{color: #FF7F58;text-align: center;}
+#txtAfrica,#Africa{color: #58676C;text-align: center;}
+#txtOceania,#Oceania{color: #01A2D4;text-align: center;}
+#txtNorthAmerica,#txtSouthAmerica,#txtEurope,#txtAsia,#txtAfrica,#txtOceania{font-weight: bold;}
 
 
 
