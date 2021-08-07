@@ -13,6 +13,7 @@ html{scroll-behavior: smooth;}
 #designedBy{font-size: 1rem;}
 .text-center{text-align: center;}
 .text-bold{font-weight: bold;}
+.pad0{padding: 0px;}
 
 /* Main */
 .title{display: inline;font-size: 300%;font-weight:bold;color:#309FB5;}

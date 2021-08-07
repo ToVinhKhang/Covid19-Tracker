@@ -120,12 +120,12 @@
 	h4{font-size:100%;}
 	h5{font-size:70%;}
 	.reference{float: inherit;text-align: center;}
-	#txtNorthAmerica{font-size: 55%;}#NorthAmerica{font-size: 110%;}
-	#txtSouthAmerica{font-size: 55%;}#SouthAmerica{font-size: 110%;}
-	#txtEurope{font-size: 55%;}#Europe{font-size: 110%;}
-	#txtAsia{font-size: 55%;}#Asia{font-size: 110%;}
-	#txtAfrica{font-size: 55%;}#Africa{font-size: 110%;}
-	#txtOceania{font-size: 55%;}#Oceania{font-size: 110%;}
+	#txtNorthAmerica{font-size: 70%;}#NorthAmerica{font-size: 110%;}
+	#txtSouthAmerica{font-size: 70%;}#SouthAmerica{font-size: 110%;}
+	#txtEurope{font-size: 70%;}#Europe{font-size: 110%;}
+	#txtAsia{font-size: 70%;}#Asia{font-size: 110%;}
+	#txtAfrica{font-size: 70%;}#Africa{font-size: 110%;}
+	#txtOceania{font-size: 70%;}#Oceania{font-size: 110%;}
 	#txtNorthAmerica,#txtSouthAmerica,#txtEurope,#txtAsia,#txtAfrica,#txtOceania{font-weight: bold;}
 }
 @media screen and (max-width: 376px) {
