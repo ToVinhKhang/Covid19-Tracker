@@ -51,7 +51,7 @@ _The Covid19 Tracker project was developed to contribute to the community. This 
 | | _(Display English At First)_ |
 | Read More | About The Data / Vaccine Details and Technology / Coronavirus Variant / Treatment Medicine |
 | | _(Display Info by Popup Modal)_ |
-| Auxiliary | Filter, Sort, Mode |
+| Auxiliary | Filter Table / Sort Table / Dark Mode |
 | | _(Filter Name of Countries, Sort Increase Decrease, Dark-Light)_ |
 | Others | Progressive Web Apps |
 <br>
