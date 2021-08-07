@@ -1,6 +1,6 @@
 {
-	"name": "Covid-19 Tracker",
-	"short_name": "Covid-19 Tracker",
+	"name": "Covid19 Tracker",
+	"short_name": "Covid19 Tracker",
 	"start_url": "/",
 	"background_color": "#FFFFFF",
 	"theme_color": "#FFFFFF",
@@ -8,28 +8,23 @@
 	"orientation": "portrait",
 	"icons": [
 		{
-		  "src": "/",
-		  "sizes": "36x36",
+		  "src": "https://covid19-kent.netlify.app/img/Covid19_16.png",
+		  "sizes": "16x16",
 		  "type": "image/png"
 		},
 		{
-		  "src": "https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=48",
+		  "src": "https://covid19-kent.netlify.app/img/Covid19_48.png",
 		  "sizes": "48x48",
 		  "type": "image/png"
 		},
 		{
-		  "src": "https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=72",
-		  "sizes": "72x72",
+		  "src": "https://covid19-kent.netlify.app/img/Covid19_128.png",
+		  "sizes": "128x128",
 		  "type": "image/png"
 		},
 		{
-		  "src": "https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=96",
-		  "sizes": "96x96",
-		  "type": "image/png"
-		},
-		{
-		  "src": "https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=310",
-		  "sizes": "310x310",
+		  "src": "https://covid19-kent.netlify.app/img/Covid19_519.png",
+		  "sizes": "591x591",
 		  "type": "image/png"
 		}
 	]
