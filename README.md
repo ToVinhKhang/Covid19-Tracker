@@ -183,14 +183,14 @@ https://api-kent.netlify.app/.netlify/functions/api
 
 
 ## REFERENCES
-#### MAIN
+### • MAIN
 #### [1] World Health Organization: [Link](https://www.who.int/)
 #### [2] Our World in Data: [Link](https://ourworldindata.org/covid-vaccinations)
 #### [3] Vietnam Ministry of Health: [Link](https://ncov.moh.gov.vn/)
 #### [4] Vietnam Covid Vaccination Portal: [Link](https://tiemchungcovid19.gov.vn/portal)
 #### [5] Centers for Disease Control and Prevention: [Link](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html)
 
-#### READ MORE
+### • VACCINE
 #### [6] Pfizer: [Link](https://www.pfizer.com/)
 #### [7] Moderna: [Link](https://www.modernatx.com/)
 #### [8] Jassen: [Link](https://www.janssen.com/)
@@ -200,10 +200,14 @@ https://api-kent.netlify.app/.netlify/functions/api
 #### [12] Sinopharm: [Link](http://www.sinopharm.com/en/1156.html)
 #### [13] Novavax: [Link](https://www.novavax.com/)
 #### [14] NanoCovax: [Link](https://nanogenpharma.com/products/nanocovax-141.html)
+
+### • TECHNOLOGY
 #### [15] mARN Techonology: [Link](https://en.wikipedia.org/wiki/RNA_vaccine)
 #### [16] Viral Vector Techonology: [Link](https://en.wikipedia.org/wiki/Viral_vector)
 #### [17] Inactivated Virus Techonology: [Link](https://en.wikipedia.org/wiki/Inactivated_vaccine)
 #### [18] Protein Subunit Techonology: [Link](https://en.wikipedia.org/wiki/Protein_subunit)
+
+### • TREATMENT MEDICINE
 #### [19] Remdesivir: [Link](https://en.wikipedia.org/wiki/Remdesivir)
 #### [20] Sotrovimab: [Link](https://en.wikipedia.org/wiki/Sotrovimab)
 #### [21] Molnupiravir: [Link](https://en.wikipedia.org/wiki/Molnupiravir)
