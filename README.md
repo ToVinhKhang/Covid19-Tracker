@@ -192,8 +192,8 @@ https://api-kent.netlify.app/.netlify/functions/api
 
 <details>
    <summary>Readmore</summary>
-   <h5> | 
-      Pfizer: <a target="_blank" href="https://www.pfizer.com/">Link</a> | 
+   <h5 style="font-style: italic;"> | 
+      Pfizer: <a href="https://www.pfizer.com/">Link</a> | 
       Moderna: <a href="https://www.modernatx.com/">Link</a> | 
       Jassen: <a href="https://www.janssen.com/">Link</a> | 
       AstraZeneca: <a href="https://www.astrazeneca.com/">Link</a> | 
