@@ -192,6 +192,7 @@ https://api-kent.netlify.app/.netlify/functions/api
 
 <details>
    <summary>Readmore</summary>
+    | 
    Pfizer: <a href="https://www.pfizer.com/">Link</a> | 
    Moderna: <a href="https://www.modernatx.com/">Link</a> | 
    Jassen: <a href="https://www.janssen.com/">Link</a> | 
@@ -208,7 +209,8 @@ https://api-kent.netlify.app/.netlify/functions/api
    Remdesivir: <a href="https://en.wikipedia.org/wiki/Remdesivir">Link</a> | 
    Sotrovimab: <a href="https://en.wikipedia.org/wiki/Sotrovimab">Link</a> | 
    Molnupiravir: <a href="https://en.wikipedia.org/wiki/Molnupiravir">Link</a> | 
-   Favipiravir: <a href="https://en.wikipedia.org/wiki/Favipiravir">Link</a> | 
+   Favipiravir: <a href="https://en.wikipedia.org/wiki/Favipiravir">Link</a>
+    | 
 </details>
 
 <br>
