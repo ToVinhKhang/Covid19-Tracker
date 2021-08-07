@@ -13,7 +13,6 @@
    
    <h1 align="center">VIETNAM TRACKER</h1>
    <img align="left" alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Pic00.png?token=ALF7X7VGJNITR5SZTWT7XE3BC47I2" width="100%">
-   <img align="left" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Pic2.png?token=ALF7X7XE7KW2IDHIWNDAEILBB6FA6" width="100%">
    
    <p align="center">&nbsp;</p>
    
