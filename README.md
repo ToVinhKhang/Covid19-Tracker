@@ -61,7 +61,24 @@ _The Covid19 Tracker project was developed to contribute to the community. This 
 https://api-kent.netlify.app/.netlify/functions/api
 ```
 
-#### • [GET] /global
+#### • [GET] /global/all
+
+```javascript
+   Example:
+   {
+      "cases":202511726,
+      "todayCases":151936,
+      "deaths":4292240,
+      "todayDeaths":2525,
+      "recovered":181997230,
+      "todayRecovered":128958,
+      "active":16222256,
+      "population":7842060121,
+      "affectedCountries":222
+   }
+```
+
+#### • [GET] /global/countries
 
 ```javascript
    Example:
