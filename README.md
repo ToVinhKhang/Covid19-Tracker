@@ -31,6 +31,10 @@
       <img alt="DarkLight" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/DarkLight.png?token=ALF7X7UAXPAWALW2JOFAUJTBB6AJ4" width="50.5">
       <img alt="SwitchLang" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SwitchLangs.png?token=ALF7X7VYDTHIC4S4GK7P3NDBB6ALI" width="88.5">
    </p>
+   
+   <h1 align="center">SOFTWARE INFO</h1>
+   <img alt="SoftwareInfo" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SoftwareInfo.png?token=ALF7X7WRRF6A7Z76S2QASI3BDCRCS" width="100%">
+   
    <p align="center">&nbsp;</p>
 </details>
 <br>
