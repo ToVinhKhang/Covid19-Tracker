@@ -43,16 +43,24 @@
 
 <details>
    <summary> Guide Add Web to Mobile Device Home Screen</summary>
+   
    <h1 align="left"> • IOS</h1>
-   <p>
-      Tap the icon featuring a right-pointing arrow coming out of a box along the top of the Safari window to open a drop-down menu.</p>
-      <p>Tap “Add to Home Screen.” The Add to Home dialog box will appear, with the icon that will be used for this website on the left side of the dialog box.</p>
-      <p>Enter the name for the shortcut using the on-screen keyboard and tap “Add.” Safari will close automatically and you will be taken to where the icon is located on your iPad’s desktop.</p>
+   <p>1/Launch “Safari” app. Enter “https://covid19-kent.netlify.app”. Tap “Go”.
+   <p>2/Tap the icon featuring an up-arrow of the Safari window to open a drop-down menu.</p>
+   <p>3/Tap “Add to Home Screen.” The Add to Home dialog box will appear.</p>
+   <p>4/Enter the name for the shortcut using the on-screen keyboard and tap “Add.” Safari will close automatically.</p>
+   <p>5/Check your icon on the desktop.</p>
+   
    <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA1.PNG" width="24%">
    <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA2.PNG" width="24%">
    <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA3.PNG" width="24%">
    <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA4.PNG" width="24%">
+   <br>
+   
    <h1 align="left"> • Android</h1>
+   <p>1/Launch “Chrome” app. Enter “https://covid19-kent.netlify.app”. Tap “Go”.
+   <p>2/Tap the menu icon (3 dots in upper right-hand corner).</p>
+   <p>3/Tap “Add to homescreen.” Then do the same few steps as IOS above.</p>
 </details>
 <br>
 <br>
