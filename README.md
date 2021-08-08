@@ -1,10 +1,10 @@
 # Covid-19 Tracker
 <details>
    <summary> Release</summary>
-   <p align="center">Version: 2.2.1</p>
-   <a href="https://covid19-kent.netlify.app/">
+   <a align="center" href="https://covid19-kent.netlify.app/">
       <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Covid19_128.png">
    </a>
+   <p align="center">Version: 2.2.1</p>
    <br>
 </details>
 
@@ -42,9 +42,9 @@
 </details>
 
 <details>
-   <summary> Guide Add Web to Mobile Device Home Screen</summary>
+   <summary> Add to Mobile Device</summary>
    
-   <h1 align="left"> • IOS</h1>
+   <h2 align="left"> • IOS</h2>
    <p>1/Launch "Safari" app. Enter "https://covid19-kent.netlify.app" and Tap "Go".
    <p>2/Tap the icon featuring an up-arrow of the Safari window to open a drop-down menu.</p>
    <p>3/Tap "Add to Home Screen" The Add to Home dialog box will appear.</p>
@@ -57,7 +57,7 @@
    <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA4.PNG" width="24%">
    
    <p align="center">&nbsp;</p>
-   <h1 align="left"> • Android</h1>
+   <h2 align="left"> • Android</h2>
    <p>1/Launch "Chrome" app. Enter "https://covid19-kent.netlify.app" and Tap "Go".
    <p>2/Tap the menu icon (3 dots in upper right-hand corner).</p>
    <p>3/Tap "Add to homescreen". Then do the same few steps as IOS above.</p>
