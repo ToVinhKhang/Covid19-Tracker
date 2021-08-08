@@ -78,7 +78,7 @@ function getDataGlobalAllAgain(){
 // Display
 //---------
 function displayDataGlobalDetails(jsonData){
-	table = '';
+	table.innerHTML = '';
 	
 	// Continent
 	var Asia = 0;
