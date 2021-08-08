@@ -1,7 +1,7 @@
 # Covid-19 Tracker
 <details>
    <summary> Release</summary>
-   <p align="center">&nbsp;</p>
+   <p align="center">Version: 2.2.1</p>
    <a href="https://covid19-kent.netlify.app/">
       <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Covid19_128.png">
    </a>
@@ -45,10 +45,10 @@
    <summary> Guide Add Web to Mobile Device Home Screen</summary>
    
    <h1 align="left"> • IOS</h1>
-   <p>1/Launch “Safari” app. Enter 'https://covid19-kent.netlify.app'. Tap “Go”.
+   <p>1/Launch "Safari" app. Enter "https://covid19-kent.netlify.app" and Tap "Go".
    <p>2/Tap the icon featuring an up-arrow of the Safari window to open a drop-down menu.</p>
-   <p>3/Tap “Add to Home Screen.” The Add to Home dialog box will appear.</p>
-   <p>4/Enter the name for the shortcut using the on-screen keyboard and tap “Add.” Safari will close automatically.</p>
+   <p>3/Tap "Add to Home Screen" The Add to Home dialog box will appear.</p>
+   <p>4/Enter the name for the shortcut using the on-screen keyboard and tap "Add". Safari will close automatically.</p>
    <p>5/Check your icon on the desktop.</p>
    
    <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA1.PNG" width="24%">
@@ -58,9 +58,9 @@
    
    <p align="center">&nbsp;</p>
    <h1 align="left"> • Android</h1>
-   <p>1/Launch “Chrome” app. Enter 'https://covid19-kent.netlify.app'. Tap “Go”.
+   <p>1/Launch "Chrome" app. Enter "https://covid19-kent.netlify.app" and Tap "Go".
    <p>2/Tap the menu icon (3 dots in upper right-hand corner).</p>
-   <p>3/Tap “Add to homescreen.” Then do the same few steps as IOS above.</p>
+   <p>3/Tap "Add to homescreen". Then do the same few steps as IOS above.</p>
 </details>
 <br>
 <br>
