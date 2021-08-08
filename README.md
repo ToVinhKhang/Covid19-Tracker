@@ -5,11 +5,11 @@
    <details>
       <summary> Guide Download App</summary>
       <p align="left">
-      <h1 align="center">IOS</h1>
-         <img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA1.PNG" width="50%">
-         <img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA2.PNG" width="50%">
-         <img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA3.PNG" width="50%">
-         <img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA4.PNG" width="50%">
+         <h1 align="left">IOS</h1>
+         <img alt="WorldTracker" align="left" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA1.PNG" width="50%">
+         <img alt="WorldTracker" align="left" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA2.PNG" width="50%">
+         <img alt="WorldTracker" align="left" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA3.PNG" width="50%">
+         <img alt="WorldTracker" align="left" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA4.PNG" width="50%">
       </p>
    </details>
 </details>
