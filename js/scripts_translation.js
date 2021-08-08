@@ -88,6 +88,7 @@ function displayDataTranslated(dataLang){
 	var txtGlobalCases = document.getElementById("txtGlobalCases");
 	var txtGlobalRecovered = document.getElementById("txtGlobalRecovered");
 	var txtGlobalDeaths = document.getElementById("txtGlobalDeaths");
+	var txtSeeDetails = document.getElementById("txtSeeDetails");
 	var txtTotalCases = document.getElementById("txtTotalCases");
 	var txtTotalRecovered = document.getElementById("txtTotalRecovered");
 	var txtTotalDeaths = document.getElementById("txtTotalDeaths");
@@ -157,6 +158,7 @@ function displayDataTranslated(dataLang){
 	txtGlobalCases.innerHTML = dataLang.totalVietnam.txt1;
 	txtGlobalRecovered.innerHTML = dataLang.totalVietnam.txt2;
 	txtGlobalDeaths.innerHTML = dataLang.totalVietnam.txt3;
+	txtSeeDetails..innerHTML = dataLang.tableWorld.txt;
 	txtTotalCases.innerHTML = dataLang.totalVietnam.txt1;
 	txtTotalRecovered.innerHTML = dataLang.totalVietnam.txt2;
 	txtTotalDeaths.innerHTML = dataLang.totalVietnam.txt3;

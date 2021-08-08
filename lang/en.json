@@ -7,7 +7,8 @@
 		"th2": "Cases",
 		"th3": "Recovered",
 		"th4": "Deaths",
-		"th5": "Population"
+		"th5": "Population",
+		"txt": "See Details!"
 	},
 	"Continent": {
 		"txt0": "CONTINENT",

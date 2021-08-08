@@ -106,7 +106,7 @@ function displayDataGlobalDetails(jsonData){
 		
 		// Custom in Vietnam
 		if(u.country == "Vietnam"){
-			td5.innerHTML = u.population.toLocaleString('en-US')+`<br><span class="cursorPointer" onclick="SwitchTracker()">See Details!</span>`;
+			td5.innerHTML = u.population.toLocaleString('en-US')+`<br><span id="txtSeeDetails" class="cursorPointer" onclick="SwitchTracker()">See Details!</span>`;
 			
 			displayTotalVN_Population(u.population);
 			getDataDailyVaccines(u.population);
