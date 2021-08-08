@@ -13,31 +13,31 @@
    <summary> Some Illustrations</summary>
    <p align="left">
       <h1 align="center">WORLD TRACKER</h1>
-      <img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Pic0.png?token=ALF7X7TYI6JH5P6ADQMX4JTBC462S" width="100%">
+      <img alt="WorldTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic0.png" width="100%">
    </p>
    
    <h1 align="center">VIETNAM TRACKER</h1>
-   <img align="left" alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Pic00.png?token=ALF7X7VGJNITR5SZTWT7XE3BC47I2" width="100%">
+   <img align="left" alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic00.png" width="100%">
    
    <p align="center">&nbsp;</p>
    
    <h1 align="center">CORONAVIRUS VARIANT</h1>
-   <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Variant_EN_lang.png?token=ALF7X7V45CGD3ZRWAXJ2LALBB6FEM" width="100%">
+   <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%">
 
    <h1 align="center">SOFTWARE INFO</h1>
-   <img alt="SoftwareInfo" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SoftwareInfo.png?token=ALF7X7WRRF6A7Z76S2QASI3BDCRCS" width="100%">
+   <img alt="SoftwareInfo" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/SoftwareInfo.png" width="100%">
    
    <h1 align="center">TOOLS</h1>
    <p align="center">
-      <img alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Bar01.png?token=ALF7X7UKFPLW5KUY3BFDOI3BB6AM6" width="210">
-      <img alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Bar02.png?token=ALF7X7Q7KOSX26KQ2B3KHILBB6AMC" width="200">
+      <img alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar01.png" width="210">
+      <img alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar02.png" width="200">
    </p>
 
    <p align="center">
-      <img alt="ReadmoreList" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/ReadMore.png?token=ALF7X7R74R2NXUUE6UQNS73BC5AAK" width="209">
-      <img alt="VNTracker" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/iconVN.png?token=ALF7X7Q6HADO77D2HZL5UHTBB6DK2" width="52">
-      <img alt="DarkLight" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/DarkLight.png?token=ALF7X7UAXPAWALW2JOFAUJTBB6AJ4" width="50.5">
-      <img alt="SwitchLang" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SwitchLangs.png?token=ALF7X7VYDTHIC4S4GK7P3NDBB6ALI" width="88.5">
+      <img alt="ReadmoreList" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/ReadMore.png" width="209">
+      <img alt="VNTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/iconVN.png" width="52">
+      <img alt="DarkLight" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/DarkLight.png" width="50.5">
+      <img alt="SwitchLangs" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/SwitchLangs.png" width="88.5">
    </p>
    <p align="center">&nbsp;</p>
 </details>
