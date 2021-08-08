@@ -41,13 +41,15 @@
 
 <details>
    <summary> Guide Download App</summary>
-   <h1 align="left">IOS</h1>
+   <h1 align="center">IOS</h1>
    <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA1.PNG" width="22%">
    <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA2.PNG" width="22%">
    <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA3.PNG" width="22%">
    <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA4.PNG" width="22%">
 </details>
-   
+<br>
+<br>
+
 ## INTRODUCTION
 _The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
 <br>
