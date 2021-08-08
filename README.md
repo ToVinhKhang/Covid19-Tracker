@@ -19,6 +19,9 @@
    <h1 align="center">CORONAVIRUS VARIANT</h1>
    <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Variant_EN_lang.png?token=ALF7X7V45CGD3ZRWAXJ2LALBB6FEM" width="100%">
 
+   <h1 align="center">SOFTWARE INFO</h1>
+   <img alt="SoftwareInfo" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SoftwareInfo.png?token=ALF7X7WRRF6A7Z76S2QASI3BDCRCS" width="100%">
+   
    <h1 align="center">TOOLS</h1>
    <p align="center">
       <img alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Bar01.png?token=ALF7X7UKFPLW5KUY3BFDOI3BB6AM6" width="210">
@@ -31,10 +34,6 @@
       <img alt="DarkLight" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/DarkLight.png?token=ALF7X7UAXPAWALW2JOFAUJTBB6AJ4" width="50.5">
       <img alt="SwitchLang" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SwitchLangs.png?token=ALF7X7VYDTHIC4S4GK7P3NDBB6ALI" width="88.5">
    </p>
-   
-   <h1 align="center">SOFTWARE INFO</h1>
-   <img alt="SoftwareInfo" src="https://raw.githubusercontent.com/ToVinhKhang/API/main/img/SoftwareInfo.png?token=ALF7X7WRRF6A7Z76S2QASI3BDCRCS" width="100%">
-   
    <p align="center">&nbsp;</p>
 </details>
 <br>
