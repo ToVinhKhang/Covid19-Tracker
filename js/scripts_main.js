@@ -14,9 +14,6 @@ const API_GlobalAll       = "https://api-kent.netlify.app/.netlify/functions/api
 // API for GlobalCountries
 const API_GlobalCountries = "https://api-kent.netlify.app/.netlify/functions/api/global/countries";
 
-// API for Daily Vaccines
-const API_DailyVaccines   = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/vaccines";
-
 // Init
 let table;
 window.addEventListener('load',() => {

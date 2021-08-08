@@ -17,6 +17,9 @@ const API_DailyVietnam  = "https://api-kent.netlify.app/.netlify/functions/api/v
 // API for Detail Vaccine 
 const API_DetailVaccine = "https://api-kent.netlify.app/.netlify/functions/api/vn/vaccines/distribution";
 
+// API for Daily Vaccines
+const API_DailyVaccines   = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/vaccines";
+
 // Init
 let tableVN;
 let tableVNdose;
