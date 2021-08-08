@@ -1,7 +1,10 @@
 # Covid-19 Tracker
 <details>
    <summary> Release</summary>
-   <a href="https://covid19-kent.netlify.app/"><img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Covid19_48.png"></a>
+   <p align="center">&nbsp;</p>
+   <a href="https://covid19-kent.netlify.app/">
+      <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Covid19_128.png">
+   </a>
    <br>
 </details>
 
