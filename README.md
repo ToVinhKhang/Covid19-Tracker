@@ -41,11 +41,11 @@
 
 <details>
    <summary> Guide Download App</summary>
-   <h1 align="center">IOS</h1>
-   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA1.PNG" width="22%">
-   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA2.PNG" width="22%">
-   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA3.PNG" width="22%">
-   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA4.PNG" width="22%">
+   <h1 align="left">Phone (IOS)</h1>
+   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA1.PNG" width="24%">
+   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA2.PNG" width="24%">
+   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA3.PNG" width="24%">
+   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA4.PNG" width="24%">
 </details>
 <br>
 <br>
