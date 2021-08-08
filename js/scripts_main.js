@@ -78,6 +78,8 @@ function getDataGlobalAllAgain(){
 // Display
 //---------
 function displayDataGlobalDetails(jsonData){
+	table = '';
+	
 	// Continent
 	var Asia = 0;
 	var Europe = 0;

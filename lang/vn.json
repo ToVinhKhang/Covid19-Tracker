@@ -86,7 +86,7 @@
 	},
 	"AboutCoronavirusVariant": {
 		"title": "BIẾN CHỦNG CORONA",
-		"content": "<img class='imgVariant' src='https://raw.githubusercontent.com/ToVinhKhang/API/main/img/Variant_VN_lang.png?token=ALF7X7VRWFDQEXSV3WY4S43BB6DIA'>"
+		"content": "<img class='imgVariant' src='https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_VN_lang.png'>"
 	},
 	"SoftwareInfo": {
 		"title": "VỀ PHẦN MỀM",
