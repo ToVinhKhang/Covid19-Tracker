@@ -5,6 +5,10 @@
 // -----------------------------------------------
 
 window.addEventListener('load',()=>{
+	setTimeout(()=>{sortTable();}, 1000);
+});
+
+function sortTable(){
 	var DataTable = [];
 	var SortTable = document.getElementsByClassName("sortable-table");
 	for(let i = 0; i < SortTable.length; i++){
@@ -42,8 +46,7 @@ window.addEventListener('load',()=>{
 			});
 		}
 	}
-});
-
+}
 function findParent(ele,cls){while((ele = ele.parentElement) && !ele.classList.contains(cls));return ele;}
 function UnFormatStringNum(n){n = n.replace(/[^\d\.-]/g, '');return Number(n);}
 function formatContent(string){var span = document.createElement('span');span.innerHTML = string.split('<')[0];return span.textContent || span.innerText;};
@@ -61,6 +64,8 @@ function RenderSortedTable(table, data){
 		}
 	}
 }
+
+
 
 // -------------
 // 	END
