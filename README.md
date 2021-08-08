@@ -1,25 +1,10 @@
 # Covid-19 Tracker
 <details>
    <summary> Release</summary>
-   <p align="left">
-      <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Covid19_48.png">
-   </p>
+   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Covid19_48.png"> 
    •  https://covid19-kent.netlify.app/
    <br>
-   
-   <details>
-      <summary> Guide Download App</summary>
-      <p align="left">
-         <h1 align="left">IOS</h1>
-         <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA1.PNG" width="50%">
-         <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA2.PNG" width="50%">
-         <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA3.PNG" width="50%">
-         <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA4.PNG" width="50%">
-      </p>
-   </details>
 </details>
-
-
 
 <details>
    <summary> Some Illustrations</summary>
@@ -55,6 +40,15 @@
 </details>
 <br>
 
+<details>
+   <summary> Guide Download App</summary>
+   <h1 align="left">IOS</h1>
+   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA1.PNG" width="50%">
+   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA2.PNG" width="50%">
+   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA3.PNG" width="50%">
+   <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/GuidePWA4.PNG" width="50%">
+</details>
+   
 ## INTRODUCTION
 _The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
 <br>
