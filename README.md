@@ -7,7 +7,6 @@
       </a>
    </p>
    <p align="center">Version: 2.2.1</p>
-   <br>
 </details>
 
 <details>
@@ -64,7 +63,6 @@
    <p>2/Tap the menu icon (3 dots in upper right-hand corner).</p>
    <p>3/Tap "Add to homescreen". Then do the same few steps as IOS above.</p>
 </details>
-<br>
 <br>
 
 ## INTRODUCTION
