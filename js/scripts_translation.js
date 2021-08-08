@@ -158,7 +158,7 @@ function displayDataTranslated(dataLang){
 	txtGlobalCases.innerHTML = dataLang.totalVietnam.txt1;
 	txtGlobalRecovered.innerHTML = dataLang.totalVietnam.txt2;
 	txtGlobalDeaths.innerHTML = dataLang.totalVietnam.txt3;
-	txtSeeDetails..innerHTML = dataLang.tableWorld.txt;
+	txtSeeDetails.innerHTML = dataLang.tableWorld.txt;
 	txtTotalCases.innerHTML = dataLang.totalVietnam.txt1;
 	txtTotalRecovered.innerHTML = dataLang.totalVietnam.txt2;
 	txtTotalDeaths.innerHTML = dataLang.totalVietnam.txt3;
