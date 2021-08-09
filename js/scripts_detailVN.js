@@ -220,12 +220,7 @@ function ForEr(){
 
 // Create Chart
 function createChart(dateArray, dataArray, name, color, idChart, type, idDivChart){
-	// Destroy old chart
-	document.getElementById(idDivChart).innerHTML = `<canvas id="`+idChart+`" class="chart"></canvas>`;
-	
-	// Create new chart
-	setTimeout(()=>{
-		var data = {labels: dateArray,datasets:[{
+	var data = {labels: dateArray,datasets:[{
 			barPercentage: 0.25,
 			label: name,
 			backgroundColor: color,
@@ -235,12 +230,10 @@ function createChart(dateArray, dataArray, name, color, idChart, type, idDivChar
 	};
     var config = {type:type,data,options:{tension: 0.3}};
 	var myChart = new Chart(document.getElementById(idChart),config);
-	},1000);
-    
 }
 
 // Update data every 15 mins
-setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDaily();},(1000*15));
+setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDaily();},(1000*60*15));
 
 // -----
 // END
