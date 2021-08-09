@@ -32,8 +32,9 @@ window.addEventListener('load',() => {
 	tableVNdose = document.getElementById("tableVNdose");
 	tableVNvacDistribution = document.getElementById("tableVNvacDistribution");
 	getDataVNCity();
-	getDataVNDetailVaccine();
 	getDataVNDaily();
+	getDataVNDetailVaccine();
+	getDataVNDailyVaccines();
 	getDataVNDailyHCMCity();
 });
 
@@ -65,12 +66,13 @@ function getDataVNDaily(){
 		.catch(err => {console.error(err);unDisplayChart();});
 }
 // Get Data Daily Vaccines
-function getDataVNDailyVaccines(Population){
+function getDataVNDailyVaccines(){
 	fetch(API_DailyVaccines)
 		.then(data => data.json())
-		.then(jsonData => {displayDailyVaccines(jsonData,Population);})
+		.then(jsonData => {displayDailyVaccines(jsonData);})
 		.catch(e => {console.log(e);unDisplayChart();});
 }
+
 // Get Data Daily HCM City
 function getDataVNDailyHCMCity(){
 	fetch(API_DailyHCMCity)
@@ -170,10 +172,11 @@ function displayDailyVietnam(jsonData){
 	createChart(dateArray,casesArray_New,"NEW","#186FB5","newcasesChart","line","newcasesChartDiv");
 	createChart(dateArray,deathsArray_New,"NEW","#E41E20","newdeathsChart","line","newdeathsChartDiv");
 }
-function displayDailyVaccines(jsonData,Population){
+function displayDailyVaccines(jsonData){
 	var dateArray = [];
 	var vaccineArray = [];
 	var vaccineArray_New = [];
+	var lastedUpdateData = jsonData.data.length-1;
 	var lastedUpdateData = jsonData.data.length-1;
 	var vaccineData = jsonData.data[lastedUpdateData];
 	
@@ -194,6 +197,7 @@ function displayDailyVaccines(jsonData,Population){
 	createChart(dateArray,vaccineArray,"TOTAL","#666666","vaccineChart","bar","vaccineChartDiv");
 	createChart(dateArray,vaccineArray_New,"NEW","#666666","newvaccineChart","line","newvaccineChartDiv");
 }
+
 function displayDailyHCMCity(jsonData){
 	var dateArray = [];
 	var hcmArray = [];
@@ -204,7 +208,6 @@ function displayDailyHCMCity(jsonData){
 		hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
 		hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
     }
-	console.log(hcmArray)
 	createChart(dateArray,hcmArray,"TOTAL","#186FB5","casesChartHcm","bar","casesChartHcmDiv");
 	createChart(dateArray,hcmArray_New,"NEW","#186FB5","newcasesChartHcm","line","newcasesChartHcmDiv");
 }
@@ -274,7 +277,7 @@ function createChart(dateArray, dataArray, name, color, idChart, type, idDivChar
 }
 
 // Update data every 15 mins
-setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDaily();},(1000*60*15));
+setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();},(1000*60*15));
 
 // -----
 // END
