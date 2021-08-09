@@ -2,11 +2,21 @@ var fileToCache = [
 	
 ];
 
-caches.delete("./");
-caches.delete("./css/styles_main.css");
-caches.delete("./css/styles_global.css");
-caches.delete("./css/styles_darkmode.css");
-caches.delete("./css/styles_responsive.css");
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          // Return true if you want to remove this cache,
+          // but remember that caches are shared across
+          // the whole origin
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
 
 self.addEventListener("install", e=>{
 	e.waitUntil(
