@@ -187,7 +187,7 @@ function displayDailyVaccines(jsonData){
 	document.getElementById("vacTotal").innerHTML = ShorterValue(vacTotal,2);
 	document.getElementById("vacOneDose").innerHTML = ShorterValue(vacOneDose,2);
 	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose,2);
-	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/Population)*100).toFixed(2)+`%`;
+	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/98308872)*100).toFixed(2)+`%`;
 	
 	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
 		dateArray.push(jsonData.data[i].date);
