@@ -79,8 +79,8 @@
 
 .btnDailyHistory{font-weight: bold; border-radius: 25px;padding:0px; border: 1px #999999 solid; text-align:center;font-size: 150%;cursor:pointer;}
 #fieldsetDeathsDataChart,#fieldsetDoseVaccinatedDataChart{margin:40px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
-#fieldsetCasesDataChart{margin:20px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
-#txtDeathsDataChart,#txtCasesDataChart{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
+#fieldsetCasesDataChart,#fieldsetCasesDataChartHcm{margin:20px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;}
+#txtDeathsDataChart,#txtCasesDataChart,#txtCasesDataChartHcm{width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
 #txtDoseVaccinatedDataChart{width: 400px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
 .dailyChart,.TitleDetails{text-align: center; font-weight: bold; font-size: 280%;margin: 0px;letter-spacing: 2.5px;}
 #message{text-align:center; display: none; font-size: 30px;}
