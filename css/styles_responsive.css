@@ -71,7 +71,7 @@
 	#aboutGuide{word-break: break-all;}
 	#txtGlobal{width: 100px;font-size: 20px;}
 	#txtContinent{width: 140px;font-size: 20px;}
-	#txtCasesDataChart,#txtDeathsDataChart{width: 100px;font-size: 20px;}
+	#txtCasesDataChart,#txtDeathsDataChart,#txtCasesDataChartHcm{width: 100px;font-size: 20px;}
 	#txtDoseVaccinatedDataChart{width: 200px;font-size: 20px;}
 	#message{font-size: 14px;}
 	.reference{font-size:75%;}
@@ -117,7 +117,7 @@
 	#vacTotal,#vacOneDose,#vacTwoDose{font-size:18px;margin:5px;}
 	#totalPlanned,#totalRealistic,#totalDistriRate{font-size:18px;margin:5px;}
 	#TotalCases,#TotalRecovered,#TotalDeaths,#Population,#IncidenceRate,#RecoveryRate,#DeathRate{font-weight:500;}
-	#txtCasesDataChart,#txtDeathsDataChart{width: 150px;}
+	#txtCasesDataChart,#txtDeathsDataChart,#txtCasesDataChartHcm{width: 150px;}
 	#txtDoseVaccinatedDataChart{width: 210px;}
 	.dailyChart,.TitleDetails{font-size: 150%;}
 	#AllChart{padding-top:0px;}
@@ -134,7 +134,7 @@
 	#txtNorthAmerica,#txtSouthAmerica,#txtEurope,#txtAsia,#txtAfrica,#txtOceania{font-weight: bold;}
 	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 68%;}
 	#refeshPage{display: block;left: 48%;}
-	#NationalDailyBtn,#HCMCityDailyBtn{font-size: 100%;}
+	.btnDailyHistory{font-size: 100%!important;;}
 }
 @media screen and (max-width: 376px) {
 	.IncidenceRate{font-size:7px;}
@@ -161,7 +161,7 @@
 	#txtOceania{font-size: 58%;}#Oceania{font-size: 100%;}
 	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 60%;}
 	#refeshPage{display: block;left: 47%;}
-	#NationalDailyBtn,#HCMCityDailyBtn{font-size: 90%;}
+	.btnDailyHistory{font-size: 90%!important;}
 }
 @media screen and (max-width: 360px) {
 	.TotalCases{font-size:12px;}

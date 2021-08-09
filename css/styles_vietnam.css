@@ -84,10 +84,6 @@
 .dailyChart,.TitleDetails{text-align: center; font-weight: bold; font-size: 280%;margin: 0px;letter-spacing: 2.5px;}
 #message{text-align:center; display: none; font-size: 30px;}
 
-#HCMCity{display: none;}
-#NationalDailyBtn{background-color: #ddd;}
-#HCMCityDailyBtn{background-color: #f1f2f5;}
-.btnDailyHistory{font-weight: bold; border-radius: 20px;padding:0px; border: 1px #999999 solid; text-align:center;font-size: 150%;cursor:pointer;}
 
 
 
