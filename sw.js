@@ -1,20 +1,10 @@
 var fileToCache = [
-	
+	"./",
+	"./css/styles_main.css",
+	"./css/styles_global.css",
+	"./css/styles_darkmode.css",
+	"./css/styles_responsive.css"
 ];
-
-self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.filter(function(cacheName) {
-          return true;
-        }).map(function(cacheName) {
-          return caches.delete(cacheName);
-        })
-      );
-    })
-  );
-});
 
 self.addEventListener("install", e=>{
 	e.waitUntil(
