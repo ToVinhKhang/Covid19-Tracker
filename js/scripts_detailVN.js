@@ -221,8 +221,8 @@ function ForEr(){
 // Create Chart
 function createChart(dateArray, dataArray, name, color, idChart, type, idDivChart){
 	// Destroy old chart
-	$("#"+idChart).remove();
-	$("#"+idDivChart).append(`<canvas id='`+idChart+`' class="chart" width="600" height="300"></canvas>`);
+	$(`#`+idChart).remove();
+	$(`#`+idDivChart).append(`<canvas id="`+idChart+`" class="chart"></canvas>`);
 	
 	// Create new chart
 	var targetChart = document.getElementById(idChart).getContext('2d');
@@ -239,7 +239,7 @@ function createChart(dateArray, dataArray, name, color, idChart, type, idDivChar
 }
 
 // Update data every 15 mins
-setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDaily();},(1000*60*15));
+setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDaily();},(1000*60));
 
 // -----
 // END
