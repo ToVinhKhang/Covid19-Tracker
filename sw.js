@@ -1,5 +1,7 @@
-
-var CURRENT_CACHES = "Covid19";
+var CACHE_VERSION = 1;
+var CURRENT_CACHES = {
+	prefetch: 'window-cache-v' + CACHE_VERSION
+};
 
 var file = [
 	"./",
@@ -9,7 +11,7 @@ var file = [
 
 self.addEventListener("install", e=>{
 	e.waitUntil(
-		caches.open(CURRENT_CACHES).then(cache =>{
+		caches.open(CURRENT_CACHES.prefetch).then(cache =>{
 			return cache.addAll(file);
 		})
 	);
@@ -23,7 +25,7 @@ self.addEventListener("fetch", e=>{
 	);
 });
 
-/*self.addEventListener('activate', function(event) {
+self.addEventListener('activate', function(event) {
 	self.clients.claim();
 	var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function(key){return CURRENT_CACHES[key];});
 	event.waitUntil(
@@ -37,4 +39,4 @@ self.addEventListener("fetch", e=>{
 			);
 		})
 	);
-});*/
+});
