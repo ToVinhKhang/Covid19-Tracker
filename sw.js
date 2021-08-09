@@ -1,5 +1,5 @@
 
-var CURRENT_CACHES = "Covid19"
+var CURRENT_CACHES = "Covid19";
 
 var file = [
 	"./",
@@ -9,7 +9,7 @@ var file = [
 
 self.addEventListener("install", e=>{
 	e.waitUntil(
-		caches.open(CURRENT_CACHES.prefetch).then(cache =>{
+		caches.open(CURRENT_CACHES).then(cache =>{
 			return cache.addAll(file);
 		})
 	);
