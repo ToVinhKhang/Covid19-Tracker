@@ -66,7 +66,9 @@
 		"title0": "LỊCH SỬ HẰNG NGÀY",
 		"title1": "CA NHIỄM",
 		"title2": "TỬ VONG",
-		"title3": "LIỀU ĐÃ TIÊM"
+		"title3": "LIỀU ĐÃ TIÊM",
+		"btn1": "CẢ NƯỚC",
+		"btn2": "TP HCM"
 	},
 	"AboutData" : "<option value=''>Xem Thêm</option><option value='AboutTheData'>• Về Dữ Liệu </option><option value='VaccineDetails'>• Chi Tiết Vắcxin </option><option value='VaccineTechnology'>• Công Nghệ Vắcxin </option><option value='CoronavirusVariant'>• Biến Chủng Corona </option><option value='TreatmentMedicine'>• Thuốc Điều Trị</option><option value='SoftwareInfo'>• Về Phần Mềm </option>",
 	"AboutTheData": {

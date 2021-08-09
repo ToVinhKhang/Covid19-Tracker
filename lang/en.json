@@ -66,7 +66,9 @@
 		"title0": "DAILY HISTORY",
 		"title1": "CASES",
 		"title2": "DEATHS",
-		"title3": "DOSE VACCINATED"
+		"title3": "DOSE VACCINATED",
+		"btn1": "NATIONAL",
+		"btn2": "HCM CITY"
 	},
 	"AboutData" : "<option value=''>Read More</option><option value='AboutTheData'>• About The Data </option><option value='VaccineDetails'>• Vaccine Details </option><option value='VaccineTechnology'>• Vaccine Technology </option><option value='CoronavirusVariant'>• Coronavirus Variant </option><option value='TreatmentMedicine'>• Treatment Medicine</option><option value='SoftwareInfo'>• Software Info </option>",
 	"AboutTheData": {

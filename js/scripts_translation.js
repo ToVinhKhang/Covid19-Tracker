@@ -134,7 +134,10 @@ function displayDataTranslated(dataLang){
 	var aboutGuide = document.getElementById("aboutGuide");
 	var dailyChart = document.getElementById("dailyChart");	
 	var message = document.getElementById("message");	
-
+	var NationalDailyBtn = document.getElementById("NationalDailyBtn");
+	var HCMCityDailyBtn = document.getElementById("HCMCityDailyBtn");
+	
+	
 	th_contries.innerHTML = dataLang.tableWorld.th1;
 	th_cases.innerHTML = dataLang.tableWorld.th2;
 	th_recovered.innerHTML = dataLang.tableWorld.th3;
@@ -206,6 +209,8 @@ function displayDataTranslated(dataLang){
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
 	dailyChart.innerHTML = dataLang.Chart.title0;
 	message.innerHTML = dataLang.forEr;
+	NationalDailyBtn = dataLang.Chart.btn1;
+	HCMCityDailyBtn = dataLang.Chart.btn2;
 }
 
 // ----

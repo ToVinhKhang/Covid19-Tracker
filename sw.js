@@ -1,8 +1,6 @@
 var fileToCache = [
 	"./",
 	"./css/styles_main.css",
-	"./css/styles_global.css",
-	"./css/styles_darkmode.css",
 	"./css/styles_responsive.css"
 ];
 
