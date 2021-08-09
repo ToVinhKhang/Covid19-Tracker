@@ -222,7 +222,7 @@ function ForEr(){
 function createChart(dateArray, dataArray, name, color, idChart, type, idDivChart){
 	// Destroy old chart
 	$("#"+idChart).remove();
-	$("#"+idDivChart).append(`<canvas id='`+idChart+`' class="chart"></canvas>`);
+	$("#"+idDivChart).append(`<canvas id='`+idChart+`' class="chart" width="600" height="300"></canvas>`);
 	
 	// Create new chart
 	var targetChart = document.getElementById(idChart).getContext('2d');
