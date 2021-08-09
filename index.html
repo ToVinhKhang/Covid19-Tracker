@@ -5,15 +5,17 @@
 	<title>Covid-19 Tracker</title>
 	<link rel="icon" href="https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=720" type="image" sizes="16x16">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Refresh Caches -->
 	<meta http-equiv='cache-control' content='no-cache'>
 	<meta http-equiv='expires' content='0'>
 	<meta http-equiv='pragma' content='no-cache'>
+	<!-- CDN -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 	<!-- Styles All -->
 	<link rel="stylesheet" href="./css/styles_main.css">
 	<link rel="stylesheet" href="./css/styles_global.css">
@@ -340,8 +342,8 @@
 				
 				<!-- HCM City -->
 				<div id="HCMCity" style="display: none;">
-					<fieldset id="fieldsetCasesDataChartHcm">
-						<legend id="txtCasesDataChartHcm">CASES</legend>
+					<fieldset id="fieldsetCasesDataChartHcm" style="margin:20px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;">
+						<legend id="txtCasesDataChartHcm" style="width: 200px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;">CASES</legend>
 						<div class="row">
 							<div class="col-md-6"><canvas id="newcasesChartHcm" width="400" height="250" class="chart"></canvas></div>
 							<div class="col-md-6"><canvas id="casesChartHcm" width="400" height="250" class="chart"></canvas></div>
