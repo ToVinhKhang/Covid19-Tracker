@@ -6,6 +6,12 @@ var fileToCache = [
 	"./css/styles_responsive.css"
 ];
 
+caches.delete("./");
+caches.delete("./css/styles_main.css");
+caches.delete("./css/styles_global.css");
+caches.delete("./css/styles_darkmode.css");
+caches.delete("./css/styles_responsive.css");
+
 self.addEventListener("install", e=>{
 	e.waitUntil(
 		caches.open("static").then(cache =>{
