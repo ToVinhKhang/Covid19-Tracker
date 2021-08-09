@@ -246,7 +246,6 @@ function ForEr(){
 	document.getElementById("content-detail").style.display="none";
 }
 
-
 function NationalDailyBtn(){
 	document.getElementById("National").style.display = "block";
 	document.getElementById("HCMCity").style.display = "none";
@@ -259,8 +258,6 @@ function HCMCityDailyBtn(){
 	document.getElementById("HCMCityDailyBtn").style.backgroundColor = "#ddd";
 	document.getElementById("NationalDailyBtn").style.backgroundColor = "#f1f2f5";
 }
-
-
 
 // Create Chart
 function createChart(dateArray, dataArray, name, color, idChart, type, idDivChart){
