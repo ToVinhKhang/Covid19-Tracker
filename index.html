@@ -308,8 +308,8 @@
 				<hr>
 				<p class="dailyChart" id="dailyChart">DAILY HISTORY</p>
 				<div class="row p-3">
-					<p class="col-md-6 col-6 btnDailyHistory" style="font-weight: bold; border-radius: 20px;padding:0px; border: 1px #999999 solid; text-align:center;font-size: 150%;cursor:pointer; background-color: #ddd;" onClick="NationalDailyBtn()" id="NationalDailyBtn">NATIONAL</p>
-					<p class="col-md-6 col-6 btnDailyHistory" style="font-weight: bold; border-radius: 20px;padding:0px; border: 1px #999999 solid; text-align:center;font-size: 150%;cursor:pointer; background-color: #f1f2f5;" onClick="HCMCityDailyBtn()" id="HCMCityDailyBtn">HCM CITY</p>
+					<p class="col-md-6 col-6 btnDailyHistory" onClick="NationalDailyBtn()" id="NationalDailyBtn">NATIONAL</p>
+					<p class="col-md-6 col-6 btnDailyHistory" onClick="HCMCityDailyBtn()" id="HCMCityDailyBtn">HCM CITY</p>
 				</div>
 				
 				<!-- National -->
@@ -342,7 +342,7 @@
 				
 				<!-- HCM City -->
 				<div id="HCMCity" style="display: none;">
-					<fieldset id="fieldsetCasesDataChartHcm" style="margin:20px 0px 0px 0px;padding:0;border: 3px solid #ddd; border-radius: 30px;">
+					<fieldset id="fieldsetCasesDataChartHcm">
 						<legend id="txtCasesDataChartHcm">CASES</legend>
 						<div class="row">
 							<div class="col-md-6"><canvas id="newcasesChartHcm" width="400" height="250" class="chart"></canvas></div>
