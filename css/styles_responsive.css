@@ -7,6 +7,7 @@
 /* Responsive */
 @media screen and (max-width: 1024px) {
 	#global,#continent{width: 100%;margin-bottom: 30px;}
+	#headerWorld{margin-top: 30px;}
 	#countries{font-size:55%;width: 100%;}
 	span{font-size: 8px;}
 	.flagCountry{width: 30px; height: 25px;}
@@ -49,6 +50,7 @@
 	#txtAfrica,#Africa{font-size: 150%;}
 	#txtOceania,#Oceania{font-size: 150%;}
 	.continent{margin: 20px;}
+	#refeshPage{display: block;}
 }
 @media screen and (max-width: 768px) {
 	#tableVN{height:300px;}
@@ -80,6 +82,7 @@
 	#txtAfrica{font-size: 90%;}
 	#txtOceania{font-size: 90%;}
 	.continent{margin: 18px;}
+	#refeshPage{display: block;left: 48.5%;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
@@ -131,6 +134,7 @@
 	#txtOceania{font-size: 70%;}#Oceania{font-size: 130%;}
 	#txtNorthAmerica,#txtSouthAmerica,#txtEurope,#txtAsia,#txtAfrica,#txtOceania{font-weight: bold;}
 	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 68%;}
+	#refeshPage{display: block;left: 48%;}
 }
 @media screen and (max-width: 376px) {
 	.IncidenceRate{font-size:7px;}
@@ -156,6 +160,7 @@
 	#txtAfrica{font-size: 58%;}#Africa{font-size: 100%;}
 	#txtOceania{font-size: 58%;}#Oceania{font-size: 100%;}
 	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 60%;}
+	#refeshPage{display: block;left: 47%;}
 }
 @media screen and (max-width: 360px) {
 	.TotalCases{font-size:12px;}
@@ -198,4 +203,5 @@
 	#txtAsia{font-size: 40%;}#Asia{font-size: 70%;}
 	#txtAfrica{font-size: 40%;}#Africa{font-size: 70%;}
 	#txtOceania{font-size: 40%;}#Oceania{font-size: 70%;}
+	#refeshPage{display: block;left: 46.5%;}
 }

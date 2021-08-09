@@ -59,6 +59,9 @@ hr{border: 0;border-top: 2px solid #ddd;text-align: center; width: 35%;}
 }
 #scrollTop:hover{background-color: #309FB5;}
 
+/* Refesh Page */
+#refeshPage{position: absolute;top: 10px;left: 49%;z-index: 99;font-size: 22px; color: #1c1e21; display: none;}
+
 /* Scroll Bar */
 ::-webkit-scrollbar {width: 8px;}
 ::-webkit-scrollbar-track {background: #f1f1f1;}

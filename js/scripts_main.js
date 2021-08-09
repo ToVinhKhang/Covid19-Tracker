@@ -204,7 +204,7 @@ function formatTailNum(num){
 	if(numDigitsAfterDecimal(num)==1){num+=`0`}
 	return num;
 }
-
+function refreshPage(){window.location.reload();}
 
 // DateTime
 function Zero(num) {return (num >= 0 && num < 10) ? "0" + num : num + "";}
