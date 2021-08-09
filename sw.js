@@ -1,6 +1,6 @@
-var CACHE_VERSION = 1;
+
 var CURRENT_CACHES = {
-	prefetch: 'window-cache-v' + CACHE_VERSION
+	prefetch: 'Covid-19 Tracker'
 };
 
 var file = [
