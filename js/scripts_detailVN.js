@@ -221,7 +221,7 @@ function ForEr(){
 // Create Chart
 function createChart(dateArray, dataArray, name, color, idChart, type, idDivChart){
 	// Destroy old chart
-	document.querySelector(`#`+idDivChart).innerHTML = `<canvas id="`+idChart+`" class="chart"></canvas>`;
+	document.getElementById(idDivChart).innerHTML = `<canvas id="`+idChart+`" class="chart"></canvas>`;
 	
 	// Create new chart
     var data = {labels: dateArray,datasets:[{
