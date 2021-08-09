@@ -1,7 +1,7 @@
 # Covid-19 Tracker
 <details>
    <summary> Release</summary>
-   <p align="center">Click Icon To Use</p>
+   <p align="center">Click Icon</p>
    <p align="center">
       <a href="https://covid19-kent.netlify.app/">
          <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Covid19_128.png">
