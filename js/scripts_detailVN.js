@@ -237,7 +237,7 @@ function createChart(dateArray, dataArray, name, color, idChart, type, idDivChar
 }
 
 // Update data every 15 mins
-setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDaily();},(1000*15));
+setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDaily();},(1000*60*15));
 
 // -----
 // END
