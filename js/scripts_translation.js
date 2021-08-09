@@ -209,8 +209,8 @@ function displayDataTranslated(dataLang){
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
 	dailyChart.innerHTML = dataLang.Chart.title0;
 	message.innerHTML = dataLang.forEr;
-	NationalDailyBtn = dataLang.Chart.btn1;
-	HCMCityDailyBtn = dataLang.Chart.btn2;
+	NationalDailyBtn.innerHTML = dataLang.Chart.btn1;
+	HCMCityDailyBtn.innerHTML = dataLang.Chart.btn2;
 }
 
 // ----
