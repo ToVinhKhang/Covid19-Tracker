@@ -25,7 +25,7 @@ self.addEventListener("fetch", e=>{
 	);
 });
 
-self.addEventListener('activate', function(event) {
+/*self.addEventListener('activate', function(event) {
 	self.clients.claim();
 	var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function(key){return CURRENT_CACHES[key];});
 	event.waitUntil(
@@ -39,4 +39,4 @@ self.addEventListener('activate', function(event) {
 			);
 		})
 	);
-});
+});*/
