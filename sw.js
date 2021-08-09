@@ -25,10 +25,10 @@ self.addEventListener("fetch", e=>{
 	);
 });
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', e=>{
 	self.clients.claim();
 	var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function(key){return CURRENT_CACHES[key];});
-	event.waitUntil(
+	e.waitUntil(
 		caches.keys().then(function(cacheNames) {
 			return Promise.all(
 				cacheNames.map(function(cacheName){
