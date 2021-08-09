@@ -225,7 +225,7 @@ function createChart(dateArray, dataArray, name, color, idChart, type, idDivChar
 	$("#"+idDivChart).append(`<canvas id='`+idChart+`' class="chart"></canvas>`);
 	
 	// Create new chart
-	var targetChart = document.getElementById(idChart);
+	var targetChart = document.getElementById(idChart).getContext('2d');
     var data = {labels: dateArray,datasets:[{
 			barPercentage: 0.25,
 			label: name,
