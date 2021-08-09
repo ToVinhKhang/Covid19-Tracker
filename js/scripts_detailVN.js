@@ -33,9 +33,9 @@ window.addEventListener('load',() => {
 	tableVNvacDistribution = document.getElementById("tableVNvacDistribution");
 	getDataVNCity();
 	getDataVNDaily();
+	getDataVNDailyHCMCity();
 	getDataVNDetailVaccine();
 	getDataVNDailyVaccines();
-	getDataVNDailyHCMCity();
 });
 
 
