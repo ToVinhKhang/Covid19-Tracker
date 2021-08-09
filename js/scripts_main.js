@@ -220,6 +220,9 @@ setInterval(()=>{
 // Update data every 15 mins
 setInterval(()=>{getDataGlobalDetailsAgain();getDataGlobalAllAgain();},(1000*60*15));
 
+// Refesh Page every 12 hours 1
+setInterval(()=>{refreshPage();},(1000*60*60*12));
+
 //------
 // END
 //------

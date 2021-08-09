@@ -89,7 +89,6 @@
 	.vnTotal,.vnRate{border: 2px solid #ddd;margin: 10px;border-radius:25px;padding:25px 10px 10px 10px;}
 	#LastUpdated{font-size:10px;}
 	.dailyChart,.TitleDetails{font-size: 200%;}
-	
 }
 
 @media screen and (max-width: 540px){
@@ -135,6 +134,7 @@
 	#txtNorthAmerica,#txtSouthAmerica,#txtEurope,#txtAsia,#txtAfrica,#txtOceania{font-weight: bold;}
 	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 68%;}
 	#refeshPage{display: block;left: 48%;}
+	#NationalDailyBtn,#HCMCityDailyBtn{font-size: 100%;}
 }
 @media screen and (max-width: 376px) {
 	.IncidenceRate{font-size:7px;}
@@ -161,6 +161,7 @@
 	#txtOceania{font-size: 58%;}#Oceania{font-size: 100%;}
 	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 60%;}
 	#refeshPage{display: block;left: 47%;}
+	#NationalDailyBtn,#HCMCityDailyBtn{font-size: 90%;}
 }
 @media screen and (max-width: 360px) {
 	.TotalCases{font-size:12px;}

@@ -18,7 +18,10 @@ const API_DailyVietnam  = "https://api-kent.netlify.app/.netlify/functions/api/v
 const API_DetailVaccine = "https://api-kent.netlify.app/.netlify/functions/api/vn/vaccines/distribution";
 
 // API for Daily Vaccines
-const API_DailyVaccines   = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/vaccines";
+const API_DailyVaccines = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/vaccines";
+
+// API for Daily HCM City
+const API_DailyHCMCity  = "https://api.zingnews.vn/public/v2/corona/getChart?loc=hochiminh";
 
 // Init
 let tableVN;
@@ -31,6 +34,7 @@ window.addEventListener('load',() => {
 	getDataVNCity();
 	getDataVNDetailVaccine();
 	getDataVNDaily();
+	getDataVNDailyHCMCity();
 });
 
 
@@ -65,6 +69,13 @@ function getDataVNDailyVaccines(Population){
 	fetch(API_DailyVaccines)
 		.then(data => data.json())
 		.then(jsonData => {displayDailyVaccines(jsonData,Population);})
+		.catch(e => {console.log(e);unDisplayChart();});
+}
+// Get Data Daily HCM City
+function getDataVNDailyHCMCity(){
+	fetch(API_DailyHCMCity)
+		.then(data => data.json())
+		.then(jsonData => {displayDailyHCMCity(jsonData);})
 		.catch(e => {console.log(e);unDisplayChart();});
 }
 
@@ -154,10 +165,10 @@ function displayDailyVietnam(jsonData){
 		casesArray_New.push(jsonData.data[i].new_cases);
 		deathsArray_New.push(jsonData.data[i].new_deaths);
 	}
-	createChart(dateArray,casesArray,"Total Cases","#186FB5","casesChart","bar","casesChartDiv");
-	createChart(dateArray,deathsArray,"Total Deaths","#E41E20","deathsChart","bar","deathsChartDiv");
-	createChart(dateArray,casesArray_New,"New Cases","#186FB5","newcasesChart","line","newcasesChartDiv");
-	createChart(dateArray,deathsArray_New,"New Deaths","#E41E20","newdeathsChart","line","newdeathsChartDiv");
+	createChart(dateArray,casesArray,"TOTAL","#186FB5","casesChart","bar","casesChartDiv");
+	createChart(dateArray,deathsArray,"TOTAL","#E41E20","deathsChart","bar","deathsChartDiv");
+	createChart(dateArray,casesArray_New,"NEW","#186FB5","newcasesChart","line","newcasesChartDiv");
+	createChart(dateArray,deathsArray_New,"NEW","#E41E20","newdeathsChart","line","newdeathsChartDiv");
 }
 function displayDailyVaccines(jsonData,Population){
 	var dateArray = [];
@@ -180,8 +191,22 @@ function displayDailyVaccines(jsonData,Population){
 		vaccineArray.push(jsonData.data[i].total_vaccinations);
 		vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
 	}
-	createChart(dateArray,vaccineArray,"Total Dose Vaccinated","#666666","vaccineChart","bar","vaccineChartDiv");
-	createChart(dateArray,vaccineArray_New,"New Dose Vaccinated","#666666","newvaccineChart","line","newvaccineChartDiv");
+	createChart(dateArray,vaccineArray,"TOTAL","#666666","vaccineChart","bar","vaccineChartDiv");
+	createChart(dateArray,vaccineArray_New,"NEW","#666666","newvaccineChart","line","newvaccineChartDiv");
+}
+function displayDailyHCMCity(jsonData){
+	var dateArray = [];
+	var hcmArray = [];
+	var hcmArray_New = [];
+	var lengthData = jsonData.data.data.length-1;
+	for(i=lengthData-5;i<=lengthData;i++){
+		dateArray.push(jsonData.data.data[i].date);
+		hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
+		hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
+    }
+	console.log(hcmArray)
+	createChart(dateArray,hcmArray,"TOTAL","#186FB5","casesChartHcm","bar","casesChartHcmDiv");
+	createChart(dateArray,hcmArray_New,"NEW","#186FB5","newcasesChartHcm","line","newcasesChartHcmDiv");
 }
 
 function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
@@ -217,6 +242,22 @@ function ForEr(){
 	document.getElementById("content-total").style.display="none";
 	document.getElementById("content-detail").style.display="none";
 }
+
+
+function NationalDailyBtn(){
+	document.getElementById("National").style.display = "block";
+	document.getElementById("HCMCity").style.display = "none";
+	document.getElementById("NationalDailyBtn").style.backgroundColor = "#ddd";
+	document.getElementById("HCMCityDailyBtn").style.backgroundColor = "#f1f2f5";
+}
+function HCMCityDailyBtn(){
+	document.getElementById("HCMCity").style.display = "block";
+	document.getElementById("National").style.display = "none";
+	document.getElementById("HCMCityDailyBtn").style.backgroundColor = "#ddd";
+	document.getElementById("NationalDailyBtn").style.backgroundColor = "#f1f2f5";
+}
+
+
 
 // Create Chart
 function createChart(dateArray, dataArray, name, color, idChart, type, idDivChart){
