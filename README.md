@@ -1,6 +1,7 @@
 # Covid-19 Tracker
 <details>
    <summary> Release</summary>
+   <p align="center">Click Icon To Use</p>
    <p align="center">
       <a href="https://covid19-kent.netlify.app/">
          <img alt="GuidePWA1" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Covid19_128.png">
@@ -66,7 +67,7 @@
 <br>
 
 ## INTRODUCTION
-_The Covid19 Tracker project was developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Epidemic Data Situation and Vietnam Country Details. In addition, the system also provides some information about coronavirus variant, vaccine technologies, ..._
+_The Covid19 Tracker project is developed to contribute to the community. This system makes it possible for users everywhere to monitor the World Coronavirus Disease Data Situation and Vietnam Country Details. In addition, the system also provides some information about vaccine technologies, coronavirus variants, treatment medicines, etc. In addition, users on mobile devices can also add this app to the home screen for ease of use._
 <br>
 <br>
 
