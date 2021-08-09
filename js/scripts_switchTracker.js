@@ -19,6 +19,7 @@ function SwitchTracker(){
 		document.getElementById("txtVNTracker").innerHTML = "Vietnam Tracker";
 		$(".WorldLogo").attr("src", "https://img.icons8.com/color/452/vietnam-circular.png");
 		checkClass.remove("WorldLogo");
+		document.title = "Covid-19 Tracker";
 	}
 	
 	// Display World Tracker
@@ -29,6 +30,7 @@ function SwitchTracker(){
 		document.getElementById("txtVNTracker").innerHTML = "World Tracker";
 		$(".vnLogo").attr("src", "https://image.flaticon.com/icons/png/512/1652/1652844.png");
 		checkClass.remove("vnLogo");
+		document.title = "Covid-19 Tracker | Vietnam";
 	}
 	
 	// Scroll Top 
