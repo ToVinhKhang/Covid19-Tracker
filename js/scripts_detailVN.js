@@ -28,9 +28,9 @@ window.addEventListener('load',() => {
 	tableVN = document.getElementById("tableVN");
 	tableVNdose = document.getElementById("tableVNdose");
 	tableVNvacDistribution = document.getElementById("tableVNvacDistribution");
-	getDataCity();
-	getDataDetailVaccine();
-	getDataDailyVietnam();
+	getDataVNCity();
+	getDataVNDetailVaccine();
+	getDataVNDaily();
 });
 
 
@@ -38,7 +38,7 @@ window.addEventListener('load',() => {
 // GET DATA
 //---------
 // Get Data City 
-function getDataCity(){
+function getDataVNCity(){
 	tableVN.innerHTML = '';
 	fetch(API_CityVietnam)
 		.then(data => data.json())
@@ -47,21 +47,21 @@ function getDataCity(){
 }
 
 // Get Data Detail Vaccine 
-function getDataDetailVaccine(){
+function getDataVNDetailVaccine(){
 	fetch(API_DetailVaccine)
 		.then(data => data.json())
 		.then(jsonData => {displayVacDose(jsonData);displayVacDistribution(jsonData);})
 		.catch(err => {ForEr();console.error(err);});
 }
 // Get Data DailyVietnam
-function getDataDailyVietnam(){
+function getDataVNDaily(){
 	fetch(API_DailyVietnam)
 		.then(data => data.json())
 		.then(jsonData => {displayDailyVietnam(jsonData);})
 		.catch(err => {console.error(err);unDisplayChart();});
 }
 // Get Data Daily Vaccines
-function getDataDailyVaccines(Population){
+function getDataVNDailyVaccines(Population){
 	fetch(API_DailyVaccines)
 		.then(data => data.json())
 		.then(jsonData => {displayDailyVaccines(jsonData,Population);})
@@ -154,10 +154,10 @@ function displayDailyVietnam(jsonData){
 		casesArray_New.push(jsonData.data[i].new_cases);
 		deathsArray_New.push(jsonData.data[i].new_deaths);
 	}
-	createChart(dateArray,casesArray,"Total Cases","#186FB5","casesChart","bar");
-	createChart(dateArray,deathsArray,"Total Deaths","#E41E20","deathsChart","bar");
-	createChart(dateArray,casesArray_New,"New Cases","#186FB5","newcasesChart","line");
-	createChart(dateArray,deathsArray_New,"New Deaths","#E41E20","newdeathsChart","line");
+	createChart(dateArray,casesArray,"Total Cases","#186FB5","casesChart","bar","casesChartDiv");
+	createChart(dateArray,deathsArray,"Total Deaths","#E41E20","deathsChart","bar","deathsChartDiv");
+	createChart(dateArray,casesArray_New,"New Cases","#186FB5","newcasesChart","line","newcasesChartDiv");
+	createChart(dateArray,deathsArray_New,"New Deaths","#E41E20","newdeathsChart","line","newdeathsChartDiv");
 }
 function displayDailyVaccines(jsonData,Population){
 	var dateArray = [];
@@ -180,8 +180,8 @@ function displayDailyVaccines(jsonData,Population){
 		vaccineArray.push(jsonData.data[i].total_vaccinations);
 		vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
 	}
-	createChart(dateArray,vaccineArray,"Total Dose Vaccinated","#666666","vaccineChart","bar");
-	createChart(dateArray,vaccineArray_New,"New Dose Vaccinated","#666666","newvaccineChart","line");
+	createChart(dateArray,vaccineArray,"Total Dose Vaccinated","#666666","vaccineChart","bar","vaccineChartDiv");
+	createChart(dateArray,vaccineArray_New,"New Dose Vaccinated","#666666","newvaccineChart","line","newvaccineChartDiv");
 }
 
 function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
@@ -219,7 +219,12 @@ function ForEr(){
 }
 
 // Create Chart
-function createChart(dateArray, dataArray, name, color, idChart, type){
+function createChart(dateArray, dataArray, name, color, idChart, type, idDivChart){
+	// Destroy old chart
+	$("#"+idChart).remove();
+	$("#"+idDivChart).append(`<canvas id='`+idChart+`' class="chart"></canvas>`);
+	
+	// Create new chart
 	var targetChart = document.getElementById(idChart);
     var data = {labels: dateArray,datasets:[{
 			barPercentage: 0.25,
@@ -230,11 +235,11 @@ function createChart(dateArray, dataArray, name, color, idChart, type){
 		}]
 	};
     var config = {type:type,data,options:{tension: 0.3}};
-	var myChart = new Chart(document.getElementById(idChart),config);
+	var myChart = new Chart(targetChart,config);
 }
 
 // Update data every 15 mins
-setInterval(()=>{getDataCity();getDataDetailVaccine();},(1000*60*15));
+setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDaily();},(1000*60*15));
 
 // -----
 // END
