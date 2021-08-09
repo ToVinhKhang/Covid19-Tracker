@@ -270,7 +270,7 @@ function createChart(dateArray, dataArray, name, color, idChart, type, idDivChar
 		}]
 	};
     var config = {type:type,data,options:{tension: 0.3}};
-	var myChart = new Chart(document.getElementById(idChart).getContext("2d"),config);
+	var myChart = new Chart(document.getElementById(idChart),config);
 }
 
 // Update data every 15 mins
