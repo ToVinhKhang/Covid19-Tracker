@@ -89,7 +89,7 @@
 	},
 	"AboutCoronavirusVariant": {
 		"title": "CORONAVIRUS VARIANT",
-		"content": "<img class='imgVariant' src='https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png'>"
+		"content": "<img class='imgVariant' src='https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/VariantEN1.png'><img class='imgVariant' src='https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/VariantEN2.png'>"
 	},
 	"SoftwareInfo": {
 		"title": "SOFTWARE INFO",
