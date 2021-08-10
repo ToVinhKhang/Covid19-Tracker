@@ -135,7 +135,7 @@ function displayDataTranslated(dataLang){
 	var dailyChart = document.getElementById("dailyChart");	
 	var message = document.getElementById("message");	
 	var NationalDailyBtn = document.getElementById("NationalDailyBtn");
-	var HCMCityDailyBtn = document.getElementById("HCMCityDailyBtn");
+	var MostInterest = document.getElementById("MostInterest");
 	
 	
 	th_contries.innerHTML = dataLang.tableWorld.th1;
@@ -210,7 +210,7 @@ function displayDataTranslated(dataLang){
 	dailyChart.innerHTML = dataLang.Chart.title0;
 	message.innerHTML = dataLang.forEr;
 	NationalDailyBtn.innerHTML = dataLang.Chart.btn1;
-	HCMCityDailyBtn.innerHTML = dataLang.Chart.btn2;
+	MostInterest.innerHTML = dataLang.Chart.btn2;
 }
 
 // ----

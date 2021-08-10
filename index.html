@@ -308,8 +308,18 @@
 				<hr>
 				<p class="dailyChart" id="dailyChart">DAILY HISTORY</p>
 				<div class="row p-3">
+					<!-- NationalDailyBtn -->
 					<p class="col-md-6 col-6 btnDailyHistory" onClick="NationalDailyBtn()" id="NationalDailyBtn">NATIONAL</p>
-					<p class="col-md-6 col-6 btnDailyHistory" onClick="HCMCityDailyBtn()" id="HCMCityDailyBtn">HCM CITY</p>
+					<!-- CityProvinceDailyBtn -->
+					<div class="col-md-6 col-6 dropdown" id="CityProvinceDailyBtn">
+						<!-- Most Interest -->
+						<button class="dropdown-toggle btnDailyHistory " type="button" id="MostInterest" data-toggle="dropdown">MOST INTEREST</button>
+						<div class="dropdown-menu w-100" aria-labelledby="MostInterest">
+							<a class="dropdown-item w-100" onClick="CityProvinceDaily()" id="hcm">Hồ Chí Minh</a>
+							<a class="dropdown-item w-100" onClick="CityProvinceDaily()" id="hn">Hà Nội</a>
+							<a class="dropdown-item w-100" onClick="CityProvinceDaily()" id="bd">Bình Dương</a>
+						</div>
+					</div>
 				</div>
 				
 				<!-- National -->
@@ -340,13 +350,13 @@
 					</fieldset>
 				</div>
 				
-				<!-- HCM City -->
-				<div id="HCMCity" style="display: none;">
-					<fieldset id="fieldsetCasesDataChartHcm">
-						<legend id="txtCasesDataChartHcm">CASES</legend>
+				<!-- City/Province -->
+				<div id="CityProvince">
+					<fieldset id="fieldsetCasesDataChartCityProvince">
+						<legend id="txtCasesDataChartCityProvince">CASES</legend>
 						<div class="row">
-							<div class="col-md-6"><canvas id="newcasesChartHcm" width="400" height="250" class="chart"></canvas></div>
-							<div class="col-md-6"><canvas id="casesChartHcm" width="400" height="250" class="chart"></canvas></div>
+							<div class="col-md-6" id="newcasesChartCityProvinceDiv"><canvas id="newcasesChartCityProvince" width="400" height="250" class="chart"></canvas></div>
+							<div class="col-md-6" id="casesChartCityProvinceDiv"><canvas id="casesChartCityProvince" width="400" height="250" class="chart"></canvas></div>
 						</div>
 					</fieldset>
 				</div>

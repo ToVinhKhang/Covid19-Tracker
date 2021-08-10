@@ -20,8 +20,6 @@ const API_DetailVaccine = "https://api-kent.netlify.app/.netlify/functions/api/v
 // API for Daily Vaccines
 const API_DailyVaccines = "https://api-kent.netlify.app/.netlify/functions/api/vn/daily/vaccines";
 
-// API for Daily HCM City
-const API_DailyHCMCity  = "https://api.zingnews.vn/public/v2/corona/getChart?loc=hochiminh";
 
 // Init
 let tableVN;
@@ -33,7 +31,7 @@ window.addEventListener('load',() => {
 	tableVNvacDistribution = document.getElementById("tableVNvacDistribution");
 	getDataVNCity();
 	getDataVNDaily();
-	getDataVNDailyHCMCity();
+	getDataVNDailyCityProvince();
 	getDataVNDetailVaccine();
 	getDataVNDailyVaccines();
 });
@@ -73,12 +71,17 @@ function getDataVNDailyVaccines(){
 		.catch(e => {console.log(e);unDisplayChart();});
 }
 
-// Get Data Daily HCM City
-function getDataVNDailyHCMCity(){
-	fetch(API_DailyHCMCity)
+// Get Data Daily CityProvince (Most Interest)
+function getDataVNDailyCityProvince(){
+	$('#hcm').on('click',()=>{fetchCityProvince("hochiminh");});
+	$('#hn').on('click',()=>{fetchCityProvince("hanoi");});
+	$('#bd').on('click',()=>{fetchCityProvince("binhduong");});
+}
+function fetchCityProvince(name){
+	fetch("https://api.zingnews.vn/public/v2/corona/getChart?loc="+name)
 		.then(data => data.json())
-		.then(jsonData => {displayDailyHCMCity(jsonData);})
-		.catch(e => {console.log(e);unDisplayChart();});
+		.then(jsonData => {displayDailyCityProvince(jsonData);})
+		.catch(e => {console.log(e);});
 }
 
 
@@ -197,8 +200,7 @@ function displayDailyVaccines(jsonData){
 	createChart(dateArray,vaccineArray,"TOTAL","#666666","vaccineChart","bar");
 	createChart(dateArray,vaccineArray_New,"NEW","#666666","newvaccineChart","line");
 }
-
-function displayDailyHCMCity(jsonData){
+function displayDailyCityProvince(jsonData){
 	var dateArray = [];
 	var hcmArray = [];
 	var hcmArray_New = [];
@@ -208,8 +210,8 @@ function displayDailyHCMCity(jsonData){
 		hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
 		hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
     }
-	createChart(dateArray,hcmArray,"TOTAL","#186FB5","casesChartHcm","bar");
-	createChart(dateArray,hcmArray_New,"NEW","#186FB5","newcasesChartHcm","line");
+	createChart2(dateArray,hcmArray,"TOTAL","#186FB5","casesChartCityProvince","bar","casesChartCityProvinceDiv");
+	createChart2(dateArray,hcmArray_New,"NEW","#186FB5","newcasesChartCityProvince","line","newcasesChartCityProvinceDiv");
 }
 
 function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
@@ -220,7 +222,6 @@ function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
 function displayTotalVN_Population(Population){
 	document.getElementById("Population").innerHTML      = ShorterValue(Population,2);
 }
-
 function displayRate(totalCases,totalRecovered,totalDeaths){
 	var incidenceRate = parseFloat((parseInt(totalCases)/(98308872))*100).toFixed(2)+`%`;
 	var recoveryRate  = parseFloat((parseInt(totalRecovered)/totalCases)*100).toFixed(2)+`%`;
@@ -235,32 +236,43 @@ function displayTotalVacDistribution(totalPlanned,totalRealistic,totalDistribute
 	document.getElementById("totalRealistic").innerHTML = totalRealistic.toLocaleString('en-US');
 	document.getElementById("totalDistriRate").innerHTML = totalDistributedRate + `%`;
 }
+function NationalDailyBtn(){
+	document.getElementById("National").style.display = "block";
+	document.getElementById("CityProvince").style.display = "none";
+	document.getElementById("NationalDailyBtn").style.backgroundColor = "#ddd";
+	document.getElementById("CityProvinceDailyBtn").style.backgroundColor = "#f1f2f5";
+}
+function CityProvinceDaily(){
+	document.getElementById("CityProvince").style.display = "block";
+	document.getElementById("National").style.display = "none";
+	document.getElementById("CityProvinceDailyBtn").style.backgroundColor = "#ddd";
+	document.getElementById("NationalDailyBtn").style.backgroundColor = "#f1f2f5";
+}
+
 
 // Handle Error
-function unDisplayChart(){
-	document.getElementById("AllChart").style.display="none";
-}
+function unDisplayChart(){document.getElementById("AllChart").style.display="none";}
 function ForEr(){
 	document.getElementById("message").style.display="block";
 	document.getElementById("content-total").style.display="none";
 	document.getElementById("content-detail").style.display="none";
 }
 
-function NationalDailyBtn(){
-	document.getElementById("National").style.display = "block";
-	document.getElementById("HCMCity").style.display = "none";
-	document.getElementById("NationalDailyBtn").style.backgroundColor = "#ddd";
-	document.getElementById("HCMCityDailyBtn").style.backgroundColor = "#f1f2f5";
-}
-function HCMCityDailyBtn(){
-	document.getElementById("HCMCity").style.display = "block";
-	document.getElementById("National").style.display = "none";
-	document.getElementById("HCMCityDailyBtn").style.backgroundColor = "#ddd";
-	document.getElementById("NationalDailyBtn").style.backgroundColor = "#f1f2f5";
-}
-
 // Create Chart
 function createChart(dateArray, dataArray, name, color, idChart, type){
+	var data = {labels: dateArray,datasets:[{
+			barPercentage: 0.25,
+			label: name,
+			backgroundColor: color,
+			borderColor: color,
+			data: dataArray,
+		}]
+	};
+    var config = {type:type,data,options:{tension: 0.3}};
+	var myChart = new Chart(document.getElementById(idChart),config);
+}
+function createChart2(dateArray, dataArray, name, color, idChart, type, idChartDiv){
+	document.getElementById(idChartDiv).innerHTML = `<canvas id="`+idChart+`" width="400" height="250" class="chart"></canvas></div>`
 	var data = {labels: dateArray,datasets:[{
 			barPercentage: 0.25,
 			label: name,
