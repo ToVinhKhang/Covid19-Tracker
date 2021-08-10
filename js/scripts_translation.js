@@ -105,6 +105,7 @@ function displayDataTranslated(dataLang){
 	var txtCasesDataChart = document.getElementById("txtCasesDataChart");
 	var txtDeathsDataChart = document.getElementById("txtDeathsDataChart");
 	var txtDoseVaccinatedDataChart = document.getElementById("txtDoseVaccinatedDataChart");
+	var txtCasesDataChartCityProvince = document.getElementById("txtCasesDataChartCityProvince");
 	var txtDetailsVaccination = document.getElementById("txtDetailsVaccination");
 	var txtVaccineDistribution = document.getElementById("txtVaccineDistribution");
 	var txtNorthAmerica = document.getElementById("txtNorthAmerica");
@@ -181,6 +182,7 @@ function displayDataTranslated(dataLang){
 	txtCasesDataChart.innerHTML = dataLang.Chart.title1;
 	txtDeathsDataChart.innerHTML = dataLang.Chart.title2;
 	txtDoseVaccinatedDataChart.innerHTML = dataLang.Chart.title3;
+	txtCasesDataChartCityProvince.innerHTML = dataLang.Chart.title1;
 	txtContinent.innerHTML = dataLang.Continent.txt0;
 	txtNorthAmerica.innerHTML = dataLang.Continent.txt1;
 	txtSouthAmerica.innerHTML = dataLang.Continent.txt2;

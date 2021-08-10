@@ -71,7 +71,7 @@
 	#aboutGuide{word-break: break-all;}
 	#txtGlobal{width: 100px;font-size: 20px;}
 	#txtContinent{width: 140px;font-size: 20px;}
-	#txtCasesDataChart,#txtDeathsDataChart,#txtCasesDataChartHcm{width: 100px;font-size: 20px;}
+	#txtCasesDataChart,#txtDeathsDataChart,#txtCasesDataChartCityProvince{width: 100px;font-size: 20px;}
 	#txtDoseVaccinatedDataChart{width: 200px;font-size: 20px;}
 	#message{font-size: 14px;}
 	.reference{font-size:75%;}
@@ -117,7 +117,7 @@
 	#vacTotal,#vacOneDose,#vacTwoDose{font-size:18px;margin:5px;}
 	#totalPlanned,#totalRealistic,#totalDistriRate{font-size:18px;margin:5px;}
 	#TotalCases,#TotalRecovered,#TotalDeaths,#Population,#IncidenceRate,#RecoveryRate,#DeathRate{font-weight:500;}
-	#txtCasesDataChart,#txtDeathsDataChart,#txtCasesDataChartHcm{width: 150px;}
+	#txtCasesDataChart,#txtDeathsDataChart,#txtCasesDataChartCityProvince{width: 150px;}
 	#txtDoseVaccinatedDataChart{width: 210px;}
 	.dailyChart,.TitleDetails{font-size: 150%;}
 	#AllChart{padding-top:0px;}
