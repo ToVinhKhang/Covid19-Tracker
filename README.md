@@ -23,7 +23,8 @@
    <p align="center">&nbsp;</p>
    
    <h1 align="center">CORONAVIRUS VARIANT</h1>
-   <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Variant_EN_lang.png" width="100%">
+   <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/VariantEN1.png" width="100%">
+   <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/VariantEN2.png" width="100%">
 
    <h1 align="center">SOFTWARE INFO</h1>
    <img alt="SoftwareInfo" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/SoftwareInfo.png" width="100%">
