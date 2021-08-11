@@ -197,8 +197,8 @@ function displayDailyVaccines(jsonData){
 		vaccineArray.push(jsonData.data[i].total_vaccinations);
 		vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
 	}
-	createChart(dateArray,vaccineArray,"TOTAL","#666666","vaccineChart","bar");
-	createChart(dateArray,vaccineArray_New,"NEW","#666666","newvaccineChart","line");
+	createChart2(dateArray,vaccineArray,"TOTAL","#666666","vaccineChart","bar","newvaccineChartDiv");
+	createChart2(dateArray,vaccineArray_New,"NEW","#666666","newvaccineChart","line","vaccineChartDiv");
 }
 function displayDailyCityProvince(jsonData){
 	var dateArray = [];
@@ -219,9 +219,8 @@ function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
 	document.getElementById("TotalRecovered").innerHTML  = parseInt(TotalRecovered).toLocaleString('en-US');
 	document.getElementById("TotalDeaths").innerHTML     = parseInt(TotalDeaths).toLocaleString('en-US');
 }
-function displayTotalVN_Population(Population){
-	document.getElementById("Population").innerHTML      = ShorterValue(Population,2);
-}
+function displayTotalVN_Population(Population){document.getElementById("Population").innerHTML = ShorterValue(Population,2);}
+
 function displayRate(totalCases,totalRecovered,totalDeaths){
 	var incidenceRate = parseFloat((parseInt(totalCases)/(98308872))*100).toFixed(2)+`%`;
 	var recoveryRate  = parseFloat((parseInt(totalRecovered)/totalCases)*100).toFixed(2)+`%`;
@@ -286,7 +285,7 @@ function createChart2(dateArray, dataArray, name, color, idChart, type, idChartD
 }
 
 // Update data every 15 mins
-setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();},(1000*60*15));
+setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDailyVaccines();},(1000*15));
 
 // -----
 // END
