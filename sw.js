@@ -19,7 +19,6 @@ self.addEventListener("install", e=>{
 	);
 });
 
-
 // Fetch file Prefetch
 self.addEventListener("fetch", e=>{
 	e.respondWith(
