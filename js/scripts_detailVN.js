@@ -170,10 +170,10 @@ function displayDailyVietnam(jsonData){
 		casesArray_New.push(jsonData.data[i].new_cases);
 		deathsArray_New.push(jsonData.data[i].new_deaths);
 	}
-	createChart(dateArray,casesArray,"TOTAL","#186FB5","casesChart","bar");
-	createChart(dateArray,deathsArray,"TOTAL","#E41E20","deathsChart","bar");
-	createChart(dateArray,casesArray_New,"NEW","#186FB5","newcasesChart","line");
-	createChart(dateArray,deathsArray_New,"NEW","#E41E20","newdeathsChart","line");
+	createChart2(dateArray,casesArray,"TOTAL","#186FB5","casesChart","bar","casesChartDiv");
+	createChart2(dateArray,deathsArray,"TOTAL","#E41E20","deathsChart","bar","deathsChartDiv");
+	createChart2(dateArray,casesArray_New,"NEW","#186FB5","newcasesChart","line","newcasesChartDiv");
+	createChart2(dateArray,deathsArray_New,"NEW","#E41E20","newdeathsChart","line","newdeathsChartDiv");
 }
 function displayDailyVaccines(jsonData){
 	var dateArray = [];
@@ -197,8 +197,8 @@ function displayDailyVaccines(jsonData){
 		vaccineArray.push(jsonData.data[i].total_vaccinations);
 		vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
 	}
-	createChart2(dateArray,vaccineArray,"TOTAL","#666666","vaccineChart","bar","newvaccineChartDiv");
-	createChart2(dateArray,vaccineArray_New,"NEW","#666666","newvaccineChart","line","vaccineChartDiv");
+	createChart2(dateArray,vaccineArray,"TOTAL","#666666","vaccineChart","bar","vaccineChartDiv");
+	createChart2(dateArray,vaccineArray_New,"NEW","#666666","newvaccineChart","line","newvaccineChartDiv");
 }
 function displayDailyCityProvince(jsonData){
 	var dateArray = [];
@@ -285,7 +285,7 @@ function createChart2(dateArray, dataArray, name, color, idChart, type, idChartD
 }
 
 // Update data every 15 mins
-setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDailyVaccines();},(1000*15));
+setInterval(()=>{getDataVNCity();getDataVNDetailVaccine();getDataVNDaily();getDataVNDailyVaccines();},(1000*15));
 
 // -----
 // END
