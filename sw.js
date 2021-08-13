@@ -5,7 +5,7 @@
 // -----------------------------------------------
 
 // Init
-var CURRENT_CACHES = {prefetch: 'Covid19-Kent'};
+var CURRENT_CACHES = {prefetch: 'Covid19'};
 var file = [
 	"./",
 	"./css/styles_main.css",
