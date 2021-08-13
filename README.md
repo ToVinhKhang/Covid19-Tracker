@@ -27,7 +27,9 @@
    <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/VariantEN2.png" width="100%">
    
    <h1 align="center">MAP</h1>
-   <img align="left" alt="VietnamMap" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/mapVN.png" width="100%">
+   <p align="center">
+      <img alt="VietnamMap" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/mapVN.png" width="50%">
+   </p>
    
    <p align="center">&nbsp;</p>
    
