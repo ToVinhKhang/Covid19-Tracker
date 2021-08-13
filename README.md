@@ -25,7 +25,12 @@
    <h1 align="center">CORONAVIRUS VARIANT</h1>
    <img align="left" alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/VariantEN1.png" width="100%">
    <img alt="Variant" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/VariantEN2.png" width="100%">
-
+   
+   <h1 align="center">MAP</h1>
+   <img align="left" alt="VietnamMap" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Map.png" width="100%">
+   
+   <p align="center">&nbsp;</p>
+   
    <h1 align="center">SOFTWARE INFO</h1>
    <img alt="SoftwareInfo" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/SoftwareInfo.png" width="100%">
    
@@ -78,7 +83,7 @@ _The Covid19 Tracker project is developed to contribute to the community. This s
 | World Tracker | Global Data / Country Data / Continent Data|
 | | _(Display Total Data and Today Data)_ |
 | Vietnam Tracker | Vietnam Data / City-Province Data / Vaccines Data |
-| | _(Display Total Data, Daily Data, Rate Info and Chart)_ |
+| | _(Display Total Data, Daily Data, Rate Info, Map and Chart)_ |
 | Languages | Switching English / Vietnamese |
 | | _(Display English At First)_ |
 | Read More | About The Data / Vaccine Details and Technology / Coronavirus Variant / Treatment Medicine |
