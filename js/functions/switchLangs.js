@@ -120,7 +120,7 @@ function displayDataTranslated(dataLang){
 	var designedBy = document.getElementById("designedBy");
 	var searchInput = document.getElementById("searchInput");
 	var txtAboutData = document.getElementById("txtAboutData");
-	var vnName = document.getElementById("vnName");
+	var vnName0 = document.getElementById("vnName");
 	var nameAbData = document.getElementById("nameAbData");
 	var aboutTheData = document.getElementById("aboutTheData");
 	var nameVaccine = document.getElementById("nameVaccine");
@@ -197,7 +197,7 @@ function displayDataTranslated(dataLang){
 	designedBy.innerHTML = dataLang.footer;
 	searchInput.placeholder = dataLang.searching;
 	txtAboutData.innerHTML = dataLang.AboutData;
-	vnName.innerHTML = dataLang.vnName;
+	vnName0.innerHTML = dataLang.vnName;
 	nameAbData.textContent = dataLang.AboutTheData.title;
 	aboutTheData.innerHTML = dataLang.AboutTheData.content;
 	nameVaccine.textContent = dataLang.AboutVaccineTechnology.title;

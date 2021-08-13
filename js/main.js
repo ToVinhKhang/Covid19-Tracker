@@ -162,7 +162,7 @@ function loadDataPopup(dataEN){
 	document.getElementById("aboutTheMedicine").innerHTML = dataEN.AboutTreatmentMedicine.content;
 	document.getElementById("nameGuide").textContent = dataEN.SoftwareInfo.title;
 	document.getElementById("aboutGuide").innerHTML = dataEN.SoftwareInfo.content;
-	document.getElementById("nameMap").textContent = dataEN.vnMapName;
+	document.getElementById("nameMap").textContent = dataEN.vnMap.name;
 }
 function Loader(){
 	document.getElementById("loader").style.display = "none";
