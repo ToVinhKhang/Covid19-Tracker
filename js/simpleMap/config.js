@@ -1,3 +1,8 @@
+// -----------------------------------------------
+// SIMPLE MAP - CONFIG
+// Author: ToVinhKhang
+// Portfolio: https://tovinhkhang.netlify.app/
+// -----------------------------------------------
 
 var simplemaps_countrymap_mapdata = {
 	main_settings: {

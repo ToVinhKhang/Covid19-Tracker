@@ -1,3 +1,8 @@
+// -----------------------------------------------
+// SIMPLE MAP - SET POSITION VIETNAM MAP
+// Author: ToVinhKhang
+// Portfolio: https://tovinhkhang.netlify.app/
+// -----------------------------------------------
 
 var simplemaps_countrymap_mapinfo = {
 	map_name: "country",

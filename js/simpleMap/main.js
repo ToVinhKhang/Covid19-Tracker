@@ -1,6 +1,12 @@
+// -----------------------------------------------
+// SIMPLE MAP - MAIN
+// Author: ToVinhKhang
+// Portfolio: https://tovinhkhang.netlify.app/
+// -----------------------------------------------
 
+// Async Await
 async function FetchUsingAsync(){
-    const data = await fetch("https://api-kent.netlify.app/.netlify/functions/api/vn");
+    const data = await fetch(API_CityVietnam);
     const jsonData = await data.json();
     return {jsonData};
 }
@@ -9,6 +15,7 @@ async function getVNMap(){
     displayVNMap(detail);
 }
 
+// Init
 var state_specific = {
     VNM429: {name: "Quảng Ninh"},
     VNM444: {name: "Tây Ninh"},
@@ -75,6 +82,8 @@ var state_specific = {
     VNM601: {name: "Lào Cai"}
 }
 var colors = ["#F7F7F7","#F7ED97","#FFDA47","#FFBD57","#FF3C00","#E80000"];
+
+// Display
 function displayVNMap(detail){
     for(var i = 0; i < 62; i++){
 		for (const VNM in state_specific) {
@@ -89,6 +98,7 @@ function displayVNMap(detail){
 		}
     }
 }
+// Set
 function setColor(n){
     if(n >= 1 && n <= 10){return colors[1];}
 	else if(n > 10 && n < 100){return colors[2];}

@@ -4,6 +4,18 @@
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
 
+// Popup Modal Need Load data at first
+window.addEventListener('load',() => {
+	loadDataPopupAtFirst();
+});
+function loadDataPopupAtFirst(){
+	fetch("./lang/en.json")
+		.then(data => data.json())
+		.then(dataEN => {
+			loadDataPopup(dataEN);
+		})
+		.catch(e => console.log(e));
+}
 
 $("#txtAboutData").change(function(){
 	target = $(this).val();

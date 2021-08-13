@@ -20,14 +20,12 @@ window.addEventListener('load',() => {
 	table = document.getElementById("table");
 	getDataGlobalAll();
 	getDataGlobalDetails();
-	loadDataPopupAtFirst();
 });
 
 
 //----------
 // Get Data
 //----------
-
 // Get Data Global
 function getDataGlobalDetails(){
 	fetch(API_GlobalCountries)
@@ -46,16 +44,6 @@ function getDataGlobalAll(){
 		})
 		.catch(e => console.log(e));
 }
-// Popup Modal Need Load data at first
-function loadDataPopupAtFirst(){
-	fetch("./lang/en.json")
-		.then(data => data.json())
-		.then(dataEN => {
-			loadDataPopup(dataEN);
-		})
-		.catch(e => console.log(e));
-}
-
 
 // Just Test by AJAX :D
 function getDataGlobalDetailsAgain(){
