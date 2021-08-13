@@ -78,7 +78,7 @@ _The Covid19 Tracker project is developed to contribute to the community. This s
 | World Tracker | Global Data / Country Data / Continent Data|
 | | _(Display Total Data and Today Data)_ |
 | Vietnam Tracker | Vietnam Data / City-Province Data / Vaccines Data |
-| | _(Display Total Data, Daily Data, Rate Info and Chart)_ |
+| | _(Display Total Data, Daily Data, Rate Info, Map and Chart)_ |
 | Languages | Switching English / Vietnamese |
 | | _(Display English At First)_ |
 | Read More | About The Data / Vaccine Details and Technology / Coronavirus Variant / Treatment Medicine |
