@@ -51,6 +51,7 @@
 	#txtOceania,#Oceania{font-size: 150%;}
 	.continent{margin: 20px;}
 	#refeshPage{display: block;}
+	
 }
 @media screen and (max-width: 768px) {
 	#tableVN{height:300px;}
@@ -83,6 +84,7 @@
 	#txtOceania{font-size: 90%;}
 	.continent{margin: 18px;}
 	#refeshPage{display: block;left: 48.5%;}
+	.btnMapDiv{margin-right:-20px;width:25px;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
@@ -135,6 +137,10 @@
 	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 68%;}
 	#refeshPage{display: block;left: 48%;}
 	#NationalDailyBtn,#MostInterest{font-size: 100%;}
+	.btnMapDiv{width:100%;margin-top:15px;margin-right:0px;margin-left:0px;}
+	.btnMap2{width:40px;}
+	#txtViewAsMap{color:grey;font-style: italic;letter-spacing:2px;display:block;}
+	.btnMap2{display: block;}
 }
 @media screen and (max-width: 376px) {
 	.IncidenceRate{font-size:7px;}

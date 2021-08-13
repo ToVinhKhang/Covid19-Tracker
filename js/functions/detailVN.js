@@ -175,6 +175,7 @@ function displayDailyVietnam(jsonData){
 	createChart(dateArray,casesArray_New,"NEW","#186FB5","newcasesChart","line","newcasesChartDiv");
 	createChart(dateArray,deathsArray_New,"NEW","#E41E20","newdeathsChart","line","newdeathsChartDiv");
 }
+var population = 98318872;
 function displayDailyVaccines(jsonData){
 	var dateArray = [];
 	var vaccineArray = [];
@@ -190,7 +191,7 @@ function displayDailyVaccines(jsonData){
 	document.getElementById("vacTotal").innerHTML = ShorterValue(vacTotal,2);
 	document.getElementById("vacOneDose").innerHTML = ShorterValue(vacOneDose,2);
 	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose,2);
-	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/98308872)*100).toFixed(2)+`%`;
+	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/population)*100).toFixed(2)+`%`;
 	
 	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
 		dateArray.push(jsonData.data[i].date);
@@ -222,7 +223,7 @@ function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
 function displayTotalVN_Population(Population){document.getElementById("Population").innerHTML = ShorterValue(Population,2);}
 
 function displayRate(totalCases,totalRecovered,totalDeaths){
-	var incidenceRate = parseFloat((parseInt(totalCases)/(98308872))*100).toFixed(2)+`%`;
+	var incidenceRate = parseFloat((parseInt(totalCases)/(population))*100).toFixed(2)+`%`;
 	var recoveryRate  = parseFloat((parseInt(totalRecovered)/totalCases)*100).toFixed(2)+`%`;
 	var deathRate     = parseFloat((parseInt(totalDeaths)/totalCases)*100).toFixed(2)+`%`;
 	

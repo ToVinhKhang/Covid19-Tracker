@@ -5,18 +5,17 @@
 	<title>Covid-19 Tracker</title>
 	<link rel="icon" href="https://img.mlo-online.com/files/base/ebm/mlo/image/2020/05/Pixabay_coronavirus_5107715_1280.5eb16e6f5f05a.png?auto=format&w=720" type="image" sizes="16x16">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
 	<!-- Refresh Caches -->
 	<meta http-equiv='cache-control' content='no-cache'>
 	<meta http-equiv='expires' content='0'>
 	<meta http-equiv='pragma' content='no-cache'>
-	<!-- CDN -->
+	<!-- Bootstrap & JQuery CDN -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<!-- Styles All -->
+	<!-- Styles -->
 	<link rel="stylesheet" href="./css/styles_main.css">
 	<link rel="stylesheet" href="./css/styles_global.css">
 	<link rel="stylesheet" href="./css/styles_vietnam.css">
@@ -25,9 +24,9 @@
 	<!-- PWA -->
 	<link rel="manifest"   href="./manifest.json">
 	<link rel="apple-touch-icon" href="./img/Covid19_519.png">
-	
-	<script src="./js/scripts_main.js"></script>
-	<script src="./js/serviceWorker.js"></script>
+	<!-- Script Main -->
+	<script src="./js/main.js"></script>
+	<script src="./js/serviceWorker/serviceWorker.js"></script>
 </head>
 
 <!-- Covid-19 Tracker -->
@@ -200,7 +199,7 @@
 				<div class="row vnRate">
 					<div class="col-md-12 col-12">
 						<img class="vnDetailsFlag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/640px-Flag_of_Vietnam.svg.png">
-						<span><h2 id="vnName">VIETNAM</h2></span>
+						<span><h2 id="vnName"><div class="btnMapDiv"><img class="btnMap btnMap1" src="https://hanoivietnamhome.com/wp-content/themes/housinginvietnam/assets/images/google-map.png"></div>VIETNAM</h2></span>
 					</div>
 					<div class="col-md-6 col-6 box pad0">
 						<div><h3 class="IncidenceRate" id="txtIncidenceRate">Incidence Rate</h3><h1 id="IncidenceRate"></h1></div>
@@ -231,9 +230,14 @@
 					<tbody id="tableVN">
 					</tbody>
 				</table>
+				<!-- Map -->
+				<div class="btnMapDiv">
+					<img class="btnMap btnMap2" src="https://hanoivietnamhome.com/wp-content/themes/housinginvietnam/assets/images/google-map.png">
+					<div class="text-center text-bold" id="txtViewAsMap">View As Map</div>
+				</div>
+				
 			</div>
-
-
+			
 			<!-- Total Vaccines Data -->
 			<hr>
 			<div class="col-md-12 col-12 boxTitleDetails">
@@ -267,8 +271,7 @@
 				</table>
 			</div>
 			
-			
-			<!-- Total Vaccines by Type Data -->
+			<!-- Total Vaccines Distribution -->
 			<hr>
 			<div class="col-md-12 col-12 boxTitleDetails">
 				<div><h1 class="TitleDetails" id="txtVaccineDistribution">VACCINE DISTRIBUTION</h1></div>
@@ -286,7 +289,7 @@
 				</div>
 			</div>
 			
-			<!-- Table Detail Vaccines by Type Data-->
+			<!-- Table Detail Vaccines Distribution -->
 			<div class="col-lg-12 col-md-12 col-12">
 				<table class="table table-striped sortable-table">
 					<thead class="theadCities">
@@ -301,7 +304,6 @@
 					</tbody>
 				</table>
 			</div>
-			
 			
 			<!-- Chart JS -->
 			<div class="col-md-12 col-12 ChartData" id="AllChart" >
@@ -364,8 +366,24 @@
 		</div>
 	</div>
 	
-	
+
 	<!-- Modal -->
+	<!-- Popup Map -->
+	<div class="modal fade" id="viewModalMap" role="dialog">
+		<div class="modal-dialog modal-xl" role="content">
+			<div class="modal-content">
+				<!-- Header Modal-->
+				<div class="modal-header">
+					<h4 class="modal-title" id="nameMap"></h4><button class="close" type="close" data-dismiss="modal">&times;</button>
+				</div>
+				<!-- Vietnam Map -->
+				<div class="modal-body row">
+					<div class="map" id="map"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<!-- Popup AboutTheData -->
 	<div class="modal fade" id="viewModalData" role="dialog">
 		<div class="modal-dialog modal-xl" role="content">
@@ -468,15 +486,22 @@
 	</div>
 	
 	<!-- Scripts -->
+	<!-- ChartJS CDN -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="./js/scripts_detailVN.js"></script>
-	<script src="./js/scripts_translation.js"></script>
-	<script src="./js/scripts_popup.js"></script>
-	<script src="./js/scripts_search.js"></script>
-	<script src="./js/scripts_darkmode.js"></script>
-	<script src="./js/scripts_sortTable.js"></script>
-	<script src="./js/scripts_switchTracker.js"></script>
-	<script src="./js/scripts_scrollTop.js"></script>
+	<!-- Functions -->
+	<script src="./js/functions/detailVN.js"></script>
+	<script src="./js/functions/switchLangs.js"></script>
+	<script src="./js/functions/popupModal.js"></script>
+	<script src="./js/functions/darkMode.js"></script>
+	<script src="./js/functions/filterTable.js"></script>
+	<script src="./js/functions/sortTable.js"></script>
+	<script src="./js/functions/switchTracker.js"></script>
+	<script src="./js/functions/scrollTop.js"></script>
+	<!-- Simplemap -->
+	<script src="./js/simpleMap/main.js"></script>
+    <script src="./js/simpleMap/config.js"></script>
+	<script src="./js/simpleMap/position.js"></script>
+    <script src="./js/simpleMap/libs.js"></script>
 	
 	<!-- Footer -->
 	<div class="footer" id="footer"><span id="designedBy">Designed by </span><a href="https://tovinhkhang.netlify.app/" target="_blank">ToVinhKhang</a></div>

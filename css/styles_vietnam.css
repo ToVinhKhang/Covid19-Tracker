@@ -76,13 +76,17 @@
 #txtDoseVaccinatedDataChart{width: 400px;text-align: center;margin: 0px;font-weight: bold;font-size: 40px;}
 .dailyChart,.TitleDetails{text-align: center; font-weight: bold; font-size: 280%;margin: 0px;letter-spacing: 2.5px;}
 #message{text-align:center; display: none; font-size: 30px;}
-
+#dailyChart{margin-bottom: 10px;}
 #CityProvince{display:none;}
 .btnDailyHistory{font-weight: bold; border-radius: 8px;padding:0px; border: 1px #999999 solid; text-align:center;cursor:pointer;}
 #NationalDailyBtn{background-color: #ddd;font-size: 150%;vertical-align: middle;margin: 0px;}
 #CityProvinceDailyBtn{background-color: #f1f2f5;padding: 0px;border-radius: 8px;}
 #MostInterest{font-weight: bold;width: 100%;font-size: 150%;padding:0px;text-align:center;}
-
-
-
+#map_legend{position: static !important;display: flex;justify-content: center;}
+#map_holder{display: flex;flex-direction: column-reverse;}
+.map{width: 100%;margin: auto;}
+.btnMap{width: 100%;margin: auto;text-align:center;cursor:pointer;}
+.btnMapDiv{width:40px;float:right;margin-top:-5px;margin-left:-30px;}
+.btnMap2{display: none;}
+#txtViewAsMap{display: none;}
 

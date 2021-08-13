@@ -132,6 +132,7 @@ function displayDataTranslated(dataLang){
 	var aboutTheMedicine = document.getElementById("aboutTheMedicine");
 	var nameGuide = document.getElementById("nameGuide");
 	var aboutGuide = document.getElementById("aboutGuide");
+	var nameMap = document.getElementById("nameMap");
 	var dailyChart = document.getElementById("dailyChart");	
 	var message = document.getElementById("message");	
 	var NationalDailyBtn = document.getElementById("NationalDailyBtn");
@@ -207,6 +208,7 @@ function displayDataTranslated(dataLang){
 	aboutTheMedicine.innerHTML = dataLang.AboutTreatmentMedicine.content;
 	nameGuide.textContent = dataLang.SoftwareInfo.title;
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
+	nameMap.textContent = dataLang.vnMapName;
 	dailyChart.innerHTML = dataLang.Chart.title0;
 	message.innerHTML = dataLang.forEr;
 	NationalDailyBtn.innerHTML = dataLang.Chart.btn1;

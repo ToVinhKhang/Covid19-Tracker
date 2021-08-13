@@ -42,6 +42,8 @@ $("#txtAboutData").change(function(){
 	}
 });
 
+$(".btnMap").click(function(){ToggleOrHide("#viewModalMap");});
+
 function ToggleOrHide(idModal){
 	$(idModal).modal("toggle");
 	$(document).keydown(function(e){if(e.keyCode == 27){$(idModal).modal("hide");}});

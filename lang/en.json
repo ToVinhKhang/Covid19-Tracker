@@ -62,6 +62,7 @@
 	"forEr": "Vietnam Tracker is currently overloaded. <br> Let's try to reload this page. <br> If you still see this message, please come back later.",
 	"footer": "Designed by ",
 	"vnName" : "VIETNAM",
+	"vnMapName": "VIETNAM MAP",
 	"Chart": {
 		"title0": "DAILY HISTORY",
 		"title1": "CASES",
