@@ -64,7 +64,7 @@
 	"vnName" : "VIETNAM MAP",
 	"vnMap": {
 		"name": "VIETNAM MAP",
-		"txt": "Vietnam Map"
+		"txt": "Show Vietnam Map"
 	},
 	"Chart": {
 		"title0": "DAILY HISTORY",
