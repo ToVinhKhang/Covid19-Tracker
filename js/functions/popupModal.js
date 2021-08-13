@@ -42,6 +42,7 @@ $("#txtAboutData").change(function(){
 	}
 });
 
+$("#vnName").click(function(){ToggleOrHide("#viewModalMap");});
 $(".btnMapDiv").click(function(){ToggleOrHide("#viewModalMap");});
 
 function ToggleOrHide(idModal){

@@ -61,10 +61,10 @@
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
 	"forEr": "Bộ Theo Dõi Việt Nam hiện đang quá tải. <br> Hãy thử tải lại trang này. <br> Nếu bạn vẫn thấy thông báo này vui lòng quay lại sau.",
 	"footer": "Được thiết kế bởi ",
-	"vnName": "<div class='btnMapDiv'><img class='btnMap btnMap1' src='https://hanoivietnamhome.com/wp-content/themes/housinginvietnam/assets/images/google-map.png'></div>VIỆT NAM",
+	"vnName": "BẢN ĐỒ VIỆT NAM",
 	"vnMap": {
 		"name": "BẢN ĐỒ VIỆT NAM",
-		"txt": "Xem Dưới Dạng Bản Đồ"
+		"txt": "Bản Đồ Việt Nam"
 	},
 	"Chart": {
 		"title0": "LỊCH SỬ HẰNG NGÀY",

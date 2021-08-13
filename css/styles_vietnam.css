@@ -44,6 +44,8 @@
 #tableVNvacDistribution{border-collapse: collapse; height: 440px;width: 100%;overflow: scroll;display: block;}
 #tableVNvacDistribution tr {display:table;width:100%;table-layout:fixed;}
 #tableVNvacDistribution::-webkit-scrollbar {display: none;}
+#vnName{cursor:pointer;}
+#vnName:hover{color:#17a2b8;}
 .sortable-table thead .theadCitiesProvinces[data-sort-direction="1"]:after{content:"\25B4";}
 .sortable-table thead .theadCitiesProvinces[data-sort-direction="-1"]:after{content:"\25BE"}
 .IncidenceRate,#IncidenceRate,.TotalCases,#TotalCases{color: #186FB5;text-align: center;}
