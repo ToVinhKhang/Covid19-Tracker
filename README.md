@@ -36,7 +36,7 @@
    <h1 align="center">SOFTWARE INFO</h1>
    <img alt="SoftwareInfo" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/SoftwareInfo.png" width="100%">
    
-   <h1 align="center">TOOLS</h1>
+   <h1 align="center">BARS</h1>
    <p align="center">
       <img alt="Bar01" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar01.png" width="210">
       <img alt="Bar02" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Bar02.png" width="200">
