@@ -42,7 +42,7 @@ $("#txtAboutData").change(function(){
 	}
 });
 
-$(".btnMap").click(function(){ToggleOrHide("#viewModalMap");});
+$(".btnMapDiv").click(function(){ToggleOrHide("#viewModalMap");});
 
 function ToggleOrHide(idModal){
 	$(idModal).modal("toggle");

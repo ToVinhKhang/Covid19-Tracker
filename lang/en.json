@@ -62,7 +62,10 @@
 	"forEr": "Vietnam Tracker is currently overloaded. <br> Let's try to reload this page. <br> If you still see this message, please come back later.",
 	"footer": "Designed by ",
 	"vnName" : "<div class='btnMapDiv'><img class='btnMap btnMap1' src='https://hanoivietnamhome.com/wp-content/themes/housinginvietnam/assets/images/google-map.png'></div>VIETNAM",
-	"vnMapName": "VIETNAM MAP",
+	"vnMap": {
+		"name": "VIETNAM MAP",
+		"txt": "View As Map"
+	},
 	"Chart": {
 		"title0": "DAILY HISTORY",
 		"title1": "CASES",

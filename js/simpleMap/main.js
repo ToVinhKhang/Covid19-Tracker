@@ -54,7 +54,7 @@ var state_specific = {
     VNM489: {name: "Quảng Trị"},
     VNM490: {name: "Thừa Thiên – Huế"},
     VNM491: {name: "Đà Nẵng"},
-    VNM495: {name: "Bà Rịa - Vũng Tàu"},
+    VNM495: {name: "Bà Rịa – Vũng Tàu"},
     VNM496: {name: "Bình Thuận"},
     VNM497: {name: "Đồng Nai"},
     VNM498: {name: "An Giang"},

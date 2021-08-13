@@ -115,6 +115,7 @@ function displayDataTranslated(dataLang){
 	var txtAfrica = document.getElementById("txtAfrica");
 	var txtOceania = document.getElementById("txtOceania");
 	var txtContinent = document.getElementById("txtContinent");
+	var txtViewAsMap = document.getElementById("txtViewAsMap");
 	
 	var designedBy = document.getElementById("designedBy");
 	var searchInput = document.getElementById("searchInput");
@@ -191,6 +192,7 @@ function displayDataTranslated(dataLang){
 	txtEurope.innerHTML = dataLang.Continent.txt4;
 	txtAfrica.innerHTML = dataLang.Continent.txt5;
 	txtOceania.innerHTML = dataLang.Continent.txt6;
+	txtViewAsMap.textContent = dataLang.vnMap.txt;
 	
 	designedBy.innerHTML = dataLang.footer;
 	searchInput.placeholder = dataLang.searching;
@@ -208,7 +210,7 @@ function displayDataTranslated(dataLang){
 	aboutTheMedicine.innerHTML = dataLang.AboutTreatmentMedicine.content;
 	nameGuide.textContent = dataLang.SoftwareInfo.title;
 	aboutGuide.innerHTML = dataLang.SoftwareInfo.content;
-	nameMap.textContent = dataLang.vnMapName;
+	nameMap.textContent = dataLang.vnMap.name;
 	dailyChart.innerHTML = dataLang.Chart.title0;
 	message.innerHTML = dataLang.forEr;
 	NationalDailyBtn.innerHTML = dataLang.Chart.btn1;
