@@ -6,7 +6,7 @@
 
 var simplemaps_countrymap_mapdata = {
 	main_settings: {
-		width: "500", 
+		width: "300", 
 		background_color: "white",
 		background_transparent: "no",
 		border_color: "rgb(204, 204, 204)",
@@ -153,6 +153,6 @@ OK();
 window.addEventListener('load',() => {
 	resizeMap();
 });
-window.onresize = resizeMap;
+
 
 // END

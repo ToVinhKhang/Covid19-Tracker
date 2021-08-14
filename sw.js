@@ -5,7 +5,8 @@
 // -----------------------------------------------
 
 // Init
-var CURRENT_CACHES = {prefetch: 'Covid19-Tracker'};
+var VERSION = 2;
+var CURRENT_CACHES = {prefetch: 'Covid-19 Tracker v'+VERSION};
 var file = [
 	"./",
 	"./css/styles_main.css",
