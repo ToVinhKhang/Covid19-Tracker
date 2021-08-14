@@ -153,6 +153,9 @@ OK();
 window.addEventListener('load',() => {
 	resizeMap();
 });
+window.addEventListener('resize',() => {
+	resizeMap();
+});
 
 
 // END
