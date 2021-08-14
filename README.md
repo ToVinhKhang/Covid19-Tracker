@@ -103,6 +103,7 @@ _The Covid19 Tracker project is developed to contribute to the community. This s
 | | _(The system runs stably 24/7)_ |
 | Other | Progressive Web Apps |
 | | _(Windows, MacOS, iOS, Android)_ |
+
 <br>
 <br>
 
