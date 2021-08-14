@@ -95,6 +95,8 @@ _The Covid19 Tracker project is developed to contribute to the community. This s
 <br>
 
 ## NON-FUNCTIONS
+| Name | Descriptions |
+|-|-|
 | Performance | Responsive |
 | | _(All Devices)_ |
 | Portability | Browsers Support |
