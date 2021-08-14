@@ -83,16 +83,26 @@ _The Covid19 Tracker project is developed to contribute to the community. This s
 | Name | Descriptions |
 |-|-|
 | World Tracker | Global Data / Country Data / Continent Data|
-| | _(Display Total Data and Today Data)_ |
+| | _(Display Total-Today Data)_ |
 | Vietnam Tracker | Vietnam Data / City-Province Data / Vaccines Data |
-| | _(Display Total Data, Daily Data, Rate Info, Map and Chart)_ |
+| | _(Display Total-Daily Data, Map, Rate, Chart)_ |
 | Languages | Switching English / Vietnamese |
 | | _(Display English At First)_ |
 | Read More | About The Data / Vaccine Details and Technology / Coronavirus Variant / Treatment Medicine |
 | | _(Display Info by Popup Modal)_ |
-| Auxiliary | Filter Table / Sort Table / Dark Mode |
-| | _(Filter Name of Countries, Sort Increase Decrease, Dark-Light)_ |
-| Others | Progressive Web Apps |
+| Auxiliary | Filter-Sort Table / Dark Mode |
+| | _(Filter Countries, Sort Increase Decrease, Dark-Light)_ |
+<br>
+
+## NON-FUNCTIONS
+| Performance | Responsive |
+| | _(All Devices)_ |
+| Portability | Browsers Support |
+| | _(Best recommended Chrome, Edge and Safari)_ |
+| Reliability | Availability |
+| | _(The system runs stably 24/7)_ |
+| Other | Progressive Web Apps |
+| | _(Windows, MacOS, iOS, Android)_ |
 <br>
 <br>
 
