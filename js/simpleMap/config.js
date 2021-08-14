@@ -147,7 +147,6 @@ async function OK(){
 	await getVNMap();
 	simplemaps_countrymap_mapdata.state_specific = state_specific;
 	simplemaps_countrymap.refresh();
-	document.body.style.zoom = "99%";document.body.style.zoom = "100%";
 }
 OK();
 
