@@ -55,8 +55,8 @@ $("#txtAboutData").change(function(){
 });
 
 //VNMAP
-$("#vnName").click(function(){ToggleOrHide("#viewModalMap");document.body.style.zoom = "90%";document.body.style.zoom = "100%";});
-$(".btnMapDiv").click(function(){ToggleOrHide("#viewModalMap");document.body.style.zoom = "90%";document.body.style.zoom = "100%";});
+$("#vnName").click(function(){ToggleOrHide("#viewModalMap");document.body.style.zoom = "90%";setTimeout(()=>{document.body.style.zoom = "100%";},2000);});
+$(".btnMapDiv").click(function(){ToggleOrHide("#viewModalMap");document.body.style.zoom = "90%";setTimeout(()=>{document.body.style.zoom = "100%";},2000);});
 
 
 function ToggleOrHide(idModal){
