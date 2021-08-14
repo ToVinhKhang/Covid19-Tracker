@@ -141,6 +141,7 @@ function resizeMap(){
 		simplemaps_countrymap_mapdata.main_settings.width=500;
 		simplemaps_countrymap.refresh();
 	}
+	window.outerWidth-1;window.outerWidth+1;
 }
 
 async function OK(){

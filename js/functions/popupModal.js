@@ -55,9 +55,9 @@ $("#txtAboutData").change(function(){
 });
 
 //VNMAP
-$("#vnName").click(function(){ToggleOrHide("#viewModalMap");TrickResize();});
-$(".btnMapDiv").click(function(){ToggleOrHide("#viewModalMap");TrickResize();});
-function TrickResize(){window.outerWidth-=1;window.outerWidth+=1;}
+$("#vnName").click(function(){ToggleOrHide("#viewModalMap");});
+$(".btnMapDiv").click(function(){ToggleOrHide("#viewModalMap");});
+
 
 function ToggleOrHide(idModal){
 	$(idModal).modal("toggle");
