@@ -141,13 +141,13 @@ function resizeMap(){
 		simplemaps_countrymap_mapdata.main_settings.width=500;
 		simplemaps_countrymap.refresh();
 	}
-	window.outerWidth-1;window.outerWidth+1;
 }
 
 async function OK(){
 	await getVNMap();
 	simplemaps_countrymap_mapdata.state_specific = state_specific;
 	simplemaps_countrymap.refresh();
+	document.body.style.zoom = "99%";document.body.style.zoom = "100%";
 }
 OK();
 
