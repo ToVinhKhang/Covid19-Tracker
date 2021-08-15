@@ -175,7 +175,9 @@ function displayDailyVietnam(jsonData){
 	createChart(dateArray,casesArray_New,"NEW","#186FB5","newcasesChart","line","newcasesChartDiv");
 	createChart(dateArray,deathsArray_New,"NEW","#E41E20","newdeathsChart","line","newdeathsChartDiv");
 }
-var population = 98318872;
+
+var population = 98328872;
+
 function displayDailyVaccines(jsonData){
 	var dateArray = [];
 	var vaccineArray = [];
