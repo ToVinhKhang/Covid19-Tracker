@@ -29,6 +29,7 @@ const VN = ()=>{
 			displayDataTranslated(dataVN);
 			Swap("M","Tr");
 		}).catch(e => console.log(e));
+	getDataVNDailyCityProvince(label1="TỔNG",label2="MỚI")
 }
 const addLangEN = ()=>{window.localStorage.setItem("language","EN");}
 const addLangVN = ()=>{window.localStorage.setItem("language","VN");}

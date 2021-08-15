@@ -56,6 +56,7 @@ function getDataVNDetailVaccine(){
 		.then(jsonData => {displayVacDose(jsonData);displayVacDistribution(jsonData);})
 		.catch(err => {ForEr();console.error(err);});
 }
+
 // Get Data DailyVietnam
 function getDataVNDaily(){
 	fetch(API_DailyVietnam)
@@ -70,17 +71,16 @@ function getDataVNDailyVaccines(){
 		.then(jsonData => {displayDailyVaccines(jsonData);})
 		.catch(e => {console.log(e);unDisplayChart();});
 }
-
 // Get Data Daily CityProvince (Most Interest)
-function getDataVNDailyCityProvince(){
-	$('#hcm').on('click',()=>{fetchCityProvince("hochiminh");});
-	$('#hn').on('click',()=>{fetchCityProvince("hanoi");});
-	$('#bd').on('click',()=>{fetchCityProvince("binhduong");});
+function getDataVNDailyCityProvince(label1="TOTAL",label2="NEW"){
+	$('#hcm').on('click',()=>{fetchCityProvince("hochiminh",label1,label2);});
+	$('#hn').on('click',()=>{fetchCityProvince("hanoi",label1,label2);});
+	$('#bd').on('click',()=>{fetchCityProvince("binhduong",label1,label2);});
 }
-function fetchCityProvince(name){
+function fetchCityProvince(name,label1,label2){
 	fetch("https://api.zingnews.vn/public/v2/corona/getChart?loc="+name)
 		.then(data => data.json())
-		.then(jsonData => {displayDailyCityProvince(jsonData);})
+		.then(jsonData => {displayDailyCityProvince(jsonData,label1,label2);})
 		.catch(e => {console.log(e);});
 }
 
@@ -153,7 +153,7 @@ function displayVacDistribution(jsonData){
 	setTimeout(()=>{$('#th-citiesPlanned').trigger('click');$('#th-citiesPlanned').trigger('click');}, 3000);	
 }
 
-function displayDailyVietnam(jsonData){
+function displayDailyVietnam(jsonData,label1="TOTAL",label2="NEW"){
 	var dataChart = jsonData.data;
 	var dateArray = [];
 	var casesArray = [];
@@ -170,15 +170,15 @@ function displayDailyVietnam(jsonData){
 		casesArray_New.push(jsonData.data[i].new_cases);
 		deathsArray_New.push(jsonData.data[i].new_deaths);
 	}
-	createChart(dateArray,casesArray,"TOTAL","#186FB5","casesChart","bar","casesChartDiv");
-	createChart(dateArray,deathsArray,"TOTAL","#E41E20","deathsChart","bar","deathsChartDiv");
-	createChart(dateArray,casesArray_New,"NEW","#186FB5","newcasesChart","line","newcasesChartDiv");
-	createChart(dateArray,deathsArray_New,"NEW","#E41E20","newdeathsChart","line","newdeathsChartDiv");
+	createChart(dateArray,casesArray,label1,"#186FB5","casesChart","bar","casesChartDiv");
+	createChart(dateArray,deathsArray,label1,"#E41E20","deathsChart","bar","deathsChartDiv");
+	createChart(dateArray,casesArray_New,label2,"#186FB5","newcasesChart","line","newcasesChartDiv");
+	createChart(dateArray,deathsArray_New,label2,"#E41E20","newdeathsChart","line","newdeathsChartDiv");
 }
 
 var population = 98328872;
 
-function displayDailyVaccines(jsonData){
+function displayDailyVaccines(jsonData,label1="TOTAL",label2="NEW"){
 	var dateArray = [];
 	var vaccineArray = [];
 	var vaccineArray_New = [];
@@ -200,10 +200,10 @@ function displayDailyVaccines(jsonData){
 		vaccineArray.push(jsonData.data[i].total_vaccinations);
 		vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
 	}
-	createChart(dateArray,vaccineArray,"TOTAL","#666666","vaccineChart","bar","vaccineChartDiv");
-	createChart(dateArray,vaccineArray_New,"NEW","#666666","newvaccineChart","line","newvaccineChartDiv");
+	createChart(dateArray,vaccineArray,label1,"#666666","vaccineChart","bar","vaccineChartDiv");
+	createChart(dateArray,vaccineArray_New,label2,"#666666","newvaccineChart","line","newvaccineChartDiv");
 }
-function displayDailyCityProvince(jsonData){
+function displayDailyCityProvince(jsonData,label1,label2){
 	var dateArray = [];
 	var hcmArray = [];
 	var hcmArray_New = [];
@@ -213,8 +213,8 @@ function displayDailyCityProvince(jsonData){
 		hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
 		hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
     }
-	createChart(dateArray,hcmArray,"TOTAL","#186FB5","casesChartCityProvince","bar","casesChartCityProvinceDiv");
-	createChart(dateArray,hcmArray_New,"NEW","#186FB5","newcasesChartCityProvince","line","newcasesChartCityProvinceDiv");
+	createChart(dateArray,hcmArray,label1,"#186FB5","casesChartCityProvince","bar","casesChartCityProvinceDiv");
+	createChart(dateArray,hcmArray_New,label2,"#186FB5","newcasesChartCityProvince","line","newcasesChartCityProvinceDiv");
 }
 
 function displayTotalVN(TotalCases,TotalRecovered,TotalDeaths){
