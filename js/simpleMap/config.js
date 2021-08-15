@@ -6,11 +6,10 @@
 
 var simplemaps_countrymap_mapdata = {
 	main_settings: {
-		width: "300", 
+		width: "500", 
 		background_color: "white",
 		background_transparent: "no",
 		border_color: "rgb(204, 204, 204)",
-		
 		state_description: "- None -",
 		state_color: "rgb(247, 247, 247)",
 		state_hover_color: "#17a2b8",
@@ -18,7 +17,6 @@ var simplemaps_countrymap_mapdata = {
 		border_size: 3,
 		all_states_inactive: "no",
 		all_states_zoomable: "no",
-		
 		location_description: "Vietnam Map",
 		location_url: "",
 		location_color: "#FF0067",
@@ -32,14 +30,12 @@ var simplemaps_countrymap_mapdata = {
 		location_hover_border: 2.5,
 		all_locations_inactive: "no",
 		all_locations_hidden: "no",
-
 		label_color: "#d5ddec",
 		label_hover_color: "#d5ddec",
 		label_size: 22,
 		label_font: "Arial",
 		hide_labels: "no",
 		hide_eastern_labels: "no",
-
 		zoom: "yes",
 		manual_zoom: "yes",
 		back_image: "no",
@@ -51,14 +47,12 @@ var simplemaps_countrymap_mapdata = {
 		zoom_out_incrementally: "yes",
 		zoom_percentage: 0.99,
 		zoom_time: 0.5,
-		
 		popup_color: "white",
 		popup_opacity: 0.9,
 		popup_shadow: 1,
 		popup_corners: 5,
 		popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif",
 		popup_nocss: "no",
-
 		div: "map",
 		auto_load: "yes",
 		url_new_tab: "no",
@@ -115,47 +109,7 @@ var simplemaps_countrymap_mapdata = {
 	regions: {}
 };
 
-function resizeMap(){
-	var width = window.outerWidth;
-	if(width <= 320){
-		simplemaps_countrymap_mapdata.main_settings.width=200;
-		simplemaps_countrymap.refresh();
-	}
-	if(width <= 360){
-		simplemaps_countrymap_mapdata.main_settings.width=250;
-		simplemaps_countrymap.refresh();
-	}
-	else if(width <= 540){
-		simplemaps_countrymap_mapdata.main_settings.width=300;
-		simplemaps_countrymap.refresh();
-	}
-	else if(width <= 768){
-		simplemaps_countrymap_mapdata.main_settings.width=400;
-		simplemaps_countrymap.refresh();
-	}
-	else if(width <= 1024){
-		simplemaps_countrymap_mapdata.main_settings.width=700;
-		simplemaps_countrymap.refresh();
-	}
-	else{
-		simplemaps_countrymap_mapdata.main_settings.width=500;
-		simplemaps_countrymap.refresh();
-	}
-}
-
-async function OK(){
-	await getVNMap();
-	simplemaps_countrymap_mapdata.state_specific = state_specific;
-	simplemaps_countrymap.refresh();
-}
+async function OK(){await getVNMap();simplemaps_countrymap_mapdata.state_specific = state_specific;simplemaps_countrymap.refresh();}
 OK();
-
-window.addEventListener('load',() => {
-	resizeMap();
-});
-window.addEventListener('resize',() => {
-	resizeMap();
-});
-
 
 // END

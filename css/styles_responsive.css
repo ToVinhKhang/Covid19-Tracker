@@ -51,7 +51,6 @@
 	#txtOceania,#Oceania{font-size: 150%;}
 	.continent{margin: 20px;}
 	#refeshPage{display: block;}
-	
 }
 @media screen and (max-width: 768px) {
 	#tableVN{height:300px;}
@@ -85,6 +84,7 @@
 	.continent{margin: 18px;}
 	#refeshPage{display: block;left: 48.5%;}
 	.btnMapDiv{margin-right:-20px;width:25px;}
+	#map_inner svg{width:450px!important;}
 }
 @media screen and (max-width: 720px) {
 	.vnDetailsFlag{height: 80%;}
@@ -141,6 +141,11 @@
 	.btnMap2{width:40px;}
 	#txtViewAsMap{color:grey;font-style: italic;letter-spacing:2px;display:block;}
 	.btnMap2{display: block;}
+	#map_inner svg{width:450px!important;}
+	#map_legend ul{font-size: 80%!important;}
+}
+@media screen and (max-width: 420px) {
+	#map_inner svg{width:340px!important;}
 }
 @media screen and (max-width: 376px) {
 	.IncidenceRate{font-size:7px;}
@@ -168,6 +173,8 @@
 	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 60%;}
 	#refeshPage{display: block;left: 47%;}
 	#NationalDailyBtn,#MostInterest{font-size: 90%;}
+	#map_inner svg{width:300px!important;}
+	#map_legend ul{font-size: 72%!important;}
 }
 @media screen and (max-width: 360px) {
 	.TotalCases{font-size:12px;}
@@ -187,6 +194,8 @@
 	#tableVNvacDistribution td:nth-child(2){width: 81.88px;padding-left:14px;padding-right: 14px;}
 	.continent{margin: 12px;}
 	#txtGlobalDeaths,#txtGlobalRecovered,#txtGlobalCases {font-size: 58%;}
+	#map_inner svg{width:280px!important;}
+	#map_legend ul{font-size: 70%!important;}
 }
 @media screen and (max-width: 320px) {
 	.TotalCases{font-size:9px;}
@@ -203,7 +212,6 @@
 	#IncidenceRate{font-size:16px;}
 	#RecoveryRate{font-size:16px;}
 	#DeathRate{font-size:16px;}
-	
 	#txtNorthAmerica{font-size: 40%;}#NorthAmerica{font-size: 70%;}
 	#txtSouthAmerica{font-size: 40%;}#SouthAmerica{font-size: 70%;}
 	#txtEurope{font-size: 40%;}#Europe{font-size: 70%;}
@@ -211,4 +219,10 @@
 	#txtAfrica{font-size: 40%;}#Africa{font-size: 70%;}
 	#txtOceania{font-size: 40%;}#Oceania{font-size: 70%;}
 	#refeshPage{display: block;left: 46.5%;}
+	#map_inner svg{width:250px!important;}
+	#map_legend ul{font-size: 50%!important;}
+}
+@media screen and (max-width: 280px) {
+	#map_inner svg{width:190px!important;}
+	#map_legend ul{font-size: 45%!important;}
 }
