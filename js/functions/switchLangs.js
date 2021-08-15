@@ -19,6 +19,8 @@ $("#SwitchLanguages").change(function(){
 	if(lang=="EN"){EN();addLangEN();}
 	// Vietnamses
 	if(lang=="VN"){VN();addLangVN();}
+	// Make sure Focus NationalDailyBtn at fisrt
+	$("#NationalDailyBtn").trigger('click');
 });
 
 // INIT LANGS
