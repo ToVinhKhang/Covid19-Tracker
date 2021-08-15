@@ -21,6 +21,9 @@ const VN = ()=>{
 const addLangEN = ()=>{window.localStorage.setItem("language","EN");}
 const addLangVN = ()=>{window.localStorage.setItem("language","VN");}
 
+$("#SwitchLanguages").select(function() {
+	alert( "Handler for .select() called."+$(this).val() );
+});
 // SELECT LANGUAGES
 $("#SwitchLanguages").change(function(){
 	// LANG TARGET
