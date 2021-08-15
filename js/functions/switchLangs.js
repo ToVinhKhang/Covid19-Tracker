@@ -7,31 +7,29 @@
 // Check language at first 
 window.addEventListener("load", () => {
 	var language = window.localStorage.getItem("language");
-	if(language == "EN"){EN();}
-	else if(language == "VN"){VN();}
+	if(language == "EN"){setTimeout(()=>{EN();},2000);}
+	else if(language == "VN"){setTimeout(()=>{VN();},2000);}
 })
 
 // Init
 const EN = ()=>{
 	document.getElementById("SwitchLanguages")[0].setAttribute("selected", "");
+	$('#SwitchLanguages').selectmenu("refresh", true);
 	fetch("./lang/en.json")
 		.then(data => data.json())
 		.then(dataEN => {
-			setTimeout(()=>{
-				displayDataTranslated(dataEN);
-				Swap("Tr","M");
-			},2000);
+			displayDataTranslated(dataEN);
+			Swap("Tr","M");
 		}).catch(e => console.log(e));
 }
 const VN = ()=>{
 	document.getElementById("SwitchLanguages")[1].setAttribute("selected", "");
+	$('#SwitchLanguages').selectmenu("refresh", true);
 	fetch("./lang/vn.json")
 		.then(data => data.json())
 		.then(dataVN => {
-			setTimeout(()=>{
-				displayDataTranslated(dataVN);
-				Swap("M","Tr");
-			},2000);
+			displayDataTranslated(dataVN);
+			Swap("M","Tr");
 		}).catch(e => console.log(e));
 }
 const addLangEN = ()=>{window.localStorage.setItem("language","EN");}
