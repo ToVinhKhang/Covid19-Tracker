@@ -4,16 +4,43 @@
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
 
-// Check language at first 
+// CHECK LANG IN LOCAL STORAGE
 window.addEventListener("load", () => {
 	var language = window.localStorage.getItem("language");
 	if(language == "EN"){setTimeout(()=>{EN();},2000);}
 	else if(language == "VN"){setTimeout(()=>{VN();},2000);}
 })
 
-// Init
+// SWITCH LANG
+$("#SwitchLanguages").change(function(){
+	// LANG TARGET
+	lang = $(this).val();
+	// English
+	if(lang=="EN"){getLangEN();addLangEN();}
+	// Vietnamses
+	if(lang=="VN"){getLangVN();addLangVN();}
+});
+
+// INIT LANGS
 const EN = ()=>{
-	$('#SwitchLanguages').val("EN");
+	getLangEN();
+	getDataVNDaily();
+	getDataVNDailyVaccines();
+	getDataVNDailyCityProvince();
+}
+const VN = ()=>{
+	$('#SwitchLanguages').val("VN");
+	getLangVN();
+	getDataVNDaily("TỔNG","MỚI");
+	getDataVNDailyVaccines("TỔNG","MỚI");
+	getDataVNDailyCityProvince("TỔNG","MỚI");
+}
+const addLangEN = ()=>{window.localStorage.setItem("language","EN");}
+const addLangVN = ()=>{window.localStorage.setItem("language","VN");}
+
+
+// GET LANGS
+function getLangEN(){
 	fetch("./lang/en.json")
 		.then(data => data.json())
 		.then(dataEN => {
@@ -21,49 +48,16 @@ const EN = ()=>{
 			Swap("Tr","M");
 		}).catch(e => console.log(e));
 }
-const VN = ()=>{
-	$('#SwitchLanguages').val("VN");
+function getLangVN(){
 	fetch("./lang/vn.json")
 		.then(data => data.json())
 		.then(dataVN => {
 			displayDataTranslated(dataVN);
 			Swap("M","Tr");
 		}).catch(e => console.log(e));
-	getDataVNDailyCityProvince(label1="TỔNG",label2="MỚI")
 }
-const addLangEN = ()=>{window.localStorage.setItem("language","EN");}
-const addLangVN = ()=>{window.localStorage.setItem("language","VN");}
 
-
-// SELECT LANGUAGES
-$("#SwitchLanguages").change(function(){
-	// LANG TARGET
-	lang = $(this).val();
-	
-	// English
-	if(lang=="EN"){
-		fetch("./lang/en.json")
-		.then(data => data.json())
-		.then(dataEN => {
-			displayDataTranslated(dataEN);
-			Swap("Tr","M");
-			addLangEN();
-		}).catch(e => console.log(e));
-	}
-	
-	// Vietnamses
-	if(lang=="VN"){
-		fetch("./lang/vn.json")
-		.then(data => data.json())
-		.then(dataVN => {
-			displayDataTranslated(dataVN);
-			Swap("M","Tr");
-			addLangVN();
-		}).catch(e => console.log(e));
-	}
-});
-
-// Custom
+// SET LANGS
 function Swap(Tr,M){
 	var Population = document.getElementById("Population");
 	var GlobalCases = document.getElementById("GlobalCases");

@@ -58,17 +58,17 @@ function getDataVNDetailVaccine(){
 }
 
 // Get Data DailyVietnam
-function getDataVNDaily(){
+function getDataVNDaily(label1="TOTAL",label2="NEW"){
 	fetch(API_DailyVietnam)
 		.then(data => data.json())
-		.then(jsonData => {displayDailyVietnam(jsonData);})
+		.then(jsonData => {displayDailyVietnam(jsonData,label1,label2);})
 		.catch(err => {console.error(err);unDisplayChart();});
 }
 // Get Data Daily Vaccines
-function getDataVNDailyVaccines(){
+function getDataVNDailyVaccines(label1="TOTAL",label2="NEW"){
 	fetch(API_DailyVaccines)
 		.then(data => data.json())
-		.then(jsonData => {displayDailyVaccines(jsonData);})
+		.then(jsonData => {displayDailyVaccines(jsonData,label1,label2);})
 		.catch(e => {console.log(e);unDisplayChart();});
 }
 // Get Data Daily CityProvince (Most Interest)
@@ -153,7 +153,7 @@ function displayVacDistribution(jsonData){
 	setTimeout(()=>{$('#th-citiesPlanned').trigger('click');$('#th-citiesPlanned').trigger('click');}, 3000);	
 }
 
-function displayDailyVietnam(jsonData,label1="TOTAL",label2="NEW"){
+function displayDailyVietnam(jsonData,label1,label2){
 	var dataChart = jsonData.data;
 	var dateArray = [];
 	var casesArray = [];
@@ -178,7 +178,7 @@ function displayDailyVietnam(jsonData,label1="TOTAL",label2="NEW"){
 
 var population = 98328872;
 
-function displayDailyVaccines(jsonData,label1="TOTAL",label2="NEW"){
+function displayDailyVaccines(jsonData,label1,label2){
 	var dateArray = [];
 	var vaccineArray = [];
 	var vaccineArray_New = [];
