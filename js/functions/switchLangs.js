@@ -4,8 +4,29 @@
 // Portfolio: https://tovinhkhang.netlify.app/
 // -----------------------------------------------
 
+// Check language at first 
+window.addEventListener("load", () => {
+	var language = window.localStorage.getItem("language");
+	if(language !== "EN"){EN();addLangEN();}
+	else if(language !== "VN"){VN();addLangVN();}
+})
+
+// Init
+const EN = ()=>{
+	document.getElementById("SwitchLanguages")[0].setAttribute("selected", "");
+}
+const VN = ()=>{
+	document.getElementById("SwitchLanguages")[1].setAttribute("selected", "");
+}
+const addLangEN = ()=>{window.localStorage.setItem("language","EN");}
+const addLangVN = ()=>{window.localStorage.setItem("language","VN");}
+
 // SELECT LANGUAGES
 $("#SwitchLanguages").change(function(){
+	var language = window.localStorage.getItem("language");
+	if(language !== "EN"){EN();addLangEN();}
+	else if(language !== "VN"){VN();addLangVN();}
+	
 	// LANG TARGET
 	lang = $(this).val();
 	
