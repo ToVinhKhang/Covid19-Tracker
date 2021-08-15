@@ -24,21 +24,21 @@ $("#SwitchLanguages").change(function(){
 });
 
 // INIT LANGS
-const EN = ()=>{
+function EN(){
 	getLangEN();
 	getDataVNDaily();
 	getDataVNDailyVaccines();
 	getDataVNDailyCityProvince();
 }
-const VN = ()=>{
+function VN(){
 	$('#SwitchLanguages').val("VN");
 	getLangVN();
 	getDataVNDaily("SỐ LIỆU TỔNG TRONG NGÀY","SỐ LIỆU MỚI TRONG NGÀY");
 	getDataVNDailyVaccines("SỐ LIỆU TỔNG TRONG NGÀY","SỐ LIỆU MỚI TRONG NGÀY");
 	getDataVNDailyCityProvince("SỐ LIỆU TỔNG TRONG NGÀY","SỐ LIỆU MỚI TRONG NGÀY");
 }
-const addLangEN = ()=>{window.localStorage.setItem("language","EN");}
-const addLangVN = ()=>{window.localStorage.setItem("language","VN");}
+function addLangEN(){window.localStorage.setItem("language","EN");}
+function addLangVN(){window.localStorage.setItem("language","VN");}
 
 
 // GET LANGS

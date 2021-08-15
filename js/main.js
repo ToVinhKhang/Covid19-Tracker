@@ -22,6 +22,10 @@ window.addEventListener('load',() => {
 	getDataGlobalDetails();
 });
 
+window.onbeforeunload = function () {
+	window.scrollTo(0,0);
+}
+
 
 //----------
 // Get Data
@@ -32,7 +36,7 @@ function getDataGlobalDetails(){
 		.then(data => data.json())
 		.then(jsonData => {
 			displayDataGlobalDetails(jsonData);
-			Loader();
+			Loader();focusTopPage();
 		})
 		.catch(e => console.log(e));
 }
@@ -193,6 +197,7 @@ function formatTailNum(num){
 	return num;
 }
 function refreshPage(){window.location.reload();}
+function focusTopPage(){document.body.scrollTop = 0;document.documentElement.scrollTop = 0;}
 
 // DateTime
 function Zero(num) {return (num >= 0 && num < 10) ? "0" + num : num + "";}

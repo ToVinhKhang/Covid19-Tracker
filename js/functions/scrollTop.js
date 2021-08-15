@@ -12,7 +12,4 @@ function scrollFunction(){
 	else{btnScrollTop.style.display = "none";}
 }
 
-$('#scrollTop').click(()=>{
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-})
+$('#scrollTop').click(()=>{focusTopPage();});
