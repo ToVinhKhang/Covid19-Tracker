@@ -48,7 +48,6 @@ function getDataVNCity(){
 		.then(jsonData => {displayCity(jsonData);})
 		.catch(err => {ForEr();console.error(err);});
 }
-
 // Get Data Detail Vaccine 
 function getDataVNDetailVaccine(){
 	fetch(API_DetailVaccine)
@@ -57,22 +56,23 @@ function getDataVNDetailVaccine(){
 		.catch(err => {ForEr();console.error(err);});
 }
 
+
 // Get Data DailyVietnam
-function getDataVNDaily(label1="TOTAL",label2="NEW"){
+function getDataVNDaily(label1="TOTAL DATA OF DAY",label2="NEW DATA OF DAY"){
 	fetch(API_DailyVietnam)
 		.then(data => data.json())
 		.then(jsonData => {displayDailyVietnam(jsonData,label1,label2);})
 		.catch(err => {console.error(err);unDisplayChart();});
 }
 // Get Data Daily Vaccines
-function getDataVNDailyVaccines(label1="TOTAL",label2="NEW"){
+function getDataVNDailyVaccines(label1="TOTAL DATA OF DAY",label2="NEW DATA OF DAY"){
 	fetch(API_DailyVaccines)
 		.then(data => data.json())
 		.then(jsonData => {displayDailyVaccines(jsonData,label1,label2);})
 		.catch(e => {console.log(e);unDisplayChart();});
 }
 // Get Data Daily CityProvince (Most Interest)
-function getDataVNDailyCityProvince(label1="TOTAL",label2="NEW"){
+function getDataVNDailyCityProvince(label1="TOTAL DATA OF DAY",label2="NEW DATA OF DAY"){
 	$('#hcm').on('click',()=>{fetchCityProvince("hochiminh",label1,label2);});
 	$('#hn').on('click',()=>{fetchCityProvince("hanoi",label1,label2);});
 	$('#bd').on('click',()=>{fetchCityProvince("binhduong",label1,label2);});

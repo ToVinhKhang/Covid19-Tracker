@@ -31,9 +31,9 @@ const EN = ()=>{
 const VN = ()=>{
 	$('#SwitchLanguages').val("VN");
 	getLangVN();
-	getDataVNDaily("TỔNG","MỚI");
-	getDataVNDailyVaccines("TỔNG","MỚI");
-	getDataVNDailyCityProvince("TỔNG","MỚI");
+	getDataVNDaily("SỐ LIỆU TỔNG TRONG NGÀY","SỐ LIỆU MỚI TRONG NGÀY");
+	getDataVNDailyVaccines("SỐ LIỆU TỔNG TRONG NGÀY","SỐ LIỆU MỚI TRONG NGÀY");
+	getDataVNDailyCityProvince("SỐ LIỆU TỔNG TRONG NGÀY","SỐ LIỆU MỚI TRONG NGÀY");
 }
 const addLangEN = ()=>{window.localStorage.setItem("language","EN");}
 const addLangVN = ()=>{window.localStorage.setItem("language","VN");}
