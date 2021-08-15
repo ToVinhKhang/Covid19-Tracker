@@ -7,8 +7,8 @@
 // Check language at first 
 window.addEventListener("load", () => {
 	var language = window.localStorage.getItem("language");
-	if(language == "EN"){setTimeout(()=>{EN();},2000);}
-	else if(language == "VN"){setTimeout(()=>{VN();},2000);}
+	if(language == "EN"){EN();}
+	else if(language == "VN"){VN();}
 })
 
 // Init
@@ -17,8 +17,10 @@ const EN = ()=>{
 	fetch("./lang/en.json")
 		.then(data => data.json())
 		.then(dataEN => {
-			displayDataTranslated(dataEN);
-			Swap("Tr","M");
+			setTimeout(()=>{
+				displayDataTranslated(dataEN);
+				Swap("Tr","M");
+			},2000);
 		}).catch(e => console.log(e));
 }
 const VN = ()=>{
@@ -26,8 +28,10 @@ const VN = ()=>{
 	fetch("./lang/vn.json")
 		.then(data => data.json())
 		.then(dataVN => {
-			displayDataTranslated(dataVN);
-			Swap("M","Tr");
+			setTimeout(()=>{
+				displayDataTranslated(dataVN);
+				Swap("M","Tr");
+			},2000);
 		}).catch(e => console.log(e));
 }
 const addLangEN = ()=>{window.localStorage.setItem("language","EN");}
