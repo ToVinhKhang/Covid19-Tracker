@@ -7,7 +7,7 @@
 // Check language at first 
 window.addEventListener("load", () => {
 	var language = window.localStorage.getItem("language");
-	if(language !== "EN"){EN();addLangEN();}
+	if(language !== "EN"){EN();}
 	else if(language !== "VN"){VN();addLangVN();}
 })
 
@@ -41,8 +41,10 @@ $("#SwitchLanguages").change(function(){
 	if(lang=="EN"){
 		fetch("./lang/en.json")
 		.then(data => data.json())
-		.then(dataEN => {displayDataTranslated(dataEN);
+		.then(dataEN => {
+			displayDataTranslated(dataEN);
 			Swap("Tr","M");
+			addLangEN();
 		}).catch(e => console.log(e));
 	}
 	
@@ -50,8 +52,10 @@ $("#SwitchLanguages").change(function(){
 	if(lang=="VN"){
 		fetch("./lang/vn.json")
 		.then(data => data.json())
-		.then(dataVN => {displayDataTranslated(dataVN);
+		.then(dataVN => {
+			displayDataTranslated(dataVN);
 			Swap("M","Tr");
+			addLangVN();
 		}).catch(e => console.log(e));
 	}
 });
