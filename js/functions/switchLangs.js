@@ -23,10 +23,6 @@ const addLangVN = ()=>{window.localStorage.setItem("language","VN");}
 
 // SELECT LANGUAGES
 $("#SwitchLanguages").change(function(){
-	var language = window.localStorage.getItem("language");
-	if(language !== "EN"){EN();addLangEN();}
-	else if(language !== "VN"){VN();addLangVN();}
-	
 	// LANG TARGET
 	lang = $(this).val();
 	
