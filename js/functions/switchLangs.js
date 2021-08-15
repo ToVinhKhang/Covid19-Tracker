@@ -8,7 +8,7 @@
 window.addEventListener("load", () => {
 	var language = window.localStorage.getItem("language");
 	if(language !== "EN"){EN();}
-	else if(language !== "VN"){VN();addLangVN();}
+	else if(language !== "VN"){VN();}
 })
 
 // Init
@@ -16,7 +16,8 @@ const EN = ()=>{
 	document.getElementById("SwitchLanguages")[0].setAttribute("selected", "");
 	fetch("./lang/en.json")
 		.then(data => data.json())
-		.then(dataEN => {displayDataTranslated(dataEN);
+		.then(dataEN => {
+			displayDataTranslated(dataEN);
 			Swap("Tr","M");
 		}).catch(e => console.log(e));
 }
@@ -24,7 +25,8 @@ const VN = ()=>{
 	document.getElementById("SwitchLanguages")[1].setAttribute("selected", "");
 	fetch("./lang/vn.json")
 		.then(data => data.json())
-		.then(dataVN => {displayDataTranslated(dataVN);
+		.then(dataVN => {
+			displayDataTranslated(dataVN);
 			Swap("M","Tr");
 		}).catch(e => console.log(e));
 }
