@@ -14,15 +14,19 @@ window.addEventListener("load", () => {
 // Init
 const EN = ()=>{
 	document.getElementById("SwitchLanguages")[0].setAttribute("selected", "");
-	$("#SwitchLanguages").select(function() {
-		alert( "Handler for .select() called."+$(this).val() );
-	});
+	fetch("./lang/en.json")
+		.then(data => data.json())
+		.then(dataEN => {displayDataTranslated(dataEN);
+			Swap("Tr","M");
+		}).catch(e => console.log(e));
 }
 const VN = ()=>{
 	document.getElementById("SwitchLanguages")[1].setAttribute("selected", "");
-	$("#SwitchLanguages").select(function() {
-		alert( "Handler for .select() called."+$(this).val() );
-	});
+	fetch("./lang/vn.json")
+		.then(data => data.json())
+		.then(dataVN => {displayDataTranslated(dataVN);
+			Swap("M","Tr");
+		}).catch(e => console.log(e));
 }
 const addLangEN = ()=>{window.localStorage.setItem("language","EN");}
 const addLangVN = ()=>{window.localStorage.setItem("language","VN");}
