@@ -16,9 +16,9 @@ $("#SwitchLanguages").change(function(){
 	// LANG TARGET
 	lang = $(this).val();
 	// English
-	if(lang=="EN"){getLangEN();addLangEN();}
+	if(lang=="EN"){EN();addLangEN();}
 	// Vietnamses
-	if(lang=="VN"){getLangVN();addLangVN();}
+	if(lang=="VN"){VN();addLangVN();}
 });
 
 // INIT LANGS
