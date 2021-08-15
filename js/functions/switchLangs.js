@@ -7,8 +7,8 @@
 // Check language at first 
 window.addEventListener("load", () => {
 	var language = window.localStorage.getItem("language");
-	if(language == "EN"){EN();}
-	else if(language == "VN"){VN();}
+	if(language == "EN"){setTimeout(()=>{EN();},2000);}
+	else if(language == "VN"){setTimeout(()=>{VN();},2000);}
 })
 
 // Init
