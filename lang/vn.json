@@ -61,7 +61,7 @@
 	"searching" : "Tìm kiếm theo tên quốc gia . . .",
 	"forEr": "Bộ Theo Dõi Việt Nam hiện đang quá tải. <br> Hãy thử tải lại trang này. <br> Nếu bạn vẫn thấy thông báo này vui lòng quay lại sau.",
 	"footer": "Được thiết kế bởi ",
-	"vnName": "BẢN ĐỒ VIỆT NAM",
+	"vnName": "BẢN ĐỒ VIỆT NAM <i class='fa fa-map-marker mapMarkerIcon'></i>",
 	"vnMap": {
 		"name": "BẢN ĐỒ VIỆT NAM",
 		"txt": "Hiển Thị Bản Đồ Việt Nam"
