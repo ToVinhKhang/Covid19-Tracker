@@ -13,7 +13,6 @@ window.addEventListener("load", () => {
 
 // Init
 const EN = ()=>{
-	//document.getElementById("SwitchLanguages")[0].setAttribute("selected", "");
 	$('#SwitchLanguages').val("EN");
 	fetch("./lang/en.json")
 		.then(data => data.json())
@@ -23,7 +22,6 @@ const EN = ()=>{
 		}).catch(e => console.log(e));
 }
 const VN = ()=>{
-	//document.getElementById("SwitchLanguages")[1].setAttribute("selected", "");
 	$('#SwitchLanguages').val("VN");
 	fetch("./lang/vn.json")
 		.then(data => data.json())

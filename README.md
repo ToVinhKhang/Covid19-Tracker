@@ -85,13 +85,13 @@ _The Covid19 Tracker project is developed to contribute to the community. This s
 | World Tracker | Global Data / Country Data / Continent Data|
 | | _(Display Total-Today Data)_ |
 | Vietnam Tracker | Vietnam Data / City-Province Data / Vaccines Data |
-| | _(Display Total-Daily Data, Map, Rate, Chart)_ |
+| | _(Display Total-Daily Data, Map, Rate and Chart)_ |
 | Languages | Switching English / Vietnamese |
-| | _(Display English At First)_ |
+| | _(Display English At First and Set Language Cache)_ |
 | Read More | About The Data / Vaccine Details and Technology / Coronavirus Variant / Treatment Medicine |
 | | _(Display Info by Popup Modal)_ |
-| Auxiliary | Filter-Sort Table / Dark Mode |
-| | _(Filter Countries, Sort Increase Decrease, Dark-Light)_ |
+| Auxiliary | Filter-Sort Table / Dark-Light Mode |
+| | _(Filter Countries, Sort Increase Decrease and Set Theme Cache)_ |
 <br>
 
 ## NON-FUNCTIONS
