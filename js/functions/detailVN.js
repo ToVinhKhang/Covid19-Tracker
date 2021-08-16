@@ -163,17 +163,35 @@ function displayDailyVietnam(jsonData,label1,label2){
 	var deathsArray_New = [];
 	var recoveredArray_New = [];
 	
-	for(i=1; i<7; i++){
-		dateArray.push(jsonData.data[i].date);
+	// For 5 day ago
+	m=5;
+	for(i=2; i<7; i++){
+		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+		dateArray.push(todayDate);
 		casesArray.push(jsonData.data[i].total_cases);
 		deathsArray.push(jsonData.data[i].total_deaths);
 		casesArray_New.push(jsonData.data[i].new_cases);
 		deathsArray_New.push(jsonData.data[i].new_deaths);
+		m-=1;
 	}
-	createChart(dateArray,casesArray,label1,"#186FB5","casesChart","bar","casesChartDiv");
-	createChart(dateArray,deathsArray,label1,"#E41E20","deathsChart","bar","deathsChartDiv");
-	createChart(dateArray,casesArray_New,label2,"#186FB5","newcasesChart","line","newcasesChartDiv");
-	createChart(dateArray,deathsArray_New,label2,"#E41E20","newdeathsChart","line","newdeathsChartDiv");
+	// For today
+	var todayDate = new Date(new Date().setDate(new Date().getDate()-0)).toISOString().split("T")[0];
+	dateArray.push(todayDate);
+	fetch(API_CityVietnam)
+		.then(d => d.json())
+		.then(jd => {
+			casesArray.push(jd.total.totalCases);
+			deathsArray.push(jd.total.totalDeaths);
+			casesArray_New.push(jd.total.totalCases-jsonData.data[6].total_cases);
+			deathsArray_New.push(jd.total.totalDeaths-jsonData.data[6].total_deaths);
+		})
+
+	setTimeout(()=>{
+		createChart(dateArray,casesArray,label1,"#186FB5","casesChart","bar","casesChartDiv");
+		createChart(dateArray,deathsArray,label1,"#E41E20","deathsChart","bar","deathsChartDiv");
+		createChart(dateArray,casesArray_New,label2,"#186FB5","newcasesChart","line","newcasesChartDiv");
+		createChart(dateArray,deathsArray_New,label2,"#E41E20","newdeathsChart","line","newdeathsChartDiv");
+	},1000);
 }
 
 var population = 98328872;
@@ -195,10 +213,13 @@ function displayDailyVaccines(jsonData,label1,label2){
 	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose,2);
 	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/population)*100).toFixed(2)+`%`;
 	
+	m=6;
 	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
-		dateArray.push(jsonData.data[i].date);
+		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+		dateArray.push(todayDate);
 		vaccineArray.push(jsonData.data[i].total_vaccinations);
 		vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
+		m-=1;
 	}
 	createChart(dateArray,vaccineArray,label1,"#666666","vaccineChart","bar","vaccineChartDiv");
 	createChart(dateArray,vaccineArray_New,label2,"#666666","newvaccineChart","line","newvaccineChartDiv");
