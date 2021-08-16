@@ -13,13 +13,19 @@ window.addEventListener("load", () => {
 
 // SWITCH LANG
 $("#SwitchLanguages").change(function(){
-	// LANG TARGET
+	// Lang Target
 	lang = $(this).val();
 	// English
-	if(lang=="EN"){EN();addLangEN();}
+	if(lang=="EN"){
+		EN();addLangEN();
+		setInterval(()=>{EN();},(1000*60*1));
+	}
 	// Vietnamses
-	if(lang=="VN"){VN();addLangVN();}
-	// Make sure Focus NationalDailyBtn at fisrt
+	if(lang=="VN"){
+		VN();addLangVN();
+		setInterval(()=>{VN();},(1000*60*1));
+	}
+	// Make sure Focus NationalDailyBtn when switch lang
 	$("#NationalDailyBtn").trigger('click');
 });
 
