@@ -191,7 +191,7 @@ function displayDailyVietnam(jsonData,label1,label2){
 		createChart(dateArray,deathsArray,label1,"#E41E20","deathsChart","bar","deathsChartDiv");
 		createChart(dateArray,casesArray_New,label2,"#186FB5","newcasesChart","line","newcasesChartDiv");
 		createChart(dateArray,deathsArray_New,label2,"#E41E20","newdeathsChart","line","newdeathsChartDiv");
-	},1000);
+	},500);
 }
 
 var population = 98328872;
