@@ -16,15 +16,9 @@ $("#SwitchLanguages").change(function(){
 	// Lang Target
 	lang = $(this).val();
 	// English
-	if(lang=="EN"){
-		EN();addLangEN();
-		
-	}
+	if(lang=="EN"){EN();addLangEN();}
 	// Vietnamses
-	if(lang=="VN"){
-		VN();addLangVN();
-		setInterval(()=>{VN();},(1000*60*1));
-	}
+	if(lang=="VN"){VN();addLangVN();}
 	// Make sure Focus NationalDailyBtn when switch lang
 	$("#NationalDailyBtn").trigger('click');
 });
@@ -33,15 +27,15 @@ $("#SwitchLanguages").change(function(){
 function EN(){
 	getLangEN();
 	getDataVNDaily();getDataVNDailyVaccines();getDataVNDailyCityProvince();
-	// Update data every 15 mins
-	setInterval(()=>{getDataVNDaily();getDataVNDailyVaccines();getDataVNDailyCityProvince();},(1000*60*15));
+	// Update data every 24 hours
+	setInterval(()=>{getDataVNDaily();getDataVNDailyVaccines();getDataVNDailyCityProvince();},(1000*60*60*24));
 }
 function VN(){
 	$('#SwitchLanguages').val("VN");var label1 = "SỐ LIỆU TỔNG TRONG NGÀY";var label2 = "SỐ LIỆU MỚI TRONG NGÀY";
 	getLangVN();
 	getDataVNDaily(label1,label2);getDataVNDailyVaccines(label1,label2);getDataVNDailyCityProvince(label1,label2);
-	// Update data every 15 mins
-	setInterval(()=>{getDataVNDaily(label1,label2);getDataVNDailyVaccines(label1,label2);getDataVNDailyCityProvince(label1,label2);},(1000*60*15));
+	// Update data every 24 hours
+	setInterval(()=>{getDataVNDaily(label1,label2);getDataVNDailyVaccines(label1,label2);getDataVNDailyCityProvince(label1,label2);},(1000*60*60*24));
 }
 function addLangEN(){window.localStorage.setItem("language","EN");}
 function addLangVN(){window.localStorage.setItem("language","VN");}
