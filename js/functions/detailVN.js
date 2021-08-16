@@ -73,14 +73,14 @@ function getDataVNDailyVaccines(label1="TOTAL DATA OF DAY",label2="NEW DATA OF D
 }
 // Get Data Daily CityProvince (Most Interest)
 function getDataVNDailyCityProvince(label1="TOTAL DATA OF DAY",label2="NEW DATA OF DAY"){
-	$('#hcm').on('click',()=>{fetchCityProvince("hochiminh",label1,label2);});
-	$('#hn').on('click',()=>{fetchCityProvince("hanoi",label1,label2);});
-	$('#bd').on('click',()=>{fetchCityProvince("binhduong",label1,label2);});
+	$('#hcm').on('click',()=>{fetchCityProvince("hochiminh",label1,label2,$('#hcm').text());});
+	$('#hn').on('click', ()=>{fetchCityProvince("hanoi",label1,label2,$('#hn').text());});
+	$('#bd').on('click', ()=>{fetchCityProvince("binhduong",label1,label2,$('#bd').text());});
 }
-function fetchCityProvince(name,label1,label2){
-	fetch("https://api.zingnews.vn/public/v2/corona/getChart?loc="+name)
+function fetchCityProvince(key,label1,label2,name){
+	fetch("https://api.zingnews.vn/public/v2/corona/getChart?loc="+key)
 		.then(data => data.json())
-		.then(jsonData => {displayDailyCityProvince(jsonData,label1,label2);})
+		.then(jsonData => {displayDailyCityProvince(jsonData,label1,label2);document.getElementById("MostInterest").innerHTML = name;})
 		.catch(e => {console.log(e);});
 }
 
@@ -242,12 +242,12 @@ function NationalDailyBtn(){
 	document.getElementById("National").style.display = "block";
 	document.getElementById("CityProvince").style.display = "none";
 	document.getElementById("NationalDailyBtn").style.backgroundColor = "#ddd";
-	document.getElementById("CityProvinceDailyBtn").style.backgroundColor = "#f1f2f5";
+	document.getElementById("MostInterest").style.backgroundColor = "#f1f2f5";
 }
 function CityProvinceDaily(){
 	document.getElementById("CityProvince").style.display = "block";
 	document.getElementById("National").style.display = "none";
-	document.getElementById("CityProvinceDailyBtn").style.backgroundColor = "#ddd";
+	document.getElementById("MostInterest").style.backgroundColor = "#ddd";
 	document.getElementById("NationalDailyBtn").style.backgroundColor = "#f1f2f5";
 }
 
