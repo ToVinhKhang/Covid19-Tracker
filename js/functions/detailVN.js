@@ -236,22 +236,31 @@ function displayDailyCityProvince(jsonData,label1,label2){
 	var hcmArray = [];
 	var hcmArray_New = [];
 	var lengthData = jsonData.data.data.length-1;
+	var hour = new Date().getHours();
 	
-	// For 5 day ago
-	m=5;
-	for(i=lengthData-4;i<=lengthData;i++){
+	if(hour>0&&hour<18){
+		// For 5 day ago
+		m=5;
+		for(i=lengthData-4;i<=lengthData;i++){
+			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+			dateArray.push(todayDate);
+			hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
+			hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
+			m-=1;
+		}
+		// For today
 		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
-		hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
-		hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
-		m-=1;
+		hcmArray.push(jsonData.data.data[lengthData].total.replaceAll(".",""));
+		hcmArray_New.push(jsonData.data.data[lengthData].total.replaceAll(".","")-jsonData.data.data[lengthData-1].total.replaceAll(".",""));
 	}
-	// For today
-	var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
-	dateArray.push(todayDate);
-	hcmArray.push(jsonData.data.data[lengthData].total.replaceAll(".",""));
-	hcmArray_New.push(jsonData.data.data[lengthData].total.replaceAll(".","")-jsonData.data.data[lengthData].total.replaceAll(".",""));
-	
+	else{
+		for(i=lengthData-5;i<=lengthData;i++){
+			dateArray.push(jsonData.data.data[i].date);
+			hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
+			hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
+		}
+	}
 	createChart(dateArray,hcmArray,label1,"#186FB5","casesChartCityProvince","bar","casesChartCityProvinceDiv");
 	createChart(dateArray,hcmArray_New,label2,"#186FB5","newcasesChartCityProvince","line","newcasesChartCityProvinceDiv");
 }
