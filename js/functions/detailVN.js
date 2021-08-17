@@ -78,8 +78,8 @@ function getDataVNDailyCityProvince(label1="TOTAL DATA OF DAY",label2="NEW DATA 
 	$('#hn').on('click', ()=>{fetchCityProvince("hanoi",label1,label2,$('#hn').text());});
 	$('#bd').on('click', ()=>{fetchCityProvince("binhduong",label1,label2,$('#bd').text());});
 }
-async function fetchCityProvince(key,label1,label2,name){
-	await fetch("https://api.zingnews.vn/public/v2/corona/getChart?loc="+key)
+function fetchCityProvince(key,label1,label2,name){
+	fetch("https://api.zingnews.vn/public/v2/corona/getChart?loc="+key)
 		.then(data => data.json())
 		.then(jsonData => {displayDailyCityProvince(jsonData,label1,label2);document.getElementById("MostInterest").innerHTML = name;})
 		.catch(e => {console.log(e);});
@@ -212,8 +212,7 @@ function displayDailyVaccines(jsonData,label1,label2){
 	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose,2);
 	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/population)*100).toFixed(2)+`%`;
 	
-	// For 5 day ago
-	m=5;
+	m=6;
 	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
 		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
