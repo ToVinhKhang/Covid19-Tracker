@@ -43,16 +43,16 @@ window.addEventListener('load',() => {
 // GET DATA
 //---------
 // Get Data City 
-function getDataVNCity(){
+async function getDataVNCity(){
 	tableVN.innerHTML = '';
-	fetch(API_CityVietnam)
+	await fetch(API_CityVietnam)
 		.then(data => data.json())
 		.then(jsonData => {displayCity(jsonData);})
 		.catch(err => {ForEr();console.error(err);});
 }
 // Get Data Detail Vaccine 
-function getDataVNDetailVaccine(){
-	fetch(API_DetailVaccine)
+async function getDataVNDetailVaccine(){
+	await fetch(API_DetailVaccine)
 		.then(data => data.json())
 		.then(jsonData => {displayVacDose(jsonData);displayVacDistribution(jsonData);})
 		.catch(err => {ForEr();console.error(err);});
@@ -60,15 +60,15 @@ function getDataVNDetailVaccine(){
 
 
 // Get Data DailyVietnam
-function getDataVNDaily(label1="TOTAL DATA OF DAY",label2="NEW DATA OF DAY"){
-	fetch(API_DailyVietnam)
+async function getDataVNDaily(label1="TOTAL DATA OF DAY",label2="NEW DATA OF DAY"){
+	await fetch(API_DailyVietnam)
 		.then(data => data.json())
 		.then(jsonData => {displayDailyVietnam(jsonData,label1,label2);})
 		.catch(err => {console.error(err);unDisplayChart();});
 }
 // Get Data Daily Vaccines
-function getDataVNDailyVaccines(label1="TOTAL DATA OF DAY",label2="NEW DATA OF DAY"){
-	fetch(API_DailyVaccines)
+async function getDataVNDailyVaccines(label1="TOTAL DATA OF DAY",label2="NEW DATA OF DAY"){
+	await fetch(API_DailyVaccines)
 		.then(data => data.json())
 		.then(jsonData => {displayDailyVaccines(jsonData,label1,label2);})
 		.catch(e => {console.log(e);unDisplayChart();});
@@ -79,8 +79,8 @@ function getDataVNDailyCityProvince(label1="TOTAL DATA OF DAY",label2="NEW DATA 
 	$('#hn').on('click', ()=>{fetchCityProvince("hanoi",label1,label2,$('#hn').text());});
 	$('#bd').on('click', ()=>{fetchCityProvince("binhduong",label1,label2,$('#bd').text());});
 }
-function fetchCityProvince(key,label1,label2,name){
-	fetch("https://api.zingnews.vn/public/v2/corona/getChart?loc="+key)
+async function fetchCityProvince(key,label1,label2,name){
+	await fetch("https://api.zingnews.vn/public/v2/corona/getChart?loc="+key)
 		.then(data => data.json())
 		.then(jsonData => {displayDailyCityProvince(jsonData,label1,label2);document.getElementById("MostInterest").innerHTML = name;})
 		.catch(e => {console.log(e);});

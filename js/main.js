@@ -31,8 +31,8 @@ window.onbeforeunload = function () {
 // Get Data
 //----------
 // Get Data Global
-function getDataGlobalDetails(){
-	fetch(API_GlobalCountries)
+async function getDataGlobalDetails(){
+	await fetch(API_GlobalCountries)
 		.then(data => data.json())
 		.then(jsonData => {
 			displayDataGlobalDetails(jsonData);
@@ -40,8 +40,8 @@ function getDataGlobalDetails(){
 		})
 		.catch(e => console.log(e));
 }
-function getDataGlobalAll(){
-	fetch(API_GlobalAll)
+async function getDataGlobalAll(){
+	await fetch(API_GlobalAll)
 		.then(data => data.json())
 		.then(jsonData => {
 			displayDataGlobalAll(jsonData);
