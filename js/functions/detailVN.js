@@ -25,7 +25,6 @@ const API_DailyVaccines = "https://api-kent.netlify.app/.netlify/functions/api/v
 let tableVN;
 let tableVNdose;
 let tableVNvacDistribution;
-let headers = new Headers();headers.append('Content-Type', 'application/json');headers.append('Accept', 'application/json');
 
 window.addEventListener('load',() => {
 	tableVN = document.getElementById("tableVN");
@@ -61,7 +60,7 @@ async function getDataVNDetailVaccine(){
 
 // Get Data DailyVietnam
 async function getDataVNDaily(label1="TOTAL DATA OF DAY",label2="NEW DATA OF DAY"){
-	await fetch(API_DailyVietnam,{mode:'no-cors',headers:headers})
+	await fetch(API_DailyVietnam,{headers: {'Access-Control-Allow-Origin': '*'}})
 		.then(data => data.json())
 		.then(jsonData => {displayDailyVietnam(jsonData,label1,label2);})
 		.catch(err => {console.error(err);unDisplayChart();});
