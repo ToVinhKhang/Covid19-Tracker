@@ -25,6 +25,8 @@ const API_DailyVaccines = "https://api-kent.netlify.app/.netlify/functions/api/v
 let tableVN;
 let tableVNdose;
 let tableVNvacDistribution;
+let headers = new Headers();headers.append('Content-Type', 'application/json');headers.append('Accept', 'application/json');
+
 window.addEventListener('load',() => {
 	tableVN = document.getElementById("tableVN");
 	tableVNdose = document.getElementById("tableVNdose");
@@ -153,7 +155,12 @@ function displayVacDistribution(jsonData){
 	setTimeout(()=>{$('#th-citiesPlanned').trigger('click');$('#th-citiesPlanned').trigger('click');}, 3000);	
 }
 
-function displayDailyVietnam(jsonData,label1,label2){
+async function FetchUsingAsync0(){
+    const data = await fetch(API_CityVietnam);
+    const jsonData = await data.json();
+    return {jsonData};
+}
+async function displayDailyVietnam(jsonData,label1,label2){
 	var dataChart = jsonData.data;
 	var dateArray = [];
 	var casesArray = [];
@@ -162,9 +169,11 @@ function displayDailyVietnam(jsonData,label1,label2){
 	var casesArray_New = [];
 	var deathsArray_New = [];
 	var recoveredArray_New = [];
+	var hour = new Date().getHours();
+	const {total} = await(await FetchUsingAsync0()).jsonData;
 	
-	var time = new Date().getHours();
-	if(parseInt(time)<=19){
+	// Before 12h
+	if(hour>=0 && hour<12){
 		// For 5 day ago
 		m=6;
 		for(i=2; i<7; i++){
@@ -177,18 +186,14 @@ function displayDailyVietnam(jsonData,label1,label2){
 			m-=1;
 		}
 		// For today
-		var todayDate = new Date(new Date().setDate(new Date().getDate()-1)).toISOString().split("T")[0];
+		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
-		fetch(API_CityVietnam)
-			.then(d => d.json())
-			.then(jd => {
-				console.log(jd.total.totalCases)
-				casesArray.push(jd.total.totalCases);deathsArray.push(jd.total.totalDeaths);
-				casesArray_New.push(jd.total.totalCases-jsonData.data[6].total_cases);
-				deathsArray_New.push(jd.total.totalDeaths-jsonData.data[6].total_deaths);
-			})
+		casesArray.push(total.totalCases);deathsArray.push(total.totalDeaths);
+		casesArray_New.push(total.totalCases-jsonData.data[6].total_cases);
+		deathsArray_New.push(total.totalDeaths-jsonData.data[6].total_deaths);
 	}
-	else if(parseInt(time)>19){
+	// After 12h
+	else{
 		// For 5 day ago
 		m=5;
 		for(i=2; i<7; i++){
@@ -201,23 +206,16 @@ function displayDailyVietnam(jsonData,label1,label2){
 			m-=1;
 		}
 		// For today
-		var todayDate = new Date(new Date().setDate(new Date().getDate()-0)).toISOString().split("T")[0];
+		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
-		fetch(API_CityVietnam)
-			.then(d => d.json())
-			.then(jd => {
-				casesArray.push(jd.total.totalCases);deathsArray.push(jd.total.totalDeaths);
-				casesArray_New.push(jd.total.totalCases-jsonData.data[6].total_cases);
-				deathsArray_New.push(jd.total.totalDeaths-jsonData.data[6].total_deaths);
-			})
+		casesArray.push(total.totalCases);deathsArray.push(total.totalDeaths);
+		casesArray_New.push(total.totalCases-jsonData.data[6].total_cases);
+		deathsArray_New.push(total.totalDeaths-jsonData.data[6].total_deaths);
 	}
-
-	setTimeout(()=>{
-		createChart(dateArray,casesArray,label1,"#186FB5","casesChart","bar","casesChartDiv");
-		createChart(dateArray,deathsArray,label1,"#E41E20","deathsChart","bar","deathsChartDiv");
-		createChart(dateArray,casesArray_New,label2,"#186FB5","newcasesChart","line","newcasesChartDiv");
-		createChart(dateArray,deathsArray_New,label2,"#E41E20","newdeathsChart","line","newdeathsChartDiv");
-	},900);
+	createChart(dateArray,casesArray,label1,"#186FB5","casesChart","bar","casesChartDiv");
+	createChart(dateArray,deathsArray,label1,"#E41E20","deathsChart","bar","deathsChartDiv");
+	createChart(dateArray,casesArray_New,label2,"#186FB5","newcasesChart","line","newcasesChartDiv");
+	createChart(dateArray,deathsArray_New,label2,"#E41E20","newdeathsChart","line","newdeathsChartDiv");
 }
 
 var population = 98328872;
@@ -229,6 +227,7 @@ function displayDailyVaccines(jsonData,label1,label2){
 	var lastedUpdateData = jsonData.data.length-1;
 	var lastedUpdateData = jsonData.data.length-1;
 	var vaccineData = jsonData.data[lastedUpdateData];
+	var hour = new Date().getHours();
 	
 	vacTotal = vaccineData.total_vaccinations;
 	vacOneDose = vaccineData.people_vaccinated;
@@ -239,13 +238,31 @@ function displayDailyVaccines(jsonData,label1,label2){
 	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose,2);
 	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/population)*100).toFixed(2)+`%`;
 	
-	m=6;
-	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
+	// Before 20h
+	if(hour>=0 && hour<19){
+		m=5;
+		for(i=lastedUpdateData-4; i<=lastedUpdateData; i++){
+			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+			dateArray.push(todayDate);
+			vaccineArray.push(jsonData.data[i].total_vaccinations);
+			vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
+			m-=1;
+		}
 		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
-		vaccineArray.push(jsonData.data[i].total_vaccinations);
-		vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
-		m-=1;
+		vaccineArray.push(jsonData.data[lastedUpdateData].total_vaccinations);
+		vaccineArray_New.push(jsonData.data[lastedUpdateData].total_vaccinations - jsonData.data[lastedUpdateData].total_vaccinations);
+	}
+	// After 20h
+	else{
+		m=6;
+		for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
+			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+			dateArray.push(todayDate);
+			vaccineArray.push(jsonData.data[i].total_vaccinations);
+			vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
+			m-=1;
+		}
 	}
 	createChart(dateArray,vaccineArray,label1,"#666666","vaccineChart","bar","vaccineChartDiv");
 	createChart(dateArray,vaccineArray_New,label2,"#666666","newvaccineChart","line","newvaccineChartDiv");
