@@ -231,7 +231,7 @@ function displayDailyCityProvince(jsonData,label1,label2){
 	var lengthData = jsonData.data.data.length-1;
 	var hour = new Date().getHours();
 	
-	if(hour>0&&hour<18){
+	if(hour>=6&&hour<=18){
 		// For 5 day ago
 		m=5;
 		for(i=lengthData-4;i<=lengthData;i++){
