@@ -20,6 +20,7 @@
    <h1 align="center">VIETNAM TRACKER</h1>
    <img align="left" alt="VietnamTracker" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/Pic00.png" width="100%">
    
+   <p align="center">&nbsp;</p>
    <h1 align="center">MAP</h1>
    <img alt="VietnamMap" src="https://raw.githubusercontent.com/ToVinhKhang/Covid19-Tracker/main/img/mapVN.png" width="100%">
    
