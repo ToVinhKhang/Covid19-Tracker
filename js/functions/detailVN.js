@@ -240,6 +240,7 @@ function displayDailyVaccines(jsonData,label1,label2){
 	
 	// Before 19h
 	if(hour>=0 && hour<19){
+		// For 5 day ago
 		m=5;
 		for(i=lastedUpdateData-4; i<=lastedUpdateData; i++){
 			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
@@ -248,6 +249,7 @@ function displayDailyVaccines(jsonData,label1,label2){
 			vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
 			m-=1;
 		}
+		// For today
 		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
 		vaccineArray.push(jsonData.data[lastedUpdateData].total_vaccinations);
@@ -274,40 +276,21 @@ function displayDailyCityProvince(jsonData,label1,label2){
 	var lengthData = jsonData.data.data.length-1;
 	var hour = new Date().getHours();
 	
-	// Before 12h
-	if(hour>=0 && hour<12){
-		// For 5 day ago
-		m=6;
-		for(i=lengthData-5;i<=lengthData;i++){
-			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
-			dateArray.push(todayDate);
-			hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
-			hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
-			m-=1;
-		}
-		// For today
+	// For 5 day ago
+	m=5;
+	for(i=lengthData-4;i<=lengthData;i++){
 		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
-		hcmArray.push(jsonData.data.data[lengthData].total.replaceAll(".",""));
-		hcmArray_New.push(jsonData.data.data[lengthData].total.replaceAll(".","")-jsonData.data.data[lengthData].total.replaceAll(".",""));
+		hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
+		hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
+		m-=1;
 	}
-	// After 12h
-	else{
-		// For 5 day ago
-		m=5;
-		for(i=lengthData-4;i<=lengthData;i++){
-			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
-			dateArray.push(todayDate);
-			hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
-			hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
-			m-=1;
-		}
-		// For today
-		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
-		dateArray.push(todayDate);
-		hcmArray.push(jsonData.data.data[lengthData].total.replaceAll(".",""));
-		hcmArray_New.push(jsonData.data.data[lengthData].total.replaceAll(".","")-jsonData.data.data[lengthData].total.replaceAll(".",""));
-	}
+	// For today
+	var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+	dateArray.push(todayDate);
+	hcmArray.push(jsonData.data.data[lengthData].total.replaceAll(".",""));
+	hcmArray_New.push(jsonData.data.data[lengthData].total.replaceAll(".","")-jsonData.data.data[lengthData].total.replaceAll(".",""));
+	
 	createChart(dateArray,hcmArray,label1,"#186FB5","casesChartCityProvince","bar","casesChartCityProvinceDiv");
 	createChart(dateArray,hcmArray_New,label2,"#186FB5","newcasesChartCityProvince","line","newcasesChartCityProvinceDiv");
 }
