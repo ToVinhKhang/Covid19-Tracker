@@ -163,35 +163,61 @@ function displayDailyVietnam(jsonData,label1,label2){
 	var deathsArray_New = [];
 	var recoveredArray_New = [];
 	
-	// For 5 day ago
-	m=5;
-	for(i=2; i<7; i++){
-		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+	var time = new Date().getHours();
+	if(parseInt(time)<=19){
+		// For 5 day ago
+		m=6;
+		for(i=2; i<7; i++){
+			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+			dateArray.push(todayDate);
+			casesArray.push(jsonData.data[i].total_cases);
+			deathsArray.push(jsonData.data[i].total_deaths);
+			casesArray_New.push(jsonData.data[i].new_cases);
+			deathsArray_New.push(jsonData.data[i].new_deaths);
+			m-=1;
+		}
+		// For today
+		var todayDate = new Date(new Date().setDate(new Date().getDate()-1)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
-		casesArray.push(jsonData.data[i].total_cases);
-		deathsArray.push(jsonData.data[i].total_deaths);
-		casesArray_New.push(jsonData.data[i].new_cases);
-		deathsArray_New.push(jsonData.data[i].new_deaths);
-		m-=1;
+		fetch(API_CityVietnam)
+			.then(d => d.json())
+			.then(jd => {
+				console.log(jd.total.totalCases)
+				casesArray.push(jd.total.totalCases);deathsArray.push(jd.total.totalDeaths);
+				casesArray_New.push(jd.total.totalCases-jsonData.data[6].total_cases);
+				deathsArray_New.push(jd.total.totalDeaths-jsonData.data[6].total_deaths);
+			})
 	}
-	// For today
-	var todayDate = new Date(new Date().setDate(new Date().getDate()-0)).toISOString().split("T")[0];
-	dateArray.push(todayDate);
-	fetch(API_CityVietnam)
-		.then(d => d.json())
-		.then(jd => {
-			casesArray.push(jd.total.totalCases);
-			deathsArray.push(jd.total.totalDeaths);
-			casesArray_New.push(jd.total.totalCases-jsonData.data[6].total_cases);
-			deathsArray_New.push(jd.total.totalDeaths-jsonData.data[6].total_deaths);
-		})
+	else if(parseInt(time)>19){
+		// For 5 day ago
+		m=5;
+		for(i=2; i<7; i++){
+			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+			dateArray.push(todayDate);
+			casesArray.push(jsonData.data[i].total_cases);
+			deathsArray.push(jsonData.data[i].total_deaths);
+			casesArray_New.push(jsonData.data[i].new_cases);
+			deathsArray_New.push(jsonData.data[i].new_deaths);
+			m-=1;
+		}
+		// For today
+		var todayDate = new Date(new Date().setDate(new Date().getDate()-0)).toISOString().split("T")[0];
+		dateArray.push(todayDate);
+		fetch(API_CityVietnam)
+			.then(d => d.json())
+			.then(jd => {
+				casesArray.push(jd.total.totalCases);deathsArray.push(jd.total.totalDeaths);
+				casesArray_New.push(jd.total.totalCases-jsonData.data[6].total_cases);
+				deathsArray_New.push(jd.total.totalDeaths-jsonData.data[6].total_deaths);
+			})
+	}
 
 	setTimeout(()=>{
 		createChart(dateArray,casesArray,label1,"#186FB5","casesChart","bar","casesChartDiv");
 		createChart(dateArray,deathsArray,label1,"#E41E20","deathsChart","bar","deathsChartDiv");
 		createChart(dateArray,casesArray_New,label2,"#186FB5","newcasesChart","line","newcasesChartDiv");
 		createChart(dateArray,deathsArray_New,label2,"#E41E20","newdeathsChart","line","newdeathsChartDiv");
-	},500);
+	},900);
 }
 
 var population = 98328872;
