@@ -84,7 +84,7 @@
 #NationalDailyBtn{background-color: #ddd;font-size: 150%;vertical-align: middle;margin: 0px;}
 #CityProvinceDailyBtn{background-color: #f1f2f5;padding: 0px;border-radius: 8px;}
 #MostInterest{font-weight: bold;width: 100%;font-size: 150%;padding:0px;text-align:center;}
-#map_legend{position: static !important;display: flex;justify-content: center;}
+#map_legend{position: static !important;display: flex;justify-content: center;border-radius: 15px;}
 #map_holder{display: flex;flex-direction: column-reverse;}
 .map{width: 100%;margin: auto;}
 .btnMap{width: 100%;margin: auto;text-align:center;cursor:pointer;}
