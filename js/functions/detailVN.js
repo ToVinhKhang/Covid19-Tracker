@@ -212,9 +212,9 @@ function displayDailyVaccines(jsonData,label1,label2){
 	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose,2);
 	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/population)*100).toFixed(2)+`%`;
 	
-	// Set Zero Until Over 19h of day
+	// Set Zero Until Over 0h of day
 	var hour = new Date().getHours();
-	if(hour>=6&&hour<=19){
+	if(hour>=6&&hour<24){
 		// For 5 day ago
 		m=5;
 		for(i=lastedUpdateData-4; i<=lastedUpdateData; i++){
