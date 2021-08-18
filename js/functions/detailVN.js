@@ -212,15 +212,36 @@ function displayDailyVaccines(jsonData,label1,label2){
 	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose,2);
 	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/population)*100).toFixed(2)+`%`;
 	
-	m=6;
-	for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
-		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+	// Set Zero Until Over 18h of day
+	var hour = new Date().getHours();
+	if(hour>=6&&hour<=18){
+		// For 5 day ago
+		m=5;
+		for(i=lastedUpdateData-4; i<=lastedUpdateData; i++){
+			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+			dateArray.push(todayDate);
+			vaccineArray.push(jsonData.data[i].total_vaccinations);
+			vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
+			m-=1;
+		}
+		// For today
+		var todayDate = new Date(new Date().setDate(new Date().getDate()-0)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
-		vaccineArray.push(jsonData.data[i].total_vaccinations);
-		vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
+		vaccineArray.push(jsonData.data[lastedUpdateData].total_vaccinations);
+		vaccineArray_New.push(0);
 		m-=1;
 	}
-		
+	else{
+		// For real data
+		m=6;
+		for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
+			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+			dateArray.push(todayDate);
+			vaccineArray.push(jsonData.data[i].total_vaccinations);
+			vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
+			m-=1;
+		}
+	}
 	createChart(dateArray,vaccineArray,label1,"#666666","vaccineChart","bar","vaccineChartDiv");
 	createChart(dateArray,vaccineArray_New,label2,"#666666","newvaccineChart","line","newvaccineChartDiv");
 }
@@ -229,8 +250,9 @@ function displayDailyCityProvince(jsonData,label1,label2){
 	var hcmArray = [];
 	var hcmArray_New = [];
 	var lengthData = jsonData.data.data.length-1;
-	var hour = new Date().getHours();
 	
+	// Set Zero Until Over 18h of day
+	var hour = new Date().getHours();
 	if(hour>=6&&hour<=18){
 		// For 5 day ago
 		m=5;
@@ -241,13 +263,14 @@ function displayDailyCityProvince(jsonData,label1,label2){
 			hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
 			m-=1;
 		}
-		// For today
+		// For today set Zero
 		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
 		hcmArray.push(jsonData.data.data[lengthData].total.replaceAll(".",""));
-		hcmArray_New.push(jsonData.data.data[lengthData].total.replaceAll(".","")-jsonData.data.data[lengthData-1].total.replaceAll(".",""));
+		hcmArray_New.push(0);
 	}
 	else{
+		// For real data
 		for(i=lengthData-5;i<=lengthData;i++){
 			dateArray.push(jsonData.data.data[i].date);
 			hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
