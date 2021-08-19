@@ -5,7 +5,7 @@
 // -----------------------------------------------
 
 // Init
-var VERSION = "2.2.3";
+var VERSION = "2.2.0";
 var CURRENT_CACHES = {prefetch: 'Covid-19 Tracker v'+VERSION};
 var file = [
 	"./",
