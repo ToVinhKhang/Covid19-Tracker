@@ -5,12 +5,13 @@
 // -----------------------------------------------
 
 // Init
-var VERSION = "2.2.1";
+var VERSION = "2.2.3";
 var CURRENT_CACHES = {prefetch: 'Covid-19 Tracker v'+VERSION};
 var file = [
 	"./",
 	"./css/styles_main.css",
-	"./css/styles_responsive.css"
+	"./css/styles_responsive.css",
+	"./js/reloadPage.js"
 ];
 
 // Add File Prefecth

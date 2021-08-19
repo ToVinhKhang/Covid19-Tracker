@@ -189,14 +189,13 @@ function ShorterValue(num,n) {
 // Format Percent Num
 function numDigitsAfterDecimal(num) {
 	var afterDecimalStr = num.toString().split('.')[1] || ''
-	return afterDecimalStr.length
+	return afterDecimalStr.length;
 }
 function formatTailNum(num){
 	if(numDigitsAfterDecimal(num)==0){num+=`.00`}
 	if(numDigitsAfterDecimal(num)==1){num+=`0`}
 	return num;
 }
-function refreshPage(){window.location.reload();}
 function focusTopPage(){document.body.scrollTop = 0;document.documentElement.scrollTop = 0;}
 
 // DateTime (UTC)
@@ -213,8 +212,6 @@ setInterval(()=>{
 // Update data every 15 mins
 setInterval(()=>{getDataGlobalDetailsAgain();getDataGlobalAllAgain();},(1000*60*15));
 
-// Refesh Page every 12 hours 1
-setInterval(()=>{refreshPage();},(1000*60*60*12));
 
 //------
 // END
