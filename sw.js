@@ -11,7 +11,7 @@ var file = [
 	"./",
 	"./css/styles_main.css",
 	"./css/styles_responsive.css",
-	"./js/reloadPage.js"
+	"./js/functions/reloadPage.js"
 ];
 
 // Add File Prefecth
