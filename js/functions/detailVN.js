@@ -173,7 +173,7 @@ async function displayDailyVietnam(jsonData,label1,label2){
 	// For 5 day ago
 	m=5;
 	for(i=2; i<7; i++){
-		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+		var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
 		casesArray.push(jsonData.data[i].total_cases);
 		deathsArray.push(jsonData.data[i].total_deaths);
@@ -182,7 +182,7 @@ async function displayDailyVietnam(jsonData,label1,label2){
 		m-=1;
 	}
 	// For today
-	var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+	var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-m)).toISOString().split("T")[0];
 	dateArray.push(todayDate);
 	casesArray.push(total.totalCases);deathsArray.push(total.totalDeaths);
 	casesArray_New.push(total.totalCases-jsonData.data[6].total_cases);
@@ -212,20 +212,20 @@ function displayDailyVaccines(jsonData,label1,label2){
 	document.getElementById("vacTwoDose").innerHTML = ShorterValue(vacTwoDose,2);
 	document.getElementById("vacFullyVaccinatedRate").innerHTML = parseFloat((vacTwoDose/population)*100).toFixed(2)+`%`;
 	
-	// Set Zero Until Over 0h of day
-	var hour = new Date().getHours();
-	if(hour>=6&&hour<24){
+	// Set Zero Until 18h of day
+	var hour = new Date().getUTCHours();
+	if(hour>=0&&hour<17){
 		// For 5 day ago
 		m=5;
 		for(i=lastedUpdateData-4; i<=lastedUpdateData; i++){
-			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+			var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-m)).toISOString().split("T")[0];
 			dateArray.push(todayDate);
 			vaccineArray.push(jsonData.data[i].total_vaccinations);
 			vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
 			m-=1;
 		}
 		// For today
-		var todayDate = new Date(new Date().setDate(new Date().getDate()-0)).toISOString().split("T")[0];
+		var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-0)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
 		vaccineArray.push(jsonData.data[lastedUpdateData].total_vaccinations);
 		vaccineArray_New.push(0);
@@ -235,7 +235,7 @@ function displayDailyVaccines(jsonData,label1,label2){
 		// For real data
 		m=6;
 		for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
-			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+			var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-m)).toISOString().split("T")[0];
 			dateArray.push(todayDate);
 			vaccineArray.push(jsonData.data[i].total_vaccinations);
 			vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
@@ -251,20 +251,20 @@ function displayDailyCityProvince(jsonData,label1,label2){
 	var hcmArray_New = [];
 	var lengthData = jsonData.data.data.length-1;
 	
-	// Set Zero Until Over 18h of day
-	var hour = new Date().getHours();
-	if(hour>=6&&hour<=18){
+	// Set Zero Until 12h of day
+	var hour = new Date().getUTCHours();
+	if(hour>=0&&hour<11){
 		// For 5 day ago
 		m=5;
 		for(i=lengthData-4;i<=lengthData;i++){
-			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+			var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-m)).toISOString().split("T")[0];
 			dateArray.push(todayDate);
 			hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
 			hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
 			m-=1;
 		}
 		// For today set Zero
-		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
+		var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
 		hcmArray.push(jsonData.data.data[lengthData].total.replaceAll(".",""));
 		hcmArray_New.push(0);

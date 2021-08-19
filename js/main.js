@@ -199,14 +199,14 @@ function formatTailNum(num){
 function refreshPage(){window.location.reload();}
 function focusTopPage(){document.body.scrollTop = 0;document.documentElement.scrollTop = 0;}
 
-// DateTime
-function Zero(num) {return (num >= 0 && num < 10) ? "0" + num : num + "";}
+// DateTime (UTC)
+function Zero(num){return (num>=0 && num<10) ? "0"+num : num+"";}
 setInterval(()=>{
     var now = new Date();
-    var strDateTime = [[Zero(now.getDate()), 
-        Zero(now.getMonth() + 1), now.getFullYear()].join("/"), 
-        [Zero(now.getHours()),Zero(now.getMinutes())].join(":"), 
-        now.getHours() >= 12 ? "PM" : "AM"].join(" ");
+    var strDateTime = [
+		[Zero(now.getUTCDate()),Zero(now.getUTCMonth()+1), now.getUTCFullYear()].join("/"), 
+        [Zero(now.getUTCHours()),Zero(now.getUTCMinutes())].join(":"), (now.getUTCHours())>=12 ? "PM":"AM"
+	].join(" ");
     document.getElementById("time").innerHTML = strDateTime;
 },1000);
 
