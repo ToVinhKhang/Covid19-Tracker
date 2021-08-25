@@ -171,7 +171,7 @@ async function displayDailyVietnam(jsonData,label1,label2){
 	const {total} = await(await FetchUsingAsync0()).jsonData;
 	
 	var hour = new Date().getUTCHours();
-	if(hour>=0&&hour<11){
+	if(hour>=0&&hour<7){
 		// For 5 day ago
 		m=6;
 		for(i=2; i<7; i++){
