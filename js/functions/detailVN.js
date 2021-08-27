@@ -216,7 +216,7 @@ async function displayDailyVietnam(jsonData,label1,label2){
 	createChart(dateArray,deathsArray_New,label2,"#E41E20","newdeathsChart","line","newdeathsChartDiv");
 }
 
-var population = 98340000;
+var population = 98350000;
 
 function displayDailyVaccines(jsonData,label1,label2){
 	var dateArray = [];
