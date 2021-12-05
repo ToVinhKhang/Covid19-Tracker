@@ -44,7 +44,7 @@ window.addEventListener('load',() => {
 // Get Data City 
 async function getDataVNCity(){
 	tableVN.innerHTML = '';
-	await fetch(API_CityVietnam,{headers: {'Access-Control-Allow-Origin': '*'}})
+	await fetch(API_CityVietnam)
 		.then(data => data.json())
 		.then(jsonData => {displayCity(jsonData);})
 		.catch(err => {ForEr();console.error(err);});
