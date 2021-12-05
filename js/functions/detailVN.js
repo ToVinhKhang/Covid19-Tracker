@@ -186,9 +186,10 @@ async function displayDailyVietnam(jsonData,label1,label2){
 		// For today
 		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
-		casesArray.push(total.totalCases);deathsArray.push(total.totalDeaths);
-		casesArray_New.push(total.totalCases-jsonData.data[6].total_cases);
-		deathsArray_New.push(total.totalDeaths-jsonData.data[6].total_deaths);
+		casesArray.push(0);
+		deathsArray.push(0);
+		casesArray_New.push(0);
+		deathsArray_New.push(0);
 	}
 	else{
 		// For 5 day ago
@@ -205,9 +206,10 @@ async function displayDailyVietnam(jsonData,label1,label2){
 		// For today
 		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 		dateArray.push(todayDate);
-		casesArray.push(total.totalCases);deathsArray.push(total.totalDeaths);
-		casesArray_New.push(total.totalCases-jsonData.data[6].total_cases);
-		deathsArray_New.push(total.totalDeaths-jsonData.data[6].total_deaths);
+		casesArray.push(0);
+		deathsArray.push(0);
+		casesArray_New.push(0);
+		deathsArray_New.push(0);
 	}
 
 	createChart(dateArray,casesArray,label1,"#186FB5","casesChart","bar","casesChartDiv");
@@ -239,7 +241,7 @@ function displayDailyVaccines(jsonData,label1,label2){
 	if(hour>=0&&hour<17){
 		// For 5 day ago
 		m=5;
-		for(i=lastedUpdateData-4; i<=lastedUpdateData; i++){
+		for(i=lastedUpdateData-5; i<=lastedUpdateData; i++){
 			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 			dateArray.push(todayDate);
 			vaccineArray.push(jsonData.data[i].total_vaccinations);
@@ -260,7 +262,7 @@ function displayDailyVaccines(jsonData,label1,label2){
 			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 			dateArray.push(todayDate);
 			vaccineArray.push(jsonData.data[i].total_vaccinations);
-			vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
+			vaccineArray_New.push(jsonData.data[i].daily_vaccinations);
 			m-=1;
 		}
 	}
