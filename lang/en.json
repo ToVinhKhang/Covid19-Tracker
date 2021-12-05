@@ -39,8 +39,8 @@
 	},
 	"rateVietnam": {
 		"txt1": "Incidence Rate",
-		"txt2": "Recovery Rate",
-		"txt3": "Death Rate",
+		"txt2": "Death Rate",
+		"txt3": "NewCase Rate",
 		"txt4": "Fully Vaccinated Rate"
 	},
 	"Vaccines": {

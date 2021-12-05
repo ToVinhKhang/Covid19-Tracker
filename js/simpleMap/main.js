@@ -198,8 +198,8 @@ function displayVNMap(detail){
 				state_specific[VNM].color = setColor(detail[i].cases, colors);
 				state_specific[VNM].description = `
 					<span>Cases: <badge>${detail[i].cases}</badge></span><br>
-					<span>Recovered: <badge>${detail[i].recovered}</badge></span><br>
-					<span>Deaths: <badge>${detail[i].deaths}</badge></span>
+					<span>Deaths: <badge>${detail[i].deaths}</badge></span><br>
+					<span>NewCases: <badge>${detail[i].newcases}</badge></span>
 				`;
 			}
 		}

@@ -22,8 +22,8 @@
 	"tableVietnam": {
 		"th1": "TP/Tỉnh",
 		"th2": "Ca Nhiễm",
-		"th3": "Phục Hồi",
-		"th4": "Tử Vong"
+		"th3": "Tử Vong",
+		"th4": "Ca Mới"
 	},
 	"tableVietnamVac": {
 		"th1": "TP/Tỉnh",
@@ -39,7 +39,7 @@
 	},
 	"rateVietnam": {
 		"txt1": "Tỉ lệ Nhiễm",
-		"txt2": "Tỉ lệ Tử Vongi",
+		"txt2": "Tỉ lệ Tử Vong",
 		"txt3": "Tỉ lệ Ca Mới",
 		"txt4": "Tỉ lệ Tiêm Đủ"
 	},
