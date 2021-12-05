@@ -268,7 +268,7 @@ function displayDailyCityProvince(jsonData,label1,label2){
 	if(hour>=0&&hour<11){
 		// For 5 day ago
 		m=5;
-		for(i=lengthData-4;i<=lengthData;i++){
+		for(i=lengthData-5;i<=lengthData;i++){
 			var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-m)).toISOString().split("T")[0];
 			dateArray.push(todayDate);
 			hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
@@ -278,7 +278,7 @@ function displayDailyCityProvince(jsonData,label1,label2){
 	}
 	else{
 		// For real data
-		for(i=lengthData-6;i<=lengthData;i++){
+		for(i=lengthData-5;i<=lengthData;i++){
 			dateArray.push(jsonData.data.data[i].date);
 			hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
 			hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
