@@ -174,7 +174,7 @@ async function displayDailyVietnam(jsonData,label1,label2){
 	if(hour>=0&&hour<6){
 		// For 5 day ago
 		m=6;
-		for(i=2; i<7; i++){
+		for(i=1; i<7; i++){
 			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 			dateArray.push(todayDate);
 			casesArray.push(jsonData.data[i].total_cases);
@@ -183,18 +183,12 @@ async function displayDailyVietnam(jsonData,label1,label2){
 			deathsArray_New.push(jsonData.data[i].new_deaths);
 			m-=1;
 		}
-		// For today
-		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
-		dateArray.push(todayDate);
-		casesArray.push(0);
-		deathsArray.push(0);
-		casesArray_New.push(0);
-		deathsArray_New.push(0);
+
 	}
 	else{
 		// For 5 day ago
 		m=5;
-		for(i=2; i<7; i++){
+		for(i=1; i<7; i++){
 			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 			dateArray.push(todayDate);
 			casesArray.push(jsonData.data[i].total_cases);
@@ -203,13 +197,7 @@ async function displayDailyVietnam(jsonData,label1,label2){
 			deathsArray_New.push(jsonData.data[i].new_deaths);
 			m-=1;
 		}
-		// For today
-		var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
-		dateArray.push(todayDate);
-		casesArray.push(0);
-		deathsArray.push(0);
-		casesArray_New.push(0);
-		deathsArray_New.push(0);
+
 	}
 
 	createChart(dateArray,casesArray,label1,"#186FB5","casesChart","bar","casesChartDiv");
