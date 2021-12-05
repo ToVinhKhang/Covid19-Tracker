@@ -278,7 +278,7 @@ function displayDailyCityProvince(jsonData,label1,label2){
 	}
 	else{
 		// For real data
-		for(i=lengthData-5;i<=lengthData;i++){
+		for(i=lengthData-6;i<=lengthData;i++){
 			dateArray.push(jsonData.data.data[i].date);
 			hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
 			hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
