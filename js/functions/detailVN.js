@@ -44,7 +44,7 @@ window.addEventListener('load',() => {
 // Get Data City 
 async function getDataVNCity(){
 	tableVN.innerHTML = '';
-	await fetch(API_CityVietnam)
+	await fetch(API_CityVietnam,{headers: {'Access-Control-Allow-Origin': '*'}})
 		.then(data => data.json())
 		.then(jsonData => {displayCity(jsonData);})
 		.catch(err => {ForEr();console.error(err);});
@@ -103,9 +103,9 @@ function displayCity(jsonData){
 		tr.appendChild(NewCases);
 		tableVN.appendChild(tr);
 	}
-	var totalCases     = jsonData.total.totalCases;
+	var totalCases  = jsonData.total.totalCases;
 	var totalDeaths = jsonData.total.totalDeaths;
-	var totalNewCases    = jsonData.total.totalNewCases;
+	var totalNewCases = jsonData.total.totalNewCases;
 	
 	displayTotalVN(totalCases,totalDeaths,totalNewCases);
 	displayRate(totalCases,totalDeaths,totalNewCases);
