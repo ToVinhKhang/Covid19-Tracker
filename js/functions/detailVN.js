@@ -236,12 +236,6 @@ function displayDailyVaccines(jsonData,label1,label2){
 			vaccineArray_New.push(jsonData.data[i].daily_vaccinations);
 			m-=1;
 		}
-		// For today
-		var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-0)).toISOString().split("T")[0];
-		dateArray.push(todayDate);
-		vaccineArray.push(jsonData.data[lastedUpdateData].total_vaccinations);
-		vaccineArray_New.push(0);
-		m-=1;
 	}
 	else{
 		// For real data
@@ -268,13 +262,18 @@ function displayDailyCityProvince(jsonData,label1,label2){
 	if(hour>=0&&hour<11){
 		// For 5 day ago
 		m=5;
-		for(i=lengthData-5;i<=lengthData;i++){
+		for(i=lengthData-4;i<=lengthData;i++){
 			var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-m)).toISOString().split("T")[0];
 			dateArray.push(todayDate);
 			hcmArray.push(jsonData.data.data[i].total.replaceAll(".",""));
 			hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
 			m-=1;
 		}
+		// For today set Zero
+		var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-m)).toISOString().split("T")[0];
+		dateArray.push(todayDate);
+		hcmArray.push(jsonData.data.data[lengthData].total.replaceAll(".",""));
+		hcmArray_New.push(0);
 	}
 	else{
 		// For real data
