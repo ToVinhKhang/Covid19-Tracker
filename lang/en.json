@@ -12,8 +12,8 @@
 	},
 	"totalGlobal": {
 		"txt1": "Total Cases",
-		"txt2": "Total Deaths",
-		"txt3": "Total New Cases"
+		"txt2": "Total Recovered",
+		"txt3": "Total Deaths"
 	},
 	"Continent": {
 		"txt0": "CONTINENT",
@@ -38,8 +38,8 @@
 	},
 	"totalVietnam": {
 		"txt1": "Total Cases",
-		"txt2": "Total Recovered",
-		"txt3": "Total Deaths",
+		"txt2": "Total Deaths",
+		"txt3": "Total New Cases",
 		"txt4": "Total Population"
 	},
 	"rateVietnam": {
