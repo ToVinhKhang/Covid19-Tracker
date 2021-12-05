@@ -33,14 +33,14 @@
 	},
 	"totalVietnam": {
 		"txt1": "Tổng Ca Nhiễm",
-		"txt2": "Tổng Phục Hồi",
-		"txt3": "Tổng Tử Vong",
+		"txt2": "Tổng Tử Vong",
+		"txt3": "Tổng Ca Mới",
 		"txt4": "Tổng Dân Số"
 	},
 	"rateVietnam": {
 		"txt1": "Tỉ lệ Nhiễm",
-		"txt2": "Tỉ lệ Phục Hồi",
-		"txt3": "Tỉ lệ Tử Vong",
+		"txt2": "Tỉ lệ Tử Vongi",
+		"txt3": "Tỉ lệ Ca Mới",
 		"txt4": "Tỉ lệ Tiêm Đủ"
 	},
 	"Vaccines": {

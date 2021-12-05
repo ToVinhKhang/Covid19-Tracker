@@ -22,8 +22,8 @@
 	"tableVietnam": {
 		"th1": "Cities/Provinces",
 		"th2": "Cases",
-		"th3": "Recovered",
-		"th4": "Deaths"
+		"th3": "Deaths",
+		"th4": "New Cases"
 	},
 	"tableVietnamVac": {
 		"th1": "Cities/Provinces",
@@ -33,8 +33,8 @@
 	},
 	"totalVietnam": {
 		"txt1": "Total Cases",
-		"txt2": "Total Recovered",
-		"txt3": "Total Deaths",
+		"txt2": "Total Deaths",
+		"txt3": "Total NewCases",
 		"txt4": "Total Population"
 	},
 	"rateVietnam": {
