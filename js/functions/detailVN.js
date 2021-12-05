@@ -275,11 +275,6 @@ function displayDailyCityProvince(jsonData,label1,label2){
 			hcmArray_New.push(jsonData.data.data[i].daily.replaceAll(".",""));
 			m-=1;
 		}
-		// For today set Zero
-		var todayDate = new Date(new Date().setDate(new Date().getUTCDate()-m)).toISOString().split("T")[0];
-		dateArray.push(todayDate);
-		hcmArray.push(jsonData.data.data[lengthData].total.replaceAll(".",""));
-		hcmArray_New.push(0);
 	}
 	else{
 		// For real data
