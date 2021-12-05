@@ -243,7 +243,7 @@ function displayDailyVaccines(jsonData,label1,label2){
 			var todayDate = new Date(new Date().setDate(new Date().getDate()-m)).toISOString().split("T")[0];
 			dateArray.push(todayDate);
 			vaccineArray.push(jsonData.data[i].total_vaccinations);
-			vaccineArray_New.push(jsonData.data[i].total_vaccinations - jsonData.data[i-1].total_vaccinations);
+			vaccineArray_New.push(jsonData.data[i].daily_vaccinations);
 			m-=1;
 		}
 		// For today
