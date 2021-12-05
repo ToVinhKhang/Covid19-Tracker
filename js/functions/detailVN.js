@@ -94,21 +94,21 @@ function displayCity(jsonData){
 		let tr = document.createElement("tr");
 		let City = document.createElement("td");City.textContent = jsonData.detail[i].name.replace("- ","");
 		let Cases = document.createElement("td");Cases.textContent = parseInt(jsonData.detail[i].cases).toLocaleString('en-US');
-		let Recovered = document.createElement("td");Recovered.textContent = parseInt(jsonData.detail[i].recovered).toLocaleString('en-US');
 		let Deaths = document.createElement("td");Deaths.textContent = parseInt(jsonData.detail[i].deaths).toLocaleString('en-US');
+		let NewCases = document.createElement("td");NewCases.textContent = parseInt(jsonData.detail[i].newcases).toLocaleString('en-US');
 		
 		tr.appendChild(City);
 		tr.appendChild(Cases);
-		tr.appendChild(Recovered);
 		tr.appendChild(Deaths);
+		tr.appendChild(NewCases);
 		tableVN.appendChild(tr);
 	}
 	var totalCases     = jsonData.total.totalCases;
-	var totalRecovered = jsonData.total.totalRecovered;
-	var totalDeaths    = jsonData.total.totalDeaths;
+	var totalDeaths = jsonData.total.totalDeaths;
+	var totalNewCases    = jsonData.total.totalNewCases;
 	
-	displayTotalVN(totalCases,totalRecovered,totalDeaths);
-	displayRate(totalCases,totalRecovered,totalDeaths);
+	displayTotalVN(totalCases,totalDeaths,totalNewCases);
+	displayRate(totalCases,totalDeaths,totalNewCases);
 	
 	//Make sure focus max value at first
 	setTimeout(()=>{$('#th-citiesCases').trigger('click');$('#th-citiesCases').trigger('click');}, 3000);	
