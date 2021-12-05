@@ -10,6 +10,11 @@
 		"th5": "Dân Số",
 		"txt": "Chi Tiết!"
 	},
+	"totalGlobal": {
+		"txt1": "Tổng Ca Nhiễm",
+		"txt2": "Tổng Tử Vong",
+		"txt3": "Tổng Ca Mới"
+	},
 	"Continent": {
 		"txt0": "CHÂU LỤC",
 		"txt1": "Châu Bắc Mỹ",

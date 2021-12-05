@@ -192,9 +192,9 @@ function displayDataTranslated(dataLang){
 	txtTitle.innerHTML = dataLang.title;
 	txtDesc.innerHTML = dataLang.desc;
 	txtGlobal.innerHTML = dataLang.global;
-	txtGlobalCases.innerHTML = dataLang.totalVietnam.txt1;
-	txtGlobalRecovered.innerHTML = dataLang.totalVietnam.txt2;
-	txtGlobalDeaths.innerHTML = dataLang.totalVietnam.txt3;
+	txtGlobalCases.innerHTML = dataLang.totalGlobal.txt1;
+	txtGlobalRecovered.innerHTML = dataLang.totalGlobal.txt2;
+	txtGlobalDeaths.innerHTML = dataLang.totalGlobal.txt3;
 	txtSeeDetails.innerHTML = dataLang.tableWorld.txt;
 	txtTotalCases.innerHTML = dataLang.totalVietnam.txt1;
 	txtTotalRecovered.innerHTML = dataLang.totalVietnam.txt2;

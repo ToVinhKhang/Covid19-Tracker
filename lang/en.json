@@ -10,6 +10,11 @@
 		"th5": "Population",
 		"txt": "See Details!"
 	},
+	"totalGlobal": {
+		"txt1": "Total Cases",
+		"txt2": "Total Deaths",
+		"txt3": "Total New Cases"
+	},
 	"Continent": {
 		"txt0": "CONTINENT",
 		"txt1": "North America",
